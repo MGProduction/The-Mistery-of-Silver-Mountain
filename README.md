@@ -1,6 +1,10 @@
 # The-Mistery-of-Silver-Mountain
 Attempt to port 1984's **Chris Oxlade** &amp; **Judy Tatchell** / **Usborne Computer Guides** "**The Mistery of Silver Mountain**" to **StoryTllr** (my C64 text-graphic adventure engine)
 
+![alt text](_images/eng_cover.jpg)
+
+[Link to original English book](https://dn790001.ca.archive.org/0/items/the-mystery-of-silver-mountain/the-mystery-of-silver-mountain.pdf)
+
 I was probably thirteen/fourteen when my parents gave me a copy of **The Mystery of Silver Mountain**. It was summer, and my younger brother and I typed that BASIC listing on a C64 with a green phosphor monitor on some hot afternoon before we could go play in the woods. It was probably one of the first text adventure games I fell in love with, accomplices also being the beautiful illustrations in the book, and the wonderful background story, which, in the game was recalled with just a few words, and without any kind of graphics.
 I thought about it a lot while making Nesterin Trail, and after looking around at some material I decided to try to make a porting of that masterpiece using StoryTllr64. Not a “simple” transposition (with the addition of some graphics), but a little something more -- adding descriptions and text where there were none for space reasons (the game had to run on multiple machines with little memory) -- but preserving the gameplay. That is, I want it to be possible to play this version identically to the original-including the possibility of dying on the fly, or making mistakes that will not allow the game to end.
 
@@ -9,4 +13,4 @@ But what drives me to at least begin is the desire to show those who never had t
 
 All the material I create will be license-free. Here, the StoryTllr source code for the entire project will be available – along with supporting material I will produce.
 
-Special thanks go to these two repositories – one with a (working) Go conversion (which greatly helped me tackle the original code), and one with a conversion in Inform7 (only structural, without gameplay).
+Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
