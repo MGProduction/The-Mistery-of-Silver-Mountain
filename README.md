@@ -13,7 +13,7 @@ I thought about it a lot while making **Nesterin Trail**, and after looking arou
 It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – 80 locations and a staggering number of moves required to complete it), and it's also not certain that I'm even allowed to do it (having seen derivative works by others is not proof that this can be considered fair use).
 But what drives me to at least begin is the desire to show those who never had the chance to experience the game in the 1980s the greatness of this work, by making it just a little more accessible, in the hope that it will help many others fall in love with the world of the Sylvanians.
 
-All the material I create will be license-free. Here, the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce.
+All the material I create for this project will be free and the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce. Please be aware that I'm creating a derivative work on Chris Oxlade + Judy Tatchell + Usborne Computer Guides original material so I, of course, cannot really license anything.
 
 Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
 
