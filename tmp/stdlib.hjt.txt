@@ -12,6 +12,9 @@ objclass:localscenery
 objclass:normalobj
 	note:normal objects - takable listable and visible
 	attr:visible+takeable+listable+large
+objclass:hiddenobj
+	note:normal objects - initially hidden
+	attr:$none
 objclass:smallobj
 	note:normal objects - takable listable and visible - but small
 	attr:visible+takeable+listable
@@ -77,7 +80,7 @@ movementverb:go
 movementverb:enter
 	synonym:enter
 genericverb:x
-	synonym:x,examine,ex,read,search
+	synonym:x,examine,ex,read,search,count
 	withobj:$none
 		msg:$roomdesc
 		ifundef:$room.exits
@@ -133,7 +136,7 @@ genericverb:l
 		else
 			msg:You don't see that here
 genericverb:take
-	synonym:take,get,pick,grab
+	synonym:take,get,pick,grab,steal,gather
 	withobj:$every
 		ifobjinattr:$this,$here,visible
 			ifobj:$this,takeable		
@@ -214,7 +217,7 @@ verb:onfirst
 		msg:$roomdesc
 	else
 		msg:$roomdesc
-		msg:There are obvious exits to +
+		msg:There are clear exits to +
 		msg:$room.exits
 		msg:.
 	endif
