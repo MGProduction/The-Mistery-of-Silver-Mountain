@@ -307,6 +307,28 @@ else
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+pony
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:a pony
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+The pony looks hungry, but still looks like a mighty animal, and is saddled
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:overgrowntrack
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 normalobj
 1
 <end node> 5P9i0s8y19Z
@@ -434,7 +456,7 @@ syn:bone
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-_startat:halfduggrave
+startat:halfduggrave
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -480,7 +502,7 @@ ifobjin:boots,$available
 	if:bootson
 		msg:You're already wearing them
 	else
-		msg:Once you wear them you realize you are invisible
+		msg:Once worn, you discover that you are invisible.
 		set:bootson
 
 <end node> 5P9i0s8y19Z
@@ -2909,8 +2931,42 @@ scenery
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-gravestone
+gravestone|headstone|gravestones|headstones
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:There's a faded inscription
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+inscription
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+read
+6
+msg:The inscription on the headstone is faded and not all the letters are legible. But what can be seen is: M R H S
+
 <end node> 5P9i0s8y19Z
 dt=
 <node>
@@ -3041,6 +3097,23 @@ dt=
 <node>
 rubble
 4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+move
+6
+msg:You cannot move rubble from here
+
 <end node> 5P9i0s8y19Z
 dt=
 <node>
@@ -3200,54 +3273,6 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-actor
-3
-<end node> 5P9i0s8y19Z
-dt=
-<node>
-pony
-4
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-desc
-5
-The pony looks hungry, but still looks like a mighty animal, and is saddled
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-verb
-5
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-give
-6
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-withobj:apples
-7
-msg:Give the apples to the pony and he lets you ride him, heading briskly north.
-put:apples,$nowhere
-if:weight>0
-	decvar:weight,1
-waitkey
-goto:rustygates
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-withobj:apple
-7
-msg:Give an apple to the pony and he lets you ride him, heading briskly north.
-waitkey
-goto:rustygates
-
-<end node> 5P9i0s8y19Z
-dt=
-<node>
 verb
 3
 <end node> 5P9i0s8y19Z
@@ -3272,6 +3297,7 @@ put:apples,$nowhere
 if:weight>0
 	decvar:weight,1
 waitkey
+put:pony,rustygates
 goto:rustygates
 
 <end node> 5P9i0s8y19Z
@@ -3281,6 +3307,7 @@ withobj:apple
 5
 msg:Give an apple to the pony and he lets you ride him, heading briskly north.
 waitkey
+put:pony,rustygates
 goto:rustygates
 
 <end node> 5P9i0s8y19Z
@@ -3322,54 +3349,6 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-actor
-3
-<end node> 5P9i0s8y19Z
-dt=
-<node>
-pony
-4
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-desc
-5
-The pony looks hungry, but still looks like a mighty animal, and is saddled
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-verb
-5
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-give
-6
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-withobj:apples
-7
-msg:Give the apples to the pony and he lets you ride him, heading briskly south.
-put:apples,$nowhere
-if:weight>0
-	decvar:weight,1
-waitkey
-goto:overgrowntrack
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-withobj:apple
-7
-msg:Give an apple to the pony and he lets you ride him, heading briskly south.
-waitkey
-goto:overgrowntrack
-
-<end node> 5P9i0s8y19Z
-dt=
-<node>
 verb
 3
 <end node> 5P9i0s8y19Z
@@ -3394,7 +3373,8 @@ put:apples,$nowhere
 if:weight>0
 	decvar:weight,1
 waitkey
-goto:rustygates
+put:pony,overgrowntrack
+goto:overgrowntrack
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3403,7 +3383,8 @@ withobj:apple
 5
 msg:Give an apple to the pony and he lets you ride him, heading briskly north.
 waitkey
-goto:rustygates
+put:pony,overgrowntrack
+goto:overgrowntrack
 
 <end node> 5P9i0s8y19Z
 dt=
