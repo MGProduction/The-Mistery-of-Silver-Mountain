@@ -264,6 +264,49 @@ wear
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+sceneryactor
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hermit
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:a hermit
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:sideofawoodenvalley
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+5
+msg:He gives that back to you
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+talk
+5
+if:hermitknowsyou
+	msg:"You need +
+	msg: rings", he says.
+else
+	msg:He looks at you without answering. He has clearly seen too many horrible things to trust a stranger.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 normalobj
 1
 <end node> 5P9i0s8y19Z
@@ -286,11 +329,6 @@ dt=Text
 <node>
 verb
 3
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-give
-4
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -338,11 +376,6 @@ ifobjin:apples,$available
 	if:weight>0
 		decvar:weight,1
 
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-give
-4
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -537,6 +570,26 @@ startat:palacebatttlements
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+ifobjin:hermit,$available
+	ifobjin:brooch,$available
+		msg:His eyes light up upon seeing that old pin. He smiles at you and after asking who you are decides to help you with a clue.
+		msg:"You need +
+		msg: rings", he says.
+		put:brooch,$nowhere
+		set:hermitknowsyou
+		if:weight>0
+			decvar:weight,1
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 bucket
 2
 <end node> 5P9i0s8y19Z
@@ -604,6 +657,12 @@ dt=Text
 <node>
 take
 4
+ifnot:doorburned
+	msg:It's firmly nailed on
+else
+	put:horseshoes,$inventory
+	msg:Taken
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -1242,12 +1301,34 @@ door
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-x
+verb
 5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
 ifnot:seenhorsesoes
 	set:seenhorseshoes
 	put:horseshoes,$here
 	msg:There are horseshoes
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+stable
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:There's a wooden door
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -1763,6 +1844,15 @@ waitkey
 goto:_dead
 
 <end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dive
+4
+msg:You jump into the lake, but the water is too cold and after a while you drown
+waitkey
+goto:_dead
+
+<end node> 5P9i0s8y19Z
 dt=
 <node>
 roughwater
@@ -1818,7 +1908,7 @@ s
 if:usedbucket
 	goto:middleofthelake
 else
-	ifvar:boatwater=10
+	if:boatwater>10
 		msg:Your efforts to run the ship are now in vain. The ship sinks
 		waitkey
 		goto:_dead
@@ -1851,9 +1941,18 @@ dt=Text
 withobj:bucket
 5
 ifobjin:bucket,$available
-	ifvar:boatwater>0
+	if:boatwater>0
 		msg:You managed to keep the ship afloat
-		set:usebucket
+		set:usedbucket
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dive
+4
+msg:You jump into the lake, but the water is too cold and after a while you drown
+waitkey
+goto:_dead
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -2423,7 +2522,7 @@ sacksontheupperfloor
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-name:Sacks on the Upper Floor
+name:Sacks on the upper floor
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2462,10 +2561,31 @@ dt=
 sacks
 4
 <end node> 5P9i0s8y19Z
-dt=
+dt=Text
 <node>
-seeds
-4
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+take
+6
+msg:Sacks are too heavy!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:seedsseen
+	msg:You found some seeds
+	put:seeds,$here
+
 <end node> 5P9i0s8y19Z
 dt=
 <node>
@@ -2486,7 +2606,7 @@ outsideawindmill
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-name:Outside a Windmill
+name:Outside a windmill
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2678,6 +2798,7 @@ withobj:net
 ifobjin:net,$available
 	ifnot:capturedboar
 		msg:With no small amount of luck you manage to capture the giant animal, rendering it harmless
+		set:capturedboar
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -2989,6 +3110,30 @@ dt=
 shield
 4
 <end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pool
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:emptypool
+	if:shieldfound
+		msg:There's nothing interesting
+	else
+		msg:At a point in the now-dry pool you see a shield
+		put:shield,$here
+else
+	msg:Inside the pool, where the waters are more melted, there is something shimmering
+
+<end node> 5P9i0s8y19Z
 dt=
 <node>
 verb
@@ -3006,6 +3151,15 @@ dt=
 w
 4
 goto:gamekeeperscottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dive
+4
+msg:The pool is deeper than you thought. You cramp up and can't get back to shore. You drown
+waitkey
+goto:_dead
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -3046,7 +3200,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-sceneryactor
+actor
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3104,6 +3258,32 @@ e
 goto:disusedwaterwheel
 
 <end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apples
+5
+msg:Give the apples to the pony and he lets you ride him, heading briskly north.
+put:apples,$nowhere
+if:weight>0
+	decvar:weight,1
+waitkey
+goto:rustygates
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apple
+5
+msg:Give an apple to the pony and he lets you ride him, heading briskly north.
+waitkey
+goto:rustygates
+
+<end node> 5P9i0s8y19Z
 dt=
 <node>
 rustygates
@@ -3142,7 +3322,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-sceneryactor
+actor
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3200,6 +3380,32 @@ n
 goto:goblingraveyard
 
 <end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apples
+5
+msg:Give the apples to the pony and he lets you ride him, heading briskly north.
+put:apples,$nowhere
+if:weight>0
+	decvar:weight,1
+waitkey
+goto:rustygates
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apple
+5
+msg:Give an apple to the pony and he lets you ride him, heading briskly north.
+waitkey
+goto:rustygates
+
+<end node> 5P9i0s8y19Z
 dt=
 <node>
 sluicegates
@@ -3246,6 +3452,23 @@ dt=
 handle
 4
 <end node> 5P9i0s8y19Z
+dt=Text
+<node>
+gates
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:There's an handle
+
+<end node> 5P9i0s8y19Z
 dt=
 <node>
 verb
@@ -3256,6 +3479,19 @@ dt=
 n
 4
 goto:mistypool
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+turn
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:handle
+5
+msg:The gates open, the pool empties
+set:emptypool
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -3318,6 +3554,18 @@ dt=
 n
 4
 goto:gamekeeperscottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+turn
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:wheel
+5
+msg:It goes round
 
 <end node> 5P9i0s8y19Z
 dt=Text

@@ -1,0 +1,159 @@
+[The Mistery of Silver Mountain]
+[Introduction]
+[Crossroads]
+e
+[Winding road]
+e
+[Village of rustic houses]
+e
+[White cottage]
+examine chest
+examine pot
+get coins
+get bread
+u
+[Attic bedroom]
+examine bed
+get sheet
+n
+[Cupboard]
+open cupboard
+get boots
+s
+[Attic bedroom]
+d
+[White cottage]
+w
+[Village of rustic houses]
+w
+[Winding road]
+w
+[Crossroads]
+w
+[Eastern end of a bridge]
+w
+give coin
+cross bridge
+[Western end of a bridge]
+w
+[Orchard]
+examine trees
+get apples
+w
+[Burnt-out campfire]
+w
+wear boots
+w
+[Top of a deep well]
+remove boots
+get bucket
+e
+[Burnt-out campfire]
+wear boots
+n
+[Woodman's hut]
+remove boots
+get axe
+n
+[Pitted track]
+w
+[Edge of an icy lake]
+get boat
+w
+use sheet
+w
+[Middle of the lake]
+n
+[Rough water]
+n
+[Island shore]
+drop boat
+[Old kiln]
+n
+examine kiln
+get jug
+n
+[Marshy inlet]
+get reeds
+s
+[Old kiln]
+s
+[Island shore]
+e
+[Beached ketch]
+examine ketch
+get net
+w
+[Island shore]
+get boat
+s
+[Rough water]
+s
+use bucket
+s
+[Middle of the lake]
+e
+[Edge of an icy lake]
+drop boat
+drop bucket
+get sheet
+e
+n
+e
+u
+get sacks
+examine sacks
+get seeds
+d
+w
+n
+n
+throw net
+n
+turn wheel
+n
+get lamp
+e
+examine pool
+s
+examine sluice gates
+turn handle
+n
+examine pool
+get shield
+w
+s
+w
+give apple
+n
+read inscriptions
+e
+e
+move rubble
+w
+w
+get bone
+e
+s
+give apple
+e
+s
+s
+s
+s
+e
+e
+fill jug
+s
+e
+give coin
+cross bridge
+e
+e
+n
+examine stones
+w
+w
+n
+blow reeds
+drop reeds

@@ -55,10 +55,20 @@ genericverb:throw
 genericverb:turn
 genericverb:water
 genericverb:wear
+sceneryactor:hermit
+	name:a hermit
+	startat:sideofawoodenvalley
+		verb:give
+			msg:He gives that back to you
+		verb:talk
+			if:hermitknowsyou
+				msg:"You need +
+				msg: rings", he says.
+			else
+				msg:He looks at you without answering. He has clearly seen too many horrible things to trust a stranger.
 normalobj:apple
 	name:one apple
 	syn:apple
-	verb:give
 	verb:eat
 		ifobjin:apple,$available
 			msg:It's tasty
@@ -75,7 +85,6 @@ normalobj:apples
 			put:apples,$nowhere
 			if:weight>0
 				decvar:weight,1
-	verb:give
 normalobj:axe
 	name:an axe
 	syn:axe
@@ -127,6 +136,16 @@ normalobj:bread
 normalobj:brooch
 	name:a brooch
 	startat:palacebatttlements
+	verb:give
+		ifobjin:hermit,$available
+			ifobjin:brooch,$available
+				msg:His eyes light up upon seeing that old pin. He smiles at you and after asking who you are decides to help you with a clue.
+				msg:"You need +
+				msg: rings", he says.
+				put:brooch,$nowhere
+				set:hermitknowsyou
+				if:weight>0
+					decvar:weight,1
 normalobj:bucket
 	name:a bucket
 	startat:topofadeepwell
@@ -140,6 +159,11 @@ normalobj:coins
 normalobj:horseshoes
 	name:horseshoes
 	verb:take
+		ifnot:doorburned
+			msg:It's firmly nailed on
+		else
+			put:horseshoes,$inventory
+			msg:Taken
 	_startat:stable
 normalobj:jug
 	name:a jug
@@ -307,11 +331,14 @@ room:stable
 	desc:The air smells of old straw and leather. Empty stalls line the walls, their gates hanging open. 
 	attr.exits:[south,west]
 	scenery:door
-		x
+		verb:x
 			ifnot:seenhorsesoes
 				set:seenhorseshoes
 				put:horseshoes,$here
 				msg:There are horseshoes
+	scenery:stable
+		verb:x
+			msg:There's a wooden door
 	verb:s
 		goto:villageofrustichouses
 	verb:w
@@ -422,6 +449,10 @@ room:middleofthelake
 			msg:Leaving the boat while crossing a icy lake is a bad decision. A few seconds and you drown
 			waitkey
 			goto:_dead
+	verb:dive
+		msg:You jump into the lake, but the water is too cold and after a while you drown
+		waitkey
+		goto:_dead
 room:roughwater
 	name:Rough water
 	image:png/lake4.jpg
@@ -434,7 +465,7 @@ room:roughwater
 		if:usedbucket
 			goto:middleofthelake
 		else
-			ifvar:boatwater=10
+			if:boatwater>10
 				msg:Your efforts to run the ship are now in vain. The ship sinks
 				waitkey
 				goto:_dead
@@ -449,9 +480,13 @@ room:roughwater
 	verb:use
 		withobj:bucket
 			ifobjin:bucket,$available
-				ifvar:boatwater>0
+				if:boatwater>0
 					msg:You managed to keep the ship afloat
-					set:usebucket
+					set:usedbucket
+	verb:dive
+		msg:You jump into the lake, but the water is too cold and after a while you drown
+		waitkey
+		goto:_dead
 room:islandshore
 	name:Island shore
 	image:png/islandshore.jpg
@@ -572,17 +607,23 @@ room:cupboard
 		goto:atticbedroom
 windmill
 room:sacksontheupperfloor
-	name:Sacks on the Upper Floor
+	name:Sacks on the upper floor
 	image:png/sacksontheupperfloor.jpg
 	attr.shortdesc:by some sacks on the upper floor
 	desc:Dusty sacks are stacked high, their contents unknown. A few are split, spilling grain or powder across rotting floorboards. The roof creaks ominously with each gust of wind.
 	attr.exits:[down]
 	scenery:sacks
-	scenery:seeds
+		verb:take
+			msg:Sacks are too heavy!
+		verb:open
+		verb:x
+			ifnot:seedsseen
+				msg:You found some seeds
+				put:seeds,$here
 	verb:d
 		goto:lowerfloorofthemill
 room:outsideawindmill
-	name:Outside a Windmill
+	name:Outside a windmill
 	image:png\outsideawindmill.jpg
 	attr.shortdesc:outside a windmill
 	desc:The sails of the windmill hang limp in the still air. Moss creeps up the stone base, and faded chalk marks around the door hint at forgotten wards.
@@ -624,6 +665,7 @@ room:barrencountryside
 			ifobjin:net,$available
 				ifnot:capturedboar
 					msg:With no small amount of luck you manage to capture the giant animal, rendering it harmless
+					set:capturedboar
 room:gamekeeperscottage
 	name:Gamekeeper's cottage
 	attr.shortdesc:in the gamekeeper's cottage
@@ -678,17 +720,31 @@ room:mistypool
 	desc:A thin veil of mist curls over the still water, muffling all sound. The surface reflects the world imperfectly, as if hiding something beneath the glassy calm.
 	attr.exits:[south,west]
 	scenery:shield
+	scenery:pool
+		verb:x
+			if:emptypool
+				if:shieldfound
+					msg:There's nothing interesting
+				else
+					msg:At a point in the now-dry pool you see a shield
+					put:shield,$here
+			else
+				msg:Inside the pool, where the waters are more melted, there is something shimmering
 	verb:s
 		goto:sluicegates
 	verb:w
 		goto:gamekeeperscottage
+	verb:dive
+		msg:The pool is deeper than you thought. You cramp up and can't get back to shore. You drown
+		waitkey
+		goto:_dead
 room:overgrowntrack
 	name:Overgrown track
 	attr.shortdesc:on an overgrown track
 	image:png\overgrowntrack.jpg
 	desc:Twisted branches claw across a path nearly swallowed by underbrush. Broken stones peek through the moss, hinting at a time when this was a road worth traveling.
 	attr.exits:[east]
-	sceneryactor:pony
+	actor:pony
 		desc:The pony looks hungry, but still looks like a mighty animal, and is saddled
 		verb:give
 			withobj:apples
@@ -704,13 +760,25 @@ room:overgrowntrack
 				goto:rustygates
 	verb:e
 		goto:disusedwaterwheel
+	verb:give
+		withobj:apples
+			msg:Give the apples to the pony and he lets you ride him, heading briskly north.
+			put:apples,$nowhere
+			if:weight>0
+				decvar:weight,1
+			waitkey
+			goto:rustygates
+		withobj:apple
+			msg:Give an apple to the pony and he lets you ride him, heading briskly north.
+			waitkey
+			goto:rustygates
 room:rustygates
 	name:Rusty gates
 	attr.shortdesc:near some rusty gates
 	image:png\rustygates.jpg
 	desc:Iron bars, streaked with age and neglect, groan softly in the wind. Vines creep along the hinges, as if nature itself is trying to reclaim what was once locked away.
 	attr.exits:[north]
-	sceneryactor:pony
+	actor:pony
 		desc:The pony looks hungry, but still looks like a mighty animal, and is saddled
 		verb:give
 			withobj:apples
@@ -726,6 +794,18 @@ room:rustygates
 				goto:overgrowntrack
 	verb:n
 		goto:goblingraveyard
+	verb:give
+		withobj:apples
+			msg:Give the apples to the pony and he lets you ride him, heading briskly north.
+			put:apples,$nowhere
+			if:weight>0
+				decvar:weight,1
+			waitkey
+			goto:rustygates
+		withobj:apple
+			msg:Give an apple to the pony and he lets you ride him, heading briskly north.
+			waitkey
+			goto:rustygates
 room:sluicegates
 	name:Sluice gates
 	attr.shortdesc:by some sluice gates
@@ -733,8 +813,15 @@ room:sluicegates
 	desc:Great wooden gates block a sluggish stream, bound by rusting chains. 
 	attr.exits:[north]
 	scenery:handle
+	scenery:gates
+		verb:x
+			msg:There's an handle
 	verb:n
 		goto:mistypool
+	verb:turn
+		withobj:handle
+			msg:The gates open, the pool empties
+			set:emptypool
 room:disusedwaterwheel
 	name:Disused waterwheel
 	attr.shortdesc:by a disused waterwheel
@@ -747,6 +834,9 @@ room:disusedwaterwheel
 		goto:overgrowntrack
 	verb:n
 		goto:gamekeeperscottage
+	verb:turn
+		withobj:wheel
+			msg:It goes round
 trollbridge
 room:easternendofabridge
 	name:Eastern end of a bridge
