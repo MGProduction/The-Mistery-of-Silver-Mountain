@@ -90,27 +90,23 @@ u[5]::whitecottage[21] = $07/7
 	goto::[22]atticbedroom
 u[5]::lowerfloorofthemill[26] = $08/8
 	goto::[24]sacksontheupperfloor
-u[5]::icypath[63] = $09/9
-	goto::[54]frozenpond
-u[5]::$everywhere[246] = $0a/10
+u[5]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-d[6]::atticbedroom[22] = $0b/11
+d[6]::atticbedroom[22] = $0a/10
 	goto::[21]whitecottage
-d[6]::sacksontheupperfloor[24] = $0c/12
+d[6]::sacksontheupperfloor[24] = $0b/11
 	goto::[26]lowerfloorofthemill
-d[6]::icypath[63] = $0d/13
-	goto::[56]glacier
-d[6]::$everywhere[246] = $0a/10
+d[6]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-s[7]::stable[7] = $0e/14
+s[7]::stable[7] = $0c/12
 	goto::[6]villageofrustichouses
-s[7]::ancientstonecircle[9] = $0f/15
+s[7]::ancientstonecircle[9] = $0d/13
 	goto::[5]windingroad
-s[7]::hugefallenoak[11] = $10/16
+s[7]::hugefallenoak[11] = $0e/14
 	goto::[10]deepdarkwood
-s[7]::streaminavalleybottom[13] = $11/17
-	goto::[37]westernendofabridge
-s[7]::roughwater[16] = $12/18
+s[7]::streaminavalleybottom[13] = $0f/15
+	goto::[38]westernendofabridge
+s[7]::roughwater[16] = $10/16
 	if::[4]usedbucket
 		goto::[15]middleofthelake
 	else[133]
@@ -123,7 +119,7 @@ s[7]::roughwater[16] = $12/18
 			addvar[129]
 		endif[135]
 	endif[135]
-s[7]::islandshore[17] = $13/19
+s[7]::islandshore[17] = $11/17
 	ifisin[144]
 		if::[1]boatwithsheet
 			goto::[16]roughwater
@@ -133,94 +129,39 @@ s[7]::islandshore[17] = $13/19
 	else[133]
 		msg::[88]You cannot swim in this icy water!
 	endif[135]
-s[7]::oldkiln[19] = $14/20
+s[7]::oldkiln[19] = $12/18
 	goto::[17]islandshore
-s[7]::marshyinlet[20] = $15/21
+s[7]::marshyinlet[20] = $13/19
 	goto::[19]oldkiln
 s[7]::cupboard[23] = $07/7
 	goto::[22]atticbedroom
-s[7]::outsideawindmill[25] = $16/22
-	goto::[40]pittedtrack
-s[7]::barrencountryside[27] = $17/23
+s[7]::outsideawindmill[25] = $14/20
+	goto::[41]pittedtrack
+s[7]::barrencountryside[27] = $15/21
 	goto::[25]outsideawindmill
-s[7]::gamekeeperscottage[28] = $18/24
-	goto::[50]disusedwaterwheel
-s[7]::goblingraveyard[29] = $19/25
+s[7]::gamekeeperscottage[28] = $16/22
+	goto::[36]disusedwaterwheel
+s[7]::goblingraveyard[29] = $17/23
 	goto::[34]rustygates
-s[7]::mistypool[32] = $1a/26
+s[7]::mistypool[32] = $18/24
 	goto::[35]sluicegates
-s[7]::pittedtrack[40] = $1b/27
-	goto::[42]woodmanshut
-s[7]::woodmanshut[42] = $1c/28
-	goto::[39]burntoutcampfire
-s[7]::narrowpassage[44] = $1d/29
-	goto::[43]dampwellbottom
-s[7]::cave[45] = $1e/30
-	goto::[46]topofadeepwell
-s[7]::banquethall[47] = $1f/31
-	goto::[59]halloftapestries
-s[7]::disusedwaterwheel[50] = $20/32
+s[7]::disusedwaterwheel[36] = $19/25
 	goto::[27]barrencountryside
-s[7]::dungeonsofthepalace[51] = $21/33
-	goto::[82]winecellar
-s[7]::dustylibrary[52] = $22/34
-	goto::[78]silverthroneroom
-s[7]::entrancehalltothepalace[53] = $23/35
-	goto::[49]dankcorridor
-s[7]::frozenpond[54] = $24/36
-	goto::[63]icypath
-s[7]::gapbetweensomeboulders[55] = $09/9
-	goto::[54]frozenpond
-s[7]::guardroom[58] = $25/37
-	setvar[172]
-	if::[0]bootson
-		setvar[172]
-	else[133]
-		if::[2]uniformon
-			setvar[172]
-		endif[135]
-	endif[135]
-	ifvar[150]
-		ifnot::[15]approaching
-			msg::[106]You realize with dread that a patrol of Grargs is approaching
-			set::[15]approaching
-		else[133]
-			msg::[16]Grargs attack and effortlessly kill you
-			waitkey[177]
-			goto::[2]_dead
-		endif[135]
-	else[133]
-		goto::[65]kitchensofthepalace
-	endif[135]
-s[7]::halloftapestries[59] = $26/38
-	goto::[68]mosaicflooredhall
-s[7]::highglassgates[60] = $27/39
-	goto::[70]ornatefountain
-s[7]::highwalledgarden[62] = $28/40
-	goto::[55]gapbetweensomeboulders
-s[7]::icypath[63] = $09/9
-	goto::[54]frozenpond
-s[7]::kitchensofthepalace[65] = $29/41
-	goto::[71]palacebattlements
-s[7]::longgallery[66] = $2a/42
-	goto::[47]banquethall
-s[7]::mosaicflooredhall[68] = $2b/43
-	goto::[74]safeinogbanschambers
-s[7]::mountainhut[69] = $2c/44
-	goto::[75]screeslope
-s[7]::screeslope[75] = $2d/45
-	goto::[11]hugefallenoak
-s[7]::vaultedcavern[81] = $2e/46
-	goto::[64]inscribedcavern
-s[7]::wizardslair[83] = $2f/47
-	goto::[48]cobwebbyroom
-s[7]::$everywhere[246] = $0a/10
+s[7]::pittedtrack[41] = $1a/26
+	goto::[43]woodmanshut
+s[7]::woodmanshut[43] = $1b/27
+	goto::[40]burntoutcampfire
+s[7]::narrowpassage[45] = $1c/28
+	goto::[44]dampwellbottom
+s[7]::cave[46] = $1d/29
+	goto::[47]topofadeepwell
+s[7]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-n[8]::windingroad[5] = $30/48
+n[8]::windingroad[5] = $1e/30
 	goto::[9]ancientstonecircle
-n[8]::villageofrustichouses[6] = $31/49
+n[8]::villageofrustichouses[6] = $1f/31
 	goto::[7]stable
-n[8]::deepdarkwood[10] = $32/50
+n[8]::deepdarkwood[10] = $20/32
 	ifnot::[3]goblinfree
 		ifisin[144]
 			goto::[11]hugefallenoak
@@ -232,38 +173,40 @@ n[8]::deepdarkwood[10] = $32/50
 	else[133]
 		goto::[11]hugefallenoak
 	endif[135]
-n[8]::hugefallenoak[11] = $0a/10
+n[8]::hugefallenoak[11] = $09/9
 	msg::[83]You can't go that way
-n[8]::middleofthelake[15] = $33/51
+n[8]::middleofthelake[15] = $21/33
 	goto::[16]roughwater
-n[8]::roughwater[16] = $14/20
+n[8]::roughwater[16] = $12/18
 	goto::[17]islandshore
-n[8]::islandshore[17] = $34/52
+n[8]::islandshore[17] = $22/34
 	ifisin[144]
 		msg::[86]You cannot drag the boat that way, it's too heavy
 	else[133]
 		goto::[19]oldkiln
 	endif[135]
-n[8]::oldkiln[19] = $35/53
+n[8]::oldkiln[19] = $23/35
 	goto::[20]marshyinlet
-n[8]::atticbedroom[22] = $36/54
+n[8]::atticbedroom[22] = $24/36
 	goto::[23]cupboard
-n[8]::outsideawindmill[25] = $20/32
+n[8]::outsideawindmill[25] = $19/25
 	goto::[27]barrencountryside
-n[8]::barrencountryside[27] = $37/55
+n[8]::barrencountryside[27] = $25/37
 	ifnot::[11]capturedboar
 		msg::[21]In front of you, in the middle of the fields a giant boar looks ...
 	else[133]
-		goto::[50]disusedwaterwheel
+		goto::[36]disusedwaterwheel
 	endif[135]
-n[8]::rustygates[34] = $38/56
+n[8]::rustygates[34] = $26/38
 	goto::[29]goblingraveyard
-n[8]::sluicegates[35] = $39/57
+n[8]::sluicegates[35] = $27/39
 	goto::[32]mistypool
-n[8]::westernendofabridge[37] = $3a/58
+n[8]::disusedwaterwheel[36] = $28/40
+	goto::[28]gamekeeperscottage
+n[8]::westernendofabridge[38] = $29/41
 	unset::[13]toll
 	goto::[13]streaminavalleybottom
-n[8]::burntoutcampfire[39] = $3b/59
+n[8]::burntoutcampfire[40] = $2a/42
 	setvar[172]
 	if::[0]bootson
 		setvar[172]
@@ -283,17 +226,17 @@ n[8]::burntoutcampfire[39] = $3b/59
 		endif[135]
 	else[133]
 		unset::[15]approaching
-		goto::[42]woodmanshut
+		goto::[43]woodmanshut
 	endif[135]
-n[8]::pittedtrack[40] = $17/23
+n[8]::pittedtrack[41] = $15/21
 	goto::[25]outsideawindmill
-n[8]::woodmanshut[42] = $16/22
-	goto::[40]pittedtrack
-n[8]::dampwellbottom[43] = $3c/60
+n[8]::woodmanshut[43] = $14/20
+	goto::[41]pittedtrack
+n[8]::dampwellbottom[44] = $2b/43
 	if::[16]brokenwall
-		goto::[44]narrowpassage
+		goto::[45]narrowpassage
 	endif[135]
-n[8]::topofadeepwell[46] = $3d/61
+n[8]::topofadeepwell[47] = $2c/44
 	withobj::[23]sheet
 		ifisin[144]
 			if::[18]sheettied
@@ -326,63 +269,25 @@ n[8]::topofadeepwell[46] = $3d/61
 			endif[135]
 		endif[135]
 	endwith[136]
-n[8]::banquethall[47] = $3e/62
-	goto::[66]longgallery
-n[8]::cobwebbyroom[48] = $3f/63
-	goto::[83]wizardslair
-n[8]::dankcorridor[49] = $40/64
-	goto::[53]entrancehalltothepalace
-n[8]::disusedwaterwheel[50] = $41/65
-	goto::[28]gamekeeperscottage
-n[8]::dungeonsofthepalace[51] = $23/35
-	goto::[49]dankcorridor
-n[8]::frozenpond[54] = $28/40
-	goto::[55]gapbetweensomeboulders
-n[8]::gapbetweensomeboulders[55] = $42/66
-	goto::[62]highwalledgarden
-n[8]::glacier[56] = $24/36
-	goto::[63]icypath
-n[8]::halloftapestries[59] = $2a/42
-	goto::[47]banquethall
-n[8]::icypath[63] = $09/9
-	goto::[54]frozenpond
-n[8]::inscribedcavern[64] = $43/67
-	goto::[81]vaultedcavern
-n[8]::kitchensofthepalace[65] = $44/68
-	goto::[58]guardroom
-n[8]::mosaicflooredhall[68] = $1f/31
-	goto::[59]halloftapestries
-n[8]::ornatefountain[70] = $45/69
-	goto::[60]highglassgates
-n[8]::palacebattlements[71] = $46/70
-	goto::[65]kitchensofthepalace
-n[8]::safeinogbanschambers[74] = $26/38
-	goto::[68]mosaicflooredhall
-n[8]::screeslope[75] = $47/71
-	goto::[69]mountainhut
-n[8]::silverthroneroom[78] = $48/72
-	goto::[52]dustylibrary
-n[8]::winecellar[82] = $49/73
-	goto::[51]dungeonsofthepalace
-n[8]::$everywhere[246] = $0a/10
+n[8]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-w[9]::crossroads[4] = $4a/74
-	goto::[36]easternendofabridge
-w[9]::windingroad[5] = $4b/75
+w[9]::crossroads[4] = $2d/45
+	goto::[37]easternendofabridge
+w[9]::windingroad[5] = $2e/46
 	goto::[4]crossroads
-w[9]::villageofrustichouses[6] = $0f/15
+w[9]::villageofrustichouses[6] = $0d/13
 	goto::[5]windingroad
-w[9]::stable[7] = $30/48
+w[9]::stable[7] = $1e/30
 	goto::[9]ancientstonecircle
-w[9]::shadyhollow[8] = $10/16
+w[9]::shadyhollow[8] = $0e/14
 	goto::[10]deepdarkwood
-w[9]::ancientstonecircle[9] = $4c/76
+w[9]::ancientstonecircle[9] = $2f/47
 	goto::[8]shadyhollow
-w[9]::sideofawoodedvalley[12] = $1b/27
-	goto::[42]woodmanshut
-w[9]::streaminavalleybottom[13] = $4d/77
+w[9]::sideofawoodedvalley[12] = $1a/26
+	goto::[43]woodmanshut
+w[9]::streaminavalleybottom[13] = $30/48
 	goto::[12]sideofawoodedvalley
-w[9]::edgeofanicylake[14] = $4e/78
+w[9]::edgeofanicylake[14] = $31/49
 	ifisin[144]
 		if::[1]boatwithsheet
 			goto::[15]middleofthelake
@@ -392,33 +297,35 @@ w[9]::edgeofanicylake[14] = $4e/78
 	else[133]
 		msg::[88]You cannot swim in this icy water!
 	endif[135]
-w[9]::beachedketch[18] = $14/20
+w[9]::beachedketch[18] = $12/18
 	goto::[17]islandshore
-w[9]::whitecottage[21] = $0e/14
+w[9]::whitecottage[21] = $0c/12
 	goto::[6]villageofrustichouses
-w[9]::outsideawindmill[25] = $4f/79
-	goto::[41]ploughedfield
-w[9]::lowerfloorofthemill[26] = $17/23
+w[9]::outsideawindmill[25] = $32/50
+	goto::[42]ploughedfield
+w[9]::lowerfloorofthemill[26] = $15/21
 	goto::[25]outsideawindmill
-w[9]::goblingraveyard[29] = $50/80
+w[9]::goblingraveyard[29] = $33/51
 	goto::[30]halfduggrave
-w[9]::hollowtomb[31] = $38/56
+w[9]::hollowtomb[31] = $26/38
 	goto::[29]goblingraveyard
-w[9]::mistypool[32] = $41/65
+w[9]::mistypool[32] = $28/40
 	goto::[28]gamekeeperscottage
-w[9]::easternendofabridge[36] = $51/81
+w[9]::disusedwaterwheel[36] = $34/52
+	goto::[33]overgrowntrack
+w[9]::easternendofabridge[37] = $35/53
 	ifnot::[13]toll
 		msg::[1]A dangerous-looking troll approaches and blocks your passage, lo...
 	else[133]
 		unset::[13]toll
-		goto::[37]westernendofabridge
+		goto::[38]westernendofabridge
 	endif[135]
-w[9]::westernendofabridge[37] = $52/82
+w[9]::westernendofabridge[38] = $36/54
 	unset::[13]toll
-	goto::[38]orchard
-w[9]::orchard[38] = $1c/28
-	goto::[39]burntoutcampfire
-w[9]::burntoutcampfire[39] = $53/83
+	goto::[39]orchard
+w[9]::orchard[39] = $1b/27
+	goto::[40]burntoutcampfire
+w[9]::burntoutcampfire[40] = $37/55
 	setvar[172]
 	if::[0]bootson
 		setvar[172]
@@ -438,145 +345,71 @@ w[9]::burntoutcampfire[39] = $53/83
 		endif[135]
 	else[133]
 		unset::[15]approaching
-		goto::[46]topofadeepwell
+		goto::[47]topofadeepwell
 	endif[135]
-w[9]::pittedtrack[40] = $54/84
+w[9]::pittedtrack[41] = $38/56
 	goto::[14]edgeofanicylake
-w[9]::cave[45] = $55/85
-	goto::[44]narrowpassage
-w[9]::cobwebbyroom[48] = $56/86
-	goto::[80]turretroom
-w[9]::disusedwaterwheel[50] = $57/87
-	goto::[33]overgrowntrack
-w[9]::glacier[56] = $58/88
-	goto::[61]highpinnacle
-w[9]::grargsentrypost[57] = $59/89
-	setvar[172]
-	if::[0]bootson
-		setvar[172]
-	else[133]
-		if::[2]uniformon
-			setvar[172]
-		endif[135]
-	endif[135]
-	ifvar[150]
-		ifnot::[15]approaching
-			msg::[106]You realize with dread that a patrol of Grargs is approaching
-			set::[15]approaching
-		else[133]
-			msg::[16]Grargs attack and effortlessly kill you
-			waitkey[177]
-			goto::[2]_dead
-		endif[135]
-	else[133]
-		goto::[53]entrancehalltothepalace
-	endif[135]
-w[9]::guardroom[58] = $5a/90
-	setvar[172]
-	if::[0]bootson
-		setvar[172]
-	else[133]
-		if::[2]uniformon
-			setvar[172]
-		endif[135]
-	endif[135]
-	ifvar[150]
-		ifnot::[15]approaching
-			msg::[106]You realize with dread that a patrol of Grargs is approaching
-			set::[15]approaching
-		else[133]
-			msg::[16]Grargs attack and effortlessly kill you
-			waitkey[177]
-			goto::[2]_dead
-		endif[135]
-	else[133]
-		goto::[57]grargsentrypost
-	endif[135]
-w[9]::highglassgates[60] = $43/67
-	goto::[81]vaultedcavern
-w[9]::inscribedcavern[64] = $42/66
-	goto::[62]highwalledgarden
-w[9]::kitchensofthepalace[65] = $3e/62
-	goto::[66]longgallery
-w[9]::mazeoftunnels[67] = $5b/91
-	goto::[79]stalactitesstalagmites
-w[9]::mountainhut[69] = $09/9
-	goto::[54]frozenpond
-w[9]::perilouspath[72] = $28/40
-	goto::[55]gapbetweensomeboulders
-w[9]::safeinogbanschambers[74] = $2f/47
-	goto::[48]cobwebbyroom
-w[9]::silverbellintherock[76] = $5c/92
-	goto::[72]perilouspath
-w[9]::silverthroneroom[78] = $26/38
-	goto::[68]mosaicflooredhall
-w[9]::stalactitesstalagmites[79] = $5d/93
-	goto::[31]hollowtomb
-w[9]::vaultedcavern[81] = $5e/94
-	goto::[67]mazeoftunnels
-w[9]::winecellar[82] = $5f/95
-	goto::[73]rowofcasks
-w[9]::wizardslair[83] = $60/96
-	goto::[77]silverchamber
-w[9]::$everywhere[246] = $0a/10
+w[9]::cave[46] = $39/57
+	goto::[45]narrowpassage
+w[9]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-e[10]::crossroads[4] = $0f/15
+e[10]::crossroads[4] = $0d/13
 	goto::[5]windingroad
-e[10]::windingroad[5] = $0e/14
+e[10]::windingroad[5] = $0c/12
 	goto::[6]villageofrustichouses
-e[10]::villageofrustichouses[6] = $0b/11
+e[10]::villageofrustichouses[6] = $0a/10
 	goto::[21]whitecottage
-e[10]::shadyhollow[8] = $30/48
+e[10]::shadyhollow[8] = $1e/30
 	goto::[9]ancientstonecircle
-e[10]::ancientstonecircle[9] = $31/49
+e[10]::ancientstonecircle[9] = $1f/31
 	goto::[7]stable
-e[10]::deepdarkwood[10] = $4c/76
+e[10]::deepdarkwood[10] = $2f/47
 	goto::[8]shadyhollow
-e[10]::sideofawoodedvalley[12] = $61/97
+e[10]::sideofawoodedvalley[12] = $3a/58
 	goto::[13]streaminavalleybottom
-e[10]::edgeofanicylake[14] = $62/98
+e[10]::edgeofanicylake[14] = $3b/59
 	ifisin[144]
 		msg::[86]You cannot drag the boat that way, it's too heavy
 	else[133]
-		goto::[40]pittedtrack
+		goto::[41]pittedtrack
 	endif[135]
-e[10]::middleofthelake[15] = $54/84
+e[10]::middleofthelake[15] = $38/56
 	goto::[14]edgeofanicylake
-e[10]::islandshore[17] = $63/99
+e[10]::islandshore[17] = $3c/60
 	ifisin[144]
 		msg::[86]You cannot drag the boat that way, it's too heavy
 	else[133]
 		goto::[18]beachedketch
 	endif[135]
-e[10]::outsideawindmill[25] = $0c/12
+e[10]::outsideawindmill[25] = $0b/11
 	goto::[26]lowerfloorofthemill
-e[10]::gamekeeperscottage[28] = $39/57
+e[10]::gamekeeperscottage[28] = $27/39
 	goto::[32]mistypool
-e[10]::goblingraveyard[29] = $5d/93
+e[10]::goblingraveyard[29] = $3d/61
 	goto::[31]hollowtomb
-e[10]::halfduggrave[30] = $38/56
+e[10]::halfduggrave[30] = $26/38
 	goto::[29]goblingraveyard
-e[10]::hollowtomb[31] = $64/100
+e[10]::hollowtomb[31] = $3e/62
 	ifnot::[12]rubbleremoved
 		msg::[2]A pile of rubble blocks your path
 	else[133]
-		goto::[79]stalactitesstalagmites
+		goto::[48]stalactitesstalagmites
 	endif[135]
-e[10]::overgrowntrack[33] = $18/24
-	goto::[50]disusedwaterwheel
-e[10]::easternendofabridge[36] = $65/101
+e[10]::overgrowntrack[33] = $16/22
+	goto::[36]disusedwaterwheel
+e[10]::easternendofabridge[37] = $3f/63
 	unset::[13]toll
 	goto::[4]crossroads
-e[10]::westernendofabridge[37] = $66/102
+e[10]::westernendofabridge[38] = $40/64
 	ifnot::[13]toll
 		msg::[1]A dangerous-looking troll approaches and blocks your passage, lo...
 	else[133]
 		unset::[13]toll
-		goto::[36]easternendofabridge
+		goto::[37]easternendofabridge
 	endif[135]
-e[10]::orchard[38] = $11/17
-	goto::[37]westernendofabridge
-e[10]::burntoutcampfire[39] = $67/103
+e[10]::orchard[39] = $0f/15
+	goto::[38]westernendofabridge
+e[10]::burntoutcampfire[40] = $41/65
 	setvar[172]
 	if::[0]bootson
 		setvar[172]
@@ -596,9 +429,9 @@ e[10]::burntoutcampfire[39] = $67/103
 		endif[135]
 	else[133]
 		unset::[15]approaching
-		goto::[38]orchard
+		goto::[39]orchard
 	endif[135]
-e[10]::ploughedfield[41] = $68/104
+e[10]::ploughedfield[42] = $42/66
 	setvar[172]
 	if::[0]bootson
 		setvar[172]
@@ -619,119 +452,66 @@ e[10]::ploughedfield[41] = $68/104
 	else[133]
 		goto::[25]outsideawindmill
 	endif[135]
-e[10]::woodmanshut[42] = $4d/77
+e[10]::woodmanshut[43] = $30/48
 	goto::[12]sideofawoodedvalley
-e[10]::narrowpassage[44] = $69/105
-	goto::[45]cave
-e[10]::topofadeepwell[46] = $1c/28
-	goto::[39]burntoutcampfire
-e[10]::cobwebbyroom[48] = $2b/43
-	goto::[74]safeinogbanschambers
-e[10]::entrancehalltothepalace[53] = $6a/106
-	goto::[57]grargsentrypost
-e[10]::frozenpond[54] = $47/71
-	goto::[69]mountainhut
-e[10]::gapbetweensomeboulders[55] = $5c/92
-	goto::[72]perilouspath
-e[10]::grargsentrypost[57] = $6b/107
-	setvar[172]
-	if::[0]bootson
-		setvar[172]
-	else[133]
-		if::[2]uniformon
-			setvar[172]
-		endif[135]
-	endif[135]
-	ifvar[150]
-		ifnot::[15]approaching
-			msg::[106]You realize with dread that a patrol of Grargs is approaching
-			set::[15]approaching
-		else[133]
-			msg::[16]Grargs attack and effortlessly kill you
-			waitkey[177]
-			goto::[2]_dead
-		endif[135]
-	else[133]
-		goto::[58]guardroom
-	endif[135]
-e[10]::highglassgates[60] = $40/64
-	goto::[53]entrancehalltothepalace
-e[10]::highpinnacle[61] = $0d/13
-	goto::[56]glacier
-e[10]::highwalledgarden[62] = $28/40
-	goto::[55]gapbetweensomeboulders
-e[10]::longgallery[66] = $46/70
-	goto::[65]kitchensofthepalace
-e[10]::mazeoftunnels[67] = $43/67
-	goto::[81]vaultedcavern
-e[10]::mosaicflooredhall[68] = $22/34
-	goto::[78]silverthroneroom
-e[10]::perilouspath[72] = $6c/108
-	goto::[76]silverbellintherock
-e[10]::rowofcasks[73] = $21/33
-	goto::[82]winecellar
-e[10]::silverchamber[77] = $3f/63
-	goto::[83]wizardslair
-e[10]::stalactitesstalagmites[79] = $5e/94
-	goto::[67]mazeoftunnels
-e[10]::turretroom[80] = $2f/47
-	goto::[48]cobwebbyroom
-e[10]::vaultedcavern[81] = $45/69
-	goto::[60]highglassgates
-e[10]::$everywhere[246] = $0a/10
+e[10]::narrowpassage[45] = $43/67
+	goto::[46]cave
+e[10]::topofadeepwell[47] = $1b/27
+	goto::[40]burntoutcampfire
+e[10]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-se[11]::$everywhere[246] = $0a/10
+se[11]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-sw[12]::$everywhere[246] = $0a/10
+sw[12]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-ne[13]::$everywhere[246] = $0a/10
+ne[13]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-nw[14]::$everywhere[246] = $0a/10
+nw[14]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-go[15]::$everywhere[246] = $0a/10
+go[15]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-enter[16]::$everywhere[246] = $0a/10
+enter[16]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-x[17]::beachedketch[18] = $6d/109
+x[17]::beachedketch[18] = $44/68
 	withobj::[31]beachedketch.ketch
 		ifnot::[6]netseen
 			msg::[24]In the vessel carcass you find a net
 			put[162]
 			set::[6]netseen
 		endif[135]
-x[17]::oldkiln[19] = $6e/110
+x[17]::oldkiln[19] = $45/69
 	withobj::[32]oldkiln.kiln
 		ifnot::[7]jugseen
 			msg::[3]Amidst the shards you find a jug still intact
 			put[162]
 			set::[7]jugseen
 		endif[135]
-x[17]::whitecottage[21] = $6f/111
+x[17]::whitecottage[21] = $46/70
 	withobj::[33]whitecottage.pot
 		ifnot::[8]coinsfound
 			put[162]
 			msg::[101]You found some coins inside
 			set::[8]coinsfound
 		endif[135]
-x[17]::whitecottage[21] = $70/112
+x[17]::whitecottage[21] = $47/71
 	withobj::[34]whitecottage.chest
 		msg::[31]It's empty
-x[17]::whitecottage[21] = $71/113
+x[17]::whitecottage[21] = $48/72
 	withobj::[35]whitecottage.fireplace
 		msg::[48]The fireplace is off. Above its shelf are some copper objects, i...
-x[17]::atticbedroom[22] = $72/114
+x[17]::atticbedroom[22] = $49/73
 	withobj::[36]atticbedroom.bed
 		ifnot::[9]seensheet
 			set::[9]seensheet
 			put[162]
 			msg::[40]On the bed is a large sheet
 		endif[135]
-x[17]::cupboard[23] = $73/115
+x[17]::cupboard[23] = $4a/74
 	withobj::[37]cupboard.cupboard
 		ifnot::[10]seenboots
 			msg::[61]There's something inside
 		endif[135]
-x[17]::orchard[38] = $74/116
+x[17]::orchard[39] = $4b/75
 	withobj::[48]orchard.tree
 		msg::[63]This orchard has almost only apple trees
 		ifnot::[14]seenapples
@@ -739,31 +519,31 @@ x[17]::orchard[38] = $74/116
 			msg::[59]There are some apples left
 			put[162]
 		endif[135]
-x[17]::dampwellbottom[43] = $75/117
+x[17]::dampwellbottom[44] = $4c/76
 	withobj::[49]dampwellbottom.bottom
 		if::[16]brokenwall
 			msg::[60]There's a narrow opening
 		else[133]
 			msg::[56]There are loose bricks
 		endif[135]
-x[17]::dampwellbottom[43] = $76/118
+x[17]::dampwellbottom[44] = $4d/77
 	withobj::[50]dampwellbottom.bricks
 		if::[16]brokenwall
 			msg::[60]There's a narrow opening
 		else[133]
 			msg::[43]Some of them seem loose
 		endif[135]
-x[17]::$everywhere[246] = $77/119
+x[17]::$everywhere[246] = $4e/78
 	withobj::[6]boots
 		ifisin[144]
 			msg::[47]The boots look really old and are very ruined
 		endif[135]
-x[17]::$everywhere[246] = $78/120
+x[17]::$everywhere[246] = $4f/79
 	withobj::[7]bread
 		ifisin[144]
 			msg::[32]It's stale and there's some mold on it
 		endif[135]
-x[17]::$everywhere[246] = $79/121
+x[17]::$everywhere[246] = $50/80
 	withobj::[249]$none
 		msgattr::[1]topscore
 		ifundef::[3]Amidst the shards you find a jug still intact
@@ -801,7 +581,7 @@ x[17]::$everywhere[246] = $79/121
 			msg::[0].
 		endif[135]
 	endwith[136]
-x[17]::$everywhere[246] = $7a/122
+x[17]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -815,7 +595,7 @@ x[17]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-l[18]::$everywhere[246] = $7b/123
+l[18]::$everywhere[246] = $52/82
 	withobj::[249]$none
 		msgattr::[1]topscore
 		ifundef::[3]Amidst the shards you find a jug still intact
@@ -844,7 +624,7 @@ l[18]::$everywhere[246] = $7b/123
 			msg::[99]You don't see that here
 		endif[135]
 	endwith[136]
-l[18]::$everywhere[246] = $7a/122
+l[18]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -858,9 +638,9 @@ l[18]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-take[19]::$everywhere[246] = $7c/124
+take[19]::$everywhere[246] = $53/83
 	withobj::[12]horseshoes
-take[19]::$everywhere[246] = $7d/125
+take[19]::$everywhere[246] = $54/84
 	withobj::[245]$every
 		ifobjinattr[148]
 			ifis[142]
@@ -885,7 +665,7 @@ take[19]::$everywhere[246] = $7d/125
 			endif[135]
 		endif[135]
 	endwith[136]
-take[19]::$everywhere[246] = $7a/122
+take[19]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -899,19 +679,19 @@ take[19]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-drop[20]::middleofthelake[15] = $7e/126
+drop[20]::middleofthelake[15] = $55/85
 	withobj::[4]boat
 		msg::[34]Leaving the boat while crossing a icy lake is a bad decision. A ...
 		waitkey[177]
 		goto::[2]_dead
 	endwith[136]
-drop[20]::roughwater[16] = $7e/126
+drop[20]::roughwater[16] = $55/85
 	withobj::[4]boat
 		msg::[34]Leaving the boat while crossing a icy lake is a bad decision. A ...
 		waitkey[177]
 		goto::[2]_dead
 	endwith[136]
-drop[20]::$everywhere[246] = $7f/127
+drop[20]::$everywhere[246] = $56/86
 	withobj::[245]$every
 		ifisin[144]
 			ifis[142]
@@ -927,7 +707,7 @@ drop[20]::$everywhere[246] = $7f/127
 			msg::[94]You don't have it
 		endif[135]
 	endwith[136]
-drop[20]::$everywhere[246] = $7a/122
+drop[20]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -941,7 +721,7 @@ drop[20]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-use[21]::roughwater[16] = $80/128
+use[21]::roughwater[16] = $57/87
 	withobj::[9]bucket
 		ifisin[144]
 			ifvar[150]
@@ -950,7 +730,7 @@ use[21]::roughwater[16] = $80/128
 			endif[135]
 		endif[135]
 	endwith[136]
-use[21]::$everywhere[246] = $81/129
+use[21]::$everywhere[246] = $58/88
 	withobj::[23]sheet
 		ifisin[144]
 			if::[1]boatwithsheet
@@ -960,7 +740,7 @@ use[21]::$everywhere[246] = $81/129
 				set::[1]boatwithsheet
 			endif[135]
 		endif[135]
-use[21]::$everywhere[246] = $7a/122
+use[21]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -974,10 +754,10 @@ use[21]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-push[22]::dampwellbottom[43] = $82/130
+push[22]::dampwellbottom[44] = $59/89
 	withobj::[50]dampwellbottom.bricks
 		msg::[81]You can't do much with your bare hands
-push[22]::$everywhere[246] = $7a/122
+push[22]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -991,10 +771,10 @@ push[22]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-pull[23]::dampwellbottom[43] = $82/130
+pull[23]::dampwellbottom[44] = $59/89
 	withobj::[50]dampwellbottom.bricks
 		msg::[81]You can't do much with your bare hands
-pull[23]::$everywhere[246] = $7a/122
+pull[23]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1008,14 +788,14 @@ pull[23]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-open[24]::cupboard[23] = $83/131
+open[24]::cupboard[23] = $5a/90
 	withobj::[37]cupboard.cupboard
 		ifnot::[10]seenboots
 			msg::[25]Inside the cupboard you find boots
 			put[162]
 			set::[10]seenboots
 		endif[135]
-open[24]::$everywhere[246] = $84/132
+open[24]::$everywhere[246] = $5b/91
 	ifisin[144]
 		ifis[142]
 			ifis[142]
@@ -1028,7 +808,7 @@ open[24]::$everywhere[246] = $84/132
 			msg::[87]You cannot open it
 		endif[135]
 	endif[135]
-open[24]::$everywhere[246] = $7a/122
+open[24]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1042,7 +822,7 @@ open[24]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-close[25]::$everywhere[246] = $85/133
+close[25]::$everywhere[246] = $5c/92
 	ifisin[144]
 		ifis[142]
 			ifis[142]
@@ -1055,7 +835,7 @@ close[25]::$everywhere[246] = $85/133
 			msg::[85]You cannot close it
 		endif[135]
 	endif[135]
-close[25]::$everywhere[246] = $7a/122
+close[25]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1069,7 +849,7 @@ close[25]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-lock[26]::$everywhere[246] = $7a/122
+lock[26]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1083,7 +863,7 @@ lock[26]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-unlock[27]::$everywhere[246] = $7a/122
+unlock[27]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1097,7 +877,7 @@ unlock[27]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-show[28]::$everywhere[246] = $7a/122
+show[28]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1111,7 +891,7 @@ show[28]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-give[29]::overgrowntrack[33] = $86/134
+give[29]::overgrowntrack[33] = $5d/93
 	withobj::[41]overgrowntrack.pony
 		withobj::[2]apples
 			msg::[14]Give the apples to the pony and he lets you ride him, heading br...
@@ -1127,7 +907,7 @@ give[29]::overgrowntrack[33] = $86/134
 			waitkey[177]
 			goto::[34]rustygates
 		endwith[136]
-give[29]::rustygates[34] = $87/135
+give[29]::rustygates[34] = $5e/94
 	withobj::[42]rustygates.pony
 		withobj::[2]apples
 			msg::[15]Give the apples to the pony and he lets you ride him, heading br...
@@ -1143,7 +923,7 @@ give[29]::rustygates[34] = $87/135
 			waitkey[177]
 			goto::[33]overgrowntrack
 		endwith[136]
-give[29]::easternendofabridge[36] = $88/136
+give[29]::easternendofabridge[37] = $5f/95
 	withobj::[11]coins
 		ifisin[144]
 			msg::[52]The troll takes them all and goes away
@@ -1172,7 +952,7 @@ give[29]::easternendofabridge[36] = $88/136
 			msg::[93]You don't have any
 		endif[135]
 	endwith[136]
-give[29]::easternendofabridge[36] = $89/137
+give[29]::easternendofabridge[37] = $60/96
 	withobj::[45]easternendofabridge.troll
 		withobj::[11]coins
 			ifisin[144]
@@ -1202,7 +982,7 @@ give[29]::easternendofabridge[36] = $89/137
 				msg::[93]You don't have any
 			endif[135]
 		endwith[136]
-give[29]::westernendofabridge[37] = $88/136
+give[29]::westernendofabridge[38] = $5f/95
 	withobj::[11]coins
 		ifisin[144]
 			msg::[52]The troll takes them all and goes away
@@ -1231,7 +1011,7 @@ give[29]::westernendofabridge[37] = $88/136
 			msg::[93]You don't have any
 		endif[135]
 	endwith[136]
-give[29]::westernendofabridge[37] = $8a/138
+give[29]::westernendofabridge[38] = $61/97
 	withobj::[47]westernendofabridge.troll
 		msg::[68]Whatx?
 		withobj::[11]coins
@@ -1262,7 +1042,7 @@ give[29]::westernendofabridge[37] = $8a/138
 				msg::[93]You don't have any
 			endif[135]
 		endwith[136]
-give[29]::$everywhere[246] = $8b/139
+give[29]::$everywhere[246] = $62/98
 	withobj::[1]apple
 		ifisin[144]
 			msg::[33]It's tasty
@@ -1271,13 +1051,13 @@ give[29]::$everywhere[246] = $8b/139
 				decvar[132]
 			endif[135]
 		endif[135]
-give[29]::$everywhere[246] = $8c/140
+give[29]::$everywhere[246] = $63/99
 	withobj::[2]apples
-give[29]::$everywhere[246] = $8d/141
+give[29]::$everywhere[246] = $64/100
 	withobj::[5]bone
-give[29]::$everywhere[246] = $8e/142
+give[29]::$everywhere[246] = $65/101
 	withobj::[7]bread
-give[29]::$everywhere[246] = $7a/122
+give[29]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1291,9 +1071,9 @@ give[29]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-put[30]::$everywhere[246] = $8f/143
+put[30]::$everywhere[246] = $66/102
 	msg::[67]What?
-put[30]::$everywhere[246] = $7a/122
+put[30]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1307,40 +1087,40 @@ put[30]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-help[31]::$everywhere[246] = $90/144
+help[31]::$everywhere[246] = $67/103
 	msg::[64]To act write short commands in \yVERB+ELEMENT \w (i.e. \ytake pe...
 	msg::[36]Move using cardinal directions. Use \yinventory \wto see what yo...
-inventory[32]::$everywhere[246] = $91/145
+inventory[32]::$everywhere[246] = $68/104
 	ifobjinattr[148]
 		msg::[77]You are carrying: +
 		list[151]
 	else[133]
 		msg::[79]You aren't carrying anything.
 	endif[135]
-quit[33]::$everywhere[246] = $92/146
+quit[33]::$everywhere[246] = $69/105
 	msg::[4]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		quit[163]
 	endif[135]
-restart[34]::$everywhere[246] = $93/147
+restart[34]::$everywhere[246] = $6a/106
 	msg::[4]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		start[174]
 	endif[135]
-save[35]::$everywhere[246] = $94/148
+save[35]::$everywhere[246] = $6b/107
 	save[164]
 	msg::[10]Done
-load[36]::$everywhere[246] = $95/149
+load[36]::$everywhere[246] = $6c/108
 	msg::[4]Are you sure? (Y/N)
 	getkey[137]
 	ifkey[146]::89
 		load[152]
 	endif[135]
-mem[37]::$everywhere[246] = $96/150
+mem[37]::$everywhere[246] = $6d/109
 	dbg[131]
-gfx[38]::$everywhere[246] = $97/151
+gfx[38]::$everywhere[246] = $6e/110
 	msg::[119]\yn\wormal, \yp\wrogressive or \ys\wtatic?
 	getkey[137]
 	ifkey[146]::78
@@ -1357,7 +1137,7 @@ gfx[38]::$everywhere[246] = $97/151
 			endif[135]
 		endif[135]
 	endif[135]
-talk[39]::$everywhere[246] = $98/152
+talk[39]::$everywhere[246] = $6f/111
 	ifobjinattr[148]
 		ifis[142]
 			msg::[17]He simply ignores you
@@ -1367,7 +1147,7 @@ talk[39]::$everywhere[246] = $98/152
 	else[133]
 		msg::[70]Who?
 	endif[135]
-talk[39]::$everywhere[246] = $99/153
+talk[39]::$everywhere[246] = $70/112
 	withobj::[249]$none
 		msg::[65]To whom, about what?
 	endwith[136]
@@ -1385,7 +1165,7 @@ talk[39]::$everywhere[246] = $99/153
 	withobj::[255]$unknown
 		msg::[45]Talk to whom?
 	endwith[136]
-ask[40]::$everywhere[246] = $98/152
+ask[40]::$everywhere[246] = $6f/111
 	ifobjinattr[148]
 		ifis[142]
 			msg::[17]He simply ignores you
@@ -1395,7 +1175,7 @@ ask[40]::$everywhere[246] = $98/152
 	else[133]
 		msg::[70]Who?
 	endif[135]
-ask[40]::$everywhere[246] = $99/153
+ask[40]::$everywhere[246] = $70/112
 	withobj::[249]$none
 		msg::[65]To whom, about what?
 	endwith[136]
@@ -1413,11 +1193,11 @@ ask[40]::$everywhere[246] = $99/153
 	withobj::[255]$unknown
 		msg::[45]Talk to whom?
 	endwith[136]
-bail[41]::$everywhere[246] = $9a/154
+bail[41]::$everywhere[246] = $71/113
 	withobj::[245]$every
 		msg::[19]How?
 	endwith[136]
-bail[41]::$everywhere[246] = $7a/122
+bail[41]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1431,7 +1211,7 @@ bail[41]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-blow[42]::$everywhere[246] = $7a/122
+blow[42]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1445,7 +1225,7 @@ blow[42]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-break[43]::$everywhere[246] = $7a/122
+break[43]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1459,7 +1239,7 @@ break[43]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-burn[44]::$everywhere[246] = $7a/122
+burn[44]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1473,7 +1253,7 @@ burn[44]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-climb[45]::dampwellbottom[43] = $9b/155
+climb[45]::dampwellbottom[44] = $72/114
 	withobj::[21]rope
 		if::[17]ropetied
 			msg::[6]As soon as you try to climb back up the rope comes off and falls...
@@ -1489,13 +1269,13 @@ climb[45]::dampwellbottom[43] = $9b/155
 			msg::[50]The sheet is torn
 		endif[135]
 	endwith[136]
-climb[45]::topofadeepwell[46] = $9c/156
+climb[45]::topofadeepwell[47] = $73/115
 	withobj::[23]sheet
 		ifisin[144]
 			if::[18]sheettied
 				msg::[91]You descend into the well slowly attached to the sheet, but it r...
 				put[162]
-				goto::[43]dampwellbottom
+				goto::[44]dampwellbottom
 			endif[135]
 		endif[135]
 	endwith[136]
@@ -1503,11 +1283,11 @@ climb[45]::topofadeepwell[46] = $9c/156
 		ifisin[144]
 			if::[17]ropetied
 				msg::[90]You descend into the well slowly attached to the rope.
-				goto::[43]dampwellbottom
+				goto::[44]dampwellbottom
 			endif[135]
 		endif[135]
 	endwith[136]
-climb[45]::$everywhere[246] = $7a/122
+climb[45]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1521,23 +1301,23 @@ climb[45]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-cross[46]::easternendofabridge[36] = $9d/157
+cross[46]::easternendofabridge[37] = $74/116
 	withobj::[44]easternendofabridge.bridge
 		ifnot::[13]toll
 			msg::[1]A dangerous-looking troll approaches and blocks your passage, lo...
 		else[133]
 			unset::[13]toll
-			goto::[37]westernendofabridge
+			goto::[38]westernendofabridge
 		endif[135]
-cross[46]::westernendofabridge[37] = $9e/158
+cross[46]::westernendofabridge[38] = $75/117
 	withobj::[46]westernendofabridge.bridge
 		ifnot::[13]toll
 			msg::[1]A dangerous-looking troll approaches and blocks your passage, lo...
 		else[133]
 			unset::[13]toll
-			goto::[36]easternendofabridge
+			goto::[37]easternendofabridge
 		endif[135]
-cross[46]::$everywhere[246] = $7a/122
+cross[46]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1551,7 +1331,7 @@ cross[46]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-cut[47]::$everywhere[246] = $7a/122
+cut[47]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1565,7 +1345,7 @@ cut[47]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-dive[48]::$everywhere[246] = $7a/122
+dive[48]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1579,11 +1359,11 @@ dive[48]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-drink[49]::$everywhere[246] = $9f/159
+drink[49]::$everywhere[246] = $76/118
 	withobj::[245]$every
 		msg::[114]You're not thirsty
 	endwith[136]
-drink[49]::$everywhere[246] = $7a/122
+drink[49]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1597,7 +1377,7 @@ drink[49]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-empty[50]::$everywhere[246] = $7a/122
+empty[50]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1611,7 +1391,7 @@ empty[50]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-feed[51]::$everywhere[246] = $7a/122
+feed[51]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1625,7 +1405,7 @@ feed[51]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-hold[52]::$everywhere[246] = $7a/122
+hold[52]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1639,7 +1419,7 @@ hold[52]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-insert[53]::$everywhere[246] = $7a/122
+insert[53]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1653,7 +1433,7 @@ insert[53]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-light[54]::$everywhere[246] = $7a/122
+light[54]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1667,7 +1447,7 @@ light[54]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-make[55]::$everywhere[246] = $7a/122
+make[55]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1681,7 +1461,7 @@ make[55]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-pay[56]::easternendofabridge[36] = $88/136
+pay[56]::easternendofabridge[37] = $5f/95
 	withobj::[11]coins
 		ifisin[144]
 			msg::[52]The troll takes them all and goes away
@@ -1710,7 +1490,7 @@ pay[56]::easternendofabridge[36] = $88/136
 			msg::[93]You don't have any
 		endif[135]
 	endwith[136]
-pay[56]::easternendofabridge[36] = $89/137
+pay[56]::easternendofabridge[37] = $60/96
 	withobj::[45]easternendofabridge.troll
 		withobj::[11]coins
 			ifisin[144]
@@ -1740,7 +1520,7 @@ pay[56]::easternendofabridge[36] = $89/137
 				msg::[93]You don't have any
 			endif[135]
 		endwith[136]
-pay[56]::westernendofabridge[37] = $88/136
+pay[56]::westernendofabridge[38] = $5f/95
 	withobj::[11]coins
 		ifisin[144]
 			msg::[52]The troll takes them all and goes away
@@ -1769,7 +1549,7 @@ pay[56]::westernendofabridge[37] = $88/136
 			msg::[93]You don't have any
 		endif[135]
 	endwith[136]
-pay[56]::westernendofabridge[37] = $8a/138
+pay[56]::westernendofabridge[38] = $61/97
 	withobj::[47]westernendofabridge.troll
 		msg::[68]Whatx?
 		withobj::[11]coins
@@ -1800,7 +1580,7 @@ pay[56]::westernendofabridge[37] = $8a/138
 				msg::[93]You don't have any
 			endif[135]
 		endwith[136]
-pay[56]::$everywhere[246] = $7a/122
+pay[56]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1814,7 +1594,7 @@ pay[56]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-plant[57]::$everywhere[246] = $7a/122
+plant[57]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1828,7 +1608,7 @@ plant[57]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-poison[58]::$everywhere[246] = $7a/122
+poison[58]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1842,9 +1622,7 @@ poison[58]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-reflect[59]::wizardslair[83] = $a0/160
-	msg::[19]How?
-reflect[59]::$everywhere[246] = $7a/122
+reflect[59]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1858,7 +1636,7 @@ reflect[59]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-remove[60]::$everywhere[246] = $a1/161
+remove[60]::$everywhere[246] = $77/119
 	withobj::[6]boots
 		ifisin[144]
 			if::[0]bootson
@@ -1868,7 +1646,7 @@ remove[60]::$everywhere[246] = $a1/161
 				msg::[96]You don't have them on
 			endif[135]
 		endif[135]
-remove[60]::$everywhere[246] = $a2/162
+remove[60]::$everywhere[246] = $78/120
 	withobj::[28]uniform
 		ifisin[144]
 			if::[2]uniformon
@@ -1878,7 +1656,7 @@ remove[60]::$everywhere[246] = $a2/162
 				msg::[95]You don't have it on
 			endif[135]
 		endif[135]
-remove[60]::$everywhere[246] = $7a/122
+remove[60]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1892,7 +1670,7 @@ remove[60]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-rig[61]::$everywhere[246] = $7a/122
+rig[61]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1906,7 +1684,7 @@ rig[61]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-ring[62]::$everywhere[246] = $7a/122
+ring[62]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1920,7 +1698,7 @@ ring[62]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-swing[63]::dampwellbottom[43] = $a3/163
+swing[63]::dampwellbottom[44] = $79/121
 	withobj::[3]axe
 		ifisin[144]
 			if::[16]brokenwall
@@ -1931,7 +1709,7 @@ swing[63]::dampwellbottom[43] = $a3/163
 			endif[135]
 		endif[135]
 	endwith[136]
-swing[63]::$everywhere[246] = $7a/122
+swing[63]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1945,7 +1723,7 @@ swing[63]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-throw[64]::barrencountryside[27] = $a4/164
+throw[64]::barrencountryside[27] = $7a/122
 	withobj::[16]net
 		ifisin[144]
 			ifnot::[11]capturedboar
@@ -1953,7 +1731,7 @@ throw[64]::barrencountryside[27] = $a4/164
 			endif[135]
 		endif[135]
 	endwith[136]
-throw[64]::$everywhere[246] = $7a/122
+throw[64]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1967,7 +1745,7 @@ throw[64]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-turn[65]::$everywhere[246] = $7a/122
+turn[65]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1981,7 +1759,7 @@ turn[65]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-water[66]::$everywhere[246] = $7a/122
+water[66]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -1995,7 +1773,7 @@ water[66]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-wear[67]::$everywhere[246] = $a5/165
+wear[67]::$everywhere[246] = $7b/123
 	withobj::[6]boots
 		ifisin[144]
 			if::[0]bootson
@@ -2005,7 +1783,7 @@ wear[67]::$everywhere[246] = $a5/165
 				set::[0]bootson
 			endif[135]
 		endif[135]
-wear[67]::$everywhere[246] = $a6/166
+wear[67]::$everywhere[246] = $7c/124
 	withobj::[28]uniform
 		ifisin[144]
 			if::[2]uniformon
@@ -2015,7 +1793,7 @@ wear[67]::$everywhere[246] = $a6/166
 				set::[2]uniformon
 			endif[135]
 		endif[135]
-wear[67]::$everywhere[246] = $7a/122
+wear[67]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -2029,7 +1807,7 @@ wear[67]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-eat[68]::$everywhere[246] = $8b/139
+eat[68]::$everywhere[246] = $62/98
 	withobj::[1]apple
 		ifisin[144]
 			msg::[33]It's tasty
@@ -2038,7 +1816,7 @@ eat[68]::$everywhere[246] = $8b/139
 				decvar[132]
 			endif[135]
 		endif[135]
-eat[68]::$everywhere[246] = $a7/167
+eat[68]::$everywhere[246] = $7d/125
 	withobj::[2]apples
 		ifisin[144]
 			msg::[62]They're tasty
@@ -2047,7 +1825,7 @@ eat[68]::$everywhere[246] = $a7/167
 				decvar[132]
 			endif[135]
 		endif[135]
-eat[68]::$everywhere[246] = $a8/168
+eat[68]::$everywhere[246] = $7e/126
 	withobj::[7]bread
 		ifisin[144]
 			msg::[30]It's disgusting, but still eatable.
@@ -2056,7 +1834,7 @@ eat[68]::$everywhere[246] = $a8/168
 				decvar[132]
 			endif[135]
 		endif[135]
-tie[69]::topofadeepwell[46] = $3d/61
+tie[69]::topofadeepwell[47] = $2c/44
 	withobj::[23]sheet
 		ifisin[144]
 			if::[18]sheettied
@@ -2089,7 +1867,7 @@ tie[69]::topofadeepwell[46] = $3d/61
 			endif[135]
 		endif[135]
 	endwith[136]
-onfirst[240]::$everywhere[246] = $7a/122
+onfirst[240]::$everywhere[246] = $51/81
 	withobj::[249]$none
 		msg::[117]\V what?
 	endwith[136]
@@ -2103,9 +1881,9 @@ onfirst[240]::$everywhere[246] = $7a/122
 			msg::[97]You don't see it here
 		endif[135]
 	endwith[136]
-onfirst[241]::$everywhere[246] = $0a/10
+onfirst[241]::$everywhere[246] = $09/9
 	msg::[83]You can't go that way
-onfirst[242]::$everywhere[246] = $99/153
+onfirst[242]::$everywhere[246] = $70/112
 	withobj::[249]$none
 		msg::[65]To whom, about what?
 	endwith[136]
@@ -2123,5 +1901,5 @@ onfirst[242]::$everywhere[246] = $99/153
 	withobj::[255]$unknown
 		msg::[45]Talk to whom?
 	endwith[136]
-$unknown[255]::$everywhere[246] = $8f/143
+$unknown[255]::$everywhere[246] = $66/102
 	msg::[67]What?
