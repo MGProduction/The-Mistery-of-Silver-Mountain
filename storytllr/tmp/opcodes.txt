@@ -1,0 +1,880 @@
+onfirst[0]::$start[0] = $00/0
+	clear[130]
+	msg::[50]\c...
+	waitkey[177]
+	goto::[2]_introduction
+onfirst[0]::_end[1] = $01/1
+	clear[130]
+	msg::[28]While you walk towards the Piazza Principe train station you thi...
+	msg::[16]On another hand, you're happy to come home, to see your family.
+	msg::[41]You catch your train and, rocked by the wagon movements, you rap...
+	waitkey[177]
+	clear[130]
+	msg::[21]The first part of this game ends here.
+	msg::[6]If you want to know how the story goes on, you can load the seco...
+	msg::[7]In that case, use \ySHIBBOLETH\w \yFANFALUCH\w to access it.
+	waitkey[177]
+	quit[163]
+onfirst[0]::_introduction[2] = $02/2
+	clear[130]
+	msg::[20]The Sylvani once lived peacefully at the foot of Silver Mountain...
+	msg::[2]But when the vicious Grarg army invaded, their queen, Pari Sylva...
+	msg::[8]In the battle of minds that followed, a traitor fell, and the Gr...
+	msg::[17]Queen Pari's son, Kylar, raised in secret, sought magical relics...
+	msg::[15]Now the Elders call to any brave soul: will you finish what Kyla...
+	setvar[172]
+	waitkey[177]
+	goto::[7]crossroads
+onfirst[0]::$everywhere[246] = $03/3
+	clear[130]
+	ifundef::[3]Done
+		msgattr::[1]topscore
+	else[133]
+		msgattr::[1]topscore
+		msg::[23]There are obvious exits to +
+		msgattr::[3]maxweight
+		msg::[0].
+	endif[135]
+	ifobjinattr[148]
+		msg::[48]You see: +
+		list[151]
+	endif[135]
+onenter[1]::$everywhere[246] = $04/4
+	clear[130]
+	ifundef::[2]But when the vicious Grarg army invaded, their queen, Pari Sylva...
+		msg::[34]You are in +
+		msgattr::[0]score
+	else[133]
+		msg::[32]You are +
+		msgattr::[2]weight
+	endif[135]
+	msg::[0].
+	ifundef::[3]Done
+		msg::[22]There are no evident exits.
+	else[133]
+		msg::[23]There are obvious exits to +
+		msgattr::[3]maxweight
+		msg::[0].
+	endif[135]
+	ifobjinattr[148]
+		msg::[48]You see: +
+		list[151]
+	endif[135]
+u[5]::whitecottage[15] = $05/5
+	goto::[16]atticbedroom
+u[5]::icypath[45] = $06/6
+	goto::[32]frozenpond
+u[5]::lowerfloorofthemill[50] = $07/7
+	goto::[68]sacksontheupperfloor
+u[5]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+d[6]::atticbedroom[16] = $09/9
+	goto::[15]whitecottage
+d[6]::icypath[45] = $0a/10
+	goto::[35]glacier
+d[6]::sacksontheupperfloor[68] = $0b/11
+	goto::[50]lowerfloorofthemill
+d[6]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+s[7]::stable[10] = $0c/12
+	goto::[9]villageofrustichouses
+s[7]::ancientstonecircle[12] = $0d/13
+	goto::[8]windingroad
+s[7]::hugefallenoak[14] = $0e/14
+	goto::[13]deepdarkwood
+s[7]::cupboard[17] = $05/5
+	goto::[16]atticbedroom
+s[7]::cave[19] = $0f/15
+	goto::[18]topofadeepwell
+s[7]::narrowpassage[20] = $10/16
+	goto::[25]dampwellbottom
+s[7]::banquethall[21] = $11/17
+	goto::[40]halloftapestries
+s[7]::barrencountryside[22] = $12/18
+	goto::[59]outsideawindmill
+s[7]::disusedwaterwheel[27] = $13/19
+	goto::[22]barrencountryside
+s[7]::dungeonsofthepalace[28] = $14/20
+	goto::[80]winecellar
+s[7]::dustylibrary[29] = $15/21
+	goto::[74]silverthroneroom
+s[7]::entrancehalltothepalace[31] = $16/22
+	goto::[26]dankcorridor
+s[7]::frozenpond[32] = $17/23
+	goto::[45]icypath
+s[7]::gamekeeperscottage[33] = $18/24
+	goto::[27]disusedwaterwheel
+s[7]::gapbetweensomeboulders[34] = $06/6
+	goto::[32]frozenpond
+s[7]::goblingraveyard[36] = $19/25
+	goto::[67]rustygates
+s[7]::guardroom[38] = $1a/26
+	goto::[48]kitchensofthepalace
+s[7]::halloftapestries[40] = $1b/27
+	goto::[55]mosaicflooredhall
+s[7]::highglassgates[41] = $1c/28
+	goto::[58]ornatefountain
+s[7]::highwalledgarden[43] = $1d/29
+	goto::[34]gapbetweensomeboulders
+s[7]::icypath[45] = $06/6
+	goto::[32]frozenpond
+s[7]::islandshore[47] = $1e/30
+	goto::[65]roughwater
+s[7]::kitchensofthepalace[48] = $1f/31
+	goto::[61]palacebattlements
+s[7]::longgallery[49] = $20/32
+	goto::[21]banquethall
+s[7]::marshyinlet[51] = $21/33
+	goto::[57]oldkiln
+s[7]::mistypool[54] = $22/34
+	goto::[75]sluicegates
+s[7]::mosaicflooredhall[55] = $23/35
+	goto::[69]safeinogbanschambers
+s[7]::mountainhut[56] = $24/36
+	goto::[70]screeslope
+s[7]::oldkiln[57] = $25/37
+	goto::[47]islandshore
+s[7]::outsideawindmill[59] = $26/38
+	goto::[63]pittedtrack
+s[7]::pittedtrack[63] = $27/39
+	goto::[82]woodmanshut
+s[7]::roughwater[65] = $28/40
+	goto::[53]middleofthelake
+s[7]::screeslope[70] = $29/41
+	goto::[14]hugefallenoak
+s[7]::streaminavalleybottom[77] = $2a/42
+	goto::[6]westernendofabridge
+s[7]::vaultedcavern[79] = $2b/43
+	goto::[46]inscribedcavern
+s[7]::wizardslair[81] = $2c/44
+	goto::[24]cobwebbyroom
+s[7]::woodmanshut[82] = $2d/45
+	goto::[3]burntoutcampfire
+s[7]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+n[8]::burntoutcampfire[3] = $27/39
+	goto::[82]woodmanshut
+n[8]::westernendofabridge[6] = $2e/46
+	goto::[77]streaminavalleybottom
+n[8]::windingroad[8] = $2f/47
+	goto::[12]ancientstonecircle
+n[8]::villageofrustichouses[9] = $30/48
+	goto::[10]stable
+n[8]::deepdarkwood[13] = $29/41
+	goto::[14]hugefallenoak
+n[8]::hugefallenoak[14] = $0e/14
+	goto::[13]deepdarkwood
+n[8]::atticbedroom[16] = $31/49
+	goto::[17]cupboard
+n[8]::banquethall[21] = $32/50
+	goto::[49]longgallery
+n[8]::barrencountryside[22] = $18/24
+	goto::[27]disusedwaterwheel
+n[8]::cobwebbyroom[24] = $33/51
+	goto::[81]wizardslair
+n[8]::dankcorridor[26] = $34/52
+	goto::[31]entrancehalltothepalace
+n[8]::disusedwaterwheel[27] = $35/53
+	goto::[33]gamekeeperscottage
+n[8]::dungeonsofthepalace[28] = $16/22
+	goto::[26]dankcorridor
+n[8]::frozenpond[32] = $1d/29
+	goto::[34]gapbetweensomeboulders
+n[8]::gapbetweensomeboulders[34] = $36/54
+	goto::[43]highwalledgarden
+n[8]::glacier[35] = $17/23
+	goto::[45]icypath
+n[8]::halloftapestries[40] = $20/32
+	goto::[21]banquethall
+n[8]::icypath[45] = $06/6
+	goto::[32]frozenpond
+n[8]::inscribedcavern[46] = $37/55
+	goto::[79]vaultedcavern
+n[8]::islandshore[47] = $21/33
+	goto::[57]oldkiln
+n[8]::kitchensofthepalace[48] = $38/56
+	goto::[38]guardroom
+n[8]::middleofthelake[53] = $1e/30
+	goto::[65]roughwater
+n[8]::mosaicflooredhall[55] = $11/17
+	goto::[40]halloftapestries
+n[8]::oldkiln[57] = $39/57
+	goto::[51]marshyinlet
+n[8]::ornatefountain[58] = $3a/58
+	goto::[41]highglassgates
+n[8]::outsideawindmill[59] = $13/19
+	goto::[22]barrencountryside
+n[8]::palacebattlements[61] = $1a/26
+	goto::[48]kitchensofthepalace
+n[8]::pittedtrack[63] = $12/18
+	goto::[59]outsideawindmill
+n[8]::roughwater[65] = $25/37
+	goto::[47]islandshore
+n[8]::rustygates[67] = $3b/59
+	goto::[36]goblingraveyard
+n[8]::safeinogbanschambers[69] = $1b/27
+	goto::[55]mosaicflooredhall
+n[8]::screeslope[70] = $3c/60
+	goto::[56]mountainhut
+n[8]::silverthroneroom[74] = $3d/61
+	goto::[29]dustylibrary
+n[8]::sluicegates[75] = $3e/62
+	goto::[54]mistypool
+n[8]::winecellar[80] = $3f/63
+	goto::[28]dungeonsofthepalace
+n[8]::woodmanshut[82] = $26/38
+	goto::[63]pittedtrack
+n[8]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+w[9]::burntoutcampfire[3] = $0f/15
+	goto::[18]topofadeepwell
+w[9]::orchard[4] = $2d/45
+	goto::[3]burntoutcampfire
+w[9]::easternendofabridge[5] = $2a/42
+	goto::[6]westernendofabridge
+w[9]::westernendofabridge[6] = $40/64
+	goto::[4]orchard
+w[9]::crossroads[7] = $41/65
+	goto::[5]easternendofabridge
+w[9]::windingroad[8] = $42/66
+	goto::[7]crossroads
+w[9]::villageofrustichouses[9] = $0d/13
+	goto::[8]windingroad
+w[9]::stable[10] = $2f/47
+	goto::[12]ancientstonecircle
+w[9]::shadyhollow[11] = $0e/14
+	goto::[13]deepdarkwood
+w[9]::ancientstonecircle[12] = $43/67
+	goto::[11]shadyhollow
+w[9]::whitecottage[15] = $0c/12
+	goto::[9]villageofrustichouses
+w[9]::cave[19] = $44/68
+	goto::[20]narrowpassage
+w[9]::beachedketch[23] = $25/37
+	goto::[47]islandshore
+w[9]::cobwebbyroom[24] = $45/69
+	goto::[78]turretroom
+w[9]::disusedwaterwheel[27] = $46/70
+	goto::[60]overgrowntrack
+w[9]::edgeofanicylake[30] = $28/40
+	goto::[53]middleofthelake
+w[9]::glacier[35] = $47/71
+	goto::[42]highpinnacle
+w[9]::goblingraveyard[36] = $48/72
+	goto::[39]halfduggrave
+w[9]::grargsentrypost[37] = $34/52
+	goto::[31]entrancehalltothepalace
+w[9]::guardroom[38] = $49/73
+	goto::[37]grargsentrypost
+w[9]::highglassgates[41] = $37/55
+	goto::[79]vaultedcavern
+w[9]::hollowtomb[44] = $3b/59
+	goto::[36]goblingraveyard
+w[9]::inscribedcavern[46] = $36/54
+	goto::[43]highwalledgarden
+w[9]::kitchensofthepalace[48] = $32/50
+	goto::[49]longgallery
+w[9]::lowerfloorofthemill[50] = $12/18
+	goto::[59]outsideawindmill
+w[9]::mazeoftunnels[52] = $4a/74
+	goto::[76]stalactitesstalagmites
+w[9]::mistypool[54] = $35/53
+	goto::[33]gamekeeperscottage
+w[9]::mountainhut[56] = $06/6
+	goto::[32]frozenpond
+w[9]::outsideawindmill[59] = $4b/75
+	goto::[64]ploughedfield
+w[9]::perilouspath[62] = $1d/29
+	goto::[34]gapbetweensomeboulders
+w[9]::pittedtrack[63] = $4c/76
+	goto::[30]edgeofanicylake
+w[9]::safeinogbanschambers[69] = $2c/44
+	goto::[24]cobwebbyroom
+w[9]::sideofawoodedvalley[71] = $27/39
+	goto::[82]woodmanshut
+w[9]::silverbellintherock[72] = $4d/77
+	goto::[62]perilouspath
+w[9]::silverthroneroom[74] = $1b/27
+	goto::[55]mosaicflooredhall
+w[9]::stalactitesstalagmites[76] = $4e/78
+	goto::[44]hollowtomb
+w[9]::streaminavalleybottom[77] = $4f/79
+	goto::[71]sideofawoodedvalley
+w[9]::vaultedcavern[79] = $50/80
+	goto::[52]mazeoftunnels
+w[9]::winecellar[80] = $51/81
+	goto::[66]rowofcasks
+w[9]::wizardslair[81] = $52/82
+	goto::[73]silverchamber
+w[9]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+e[10]::burntoutcampfire[3] = $40/64
+	goto::[4]orchard
+e[10]::orchard[4] = $2a/42
+	goto::[6]westernendofabridge
+e[10]::easternendofabridge[5] = $42/66
+	goto::[7]crossroads
+e[10]::westernendofabridge[6] = $41/65
+	goto::[5]easternendofabridge
+e[10]::crossroads[7] = $0d/13
+	goto::[8]windingroad
+e[10]::windingroad[8] = $0c/12
+	goto::[9]villageofrustichouses
+e[10]::villageofrustichouses[9] = $09/9
+	goto::[15]whitecottage
+e[10]::shadyhollow[11] = $2f/47
+	goto::[12]ancientstonecircle
+e[10]::ancientstonecircle[12] = $30/48
+	goto::[10]stable
+e[10]::deepdarkwood[13] = $43/67
+	goto::[11]shadyhollow
+e[10]::topofadeepwell[18] = $2d/45
+	goto::[3]burntoutcampfire
+e[10]::narrowpassage[20] = $53/83
+	goto::[19]cave
+e[10]::cobwebbyroom[24] = $23/35
+	goto::[69]safeinogbanschambers
+e[10]::edgeofanicylake[30] = $26/38
+	goto::[63]pittedtrack
+e[10]::entrancehalltothepalace[31] = $49/73
+	goto::[37]grargsentrypost
+e[10]::frozenpond[32] = $3c/60
+	goto::[56]mountainhut
+e[10]::gamekeeperscottage[33] = $3e/62
+	goto::[54]mistypool
+e[10]::gapbetweensomeboulders[34] = $4d/77
+	goto::[62]perilouspath
+e[10]::goblingraveyard[36] = $4e/78
+	goto::[44]hollowtomb
+e[10]::grargsentrypost[37] = $38/56
+	goto::[38]guardroom
+e[10]::halfduggrave[39] = $3b/59
+	goto::[36]goblingraveyard
+e[10]::highglassgates[41] = $34/52
+	goto::[31]entrancehalltothepalace
+e[10]::highpinnacle[42] = $0a/10
+	goto::[35]glacier
+e[10]::highwalledgarden[43] = $1d/29
+	goto::[34]gapbetweensomeboulders
+e[10]::hollowtomb[44] = $4a/74
+	goto::[76]stalactitesstalagmites
+e[10]::islandshore[47] = $54/84
+	goto::[23]beachedketch
+e[10]::longgallery[49] = $1a/26
+	goto::[48]kitchensofthepalace
+e[10]::mazeoftunnels[52] = $37/55
+	goto::[79]vaultedcavern
+e[10]::middleofthelake[53] = $4c/76
+	goto::[30]edgeofanicylake
+e[10]::mosaicflooredhall[55] = $15/21
+	goto::[74]silverthroneroom
+e[10]::outsideawindmill[59] = $0b/11
+	goto::[50]lowerfloorofthemill
+e[10]::overgrowntrack[60] = $18/24
+	goto::[27]disusedwaterwheel
+e[10]::perilouspath[62] = $55/85
+	goto::[72]silverbellintherock
+e[10]::ploughedfield[64] = $12/18
+	goto::[59]outsideawindmill
+e[10]::rowofcasks[66] = $14/20
+	goto::[80]winecellar
+e[10]::sideofawoodedvalley[71] = $2e/46
+	goto::[77]streaminavalleybottom
+e[10]::silverchamber[73] = $33/51
+	goto::[81]wizardslair
+e[10]::stalactitesstalagmites[76] = $50/80
+	goto::[52]mazeoftunnels
+e[10]::turretroom[78] = $2c/44
+	goto::[24]cobwebbyroom
+e[10]::vaultedcavern[79] = $3a/58
+	goto::[41]highglassgates
+e[10]::woodmanshut[82] = $4f/79
+	goto::[71]sideofawoodedvalley
+e[10]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+se[11]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+sw[12]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+ne[13]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+nw[14]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+go[15]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+enter[16]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+x[17]::$everywhere[246] = $56/86
+	withobj::[249]$none
+		msgattr::[1]topscore
+		ifundef::[3]Done
+			msg::[22]There are no evident exits.
+		else[133]
+			msg::[23]There are obvious exits to +
+			msgattr::[3]maxweight
+			msg::[0].
+		endif[135]
+		ifobjinattr[148]
+			msg::[48]You see: +
+			list[151]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[13]Looks absolutely normal
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			ifundef[149]::65
+				msg::[13]Looks absolutely normal
+			else[133]
+				msgattr[156]::65
+			endif[135]
+		else[133]
+			msg::[46]You don't see that here
+		endif[135]
+	endwith[136]
+	withobj::[0]exits
+		ifundef::[3]Done
+			msg::[22]There are no evident exits.
+		else[133]
+			msg::[23]There are obvious exits to +
+			msgattr::[3]maxweight
+			msg::[0].
+		endif[135]
+	endwith[136]
+x[17]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+l[18]::$everywhere[246] = $58/88
+	withobj::[249]$none
+		msgattr::[1]topscore
+		ifundef::[3]Done
+			msg::[22]There are no evident exits.
+		else[133]
+			msg::[23]There are obvious exits to +
+			msgattr::[3]maxweight
+			msg::[0].
+		endif[135]
+		ifobjinattr[148]
+			msg::[48]You see: +
+			list[151]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[13]Looks absolutely normal
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			ifundef[149]::65
+				msg::[13]Looks absolutely normal
+			else[133]
+				msgattr[156]::65
+			endif[135]
+		else[133]
+			msg::[46]You don't see that here
+		endif[135]
+	endwith[136]
+l[18]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+take[19]::$everywhere[246] = $59/89
+	withobj::[245]$every
+		ifobjinattr[148]
+			ifis[142]
+				setcount[167]
+				ifis[142]
+					addvar[129]
+				endif[135]
+				ifvar[150]
+					put[162]
+					msg::[18]Taken
+				else[133]
+					msg::[30]You already carry too much to add also this size object
+				endif[135]
+			else[133]
+				msg::[47]You don't want to take it
+			endif[135]
+		else[133]
+			ifisin[144]
+				msg::[31]You already have it
+			else[133]
+				msg::[44]You don't see it here
+			endif[135]
+		endif[135]
+	endwith[136]
+take[19]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+drop[20]::$everywhere[246] = $5a/90
+	withobj::[245]$every
+		ifisin[144]
+			ifis[142]
+				put[162]
+				msg::[4]Dropped
+				ifvar[150]
+					decvar[132]
+				endif[135]
+			else[133]
+				msg::[36]You can't drop it
+			endif[135]
+		else[133]
+			msg::[43]You don't have it
+		endif[135]
+	endwith[136]
+drop[20]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+use[21]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+push[22]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+pull[23]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+open[24]::$everywhere[246] = $5b/91
+	ifisin[144]
+		ifis[142]
+			ifis[142]
+				msg::[11]It's already open
+			else[133]
+				setattr[166]
+				msg::[3]Done
+			endif[135]
+		else[133]
+			msg::[40]You cannot open it
+		endif[135]
+	endif[135]
+open[24]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+close[25]::$everywhere[246] = $5c/92
+	ifisin[144]
+		ifis[142]
+			ifis[142]
+				unsetattr[176]
+				msg::[3]Done
+			else[133]
+				msg::[10]It's already closed
+			endif[135]
+		else[133]
+			msg::[39]You cannot close it
+		endif[135]
+	endif[135]
+close[25]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+lock[26]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+unlock[27]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+show[28]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+give[29]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+put[30]::$everywhere[246] = $5d/93
+	msg::[27]What?
+put[30]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+help[31]::$everywhere[246] = $5e/94
+	msg::[24]To act write short commands in \yVERB+ELEMENT \w (i.e. \ytake pe...
+	msg::[14]Move using cardinal directions. Use \yinventory \wto see what yo...
+inventory[32]::$everywhere[246] = $5f/95
+	ifobjinattr[148]
+		msg::[33]You are carrying: +
+		list[151]
+	else[133]
+		msg::[35]You aren't carrying anything.
+	endif[135]
+quit[33]::$everywhere[246] = $60/96
+	msg::[1]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[146]::89
+		quit[163]
+	endif[135]
+restart[34]::$everywhere[246] = $61/97
+	msg::[1]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[146]::89
+		start[174]
+	endif[135]
+save[35]::$everywhere[246] = $62/98
+	save[164]
+	msg::[3]Done
+load[36]::$everywhere[246] = $63/99
+	msg::[1]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[146]::89
+		load[152]
+	endif[135]
+mem[37]::$everywhere[246] = $64/100
+	dbg[131]
+gfx[38]::$everywhere[246] = $65/101
+	msg::[51]\yn\wormal, \yp\wrogressive or \ys\wtatic?
+	getkey[137]
+	ifkey[146]::78
+		gfxmode[138]::0
+		msg::[3]Done
+	else[133]
+		ifkey[146]::80
+			gfxmode[138]::1
+			msg::[3]Done
+		else[133]
+			ifkey[146]::83
+				gfxmode[138]::2
+				msg::[3]Done
+			endif[135]
+		endif[135]
+	endif[135]
+talk[39]::$everywhere[246] = $66/102
+	ifobjinattr[148]
+		ifis[142]
+			msg::[5]He simply ignores you
+		else[133]
+			msg::[26]To whom?
+		endif[135]
+	else[133]
+		msg::[29]Who?
+	endif[135]
+talk[39]::$everywhere[246] = $67/103
+	withobj::[249]$none
+		msg::[25]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[142]
+			msg::[9]It doesn't seem wise
+		else[133]
+			ifisin[144]
+				msg::[38]You can't talk with that
+			else[133]
+				msg::[46]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[19]Talk to whom?
+	endwith[136]
+ask[40]::$everywhere[246] = $66/102
+	ifobjinattr[148]
+		ifis[142]
+			msg::[5]He simply ignores you
+		else[133]
+			msg::[26]To whom?
+		endif[135]
+	else[133]
+		msg::[29]Who?
+	endif[135]
+ask[40]::$everywhere[246] = $67/103
+	withobj::[249]$none
+		msg::[25]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[142]
+			msg::[9]It doesn't seem wise
+		else[133]
+			ifisin[144]
+				msg::[38]You can't talk with that
+			else[133]
+				msg::[46]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[19]Talk to whom?
+	endwith[136]
+onfirst[240]::$everywhere[246] = $57/87
+	withobj::[249]$none
+		msg::[49]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[45]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[144]
+			msg::[42]You don't find a reason to do that
+		else[133]
+			msg::[44]You don't see it here
+		endif[135]
+	endwith[136]
+onfirst[241]::$everywhere[246] = $08/8
+	msg::[37]You can't go that way
+onfirst[242]::$everywhere[246] = $67/103
+	withobj::[249]$none
+		msg::[25]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[142]
+			msg::[9]It doesn't seem wise
+		else[133]
+			ifisin[144]
+				msg::[38]You can't talk with that
+			else[133]
+				msg::[46]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[19]Talk to whom?
+	endwith[136]
+$unknown[255]::$everywhere[246] = $5d/93
+	msg::[27]What?

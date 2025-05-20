@@ -1,0 +1,842 @@
+config
+	name:SilverMountain
+	title:The Mystery of Silver Mountain
+	originalauthor:Chris Oxlade + Judy Tatchell / Usborne
+	author:Marco Giorgini
+	engine:StoryTllrC64
+	version:1.0.0
+	licence:Unlicense
+	binary:yes
+	model:C64
+	image
+		rborder:1
+		hborder:8
+		splity:96
+		imgborder:png/border2.png
+include:stdlib.hjt
+room:$start
+	image:png\_title.jpg
+	onfirst
+		clear
+		msg:\c##SUBTITLE##
+			\c
+			\cOriginal \yBASIC\w Game by
+			\c\y##ORIGINALAUTHOR##\w
+			\c
+			\c\yStoryTllrC64\w release 
+			\cby \y##AUTHOR##\w
+			\c
+			\c\gUnlicense\w
+		waitkey
+		goto:_introduction
+	name:The Mistery of Silver Mountain
+room:_end
+	image:png\_title.jpg
+	onfirst
+		clear
+		msg:While you walk towards the Piazza Principe train station you think that there are strange things moving around this story and you are now more than ever determined to find the missing box. 
+		msg:On another hand, you're happy to come home, to see your family. 
+		msg:You catch your train and, rocked by the wagon movements, you rapidly fall asleep; your last thought was a pleasant one: you are going to see Democrito, your cat, real soon!
+		waitkey
+		clear
+		msg:The first part of this game ends here.
+		msg:If you want to know how the story goes on, you can load the second part of the game using one of the available original versions.
+		msg:In that case, use #SHIBBOLETH #FANFALUCH to access it.
+		waitkey
+		quit
+room:_introduction
+	image:png\_title.jpg
+	name:Introduction
+	onfirst
+		clear
+		msg:The Sylvani once lived peacefully at the foot of Silver Mountain, guided by wise Elders and protected by the mystical Stone of Destiny. 
+		msg: But when the vicious Grarg army invaded, their queen, Pari Sylvan, used the Stone to resist them. 
+		msg: In the battle of minds that followed, a traitor fell, and the Grarg wizard Magrarg seized control. The Sylvani became slaves under the brutal Overlord Ogban. 
+		msg: Queen Pari's son, Kylar, raised in secret, sought magical relics to defeat the evil, but was killed before completing his quest. 
+		msg: Now the Elders call to any brave soul: will you finish what Kylar began?
+		setvar:maxweight,13
+		waitkey
+		goto:crossroads
+room:burntoutcampfire
+	name:Burnt-out Campfire
+	image:png/burntoutcampfire.jpg
+	attr.shortdesc:by a burnt-out campfire
+	desc:Charred logs lie in a circle of scorched earth, still warm to the touch. Scattered ashes hold the imprint of a boot, and a broken blade gleams among the embers.
+	attr.exits:[north,east,west]
+	verb:n
+		goto:woodmanshut
+	verb:e
+		goto:orchard
+	verb:w
+		goto:topofadeepwell
+room:orchard
+	name:Orchard
+	attr.shortdesc:in a small orchard
+	desc:The gnarled trees here show almost fruitless branches. The air hums with wasps, and a few now-rotten remnants crunch underfoot in the damp earth.
+	attr.exits:[east,west]
+	scenery:apples
+	verb:e
+		goto:westernendofabridge
+	verb:w
+		goto:burntoutcampfire
+	image:png/orchard.jpg
+room:easternendofabridge
+	name:Eastern end of a Bridge
+	image:png/troll_bridge.jpg
+	attr.shortdesc:at the eastern end of a stone bridge
+	desc:You are on the east side of a small stone bridge that allows you to cross a stream. Strange noises and a horrible smell make you approach with suspicion.
+	attr.exits:[west,east]
+	verb:w
+		goto:westernendofabridge
+	verb:e
+		goto:crossroads
+room:westernendofabridge
+	name:Western end of a Bridge
+	image:png/troll_bridge.jpg
+	attr.shortdesc:at the western end of a bridge
+	desc:You are on the west side of a small stone bridge that allows you to cross a small river. Strange noises and a horrible smell make you approach with suspicion.
+	attr.exits:[north,west]
+	verb:n
+		goto:streaminavalleybottom
+	verb:w
+		goto:orchard
+	verb:e
+		goto:easternendofabridge
+room:crossroads
+	image:png/generic_forestpath.jpg
+	name:Crossroads
+	attr.shortdesc:at a crossroads
+	desc:Few roads meet at a crooked signpost, its arms rotted and unreadable. The breeze turns in circles here, as if confused, and each path feels desolate and dangerous.
+	attr.exits:[east,west]
+	verb:e
+		goto:windingroad
+	verb:w
+		goto:easternendofabridge
+room:windingroad
+	image:png/generic_forestpath2.jpg
+	name:Winding Road
+	attr.shortdesc:on a winding road
+	desc:The path curves sharply through hills and thickets, flanked by old stone walls. Something rustles in the undergrowth nearby, always just out of sight.
+	attr.exits:[north,east,west]
+	verb:n
+		goto:ancientstonecircle
+	verb:e
+		goto:villageofrustichouses
+	verb:w
+		goto:crossroads
+room:villageofrustichouses
+	name:Village of Rustic Houses
+	image:png/villageofrustichouses.jpg
+	attr.shortdesc:in a village of rustic houses
+	desc:Low thatched roofs and crooked chimneys crowd along a narrow road. Not all the front doors are closed and everything is so still that it seems abandoned.
+	attr.exits:[north,east,west]
+	verb:n
+		goto:stable
+	verb:e
+		goto:whitecottage
+	verb:w
+		goto:windingroad
+room:stable
+	image:png/stable.jpg
+	name:Stable
+	attr.shortdesc:in a small stable
+	desc:The air smells of old straw and leather. Empty stalls line the walls, their gates hanging open. 
+	attr.exits:[south,west]
+	scenery:horseshoe
+	verb:s
+		goto:villageofrustichouses
+	verb:w
+		goto:ancientstonecircle
+room:shadyhollow
+	image:png/generic_forestpath2.jpg
+	name:Shady Hollow
+	attr.shortdesc:in a shady hollow
+	desc:This quiet dip in the land is carpeted in thick moss and ringed by ancient trees. Birds avoid this place, and even the breeze seems to hold its breath.
+	attr.exits:[east,west]
+	verb:e
+		goto:ancientstonecircle
+	verb:w
+		goto:deepdarkwood
+room:ancientstonecircle
+	name:Ancient Stone Circle
+	image:png/ancientstonecircle.jpg
+	attr.shortdesc:by an ancient stone circle
+	desc:Weathered monoliths rise from the earth in a perfect ring, etched with symbols long forgotten. The ground within is strangely warm, and time itself feels hesitant here.
+	attr.exits:[east,west,south]
+	scenery:stones
+	verb:e
+		goto:stable
+	verb:w
+		goto:shadyhollow
+	verb:s
+		goto:windingroad
+room:deepdarkwood
+	image:png/generic_forestpath.jpg
+	name:Deep Dark Wood
+	attr.shortdesc:in a deep dark wood
+	desc:Branches arch above like a cathedral of twisted limbs. No sunlight reaches the forest floor, only cold shadows and the rustle of unseen creatures moving just out of reach.
+	attr.exits:[north,east]
+	verb:n
+		goto:hugefallenoak
+	verb:e
+		goto:shadyhollow
+room:hugefallenoak
+	name:Huge Fallen Oak
+	attr.shortdesc:near a huge fallen oak
+	desc:The ancient tree lies shattered across the forest floor, roots upturned like frozen lightning. Its bark is scorched, and something has carved runes deep into the wood.
+	attr.exits:[north,south]
+	verb:n
+	verb:s
+		goto:deepdarkwood
+room:whitecottage
+	name:White Cottage
+	image:png/whitecottage.jpg
+	attr.shortdesc:in a white cottage
+	desc:You are inside a well-kept white cottage. However, the unlit fireplace and an overturned chair in front of a set table make you think that something happened to whoever lived here. There's a chest under a window.
+	attr.exits:[west,up]
+	scenery:coins
+	scenery:pot
+	scenery:chest
+		x
+			msg:It's empty
+	verb:w
+		goto:villageofrustichouses
+	verb:u
+		goto:atticbedroom
+	sceneryobj:bread
+room:atticbedroom
+	name:Attic Bedroom
+	image:png/atticbedroom.jpg
+	attr.shortdesc:in an attic bedroom
+	desc:You are in a bedroom on the second floor. Here the dust is clearly visible, and it seems that no one has slept here for a long time.
+	attr.exits:[north,down]
+	scenery:sheet
+	verb:n
+		goto:cupboard
+	verb:d
+		goto:whitecottage
+room:cupboard
+	image:png/atticbedroom.jpg
+	name:Cupboard
+	attr.shortdesc:by a cupboard in a corner
+	desc:You are near a solid wooden cupboard with ajar doors.
+	attr.exits:[south]
+	scenery:boots
+	verb:s
+		goto:atticbedroom
+room:topofadeepwell
+	name:Top of a Deep Well
+	attr.shortdesc:by the top of a deep well
+	desc:The rope is frayed and the bucket gone, leaving only the yawning hole and the scent of wet stone. Cold air rises steadily, carrying whispers too soft to understand.
+	attr.exits:[east,north]
+	scenery:bucket
+	verb:e
+		goto:burntoutcampfire
+	verb:n
+room:cave
+	name:Cave
+	attr.shortdesc:in a small cave
+	desc:The low ceiling forces you to stoop, and water drips steadily from cracks above. A nest of bones and feathers lies in one corner, undisturbed but recent.
+	attr.exits:[south,west]
+	verb:s
+		goto:topofadeepwell
+	verb:w
+		goto:narrowpassage
+room:narrowpassage
+	name:Narrow Passage
+	attr.shortdesc:in a narrow passage
+	desc:The walls close in tightly, carved from damp stone. The air is stale and heavy, and each footstep echoes too loudly, as if something is listening ahead, or behind.
+	attr.exits:[east,south]
+	scenery:ring
+	verb:e
+		goto:cave
+	verb:s
+		goto:dampwellbottom
+more
+room:banquethall
+	name:Banquet Hall
+	attr.shortdesc:in a banqueting hall
+	desc:A vast table stretches into shadow, laid with dust-covered goblets and tarnished cutlery. Torn banners hang from the rafters, and claw marks gouge the wood where guests once sat.
+	attr.exits:[north,south]
+	scenery:uniform
+	scenery:matches
+	verb:n
+		goto:longgallery
+	verb:s
+		goto:halloftapestries
+room:barrencountryside
+	name:Barren Countryside
+	attr.shortdesc:in some barren countryside
+	desc:The wind sweeps over lifeless fields, stirring dust and brittle weeds. There's no shelter here, only scorched earth and the distant silhouettes of crumbled ruins.
+	attr.exits:[north,south]
+	verb:n
+		goto:disusedwaterwheel
+	verb:s
+		goto:outsideawindmill
+room:beachedketch
+	name:Beached Ketch
+	attr.shortdesc:by a beached ketch
+	desc:The small vessel lists on its side, sails torn and hull cracked. A trail of supplies and seaweed suggests the crew fled, or were taken, before making camp.
+	attr.exits:[west]
+	scenery:net
+	verb:w
+		goto:islandshore
+room:cobwebbyroom
+	name:Cobwebby Room
+	attr.shortdesc:in a cobwebby room
+	desc:Silken webs drape from ceiling to floor, and dried husks of insects hang in their grasp. A single broken chair sits beneath a shuttered window, long forgotten.
+	attr.exits:[north,east,west]
+	verb:n
+		goto:wizardslair
+	verb:e
+		goto:safeinogbanschambers
+	verb:w
+		goto:turretroom
+room:dampwellbottom
+	name:Damp Well Bottom
+	attr.shortdesc:in a damp well bottom
+	desc:Slimy stones glisten in the faint light filtering from above. Trickles of water echo as they fall, and something faintly luminous pulses in a crack along the far wall.
+	attr.exits:[north]
+	verb:n
+room:dankcorridor
+	name:Dank Corridor
+	attr.shortdesc:in a dank corridor
+	desc:The air is thick and wet, each breath heavy with mildew. The stone walls sweat in the darkness, and your footsteps splash faintly in unseen puddles underfoot.
+	attr.exits:[north,south]
+	verb:n
+		goto:entrancehalltothepalace
+	verb:s
+room:disusedwaterwheel
+	name:Disused Waterwheel
+	attr.shortdesc:by a disused waterwheel
+	desc:The old wheel creaks as it shifts in the wind, half-submerged in a stream thick with weeds. Lichen covers the spokes, and a rat's nest clogs the mechanism.
+	attr.exits:[south,west,north]
+	verb:s
+		goto:barrencountryside
+	verb:w
+		goto:overgrowntrack
+	verb:n
+		goto:gamekeeperscottage
+room:dungeonsofthepalace
+	name:Dungeons of the Palace
+	attr.shortdesc:in the dungeons of the palace
+	desc:Chains dangle from mossy walls, and the air reeks of mildew and old iron. Faint moans echo from unseen cells, and a pool of brackish water seeps across the floor.
+	attr.exits:[south,north]
+	verb:s
+		goto:winecellar
+	verb:n
+		goto:dankcorridor
+room:dustylibrary
+	name:Dusty Library
+	attr.shortdesc:in a dusty library
+	desc:Books sag on warped shelves, their pages brittle and yellowed. A fallen ladder lies near a smashed globe, and in the silence, the dust seems to hang in thought.
+	attr.exits:[south]
+	scenery:book
+	verb:s
+		goto:silverthroneroom
+room:edgeofanicylake
+	name:Edge of an Icy Lake
+	attr.shortdesc:on the edge of an icy lake
+	desc:The frozen surface extends like cracked glass toward the mountains. Frost-laced reeds line the shore, and the air is painfully still, each breath a cloud of cold.
+	attr.exits:[east,west]
+	scenery:boat
+	verb:e
+		goto:pittedtrack
+	verb:w
+		goto:middleofthelake
+room:entrancehalltothepalace
+	name:Entrance Hall to the Palace
+	attr.shortdesc:in the entrance hall to the palace
+	desc:Tall columns flank a wide, dusty floor once gleaming with polished stone. Tattered banners hang limply from the walls, and silence reigns where once courtiers and nobles bustled.
+	attr.exits:[south,east,west]
+	verb:s
+		goto:dankcorridor
+	verb:e
+		goto:grargsentrypost
+	verb:w
+room:frozenpond
+	name:Frozen Pond
+	attr.shortdesc:on a small frozen pond
+	desc:The ice beneath your feet groans as cracks spider outward. A single tree leans over the pond's edge, its branches clawing toward the glassy surface.
+	attr.exits:[north,east,south,down]
+	scenery:cracks
+	verb:n
+		goto:gapbetweensomeboulders
+	verb:e
+		goto:mountainhut
+	verb:s
+		goto:icypath
+	verb:d
+room:gamekeeperscottage
+	name:Gamekeeper's Cottage
+	attr.shortdesc:in the gamekeeper's cottage
+	desc:The air smells faintly of smoke and pine. Inside the cottage, antlers and faded maps line the walls. Dusty tools are neatly arranged, untouched since their owner vanished without a trace.
+	attr.exits:[east,south]
+	scenery:lamp
+	verb:e
+		goto:mistypool
+	verb:s
+		goto:disusedwaterwheel
+room:gapbetweensomeboulders
+	name:Gap between some Boulders
+	attr.shortdesc:in a gap between some boulders
+	desc:Jagged rocks press close, forming a narrow passage just wide enough to slip through. Faint drafts stir the air, whispering of something hidden beyond.
+	attr.exits:[north,east,south]
+	verb:n
+		goto:highwalledgarden
+	verb:e
+		goto:perilouspath
+	verb:s
+		goto:frozenpond
+room:glacier
+	name:Glacier
+	attr.shortdesc:above a glacier
+	desc:A glittering river of ice sprawls beneath you, creaking and groaning as it shifts. Splintered peaks surround the white expanse like frozen sentinels, and avalanches rumble in the distance.
+	attr.exits:[north,west,up]
+	verb:n
+		goto:icypath
+	verb:w
+		goto:highpinnacle
+	verb:u
+room:goblingraveyard
+	name:Goblin Graveyard
+	attr.shortdesc:in the goblin graveyard
+	desc:Crumbling headstones jut from the ground like broken teeth. Twisted roots claw through the soil, and scraps of bone and rusted armor hint at a violent past. A low, growling wind stirs the moss.
+	attr.exits:[east,west,south]
+	scenery:gravestone
+	verb:e
+		goto:hollowtomb
+	verb:w
+		goto:halfduggrave
+	verb:s
+		goto:rustygates
+room:grargsentrypost
+	name:Grarg Sentry Post
+	attr.shortdesc:by a Grarg sentry post
+	desc:A crude tower of splintered wood and rusted iron looms beside a narrow path. Charred torches and discarded bones suggest no diplomacy will be welcomed here.
+	attr.exits:[east,west]
+	verb:e
+		goto:guardroom
+	verb:w
+		goto:entrancehalltothepalace
+room:guardroom
+	name:Guard Room
+	attr.shortdesc:in the guard room
+	desc:The air smells of sweat and metal. Empty weapon racks line the walls, and overturned stools litter the floor. A recent struggle seems evident, but the guards are gone.
+	attr.exits:[south,west]
+	scenery:sword
+	verb:s
+		goto:kitchensofthepalace
+	verb:w
+		goto:grargsentrypost
+room:halfduggrave
+	name:Half-dug Grave
+	attr.shortdesc:in a half-dug grave
+	desc:Cold earth clings to your boots as you stand waist-deep in a freshly disturbed grave. The air is thick with decay, and claw marks in the soil suggest you were not the first to leave it unfinished.
+	attr.exits:[east]
+	scenery:bone
+	verb:e
+		goto:goblingraveyard
+room:halloftapestries
+	name:Hall of Tapestries
+	attr.shortdesc:in the hall of tapestries
+	desc:Faded fabric hangs in silence, depicting battles, banquets, and strange beasts. Some are torn, others singed. A cold draft rustles them like whispers from the past.
+	attr.exits:[north,south]
+	verb:n
+		goto:banquethall
+	verb:s
+		goto:mosaicflooredhall
+room:highglassgates
+	name:High Glass Gates
+	attr.shortdesc:near some high glass gates
+	desc:Crystal-clear panes shimmer with a faint magical hum, their delicate beauty out of place in the rough-hewn mountain. The gates are sealed tight, etched with glowing runes of protection.
+	attr.exits:[east,south,west]
+	scenery:hound
+	verb:e
+		goto:entrancehalltothepalace
+	verb:s
+		goto:ornatefountain
+	verb:w
+		goto:vaultedcavern
+room:highpinnacle
+	name:High Pinnacle
+	attr.shortdesc:on a high pinnacle
+	desc:The land falls away on all sides, revealing jagged valleys and distant peaks. The wind howls here, biting and loud, and the ground beneath you feels dangerously narrow.
+	attr.exits:[east]
+	scenery:rope
+	verb:e
+		goto:glacier
+room:highwalledgarden
+	name:High-walled Garden
+	attr.shortdesc:in a high-walled garden
+	desc:Towering hedges trap the scent of crushed roses and wet soil. Ivy climbs the walls, and faded statues of forgotten gods peer down through veils of green.
+	attr.exits:[east,south]
+	verb:e
+	verb:s
+		goto:gapbetweensomeboulders
+room:hollowtomb
+	name:Hollow tomb
+	attr.shortdesc:in a hollow tomb
+	desc:Stone walls press in around you, damp and echoing. A sarcophagus rests in the center, lid askew. The scent of ancient dust and faded incense still lingers in this long-forgotten resting place.
+	attr.exits:[east,west]
+	scenery:rubble
+	verb:e
+		goto:stalactitesstalagmites
+	verb:w
+		goto:goblingraveyard
+room:icypath
+	name:Icy Path
+	attr.shortdesc:on an icy path
+	desc:Your footing slips on the frozen stones, the path barely visible beneath a glaze of ice. Frost clings to the rocks, and the wind slices through your clothes like knives.
+	attr.exits:[north,south,up,down]
+	verb:n
+	verb:s
+	verb:u
+		goto:frozenpond
+	verb:d
+		goto:glacier
+room:inscribedcavern
+	name:Inscribed Cavern
+	attr.shortdesc:in an inscribed cavern
+	desc:Ancient symbols, glowing faintly blue, spiral across the cave walls. The air hums with unseen energy, and your skin tingles with the weight of old magic carved into stone.
+	attr.exits:[north,west]
+	scenery:inscriptions
+	verb:n
+		goto:vaultedcavern
+	verb:w
+		goto:highwalledgarden
+room:islandshore
+	name:Island Shore
+	attr.shortdesc:on an island shore
+	desc:Pebbles crunch beneath your feet as briny air rolls in from the lake. Twisted driftwood litters the narrow beach, and strange footprints vanish into the waterline.
+	attr.exits:[north,east,south]
+	verb:n
+		goto:oldkiln
+	verb:e
+		goto:beachedketch
+	verb:s
+		goto:roughwater
+room:kitchensofthepalace
+	name:Kitchens of the Palace
+	attr.shortdesc:in the kitchens of the palace
+	desc:Long-cold ovens line the stone walls, and blackened pots hang on rusting hooks. A shattered plate lies near a spilled sack of grain, as if the cook fled mid-meal.
+	attr.exits:[north,south,west]
+	scenery:cupboards
+	scenery:phial
+	verb:n
+		goto:guardroom
+	verb:s
+		goto:palacebattlements
+	verb:w
+		goto:longgallery
+room:longgallery
+	name:Long Gallery
+	attr.shortdesc:in the long gallery
+	desc:A grand hallway stretches into shadow, its walls lined with cracked portraits. Their painted eyes follow your movements, and the silence hums with long-held secrets.
+	attr.exits:[south,east]
+	verb:s
+		goto:banquethall
+	verb:e
+		goto:kitchensofthepalace
+room:lowerfloorofthemill
+	name:Lower Floor of the Mill
+	attr.shortdesc:on the lower floor of the mill
+	desc:The grinding stones are silent, and old flour dusts every surface. A mouse darts under a rusted gear, and from somewhere above, boards creak under invisible weight.
+	attr.exits:[west,up]
+	verb:w
+		goto:outsideawindmill
+	verb:u
+		goto:sacksontheupperfloor
+room:marshyinlet
+	name:Marshy Inlet
+	attr.shortdesc:by a marshy inlet
+	desc:Thick reeds sway in the sluggish breeze, and the ground sucks at your feet with each step. The water is dark, still, and treacherous, hiding whatever watches just beneath the surface.
+	attr.exits:[south]
+	scenery:reeds
+	verb:s
+		goto:oldkiln
+room:mazeoftunnels
+	name:Maze of Tunnels
+	attr.shortdesc:in a maze of tunnels
+	desc:Endless stone corridors twist and double back, walls close and slick with condensation. Faint scurrying noises surround you. It's easy to lose your sense of direction here, and your nerve.
+	attr.exits:[east,west]
+	scenery:maze
+	verb:e
+		goto:vaultedcavern
+	verb:w
+		goto:stalactitesstalagmites
+room:middleofthelake
+	name:Middle of the Lake
+	attr.shortdesc:in the middle of the lake
+	desc:Water stretches in all directions, dark and glassy beneath a colorless sky. Ripples spread from nowhere, and the gentle rocking of your craft is the only sign of movement.
+	attr.exits:[north,east]
+	verb:n
+		goto:roughwater
+	verb:e
+		goto:edgeofanicylake
+room:mistypool
+	name:Misty Pool
+	attr.shortdesc:by a misty pool
+	desc:A thin veil of mist curls over the still water, muffling all sound. The surface reflects the world imperfectly, as if hiding another realm beneath the glassy calm.
+	attr.exits:[south,west]
+	scenery:shield
+	verb:s
+		goto:sluicegates
+	verb:w
+		goto:gamekeeperscottage
+room:mosaicflooredhall
+	name:Mosaic floored Hall
+	attr.shortdesc:in a mosaic-floored hall
+	desc:Beneath your feet, intricate patterns of colored tiles form scenes of ancient glory. Many are cracked or missing, but some seem strangely intact, almost new.
+	attr.exits:[north,east,south]
+	scenery:goblet
+	verb:n
+		goto:halloftapestries
+	verb:e
+		goto:silverthroneroom
+	verb:s
+		goto:safeinogbanschambers
+room:mountainhut
+	name:Mountain Hut
+	attr.shortdesc:near a mountain hut
+	desc:Perched on a rocky ledge, the wooden hut looks abandoned. Smoke no longer rises from the chimney, and the door swings open slightly, creaking on its hinges.
+	attr.exits:[south,west]
+	scenery:planks
+	verb:s
+		goto:screeslope
+	verb:w
+		goto:frozenpond
+room:oldkiln
+	name:Old Kiln
+	attr.shortdesc:by an old kiln
+	desc:The crumbling brickwork of the kiln is blackened with soot, long cooled but once roaring with heat. Scorched pottery shards litter the ground, half-buried in ash and weeds.
+	attr.exits:[north,south]
+	scenery:jug
+	verb:n
+		goto:marshyinlet
+	verb:s
+		goto:islandshore
+room:ornatefountain
+	name:Ornate Fountain
+	attr.shortdesc:by an ornate fountain
+	desc:Cracked stone nymphs pour water into a basin choked with moss and coins blackened by time. The fountain still trickles faintly, though no one tends it anymore.
+	attr.exits:[north]
+	verb:n
+		goto:highglassgates
+room:outsideawindmill
+	name:Outside a Windmill
+	attr.shortdesc:outside a windmill
+	desc:The sails of the windmill hang limp in the still air. Moss creeps up the stone base, and faded chalk marks around the door hint at forgotten wards.
+	attr.exits:[north,east,south,west]
+	verb:n
+		goto:barrencountryside
+	verb:e
+		goto:lowerfloorofthemill
+	verb:s
+		goto:pittedtrack
+	verb:w
+		goto:ploughedfield
+room:overgrowntrack
+	name:Overgrown Track
+	attr.shortdesc:on an overgrown track
+	desc:Twisted branches claw across a path nearly swallowed by underbrush. Broken stones peek through the moss, hinting at a time when this was a road worth traveling.
+	attr.exits:[east]
+	scenery:pony
+	verb:e
+		goto:disusedwaterwheel
+room:palacebattlements
+	name:Palace Battlements
+	attr.shortdesc:on the palace battlements
+	desc:High above the land, the wind tears at your cloak as you peer over the edge. The view is grand, and grim. Smoke rises from distant farms, and storm clouds churn overhead.
+	attr.exits:[north]
+	scenery:brooch
+	verb:n
+		goto:kitchensofthepalace
+room:perilouspath
+	name:Perilous Path
+	attr.shortdesc:on a perilous path
+	desc:The trail clings to the cliffside like a scar, narrow and crumbling. Loose stones tumble into the void below with every cautious step. One wrong move would be your last.
+	attr.exits:[east,west]
+	verb:e
+		goto:silverbellintherock
+	verb:w
+		goto:gapbetweensomeboulders
+room:pittedtrack
+	name:Pitted Track
+	attr.shortdesc:on a pitted track
+	desc:The road ahead is broken and worn, pocked with ancient wheel ruts and puddles of stagnant water. Strange claw marks scratch at the stones along the edges.
+	attr.exits:[north,south,west]
+	verb:n
+		goto:outsideawindmill
+	verb:s
+		goto:woodmanshut
+	verb:w
+		goto:edgeofanicylake
+room:ploughedfield
+	name:Ploughed Field
+	attr.shortdesc:in a ploughed field
+	desc:Deep furrows carve the earth, still damp from recent tilling. No crops grow, but hoofprints and a broken harness suggest someone, or something, fled in haste.
+	attr.exits:[east]
+	verb:e
+		goto:outsideawindmill
+room:roughwater
+	name:Rough Water
+	attr.shortdesc:in some rough water
+	desc:Churning waves slap against hidden rocks, sending up cold sprays of foam. The current pulls at you with surprising strength, and underwater shapes flit just out of sight.
+	attr.exits:[north,south]
+	verb:n
+		goto:islandshore
+	verb:s
+		goto:middleofthelake
+room:rowofcasks
+	name:Row of Casks
+	attr.shortdesc:by a row of casks
+	desc:The scent of sour wine and damp oak fills the air. The casks are old, some leaking, others sealed with thick wax. A few bear sigils long forgotten.
+	attr.exits:[east]
+	verb:e
+		goto:winecellar
+room:rustygates
+	name:Rusty Gates
+	attr.shortdesc:near some rusty gates
+	desc:Iron bars, streaked with age and neglect, groan softly in the wind. Vines creep along the hinges, as if nature itself is trying to reclaim what was once locked away.
+	attr.exits:[north]
+	scenery:pony
+	verb:n
+		goto:goblingraveyard
+room:sacksontheupperfloor
+	name:Sacks on the Upper Floor
+	attr.shortdesc:by some sacks on the upper floor
+	desc:Dusty sacks are stacked high, their contents unknown. A few are split, spilling grain or powder across rotting floorboards. The roof creaks ominously with each gust of wind.
+	attr.exits:[down]
+	scenery:sacks
+	scenery:seeds
+	verb:d
+		goto:lowerfloorofthemill
+room:safeinogbanschambers
+	name:Safe in Ogban's Chambers
+	attr.shortdesc:by a safe in Ogban's chambers
+	desc:The massive safe is bolted to the stone floor, its dials worn smooth. Papers and half-burnt maps lie scattered nearby, signs of someone searching, or fleeing.
+	attr.exits:[north,west]
+	scenery:key
+	verb:n
+		goto:mosaicflooredhall
+	verb:w
+		goto:cobwebbyroom
+room:screeslope
+	name:Scree Slope
+	attr.shortdesc:on a scree slope
+	desc:Loose stones slide beneath each step, threatening to send you tumbling down the steep incline. The only handholds are sharp rocks and brittle shrubs.
+	attr.exits:[north,south]
+	verb:n
+		goto:mountainhut
+	verb:s
+		goto:hugefallenoak
+room:sideofawoodedvalley
+	name:Side of a Wooded Valley
+	attr.shortdesc:on the side of a wooded valley
+	desc:Trees cluster thickly down the slope, their roots twisted in the stony earth. A faint trail leads into the shadows below, where the light thins and the silence deepens.
+	attr.exits:[east,west]
+	verb:e
+		goto:streaminavalleybottom
+	verb:w
+		goto:woodmanshut
+room:silverbellintherock
+	name:Silver Bell in the Rock
+	attr.shortdesc:by a silver bell in the rock
+	desc:Embedded in the stone, the bell gleams unnaturally clean. A faint vibration hums through it, as though it waits for a voice, or a hand, to awaken it.
+	attr.exits:[west]
+	verb:w
+		goto:perilouspath
+room:silverchamber
+	name:Silver Chamber
+	attr.shortdesc:in the silver chamber
+	desc:The walls shimmer faintly, catching the light in a shifting cascade. At the center stands a pedestal of pale stone, empty but humming with the memory of power once held.
+	attr.exits:[east]
+	scenery:stone of destiny
+	verb:e
+		goto:wizardslair
+room:silverthroneroom
+	name:Silver Throne Room
+	attr.shortdesc:in the silver throne room
+	desc:Tall windows cast cold light on a high, gleaming throne. Dust hangs thick in the air, and the silence here is reverent, like the room itself remembers who once sat there.
+	attr.exits:[north,west]
+	scenery:silver plate
+	verb:n
+		goto:dustylibrary
+	verb:w
+		goto:mosaicflooredhall
+room:sluicegates
+	name:Sluice Gates
+	attr.shortdesc:by some sluice gates
+	desc:Great wooden gates block a sluggish stream, bound by rusting chains. The control wheel is stuck fast, and the water behind it churns with ominous pressure.
+	attr.exits:[north]
+	scenery:handle
+	verb:n
+		goto:mistypool
+room:stalactitesstalagmites
+	name:Stalactites Stalagmites
+	attr.shortdesc:near some stalactites and stalagmites
+	desc:Dripping water echoes through the gloom, pooling between jagged stone teeth above and below. The formations shimmer faintly, casting eerie shadows that dance like spirits in the flickering torchlight.
+	attr.exits:[east,west]
+	verb:e
+		goto:mazeoftunnels
+	verb:w
+		goto:hollowtomb
+room:streaminavalleybottom
+	name:Stream in a Valley Bottom
+	attr.shortdesc:near a stream in a valley bottom
+	desc:The stream gurgles softly over smooth stones, bordered by moss and fern. The air here is cool and rich with loam, though the distant croak of frogs sounds oddly strained.
+	attr.exits:[south,west]
+	verb:s
+		goto:westernendofabridge
+	verb:w
+		goto:sideofawoodedvalley
+room:turretroom
+	name:Turret Room
+	attr.shortdesc:in a turret room with a slot machine
+	desc:Dust motes dance in the dim light filtering through a narrow window. In the corner, a strange metallic contraption hums softly, gleaming with symbols and untouched by time.
+	attr.exits:[east]
+	verb:e
+		goto:cobwebbyroom
+room:vaultedcavern
+	name:Vaulted Cavern
+	attr.shortdesc:in a vaulted cavern
+	desc:The ceiling arches high overhead, lost in darkness. Massive stone pillars rise like silent sentinels, and your footsteps vanish into the echoing void. Something ancient watches from the shadows.
+	attr.exits:[east,south,west]
+	verb:e
+		goto:highglassgates
+	verb:s
+		goto:inscribedcavern
+	verb:w
+		goto:mazeoftunnels
+room:winecellar
+	name:Wine Cellar
+	attr.shortdesc:in a wine cellar
+	desc:Candlelight flickers across rows of dusty bottles and crumbling labels. Cobwebs hang thickly from the beams, and the floor is stained with ancient spills and something darker.
+	attr.exits:[north,west]
+	scenery:rats
+	verb:n
+		goto:dungeonsofthepalace
+	verb:w
+		goto:rowofcasks
+room:wizardslair
+	name:Wizard's Lair
+	attr.shortdesc:in the wizard's lair
+	desc:Shelves buckle under the weight of scrolls and grimoires. Strange apparatus bubble and hiss, and arcane symbols glow faintly on the floor, pulsing like a heartbeat.
+	attr.exits:[south,west]
+	verb:s
+		goto:cobwebbyroom
+	verb:w
+		goto:silverchamber
+room:woodmanshut
+	name:Woodman's Hut
+	attr.shortdesc:in a woodman's hut
+	desc:A crude axe rests by the hearth, and bundles of dried herbs hang from the rafters. The floor is swept clean, but the untouched bowl of stew suggests a hurried departure.
+	attr.exits:[north,east,south]
+	scenery:axe
+	verb:n
+		goto:pittedtrack
+	verb:e
+		goto:sideofawoodedvalley
+	verb:s
+		goto:burntoutcampfire

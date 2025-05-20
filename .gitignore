@@ -1,0 +1,62 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+*.d64
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+storytllr/png_x
+storytllr/logs
+storytllr/extra_x
+storytllr/vga_img
+storytllr/img_x
+storytllr/temp.h
+storytllr/storytllr64_data.h
+storytllr/c1541.exe
+storytllr/make.bat
