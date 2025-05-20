@@ -8,9 +8,20 @@ This complete project is freely available here on **GitHub**. If you like it ple
 
 Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
 
+## The Book
+
 ![alt text](_pub/eng_cover.jpg)
 
 [Link to original English book](https://dn790001.ca.archive.org/0/items/the-mystery-of-silver-mountain/the-mystery-of-silver-mountain.pdf)
+
+## The C64 (original) game
+
+![alt text](_pub/ingame_C64.png)
+
+## The C64 (new) game
+
+![alt text](_pub/ingame_title.png)
+![alt text](_pub/ingame_crossroads.png)
 
 ## Why?
 
