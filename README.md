@@ -8,16 +8,28 @@ This complete project is freely available here on **GitHub**. If you like it ple
 
 Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
 
+## The Book
+
 ![alt text](_pub/eng_cover.jpg)
 
 [Link to original English book](https://dn790001.ca.archive.org/0/items/the-mystery-of-silver-mountain/the-mystery-of-silver-mountain.pdf)
+
+## The C64 (original) game
+
+![alt text](_pub/ingame_C64.png)
+
+## The C64 (new) game
+
+![alt text](_pub/ingame_title.png)
+![alt text](_pub/ingame_crossroads.png)
 
 ## Why?
 
 I was probably thirteen/fourteen when my parents gave me a copy of **The Mystery of Silver Mountain**. It was summer, and my younger brother and I typed that BASIC listing on a C64 with a green phosphor monitor on some hot afternoon before we could go play in the woods. It was probably one of the first text adventure games I fell in love with, accomplices also being the beautiful illustrations in the book, and the wonderful background story, which, in the game was recalled with just a few words, and without any graphics.
 I thought about it a lot while making **Nesterin Trail**, and after looking around at some material I decided to try to make a porting of that masterpiece using StoryTllr64. Not a “simple” transposition (with the addition of some graphics), but a little something more -- adding descriptions and text where there were none for space reasons (the game had to run on multiple machines with little memory) -- but preserving the gameplay. That is, I want it to be possible to play this version identically to the original-including the possibility of dying on the fly, or making mistakes that will not allow the game to end. I mean, I want this version playable following this [guide](https://solutionarchive.com/file/id%2C7197/) - that works with the original game.
 
-It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – **80 locations** and a staggering number of moves required to complete it) but I'll try - and at least I'll release a working game featuring a first part of this large game.
+It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – **80 locations** and a staggering number of moves required to complete it).
+My first goal is to release a working game featuring the first part of this large game - with at least half of the locations (stopping at **Huge fallen oak** - where there's the **Goblin Guardian ghost** - I'll let you also handle that task, but I won't let you go further from that - at least for a first release)
 
 ## Notes & Thanks
 
