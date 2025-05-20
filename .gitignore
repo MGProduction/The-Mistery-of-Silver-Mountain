@@ -53,6 +53,8 @@ Mkfile.old
 dkms.conf
 png/*.ini
 png/*.jpg
+png/C64/
+png/VGA/
 png_x
 logs
 extra_x
