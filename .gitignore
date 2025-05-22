@@ -47,7 +47,7 @@ c_src/Debug
 c_src/.vs
 c_src/enc_temp_folder
 c_src/*.sln
-c_src/*.vcproj*
+c_src/*.vcxproj*
 
 # Kernel Module Compile Results
 *.mod*
