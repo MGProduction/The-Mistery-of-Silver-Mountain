@@ -43,6 +43,12 @@
 *.idb
 *.pdb
 
+c_src/Debug
+c_src/.vs
+c_src/enc_temp_folder
+c_src/*.sln
+c_src/*.vcproj*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
