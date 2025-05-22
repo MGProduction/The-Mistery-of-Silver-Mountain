@@ -44,3 +44,9 @@ The first thing I needed was a full map of the game, not just to reproduce it in
 ![alt text](_pub/TheMysteryOfSilverMountain.jpg)
 
 I've also added the names of the objects present in each location to the map (the ones with parenthesis around are the ones hidden at the start). This will not include what's set in the code, but it's a start.
+
+## WIP status
+
+This is the current status: rounded rooms are the ones available at the moment (even if not everyone is fully playable, and all of them have just some minimal enrichment - longer description, graphics, some extra synonyms for already handled actions)
+
+![alt text](_pub/TheMysteryOfSilverMountain_WIP.jpg)
