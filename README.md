@@ -31,6 +31,8 @@ I thought about it a lot while making **Nesterin Trail**, and after looking arou
 It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – **80 locations** and a staggering number of moves required to complete it).
 My first goal is to release a working game featuring the first part of this large game - with at least half of the locations (stopping at **Huge fallen oak** - where there's the **Goblin Guardian ghost** - I'll let you also handle that task, but I won't let you go further from that - at least for a first release)
 
+**new** I've created a working C version of the original game (https://github.com/MGProduction/The-Mistery-of-Silver-Mountain-C-version) so to have a sure and quick way to check if everything is faithful with the original version.
+
 ## Notes & Thanks
 
 All the material I create for this project will be free and the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce. Please be aware that I'm creating a derivative work on **Chris Oxlade** + **Judy Tatchell** + **Usborne Computer Guides** original material so I, of course, cannot really license anything.
