@@ -1,68 +1,100 @@
-#define screen_width 40
-#define objcount     88
-#define verbcount    57
-#define roomcount    80
+#if !defined(_C_SILVERMOUNTAIN_H_)
+#define _C_SILVERMOUNTAIN_H_
+
+// -------------------------------------------------------
+typedef void(*VERBFUNCT)();
+// -------------------------------------------------------
+
+#define SCREEN_WIDTH 40
+#define OBJCOUNT     88
+#define TOBJCOUNT    28
+#define VERBCOUNT    57
+#define ROOMCOUNT    80
 #define g            28
+
+// -------------------------------------------------------
+// FLAGS
+#define FLAG_BOOTSON 29
+#define FLAG_SHEETONBOAT 30
+#define FLAG_BUCKETONBOAT 31
+#define FLAG_BOARCAPTURED 32
+#define FLAG_EMPTYPOOL 33
+#define FLAG_BOOTSUSAGE 39
+#define FLAG_TIEDSHEET 40
+#define FLAG_STABLEDOOR 43
+#define FLAG_COINSCOUNT 44
+#define FLAG_RUBBLEBLOCKSYOU 45
+#define FLAG_TIEDROPE 53
+#define FLAG_GRARGSAPPROACHING 55
+#define FLAG_YOUAREDEAD 56
+#define FLAG_BOATSINKING 67
 // GOSUB_REF
-/*
-#define FUNCT_MOVE 800
-#define FUNCT_MOVE 800
-#define FUNCT_MOVE 800
-#define FUNCT_MOVE 800
-#define FUNCT_MOVE 800
-#define FUNCT_MOVE 800
-#define FUNCT_INVENTORY 1220
-#define FUNCT_GET 1290
-#define FUNCT_TAKE 1290
-#define FUNCT_EXAMINE 1470
-#define FUNCT_READ 1470
-#define FUNCT_GIVE 1750
-#define FUNCT_SAY 1890
-#define FUNCT_PICK 1960
-#define FUNCT_WEAR 1980
-#define FUNCT_TIE 2010
-#define FUNCT_CLIMB 2050
-#define FUNCT_RIG 2870
-#define FUNCT_USE 2120
-#define FUNCT_OPEN 2220
-#define FUNCT_LIGHT 2310
-#define FUNCT_FILL 2380
-#define FUNCT_PLANT 2420
-#define FUNCT_WATER 2450
-#define FUNCT_SWING 2470
-#define FUNCT_EMPTY 2520
-#define FUNCT_ENTER 2550
-#define FUNCT_CROSS 2580
-#define FUNCT_REMOVE 2610
-#define FUNCT_FEED 2650
-#define FUNCT_TURN 2670
-#define FUNCT_DIVE 2700
-#define FUNCT_BAIL 2720
-#define FUNCT_LEAVE 2730
-#define FUNCT_THROW 2830
-#define FUNCT_INSERT 2800
-#define FUNCT_BLOW 2870
-#define FUNCT_DROP 2730
-#define FUNCT_EAT 2920
-#define FUNCT_MOVE 2950
-#define FUNCT_INTO 2990
-#define FUNCT_RING 3010
-#define FUNCT_CUT 3050
-#define FUNCT_HOLD 3070
-#define FUNCT_BURN 2310
-#define FUNCT_POISON 2990
-#define FUNCT_SHOW 3070
-#define FUNCT_UNLOCK 3130
-#define FUNCT_WITH 2120
-#define FUNCT_DRINK 3190
-#define FUNCT_COUNT 1470
-#define FUNCT_PAY 3100
-#define FUNCT_MAKE 2870
-#define FUNCT_BREAK 3150
-#define FUNCT_STEAL 1290
-#define FUNCT_GATHER 1290
-#define FUNCT_REFLECT 3170
-*/
+void c_FUNCT_GOTO();
+void c_FUNCT_GOTO();
+void c_FUNCT_GOTO();
+void c_FUNCT_GOTO();
+void c_FUNCT_GOTO();
+void c_FUNCT_GOTO();
+void c_FUNCT_INVENTORY();
+void c_FUNCT_GET();
+void c_FUNCT_TAKE();
+void c_FUNCT_EXAMINE();
+void c_FUNCT_READ();
+void c_FUNCT_GIVE();
+void c_FUNCT_SAY();
+void c_FUNCT_PICK();
+void c_FUNCT_WEAR();
+void c_FUNCT_TIE();
+void c_FUNCT_CLIMB();
+void c_FUNCT_RIG();
+void c_FUNCT_USE();
+void c_FUNCT_OPEN();
+void c_FUNCT_LIGHT();
+void c_FUNCT_FILL();
+void c_FUNCT_PLANT();
+void c_FUNCT_WATER();
+void c_FUNCT_SWING();
+void c_FUNCT_EMPTY();
+void c_FUNCT_ENTER();
+void c_FUNCT_CROSS();
+void c_FUNCT_REMOVE();
+void c_FUNCT_FEED();
+void c_FUNCT_TURN();
+void c_FUNCT_DIVE();
+void c_FUNCT_BAIL();
+void c_FUNCT_LEAVE();
+void c_FUNCT_THROW();
+void c_FUNCT_INSERT();
+void c_FUNCT_BLOW();
+void c_FUNCT_DROP();
+void c_FUNCT_EAT();
+void c_FUNCT_MOVE();
+void c_FUNCT_INTO();
+void c_FUNCT_RING();
+void c_FUNCT_CUT();
+void c_FUNCT_HOLD();
+void c_FUNCT_BURN();
+void c_FUNCT_POISON();
+void c_FUNCT_SHOW();
+void c_FUNCT_UNLOCK();
+void c_FUNCT_WITH();
+void c_FUNCT_DRINK();
+void c_FUNCT_COUNT();
+void c_FUNCT_PAY();
+void c_FUNCT_MAKE();
+void c_FUNCT_BREAK();
+void c_FUNCT_STEAL();
+void c_FUNCT_GATHER();
+void c_FUNCT_REFLECT();
+
+void c_FUNCT_NULL();
+void c_FUNCT_INTOMAZE();
+void c_FUNCT_PRESSENTER();
+
+void draw_MSG();
+
+// -------------------------------------------------------
+
 // VERBS
 #define VERB_NORTH  1
 #define VERB_EAST   2
@@ -121,6 +153,9 @@
 #define VERB_STEAL   55
 #define VERB_GATHER   56
 #define VERB_REFLECT   57
+
+// -------------------------------------------------------
+
 // OBJECTS
 #define OBJ_STATUS_VISIBLE 0
 #define OBJ_STATUS_HIDDEN  1
@@ -213,6 +248,9 @@
 #define OBJ_WELL_BOTTOM 86
 #define OBJ_OLD_KILN 87
 #define OBJ_MOUNTIAN_HUT 88
+
+// -------------------------------------------------------
+
 // ROOMS
 #define ROOM_INVENTORY 0
 #define ROOM_HALFDUG_GRAVE 1
@@ -297,3 +335,6 @@
 #define ROOM_WHITE_COTTAGE 80
 #define ROOM_NOWHERE 81
 
+// -------------------------------------------------------
+
+#endif
