@@ -54,3 +54,5 @@ This is the current status: rounded rooms are the ones available at the moment (
 ![alt text](_pub/TheMysteryOfSilverMountain_WIP.jpg)
 
 At the moment it's possible to follow the solution's guide steps up to Goblin Guardian with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
+
+Once ready also the .d64 will be added to this page (and it will be present also a page about this demo on itch.io)
