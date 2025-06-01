@@ -4,7 +4,9 @@ This is a tribute to **1984**'s **Usborne** BASIC text-adventure masterpiece, ca
 
 So I decided to create a remake - adding extra text and graphics - and publish the new source code (**StoryTllr64** scripts) to help check it in these different "clothes", to highlight the greatness of the original work.
 
-This complete project is freely available here on **GitHub**. If you like it please share your appreciation for the original authors and their publisher.
+This **complete project** is **freely available** here on **GitHub**. As far as I know, the original game (nor the book) is not in commerce anymore.
+
+If you like it please share your appreciation for the original authors and their publisher.
 
 Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
 
