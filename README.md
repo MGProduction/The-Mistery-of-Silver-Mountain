@@ -55,4 +55,9 @@ This is the current status: rounded rooms are the ones available at the moment (
 
 At the moment it's possible to follow the solution's guide steps up to ééEntrance hall to the palace** with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
 
+Changes compared to the original game: 
+- **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
+- **Silver bell in the rocks**: (not yet implemented) this puzzle will be handled in the same way. You need to find a clue, once you find it, you don't have to write it down and insert it when prompted.
+- **Frozen pond**: this is the only 'you're automatically dead' element I've decided to let you escape from (you can backtrack to the Mountain Hut)
+
 Once ready also the .d64 will be added to this page (and it will be present also a page about this demo on itch.io)
