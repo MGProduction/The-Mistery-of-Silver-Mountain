@@ -1,3 +1,4 @@
+[#FAST]
 [The Mistery of Silver Mountain]
 [Introduction]
 [Crossroads]
@@ -68,8 +69,8 @@ n
 n
 [Island shore]
 drop boat
-[Old kiln]
 n
+[Old kiln]
 examine kiln
 get jug
 n
@@ -98,34 +99,51 @@ drop boat
 drop bucket
 get sheet
 e
+[Pitted track]
 n
+[Outside a windmill]
 e
+[Lower floor of the mill]
 u
+[Sacks on the upper floor]
 get sacks
 examine sacks
 get seeds
 d
+[Lower floor of the mill]
 w
+[Outside a windmill]
 n
+[Barren countryside]
 n
 throw net
 n
+[Disused waterwheel]
 turn wheel
 n
+[Gamekeeper's cottage]
 get lamp
 e
+[Misty pool]
 examine pool
 s
+[Sluice gates]
 examine sluice gates
 turn handle
 n
+[Misty pool]
 examine pool
 get shield
 w
+[Gamekeeper's cottage]
 s
+[Disused waterwheel]
 w
+[Overgrown track]
 give apple
+[Rusty gates]
 n
+[Goblin graveyard]
 read inscriptions
 e
 e
@@ -157,3 +175,213 @@ w
 n
 blow reeds
 drop reeds
+north
+north
+enter hut
+get planks
+west
+drop planks
+south
+down
+west
+get rope
+east
+north
+up
+north
+north
+plant seeds
+water seeds
+drop jug
+drop seeds
+climb vine
+read inscriptions
+north
+west
+west
+west
+move rubble
+west
+east
+east
+east
+east
+south
+north
+east
+[#NORM]
+give bone
+east
+east
+east
+wear boots
+east
+remove boots
+get sword
+wear boots
+south
+remove boots
+examine kitchens
+open cupboard
+get phial
+examine phial
+south
+[#STOP]
+get brooch
+north
+west
+south
+examine grargs
+wear boots
+south
+remove boots
+south
+poison wine
+east
+north
+north
+drop boots
+get uniform
+wear uniform
+examine uniform
+north
+east
+north
+west
+west
+south
+swing axe
+south
+south
+west
+light lamp
+west 
+give bread 
+west 
+open casks 
+west 
+east 
+east 
+examine stables 
+examine door 
+get horseshoe
+open door
+burn door
+get horseshoe
+south
+west
+west
+west
+west
+give coin
+cross bridge
+west
+west
+west
+tie sheet
+climb sheet 
+examine well bottom 
+swing axe
+north
+get ring
+east
+south
+east
+north
+east
+give brooch
+west
+north
+north
+north
+north
+west 
+give apple 
+north 
+east
+east 
+east
+east 
+east 
+east
+east 
+west
+south
+west
+south 
+east 
+east 
+ring bell # hermit gave you correct number
+east 
+north
+north
+east
+east
+south 
+west
+south
+south
+south 
+east 
+get silver plate
+north 
+read books 
+south
+west 
+south 
+west 
+west 
+cut cobwebs 
+west 
+insert coin 
+east
+east 
+open safe #code seen inserting coin
+get key
+west
+north 
+west 
+hold up silver plate 
+west 
+unlock door 
+drop key
+west 
+get stone of destiny
+say magic words 
+say awake 
+say guide 
+[#STOP]
+say #write word based on books info
+[#STOP]
+s
+e
+e
+e
+[Stable]
+examine stable
+examine door
+get horseshoe
+open door
+s
+w
+w
+w
+w 
+give coin
+cross bridge
+w
+w
+w
+tie sheet
+climb sheet
+examine well bottom
+swing axe
+n
+get ring
+e
+s
+e
+n
+e
+give brooch
+

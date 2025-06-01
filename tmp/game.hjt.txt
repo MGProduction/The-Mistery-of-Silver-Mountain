@@ -13,7 +13,7 @@ config
 		rborder:1
 		hborder:8
 		splity:96
-		imgborder:png/border2.png
+		imgborder:png/border3.png
 include:stdlib.hjt
 verb:onleave
 	if:bootson
@@ -21,13 +21,14 @@ verb:onleave
 		if:bootsusage>5
 			msg:Boots worn out!
 			put:boots,$nowhere
-			if:weight>0
-				decvar:weight,1
 			unset:bootson
 genericverb:bail
 	withobj:$every
 		msg:How?
 genericverb:blow
+	withobj:reeds
+		ifobjin:$this,$available
+			msg:You obtain a nice tune
 genericverb:break
 genericverb:burn
 genericverb:climb
@@ -37,35 +38,120 @@ genericverb:dive
 genericverb:drink
 	withobj:$every
 		msg:You're not thirsty
+genericverb:eat
 genericverb:empty
 genericverb:feed
 genericverb:hold
 genericverb:insert
 genericverb:light
 genericverb:make
+	withobj:reeds
+		ifobjin:$this,$available
+			msg:You obtain a nice tune
+genericverb:move
 genericverb:pay
 genericverb:plant
+	withobj:seeds
+		ifobjin:$this,$available
+			msg:You plant some of them, but nothing appens
 genericverb:poison
 genericverb:reflect
 genericverb:remove
 genericverb:rig
+	withobj:reeds
+		ifobjin:$this,$available
+			msg:You obtain a nice tune
 genericverb:ring
 genericverb:swing
+	withobj:axe
+		ifobjin:$this,$available
+			msg:Thwack!
+		else
+			msg:You don't have it
+	withobj:sword
+		ifobjin:$this,$available
+			msg:Thwack!
+		else
+			msg:You don't have it
 genericverb:throw
+	withobj:$every
+		ifobjin:$this,$available
+			put:$this,$here
+			msg:Didn't go far...
 genericverb:turn
 genericverb:water
 genericverb:wear
-sceneryactor:hermit
+actor:hermit
 	name:a hermit
+	desc:The hermit seems old and fragile, but his gaze reveals a spirit not entirely bent by events.
 	startat:sideofawoodenvalley
-		verb:give
-			msg:He gives that back to you
-		verb:talk
-			if:hermitknowsyou
-				msg:"You need +
-				msg: rings", he says.
+	verb:give
+		msg:He gives that back to you
+	verb:talk
+		if:hermitknowsyou
+			msg:"You need +
+			msg: rings", he says.
+		else
+			msg:He looks at you without answering. He has clearly seen too many horrible things to trust a stranger.
+actor:pony
+	name:a pony
+	desc:The pony looks hungry, but still looks like a mighty animal, and is saddled
+	startat:overgrowntrack
+	verb:feed
+		msg:With what?
+actor:ogban
+	name:Ogban
+	desc:His large body lies on the floor in a strange position, with his hands reaching towards his throat. He's clearly dead.
+	startat:safeinogbanschambers
+actor:troll
+	name:a troll
+	desc:A squat, shaggy creature with a disturbing appearance
+	verb:pay
+	verb:give
+		withobj:coins
+			ifobjin:coins,$available
+				msg:The troll takes them all and goes away
+				put:coins,$nowhere
+				set:toll
 			else
-				msg:He looks at you without answering. He has clearly seen too many horrible things to trust a stranger.
+				msg:You don't have any
+		withobj:coin
+			ifobjin:coins,$available
+				msg:The troll takes it and goes away
+				decvar:coinnum,1
+				if:coinnum=0
+					put:coins,$nowhere
+					msg:You run out of coins
+				set:toll
+			else
+				msg:You don't have any
+		withobj:$every
+			msg:He doesn't want it
+actor:boar
+	startat:barrencountryside
+	name:a huge boar
+	desc:A colossal boar with eyes that burn like embers regards you warily, its intentions unclear.
+	verb:feed
+		ifobjin:$this,$available
+			msg:With what?
+	verb:give
+	verb:withobj:$every
+		ifobjin:$this,$available
+			ifobjin:$that,$available
+				put:$that,$nowhere
+				msg:He eats it!
+actor:hound
+	startat:highglassgates
+	name:a ferocious hound
+	verb:feed
+		ifobjin:$this,$available
+			msg:With what?
+	verb:give
+		withobj:$every
+			ifobjin:$this,$available
+				ifobjin:$that,$available
+					put:$that,$nowhere
+					msg:He eats it!
 normalobj:apple
 	name:one apple
 	syn:apple
@@ -73,8 +159,6 @@ normalobj:apple
 		ifobjin:apple,$available
 			msg:It's tasty
 			put:apple,$nowhere
-			if:weight>0
-				decvar:weight,1
 normalobj:apples
 	name:some apples
 	syn:apples
@@ -82,9 +166,8 @@ normalobj:apples
 	verb:eat
 		ifobjin:apples,$available
 			msg:They're tasty
+			msg:Done
 			put:apples,$nowhere
-			if:weight>0
-				decvar:weight,1
 normalobj:axe
 	name:an axe
 	syn:axe
@@ -92,22 +175,28 @@ normalobj:axe
 normalobj:boat
 	name:a boat
 	syn:boat
+	desc:A little boat, in poor shape. It lacks oars and its mast has no sails.
 	startat:edgeofanicylake
+normalobj:boatwithsail
+	name:a boat
+	syn:boat
+	desc:A little boat, in poor shape. It has a sheet as a sail.
 normalobj:bone
 	name:a bone
 	syn:bone
-	_startat:halfduggrave
+	startat:halfduggrave
 	verb:give
 normalobj:boots
 	name:some boots
 	syn:boots
+	desc:The boots look really old and are very ruined
 	_startat:cupboard
 	verb:wear
 		ifobjin:boots,$available
 			if:bootson
 				msg:You're already wearing them
 			else
-				msg:Once you wear them you realize you are invisible
+				msg:Once worn, you discover that you are invisible.
 				set:bootson
 	verb:remove
 		ifobjin:boots,$available
@@ -116,23 +205,17 @@ normalobj:boots
 				unset:bootson
 			else
 				msg:You don't have them on
-	verb:x
-		ifobjin:boots,$available
-			msg:The boots look really old and are very ruined
 normalobj:bread
 	name:some bread
 	startat:whitecottage
 	syn:bread
 	verb:eat
 		ifobjin:bread,$available
-			msg:It's disgusting, but still eatable.
+			msg:It's disgusting, but still eatable. 
+			msg:Done
 			put:bread,$nowhere
-			if:weight>0
-				decvar:weight,1
-	verb:x
-		ifobjin:bread,$available
-			msg:It's stale and there's some mold on it
 	verb:give
+	desc:It's stale and there's some mold on it
 normalobj:brooch
 	name:a brooch
 	startat:palacebatttlements
@@ -144,8 +227,6 @@ normalobj:brooch
 				msg: rings", he says.
 				put:brooch,$nowhere
 				set:hermitknowsyou
-				if:weight>0
-					decvar:weight,1
 normalobj:bucket
 	name:a bucket
 	startat:topofadeepwell
@@ -157,7 +238,7 @@ normalobj:coins
 	syn:coins
 	_startat:whitecottage
 normalobj:horseshoes
-	name:horseshoes
+	name:a horseshoes
 	verb:take
 		ifnot:doorburned
 			msg:It's firmly nailed on
@@ -168,16 +249,39 @@ normalobj:horseshoes
 normalobj:jug
 	name:a jug
 	_startat:oldkiln
+	desc:A normal jug
+normalobj:jugfull
+	name:a jug
+	desc:A normal jug, filled with water
 normalobj:key
 	name:a key
 normalobj:lamp
 	name:a lamp
 	startat:gamekeeperscottage
+	verb:light
+		ifobjin:lamp,$available
+			ifobjin:lamp,$inventory
+				ifobjin:matches,$inventory
+					msg:With what?
+				else
+					put:lamp,$nowhere
+					put:litlamp,$inventory
+			else
+				msg:You should take it first
+normalobj:litlamp
+	syn:lamp
+	name:a lighted lamp
+normalobj:matches
+	name:some matches
+	verb:light
+		ifobjin:$this,$available
+			msg:You lit one of them
 normalobj:net
 	name:a net
 	_startat:beachedketch
 normalobj:phial
 	name:a phial
+	desc:The label reads 'Poison'
 normalobj:planks
 	name:some planks
 normalobj:reeds
@@ -193,15 +297,29 @@ normalobj:rope
 normalobj:seeds
 	name:some seeds
 normalobj:sheet
-	name:sheet
+	name:a sheet
 	_startat:atticbedroom
 	verb:use
-		ifobjin:boat,$available
-			if:boatwithsheet
-				msg:You're already using the sheet as sail
-			else
+		ifobjin:$this,$available
+			ifobjin:boat,$available
 				msg:You put the sheet on the boat as a sail
-				set:boatwithsheet
+				put:sheet,$nowhere
+				ifobjin:boat,$inventory
+					put:boatwithsail,$inventory
+					put:boat,$nowhere
+				else
+					put:boatwithsail,$here
+					put:boat,$nowhere
+	verb:remove|take
+		ifobjin:boatwithsail,$available
+			msg:You take the sheet back
+			put:sheet,$inventory
+			ifobjin:boatwithsail,$inventory
+				put:boat,$inventory
+				put:boatwithsail,$nowhere
+			else
+				put:boat,$here
+				put:boatwithsail,$nowhere
 normalobj:shield
 	name:a shield
 normalobj:silverplate
@@ -232,6 +350,13 @@ normalobj:uniform
 				unset:uniformon
 			else
 				msg:You don't have it on
+	verb:x
+		ifobjin:uniform,$available
+			msg:It's a dirty Grarg's uniform, and it's more or less your size
+			ifnot:matchesseen
+				set:matchesseen
+				msg:In a pocket you find some matches!
+				put:matches,$inventory
 room:$start
 	image:png\_title.jpg
 	name:The Mistery of Silver Mountain
@@ -269,7 +394,7 @@ room:_dead
 	onfirst
 		clear
 		msg:You have failed in your quest!
-		msg:Your sudden death is yet another failure in your attempt to free the Sylvani people from tyranny.
+		msg:Your sudden death is yet another failure in the attempt to free the Sylvani people from tyranny.
 		msg:Do you want to try again? (Y/N)
 		getkey
 		ifkey:Y
@@ -280,14 +405,9 @@ room:_end
 	image:png\_title.jpg
 	onfirst
 		clear
-		msg:While you walk towards the Piazza Principe train station you think that there are strange things moving around this story and you are now more than ever determined to find the missing box. 
-		msg:On another hand, you're happy to come home, to see your family. 
-		msg:You catch your train and, rocked by the wagon movements, you rapidly fall asleep; your last thought was a pleasant one: you are going to see Democrito, your cat, real soon!
-		waitkey
-		clear
-		msg:The first part of this game ends here.
-		msg:If you want to know how the story goes on, you can load the second part of the game using one of the available original versions.
-		msg:In that case, use #SHIBBOLETH #FANFALUCH to access it.
+		msg:Hooorrrraaayyyy!
+		msg:Congratulation, you have succeeded in your quest and your efforts have finally made it possible to restore peace to the land of the Sylvani.
+		msg:Your name will be remembered forever.
 		waitkey
 		quit
 room:crossroads
@@ -300,11 +420,14 @@ room:crossroads
 		goto:windingroad
 	verb:w
 		goto:easternendofabridge
+	scenery:signpost
+		verb:x
+			msg:It is almost illegible, but indicates that there is a village to the east
 room:windingroad
 	image:png/generic_forestpath2.jpg
 	name:Winding road
 	attr.shortdesc:on a winding road
-	desc:The path curves sharply through hills and thickets, flanked by old stone walls. Something rustles in the undergrowth nearby, always just out of sight.
+	desc:The path curves sharply through hills and thickets, sometimes flanked by old low stone walls. An annoying wind whispers constantly.
 	attr.exits:[north,east,west]
 	verb:n
 		goto:ancientstonecircle
@@ -359,7 +482,8 @@ room:ancientstonecircle
 	attr.shortdesc:by an ancient stone circle
 	desc:Weathered monoliths seem to rise from the earth like fingers in a irregular ring, but despite their odd shapes, you feel a sense of weel-being here, that seems to encourage you in your journey.
 	attr.exits:[east,west,south]
-	scenery:stones
+	scenery:stones|circle
+		desc:The circle has nine stones
 	verb:e
 		goto:stable
 	verb:w
@@ -386,13 +510,33 @@ room:deepdarkwood
 		goto:shadyhollow
 room:hugefallenoak
 	name:Huge fallen oak
+	image:png/hugefallenoak.jpg
 	attr.shortdesc:near a huge fallen oak
 	desc:The ancient tree lies shattered across the forest floor, roots upturned like frozen lightning. Its bark is scorched, and something has carved runes deep into the wood.
 	attr.exits:[north,south]
 	verb:n
-		msg:You can't go that way
+		if:goblinfree
+			goto:screeslope
+		else
+			msg:As soon as you move, the ghost of the Goblin Guardian gets you!
+			waitkey
+			goto:_dead
 	verb:s
-		goto:deepdarkwood
+		if:goblinfree
+			goto:deepdarkwood
+		else
+			msg:As soon as you move, the ghost of the Goblin Guardian gets you!
+			waitkey
+			goto:_dead
+	verb:rig
+	verb:make
+	verb:blow
+		withobj:reeds
+			ifobjin:$this,$available
+				ifnot:goblinfree
+					msg:You begin to play a slow, haunting melody that immediately captures the Goblin Guardian, causing him to change his expression. 
+					msg:Then he almost smiles and disappears
+					set:goblinfree
 room:sideofawoodedvalley
 	image:png/sideofawoodedvalley.jpg
 	altimage:png/generic_forestpath.jpg
@@ -414,6 +558,15 @@ room:streaminavalleybottom
 		goto:westernendofabridge
 	verb:w
 		goto:sideofawoodedvalley
+	verb:fill
+		withobj:bucket
+			ifobjin:$this,$inventory
+				msg:The bucket has small leaks, so it's not useful to carry water
+		withobj:jug
+			ifobjin:$this,$inventory
+				msg:Ok. Now the jug's full
+				put:jug,$nowhere
+				put:jugfull,$inventory
 lake
 room:edgeofanicylake
 	name:Edge of an icy lake
@@ -425,15 +578,18 @@ room:edgeofanicylake
 		ifobjin:boat,$inventory
 			msg:You cannot drag the boat that way, it's too heavy
 		else
-			goto:pittedtrack
-	verb:w
-		ifobjin:boat,$inventory
-			if:boatwithsheet
-				goto:middleofthelake
+			ifobjin:boatwithsail,$inventory
+				msg:You cannot drag the boat that way, it's too heavy
 			else
-				msg:How will you move the boat on the water?
+				goto:pittedtrack
+	verb:w
+		ifobjin:boatwithsail,$inventory
+			goto:middleofthelake
 		else
-			msg:You cannot swim in this icy water!
+			ifobjin:boat,$inventory
+				msg:How will you move the boat on the water?
+			else
+				msg:You cannot swim in this icy water!
 room:middleofthelake
 	name:Middle of the lake
 	image:png/lake4.jpg
@@ -453,6 +609,12 @@ room:middleofthelake
 		msg:You jump into the lake, but the water is too cold and after a while you drown
 		waitkey
 		goto:_dead
+	verb:fill
+		withobj:bucket
+		withobj:jug
+			msg:As you're trying to fill it up, the boat capsized!
+			waitkey
+			goto:_dead
 room:roughwater
 	name:Rough water
 	image:png/lake4.jpg
@@ -483,10 +645,20 @@ room:roughwater
 				if:boatwater>0
 					msg:You managed to keep the ship afloat
 					set:usedbucket
+		withobj:jug
+			ifobjin:bucket,$available
+				if:boatwater>0
+					msg:It's too small to make a difference
 	verb:dive
 		msg:You jump into the lake, but the water is too cold and after a while you drown
 		waitkey
 		goto:_dead
+	verb:fill
+		withobj:bucket
+		withobj:jug
+			msg:As you're trying to fill it up, the boat capsized!
+			waitkey
+			goto:_dead
 room:islandshore
 	name:Island shore
 	image:png/islandshore.jpg
@@ -497,20 +669,26 @@ room:islandshore
 		ifobjin:boat,$inventory
 			msg:You cannot drag the boat that way, it's too heavy
 		else
-			goto:oldkiln
+			ifobjin:boatwithsail,$inventory
+				msg:You cannot drag the boat that way, it's too heavy
+			else
+				goto:oldkiln
 	verb:e
 		ifobjin:boat,$inventory
 			msg:You cannot drag the boat that way, it's too heavy
 		else
-			goto:beachedketch
-	verb:s
-		ifobjin:boat,$inventory
-			if:boatwithsheet
-				goto:roughwater
+			ifobjin:boatwithsail,$inventory
+				msg:You cannot drag the boat that way, it's too heavy
 			else
-				msg:How will you move the boat on the water?
+				goto:beachedketch
+	verb:s
+		ifobjin:boatwithsail,$inventory
+			goto:roughwater
 		else
-			msg:You cannot swim in this icy water!
+			ifobjin:boat,$inventory
+				msg:How will you move the boat on the water?
+			else
+				msg:You cannot swim in this icy water!
 room:beachedketch
 	name:Beached ketch
 	image:png/islandshore.jpg
@@ -554,7 +732,7 @@ room:whitecottage
 	name:White cottage
 	image:png/whitecottage.jpg
 	attr.shortdesc:in a white cottage
-	desc:We find ourselves inside a well-kept white cottage. However, the unlit fireplace and some shattered objects scattered on the floor around a set table suggest that something has happened to the people who lived here. 
+	desc:You're inside a well-kept white cottage. However, the unlit fireplace and some shattered objects scattered on the floor around a set table suggest that something has happened to the people who lived here. 
 	attr.exits:[west,up]
 	scenery:pot
 		verb:x
@@ -563,6 +741,7 @@ room:whitecottage
 				msg:You found some coins inside
 				set:coinsfound
 	scenery:chest
+		verb:open
 		verb:x
 			msg:It's empty
 	scenery:fireplace
@@ -636,6 +815,9 @@ room:outsideawindmill
 		goto:pittedtrack
 	verb:w
 		goto:ploughedfield
+	verb:enter
+		withobj:windmill
+			goto:lowerfloorofthemill
 room:lowerfloorofthemill
 	name:Lower floor of the mill
 	attr.shortdesc:on the lower floor of the mill
@@ -654,8 +836,8 @@ room:barrencountryside
 	desc:The wind sweeps over lifeless fields, stirring dust and brittle weeds. 
 	attr.exits:[north,south]
 	verb:n
-		ifnot:capturedboar
-			msg:In front of you, in the middle of the fields a giant boar looks defiantly at you, blocking your path
+		ifobjin:boar,$available
+			msg:In front of you, in the middle of the fields the giant boar looks defiantly at you, blocking your path
 		else
 			goto:disusedwaterwheel
 	verb:s
@@ -663,9 +845,20 @@ room:barrencountryside
 	verb:throw
 		withobj:net
 			ifobjin:net,$available
-				ifnot:capturedboar
-					msg:With no small amount of luck you manage to capture the giant animal, rendering it harmless
-					set:capturedboar
+				ifobjin:boar,$available
+					msg:With no small amount of luck you manage to capture the giant animal, rendering it harmless.
+					put:boar,$nowhere
+					put:net,$nowhere
+	verb:feed
+		withobj:boar
+			ifobjin:boar,$available
+				msg:With what?
+	verb:give
+		withobj:$every
+			ifobjin:boar,$available
+				ifobjin:$this,$available
+					put:$this,$nowhere
+					msg:He eats it!
 room:gamekeeperscottage
 	name:Gamekeeper's cottage
 	attr.shortdesc:in the gamekeeper's cottage
@@ -683,7 +876,14 @@ room:goblingraveyard
 	image:png\goblingraveyard.jpg
 	desc:Crumbling headstones jut from the ground like broken teeth. Twisted roots claw through the soil, and scraps of bone and rusted armor hint at a violent past. A low, growling wind stirs the moss.
 	attr.exits:[east,west,south]
-	scenery:gravestone
+	scenery:gravestone|headstone|gravestones|headstones
+		verb:x
+			msg:There's a faded inscription
+	scenery:inscription|inscriptions
+		verb:x
+		verb:read
+			msg:A mysterious epithaph on a headstone catches your eye, but the inscription is faded and some letters are not legible.
+			msg:\yA Goblin's soul will roam\w / \yUntil the music of the\w \ym r h s\w / \ysings him home
 	verb:e
 		goto:hollowtomb
 	verb:w
@@ -706,6 +906,8 @@ room:hollowtomb
 	desc:Stone walls press in around you, damp and echoing. The scent of ancient dust and faded incense still lingers in this long-forgotten resting place.
 	attr.exits:[east,west]
 	scenery:rubble
+		verb:remove|move|push|pull
+			msg:You cannot move rubble from here
 	verb:e
 		ifnot:rubbleremoved
 			msg:A pile of rubble blocks your path
@@ -744,33 +946,19 @@ room:overgrowntrack
 	image:png\overgrowntrack.jpg
 	desc:Twisted branches claw across a path nearly swallowed by underbrush. Broken stones peek through the moss, hinting at a time when this was a road worth traveling.
 	attr.exits:[east]
-	actor:pony
-		desc:The pony looks hungry, but still looks like a mighty animal, and is saddled
-		verb:give
-			withobj:apples
-				msg:Give the apples to the pony and he lets you ride him, heading briskly north.
-				put:apples,$nowhere
-				if:weight>0
-					decvar:weight,1
-				waitkey
-				goto:rustygates
-			withobj:apple
-				msg:Give an apple to the pony and he lets you ride him, heading briskly north.
-				waitkey
-				goto:rustygates
 	verb:e
 		goto:disusedwaterwheel
 	verb:give
 		withobj:apples
 			msg:Give the apples to the pony and he lets you ride him, heading briskly north.
 			put:apples,$nowhere
-			if:weight>0
-				decvar:weight,1
 			waitkey
+			put:pony,rustygates
 			goto:rustygates
 		withobj:apple
 			msg:Give an apple to the pony and he lets you ride him, heading briskly north.
 			waitkey
+			put:pony,rustygates
 			goto:rustygates
 room:rustygates
 	name:Rusty gates
@@ -778,34 +966,20 @@ room:rustygates
 	image:png\rustygates.jpg
 	desc:Iron bars, streaked with age and neglect, groan softly in the wind. Vines creep along the hinges, as if nature itself is trying to reclaim what was once locked away.
 	attr.exits:[north]
-	actor:pony
-		desc:The pony looks hungry, but still looks like a mighty animal, and is saddled
-		verb:give
-			withobj:apples
-				msg:Give the apples to the pony and he lets you ride him, heading briskly south.
-				put:apples,$nowhere
-				if:weight>0
-					decvar:weight,1
-				waitkey
-				goto:overgrowntrack
-			withobj:apple
-				msg:Give an apple to the pony and he lets you ride him, heading briskly south.
-				waitkey
-				goto:overgrowntrack
 	verb:n
 		goto:goblingraveyard
 	verb:give
 		withobj:apples
 			msg:Give the apples to the pony and he lets you ride him, heading briskly north.
 			put:apples,$nowhere
-			if:weight>0
-				decvar:weight,1
 			waitkey
-			goto:rustygates
+			put:pony,overgrowntrack
+			goto:overgrowntrack
 		withobj:apple
 			msg:Give an apple to the pony and he lets you ride him, heading briskly north.
 			waitkey
-			goto:rustygates
+			put:pony,overgrowntrack
+			goto:overgrowntrack
 room:sluicegates
 	name:Sluice gates
 	attr.shortdesc:by some sluice gates
@@ -816,6 +990,8 @@ room:sluicegates
 	scenery:gates
 		verb:x
 			msg:There's an handle
+		verb:open
+			msg:You are not strong enough
 	verb:n
 		goto:mistypool
 	verb:turn
@@ -847,20 +1023,40 @@ room:easternendofabridge
 	verb:w
 		ifnot:toll
 			msg:A dangerous-looking troll approaches and blocks your passage, looking at you expectantly
+			put:troll,$here
 		else
 			unset:toll
+			put:troll,$nowhere
 			goto:westernendofabridge
 	verb:e
 		unset:toll
+		put:troll,$nowhere
 		goto:crossroads
 	verb:pay
+		withobj:troll
+			msg:With what?
+		withobj:coin
+			ifobjin:coins,$available
+				msg:The troll takes it and goes away
+				decvar:coinnum,1
+				if:coinnum=0
+					put:coins,$nowhere
+					msg:You run out of coins
+				set:toll
+			else
+				msg:You don't have any
+		withobj:coins
+			ifobjin:coins,$available
+				msg:The troll takes them all and goes away
+				put:coins,$nowhere
+				set:toll
+			else
+				msg:You don't have any
 	verb:give
 		withobj:coins
 			ifobjin:coins,$available
 				msg:The troll takes them all and goes away
 				put:coins,$nowhere
-				if:weight>0
-					decvar:weight,1
 				set:toll
 			else
 				msg:You don't have any
@@ -870,8 +1066,6 @@ room:easternendofabridge
 				decvar:coinnum,1
 				if:coinnum=0
 					put:coins,$nowhere
-					if:weight>0
-						decvar:weight,1
 					msg:You run out of coins
 				set:toll
 			else
@@ -884,30 +1078,6 @@ room:easternendofabridge
 			else
 				unset:toll
 				goto:westernendofabridge
-	sceneryactor:troll
-		verb:pay
-		verb:give
-			withobj:coins
-				ifobjin:coins,$available
-					msg:The troll takes them all and goes away
-					put:coins,$nowhere
-					if:weight>0
-						decvar:weight,1
-					set:toll
-				else
-					msg:You don't have any
-			withobj:coin
-				ifobjin:coins,$available
-					msg:The troll takes it and goes away
-					decvar:coinnum,1
-					if:coinnum=0
-						put:coins,$nowhere
-						if:weight>0
-							decvar:weight,1
-						msg:You run out of coins
-					set:toll
-				else
-					msg:You don't have any
 room:westernendofabridge
 	name:Western end of a bridge
 	image:png/troll_bridge.jpg
@@ -916,24 +1086,44 @@ room:westernendofabridge
 	attr.exits:[north,west]
 	verb:n
 		unset:toll
+		put:troll,$nowhere
 		goto:streaminavalleybottom
 	verb:w
 		unset:toll
+		put:troll,$nowhere
 		goto:orchard
 	verb:e
 		ifnot:toll
 			msg:A dangerous-looking troll approaches and blocks your passage, looking at you expectantly
+			put:troll,$here
 		else
 			unset:toll
 			goto:easternendofabridge
 	verb:pay
+		withobj:troll
+			msg:With what?
+		withobj:coin
+			ifobjin:coins,$available
+				msg:The troll takes it and goes away
+				decvar:coinnum,1
+				if:coinnum=0
+					put:coins,$nowhere
+					msg:You run out of coins
+				set:toll
+			else
+				msg:You don't have any
+		withobj:coins
+			ifobjin:coins,$available
+				msg:The troll takes them all and goes away
+				put:coins,$nowhere
+				set:toll
+			else
+				msg:You don't have any
 	verb:give
 		withobj:coins
 			ifobjin:coins,$available
 				msg:The troll takes them all and goes away
 				put:coins,$nowhere
-				if:weight>0
-					decvar:weight,1
 				set:toll
 			else
 				msg:You don't have any
@@ -943,8 +1133,6 @@ room:westernendofabridge
 				decvar:coinnum,1
 				if:coinnum=0
 					put:coins,$nowhere
-					if:weight>0
-						decvar:weight,1
 					msg:You run out of coins
 				set:toll
 			else
@@ -957,38 +1145,13 @@ room:westernendofabridge
 			else
 				unset:toll
 				goto:easternendofabridge
-	sceneryactor:troll
-		verb:pay
-		verb:give
-			msg:Whatx?
-			withobj:coins
-				ifobjin:coins,$available
-					msg:The troll takes them all and goes away
-					put:coins,$nowhere
-					if:weight>0
-						decvar:weight,1
-					set:toll
-				else
-					msg:You don't have any
-			withobj:coin
-				ifobjin:coins,$available
-					msg:The troll takes it and goes away
-					decvar:coinnum,1
-					if:coinnum=0
-						put:coins,$nowhere
-						if:weight>0
-							decvar:weight,1
-						msg:You run out of coins
-					set:toll
-				else
-					msg:You don't have any
 southwest
 room:orchard
 	name:Orchard
 	attr.shortdesc:in a small orchard
 	desc:You entered a small orchard. The gnarled trees here show almost fruitless branches. The air hums with wasps, and a few now-rotten remnants crunch underfoot in the damp earth.
 	attr.exits:[east,west]
-	scenery:tree|trees
+	scenery:tree|trees|orchard
 		verb:x
 			msg:This orchard has almost only apple trees
 			ifnot:seenapples
@@ -1151,8 +1314,9 @@ room:dampwellbottom
 			else
 				msg:Some of them seem loose
 		verb:push
+		verb:move
 		verb:pull
-			msg:You can't do much with your bare hands
+			msg:They're wedged in, and you can't do much with your bare hands
 room:narrowpassage
 	name:Narrow passage
 	image:png/dampwellbottom.jpg
@@ -1190,9 +1354,6 @@ room:topofadeepwell
 					msg:It's already tied
 				else
 					msg:You tie the sheet to the well
-					ifobjin:sheet,$inventory
-						if:weight>0
-							decvar:weight,1
 					put:sheet,$here
 					set:sheettied
 		withobj:rope
@@ -1201,9 +1362,6 @@ room:topofadeepwell
 					msg:It's already tied
 				else
 					msg:You tie the rope to the well
-					ifobjin:rope,$inventory
-						if:weight>0
-							decvar:weight,1
 					put:rope,$here
 					set:ropetied
 	verb:climb
@@ -1218,7 +1376,659 @@ room:topofadeepwell
 				if:ropetied
 					msg:You descend into the well slowly attached to the rope.
 					goto:dampwellbottom
-todo
+_north
+room:frozenpond
+	name:Frozen pond
+	attr.shortdesc:on a small frozen pond
+	desc:The ice beneath your feet groans as cracks spider outward. A single tree leans over the pond's edge, its branches clawing toward the glassy surface.
+	image:png/frozenpond.jpg
+	attr.exits:[north,east,south,down]
+	scenery:cracks
+		desc:The ice is dangerously thin, and it's already full of cracks
+	scenery:tree|branch|branches
+		desc:msg:Out of reach
+	verb:n
+		ifobjin:planks,$here
+			goto:gapbetweensomeboulders
+		else
+			msg:You don't dare to move. The ice is breaking!
+	verb:e
+		ifobjin:planks,$here
+			goto:mountainhut
+		else
+			msg:You don't dare to move. The ice is breaking!
+	verb:s
+		ifobjin:planks,$here
+			goto:icypath
+		else
+			msg:You don't dare to move. The ice is breaking!
+	verb:use
+		withobj:planks
+			ifobjin:planks,$inventory
+				msg:You put the planks on the frozen surface. Not you feel safer to move
+room:gapbetweensomeboulders
+	name:Gap between some boulders
+	attr.shortdesc:in a gap between some boulders
+	image:png/screeslope4.jpg
+	desc:Jagged rocks press close, forming a narrow passage just wide enough to slip through. Faint drafts stir the air, whispering of something hidden beyond.
+	attr.exits:[north,east,south]
+	verb:n
+		goto:highwalledgarden
+	verb:e
+		goto:perilouspath
+	verb:s
+		goto:frozenpond
+room:glacier
+	image:png/icypath.jpg
+	name:Glacier
+	attr.shortdesc:above a glacier
+	desc:A glittering river of ice sprawls beneath you, creaking and groaning as it shifts. Splintered peaks surround the white expanse like frozen sentinels, and avalanches rumble in the distance.
+	attr.exits:[north,west,up]
+	verb:n
+		goto:icypath
+	verb:w
+		goto:highpinnacle
+	verb:u
+room:highglassgates
+	name:High glass gates
+	attr.shortdesc:near some high glass gates
+	desc:Crystal-clear panes shimmer with a faint magical hum, their delicate beauty out of place in the rough-hewn mountain. The gates are sealed tight, etched with glowing runes of protection.
+	attr.exits:[east,south,west]
+	scenery:hound
+		verb:feed
+			msg:With what?
+	verb:e
+		if:distractedhoud
+			goto:entrancehalltothepalace
+		else
+			msg:The huge hound bars you way
+	verb:s
+		goto:ornatefountain
+	verb:w
+		goto:vaultedcavern
+	verb:give
+		withobj:bone
+			ifobjin:bone,$available
+				set:distractedhoud
+				put:bone,$nowhere
+				msg:The hound begins to gnaw at the bone, calming down.
+		withobj:$every
+			ifobjin:boar,$available
+				ifobjin:$this,$available
+					put:$this,$nowhere
+					msg:He eats it!
+room:highpinnacle
+	name:High pinnacle
+	attr.shortdesc:on a high pinnacle
+	image:png/icypath.jpg
+	desc:The land falls away on all sides, revealing jagged valleys and distant peaks. The wind howls here, biting and loud, and the ground beneath you feels dangerously narrow.
+	attr.exits:[east]
+	scenery:pinnacle
+		msg:Interesting!
+	verb:e
+		goto:glacier
+	verb:climb
+		withobj:rope
+			ifobjin:rope,$here
+				msg:You're already at the top
+room:highwalledgarden
+	name:High-walled garden
+	attr.shortdesc:in a high-walled garden
+	desc:Towering hedges trap the scent of crushed roses and wet soil. This is Queen Pari Sylvan garden were it's said plants flourish extraordinarly well.
+	image:png/highwalledgarden2.jpg
+	attr.exits:[east,south]
+	verb:e
+	verb:s
+		goto:gapbetweensomeboulders
+	verb:u
+		if:vinegrown
+			msg:the vine seems resistant and you try to climb
+			waitkey
+			goto:inscribedcavern
+	verb:plant
+		withobj:seeds
+			ifobjin:$this,$available
+				msg:Ok. This indeed seems a great place to plant them
+				set:seedplanted
+				put:seeds,$nowhere
+	verb:water
+		withobj:seeds
+			if:seedplanted
+				ifobjin:jugfull,$inventory
+					msg:It's a matter of second, and a large vine grows along the rocks reaching almost to the top
+					set:vinegrown
+					put:jugfull,$nowhere
+					put:jug,$inventory
+				else
+					msg:With what?
+			else
+				msg:You should plant them first
+	verb:climb
+		withobj:vine
+			if:vinegrown
+				msg:the vine seems resistant and you try to climb
+				waitkey
+				goto:inscribedcavern
+	scenery:vine
+		verb:x
+			if:vinegrown
+				msg:It's a large vine, reaching almost to the rocks top
+room:icypath
+	name:Icy path
+	attr.shortdesc:on an icy path
+	image:png/icypath.jpg
+	desc:Your footing slips on the frozen stones, the path barely visible beneath a glaze of ice. Frost clings to the rocks, and the wind slices through your clothes like knives.
+	attr.exits:[north,south,up,down]
+	verb:u
+		goto:frozenpond
+	verb:d
+		goto:glacier
+room:inscribedcavern
+	name:Inscribed cavern
+	attr.shortdesc:in an inscribed cavern
+	desc:The cave has walls almost completely covered in scribbles and symbols, as if it were a book to explain or warn.
+	image:png/cavern.jpg
+	attr.exits:[north,west]
+	scenery:inscriptions|scribbles|symbols
+		verb:x
+			msg:You find stories and legends of the Sylvani on the walls, but your attention falls upon a point where it seems there is an labyrinth with a well-traced path to escape from.
+			set:mazetrack
+	verb:n
+		goto:vaultedcavern
+	verb:w
+		goto:highwalledgarden
+room:mazeoftunnels
+	name:Maze of tunnels
+	attr.shortdesc:in a maze of tunnels
+	desc:Endless stone corridors twist and double back, walls close and slick with condensation. Faint scurrying noises surround you. It's easy to lose your sense of direction here, and your nerve.
+	image:png/cavern.jpg
+	attr.exits:[east,west,south,north]
+	scenery:maze
+	verb:e
+		if:mazetrack
+			msg:You try to recall the path you saw in the cave, and after a while, you find the way
+			waitkey
+			goto:vaultedcavern
+		else
+			msg:You wander for an undefined amount of time, only to find yourself back at the same point
+			msg:You're completely lost
+	verb:w
+		if:mazetrack
+			msg:You try to recall the path you saw in the cave, and after a while, you find the way
+			waitkey
+			goto:stalactitesstalagmites
+		else
+			msg:You wander for an undefined amount of time, only to find yourself back at the same point
+			msg:You're completely lost
+	verb:s
+		msg:You wander for an undefined amount of time, only to find yourself back at the same point
+		ifnot:mazetrack
+			msg:You're completely lost
+	verb:n
+		msg:You wander for an undefined amount of time, only to find yourself back at the same point
+		ifnot:mazetrack
+			msg:You're completely lost
+room:mountainhut
+	name:Mountain hut
+	attr.shortdesc:near a mountain hut
+	image:png/mountainhut3.jpg
+	desc:Perched on a rocky ledge, the wooden hut looks abandoned. Smoke no longer rises from the chimney, and the door swings open slightly, creaking on its hinges.
+	attr.exits:[south,west]
+	verb:s
+		goto:screeslope
+	verb:w
+		goto:frozenpond
+	verb:enter
+		ifnot:seenplanks
+			put:planks,$here
+			set:seenplanks
+			msg:Inside you found some planks
+room:ornatefountain
+	name:Ornate fountain
+	attr.shortdesc:by an ornate fountain
+	desc:Cracked stone nymphs pour water into a basin choked with moss and coins blackened by time. The fountain still trickles faintly, though no one tends it anymore.
+	attr.exits:[north]
+	verb:n
+		goto:highglassgates
+room:perilouspath
+	name:Perilous path
+	attr.shortdesc:on a perilous path
+	image:png/screeslope4.jpg
+	desc:The trail clings to the cliffside like a scar, narrow and crumbling. Loose stones tumble into the void below with every cautious step.
+	attr.exits:[east,west]
+	verb:e
+		goto:silverbellintherock
+	verb:w
+		goto:gapbetweensomeboulders
+room:screeslope
+	name:Scree slope
+	image:png/screeslope4.jpg
+	attr.shortdesc:on a scree slope
+	desc:Loose stones slide beneath each step, threatening to send you tumbling down the steep incline. The only handholds are sharp rocks and brittle shrubs.
+	attr.exits:[north,south]
+	verb:n
+		goto:mountainhut
+	verb:s
+		goto:hugefallenoak
+room:silverbellintherock
+	name:Silver bell in the rock
+	attr.shortdesc:by a silver bell in the rock
+	image:png/silverbellintherock.jpg
+	desc:Embedded in the stone, the bell gleams unnaturally clean. A faint vibration hums through it, as though it waits for a voice, or a hand, to awaken it.
+	attr.exits:[west]
+	verb:w
+		goto:perilouspath
+	verb:e
+		if:rockdoor
+			goto:dungeonsofthepalace
+	verb:ring
+		withobj:bell
 room:stalactitesstalagmites
-	name:Stalactites stalagmites
+	name:Stalactites and stalagmites
 	attr.shortdesc:near some stalactites and stalagmites
+	image:png/cavern.jpg
+	desc:Dripping water echoes through the gloom, pooling between jagged stone teeth above and below. The formations shimmer faintly, casting eerie shadows that dance like spirits in the flickering torchlight.
+	attr.exits:[east,west]
+	verb:e
+		goto:mazeoftunnels
+	verb:w
+		if:rubbleremoved
+			goto:hollowtomb
+		else
+			msg:A pile of rubble blocks your path
+	scenery:rubble
+		verb:remove|move|push|pull
+			msg:After a long work, you finally manage to remove the rubble, revealing the presence of a steep passage
+			set:rubbleremoved
+room:vaultedcavern
+	name:Vaulted cavern
+	attr.shortdesc:in a vaulted cavern
+	desc:The ceiling arches high overhead, lost in darkness. Massive stone pillars rise like silent sentinels, and your footsteps vanish into the echoing void. 
+	image:png/cavern.jpg
+	attr.exits:[east,south,west]
+	verb:e
+		goto:highglassgates
+	verb:s
+		goto:inscribedcavern
+	verb:w
+		goto:mazeoftunnels
+_palace
+room:banquethall
+	name:Banquet hall
+	attr.shortdesc:in a banqueting hall
+	desc:A vast table stretches into shadow, laid with dust-covered goblets and tarnished cutlery. Torn banners hang from the rafters, and claw marks gouge the wood where guests once sat.
+	attr.exits:[north,south]
+	scenery:uniform
+	scenery:matches
+	verb:n
+		goto:longgallery
+	verb:s
+		goto:halloftapestries
+room:cobwebbyroom
+	name:Cobwebby room
+	attr.shortdesc:in a cobwebby room
+	desc:Silken webs drape from ceiling to floor, and dried husks of insects hang in their grasp. A single broken chair sits beneath a shuttered window, long forgotten.
+	attr.exits:[north,east,west]
+	verb:n
+		if:cobwebscleared
+			goto:wizardslair
+		else
+			msg:You get caught in the cobwebs!
+	verb:e
+		goto:safeinogbanschambers
+	verb:w
+		if:cobwebscleared
+			goto:turretroom
+		else
+			msg:You get caught in the cobwebs!
+	verb:cut
+	verb:swing
+		withobj:cobwebs
+			msg:With what?
+		withobj:sword
+			ifobjin:sword,$available
+				msg:You cleared the cobwebs
+				set:cobwebscleared
+			else
+				msg:You don't have it
+room:dankcorridor
+	name:Dank corridor
+	attr.shortdesc:in a dank corridor
+	desc:The air is thick and wet, each breath heavy with mildew. The stone walls sweat in the darkness, and your footsteps splash faintly in unseen puddles underfoot.
+	attr.exits:[north,south]
+	verb:n
+		goto:entrancehalltothepalace
+	verb:s
+		if:dankdoor
+			goto:dungeonsofthepalace
+		else
+			msg:A massive oak door blocks you
+	verb:break
+		withobj:door
+			msg:How?
+	verb:swing
+		withobj:axe
+			ifobjin:$this,$available
+				msg:The door broke!
+				set:dankdoor
+			else
+				msg:You don't have it
+	verb:open
+		withobj:door
+			if:dankdoor
+				msg:The door's broken
+			else
+				msg:You are not strong enough
+	scenery:door
+		desc:It's a massive oak door
+room:dustylibrary
+	name:Dusty library
+	attr.shortdesc:in a dusty library
+	desc:Books sag on warped shelves, their pages brittle and yellowed. A fallen ladder lies near a smashed globe, and in the silence, the dust seems to hang in thought.
+	attr.exits:[south]
+	scenery:book
+	verb:s
+		goto:silverthroneroom
+room:entrancehalltothepalace
+	name:Entrance hall to the palace
+	attr.shortdesc:in the entrance hall to the palace
+	desc:Tall columns flank a wide, dusty floor once gleaming with polished stone. Tattered banners hang limply from the walls, and silence reigns where once courtiers and nobles bustled.
+	attr.exits:[south,east,west]
+	verb:s
+		goto:dankcorridor
+	verb:e
+		goto:grargsentrypost
+	verb:w
+room:grargsentrypost
+	name:Grarg sentry post
+	attr.shortdesc:by a Grarg sentry post
+	desc:A crude tower of splintered wood and rusted iron looms beside a narrow path. Charred torches and discarded bones suggest no diplomacy will be welcomed here.
+	attr.exits:[east,west]
+	verb:e
+		setvar:hidden,0
+		if:bootson
+			setvar:hidden,1
+		else
+			if:uniformon
+				setvar:hidden,1
+		if:hidden=0
+			ifnot:approaching
+				msg:You realize with dread that a patrol of Grargs is approaching
+				set:approaching
+			else
+				msg:Grargs attack and effortlessly kill you
+				waitkey
+				goto:_dead
+		else
+			goto:guardroom
+	verb:w
+		setvar:hidden,0
+		if:bootson
+			setvar:hidden,1
+		else
+			if:uniformon
+				setvar:hidden,1
+		if:hidden=0
+			ifnot:approaching
+				msg:You realize with dread that a patrol of Grargs is approaching
+				set:approaching
+			else
+				msg:Grargs attack and effortlessly kill you
+				waitkey
+				goto:_dead
+		else
+			goto:entrancehalltothepalace
+room:guardroom
+	name:Guard room
+	attr.shortdesc:in the guard room
+	desc:The air smells of sweat and metal. Empty weapon racks line the walls, and overturned stools litter the floor. A recent struggle seems evident, but the guards are gone.
+	attr.exits:[south,west]
+	scenery:sword
+	verb:s
+		setvar:hidden,0
+		if:bootson
+			setvar:hidden,1
+		else
+			if:uniformon
+				setvar:hidden,1
+		if:hidden=0
+			ifnot:approaching
+				msg:You realize with dread that a patrol of Grargs is approaching
+				set:approaching
+			else
+				msg:Grargs attack and effortlessly kill you
+				waitkey
+				goto:_dead
+		else
+			goto:kitchensofthepalace
+	verb:w
+		setvar:hidden,0
+		if:bootson
+			setvar:hidden,1
+		else
+			if:uniformon
+				setvar:hidden,1
+		if:hidden=0
+			ifnot:approaching
+				msg:You realize with dread that a patrol of Grargs is approaching
+				set:approaching
+			else
+				msg:Grargs attack and effortlessly kill you
+				waitkey
+				goto:_dead
+		else
+			goto:grargsentrypost
+room:halloftapestries
+	name:Hall of tapestries
+	attr.shortdesc:in the hall of tapestries
+	desc:Faded fabric hangs in silence, depicting battles, banquets, and strange beasts. Some are torn, others singed. A cold draft rustles them like whispers from the past.
+	attr.exits:[north,south]
+	verb:n
+		goto:banquethall
+	verb:s
+		goto:mosaicflooredhall
+room:kitchensofthepalace
+	name:Kitchens of the palace
+	attr.shortdesc:in the kitchens of the palace
+	desc:Long-cold ovens line the stone walls, and blackened pots hang on rusting hooks. A shattered plate lies near a spilled sack of grain, as if the cook fled mid-meal.
+	attr.exits:[north,south,west]
+	scenery:cupboard
+		verb:open
+			ifnot:seenphial
+				msg:There's a phial
+				put:phial,$here
+				set:seenphial
+	scenery:kitchens
+		verb:x
+			msg:There's a large cupboard in the corner
+	verb:n
+		goto:guardroom
+	verb:s
+		goto:palacebattlements
+	verb:w
+		goto:longgallery
+room:longgallery
+	name:Long gallery
+	attr.shortdesc:in the long gallery
+	desc:A grand hallway stretches into shadow, its walls lined with cracked portraits. Their painted eyes follow your movements, and the silence hums with long-held secrets.
+	attr.exits:[south,east]
+	verb:s
+		goto:banquethall
+	verb:e
+		goto:kitchensofthepalace
+room:mosaicflooredhall
+	name:Mosaic floored hall
+	attr.shortdesc:in a mosaic-floored hall
+	desc:Beneath your feet, intricate patterns of colored tiles form scenes of ancient glory. Many are cracked or missing, but some seem strangely intact, almost new.
+	attr.exits:[north,east,south]
+	scenery:goblet
+	verb:n
+		goto:halloftapestries
+	verb:e
+		goto:silverthroneroom
+	verb:s
+		if:ogbanpoisoned
+			goto:safeinogbanschambers
+		else
+			msg:As soon as you leave the hall you find yourself faced with Ogban who kills you without any hesitation
+			goto:_dead
+	verb:into
+	verb:poison
+		withobj:goblet
+			ifobjin:phial,$available
+				msg:Done!
+			else
+				msg:With what?
+		withobj:wine
+			ifobjin:phial,$available
+				msg:Done!
+				set:poisoninwine
+			else
+				msg:With what?
+	verb:empty
+		withobj:phial
+			msg:Where?
+room:palacebattlements
+	name:Palace battlements
+	attr.shortdesc:on the palace battlements
+	desc:High above the land, the wind tears at your cloak as you peer over the edge. The view is grand, and grim. Smoke rises from distant farms, and storm clouds churn overhead.
+	attr.exits:[north]
+	verb:n
+		goto:kitchensofthepalace
+room:safeinogbanschambers
+	name:Safe in Ogban's chambers
+	attr.shortdesc:by a safe in Ogban's chambers
+	desc:The massive safe is bolted to the stone floor, its dials worn smooth. Papers and half-burnt maps lie scattered nearby.
+	attr.exits:[north,west]
+	scenery:key
+	verb:n
+		goto:mosaicflooredhall
+	verb:w
+		goto:cobwebbyroom
+room:silverchamber
+	name:Silver chamber
+	attr.shortdesc:in the silver chamber
+	desc:The walls shimmer faintly, catching the light in a shifting cascade. At the center stands a pedestal of pale stone, empty but humming with the memory of power once held.
+	attr.exits:[east]
+	scenery:stone of destiny
+	verb:e
+		goto:wizardslair
+room:silverthroneroom
+	name:Silver throne room
+	attr.shortdesc:in the silver throne room
+	desc:Tall windows cast cold light on a high, gleaming throne. Dust hangs thick in the air, and the silence here is reverent, like the room itself remembers who once sat there.
+	attr.exits:[north,west]
+	scenery:silver plate
+	verb:n
+		if:poisoninwine
+			set:ogbanpoisoned
+		goto:dustylibrary
+	verb:w
+		goto:mosaicflooredhall
+room:turretroom
+	name:Turret room
+	attr.shortdesc:in a turret room with a slot machine
+	desc:Dust motes dance in the dim light filtering through a narrow window. In the corner, a strange metallic contraption hums softly, gleaming with symbols and untouched by time.
+	attr.exits:[east]
+	verb:e
+		goto:cobwebbyroom
+room:wizardslair
+	name:Wizard's lair
+	attr.shortdesc:in the wizard's lair
+	desc:Shelves buckle under the weight of scrolls and grimoires. Strange apparatus bubble and hiss, and arcane symbols glow faintly on the floor, pulsing like a heartbeat.
+	attr.exits:[south,west]
+	scenery:door
+		verb:unlock
+			ifobjin:key,$available
+				msg:The key turns! The door's now opened
+				set:wizarddoor
+			else
+				msg:With what?
+		verb:open
+			if:wizarddoor
+				msg:It's already opened
+			else
+				msg:It's locked
+	verb:s
+		goto:cobwebbyroom
+	verb:w
+		if:wizarddoor
+			goto:silverchamber
+		else
+			msg:There's a closed bulk door blocking your passage
+	verb:reflect
+		msg:How?
+	verb:hold
+	verb:show
+		withobj:silverplate
+			ifobjin:silverplate,$available
+				msg:You reflected the wizard's glare! He is dead!
+				set:wizardglare
+			else
+				msg:You don't have it
+_underpalace
+room:winecellar
+	name:Wine cellar
+	attr.shortdesc:in a wine cellar
+	desc:Candlelight flickers across rows of dusty bottles and crumbling labels. Cobwebs hang thickly from the beams, and the floor is stained with ancient spills and something darker.
+	attr.exits:[north,west]
+	scenery:rats
+		verb:feed
+			msg:With what?
+	verb:n
+		ifobjin:litlamp,$available
+			ifobjin:rats,$available
+				msg:Rats nibble your ankles!
+			else
+				goto:dungeonsofthepalace
+		else
+			msg:It's too dark!
+	verb:w
+		ifobjin:litlamp,$available
+			ifobjin:rats,$available
+				msg:Rats nibble your ankles!
+			else
+				goto:rowofcasks
+		else
+			msg:It's too dark!
+	verb:give
+		withobj:apples
+		withobj:bread
+			msg:They scurry away
+			put:rats,$nowhere
+			put:$this,$nowhere
+	verb:light
+		withobj:matches
+			ifobjin:matches,$available
+				msg:Not bright enough
+room:rowofcasks
+	name:Row of casks
+	attr.shortdesc:by a row of casks
+	desc:The scent of sour wine and damp oak fills the air. The casks are old, some leaking, others sealed with thick wax. A few bear sigils long forgotten.
+	attr.exits:[east]
+	verb:e
+		ifobjin:litlamp,$available
+			goto:winecellar
+		else
+			msg:It's too dark!
+	verb:w
+		if:passageseen
+			msg:The passage was steep!
+			waitkey
+			goto:shadyhollow
+	scenery:casks
+		verb:x
+			msg:Behind one of them there's a passage!
+			set:passageseen
+room:dungeonsofthepalace
+	name:Dungeons of the palace
+	attr.shortdesc:in the dungeons of the palace
+	desc:Chains dangle from mossy walls, and the air reeks of mildew and old iron. Faint moans echo from unseen cells, and a pool of brackish water seeps across the floor.
+	attr.exits:[south,north]
+	verb:s
+		goto:winecellar
+	verb:n
+		if:dankdoor
+			goto:dankcorridor
+		else
+			msg:A massive oak door blocks you
