@@ -4,11 +4,12 @@ This is a tribute to **1984**'s **Usborne** BASIC text-adventure masterpiece, ca
 
 So I decided to create a remake - adding extra text and graphics - and publish the new source code (**StoryTllr64** scripts) to help check it in these different "clothes", to highlight the greatness of the original work.
 
-This **complete project** is **freely available** here on **GitHub**. As far as I know, the original game (nor the book) is not in commerce anymore.
+# Disclaimer
 
-If you like it please share your appreciation for the original authors and their publisher.
+This **complete project** is **freely available** here on **GitHub**, as a tribute to the original game and book, which are no longer in commerce.
+(to be more specific: the book is not present on [publisher site](https://usborne.com) while available in PDF format - free - on several different websites - and the same happens also for the game).
 
-Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
+If you like this derivative work, please share your appreciation for the original authors and their publisher.
 
 ## The Book
 
@@ -43,6 +44,8 @@ Given the 80 locations, we'll likely be limited to around **40 unique graphics**
 All the material I create for this project will be free and the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce. Please be aware that I'm creating a derivative work on **Chris Oxlade** + **Judy Tatchell** + **Usborne Computer Guides** original material so I, of course, cannot really license anything.
 
 Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
+
+Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
 
 ## Game-map
 
