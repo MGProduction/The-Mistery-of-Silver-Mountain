@@ -29,7 +29,7 @@ I was probably thirteen/fourteen when my parents gave me a copy of **The Mystery
 I thought about it a lot while making **Nesterin Trail**, and after looking around at some material I decided to try to make a porting of that masterpiece using StoryTllr64. Not a “simple” transposition (with the addition of some graphics), but a little something more -- adding descriptions and text where there were none for space reasons (the game had to run on multiple machines with little memory) -- but preserving the gameplay. That is, I want it to be possible to play this version identically to the original-including the possibility of dying on the fly, or making mistakes that will not allow the game to end. I mean, I want this version playable following this [guide](https://solutionarchive.com/file/id%2C7197/) - that works with the original game.
 
 It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – **80 locations** and a staggering number of moves required to complete it).
-My first goal is to release **a working game featuring the first part of this large adventure** - with at least half of the locations (stopping at **Huge fallen oak** - where there's the **Goblin Guardian ghost** - I'll let you also handle that task, but I won't let you go further from that - at least for a first release)
+My first goal is to release **a working game featuring a part of this large adventure** - with at least three-quarters of the locations (at the moment we can reach the **Entrance hall to the palace** - just after passing the hound at the gates).
 
 **new** I've created a working C version of the original game (https://github.com/MGProduction/The-Mistery-of-Silver-Mountain-C-version) so to have a sure and quick way to check if everything is faithful with the original version.
 
@@ -53,6 +53,6 @@ This is the current status: rounded rooms are the ones available at the moment (
 
 ![alt text](_pub/TheMysteryOfSilverMountain_WIP.jpg)
 
-At the moment it's possible to follow the solution's guide steps up to Goblin Guardian with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
+At the moment it's possible to follow the solution's guide steps up to ééEntrance hall to the palace** with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
 
 Once ready also the .d64 will be added to this page (and it will be present also a page about this demo on itch.io)
