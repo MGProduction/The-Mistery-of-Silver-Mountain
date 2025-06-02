@@ -4,9 +4,12 @@ This is a tribute to **1984**'s **Usborne** BASIC text-adventure masterpiece, ca
 
 So I decided to create a remake - adding extra text and graphics - and publish the new source code (**StoryTllr64** scripts) to help check it in these different "clothes", to highlight the greatness of the original work.
 
-This complete project is freely available here on **GitHub**. If you like it please share your appreciation for the original authors and their publisher.
+# Disclaimer
 
-Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
+This **complete project** is **freely available** here on **GitHub**, as a tribute to the original game and book, which are no longer in commerce.
+(to be more specific: the book is not present on [publisher site](https://usborne.com) while available in PDF format - free - on several different websites - and the same happens also for the game).
+
+If you like this derivative work, please share your appreciation for the original authors and their publisher.
 
 ## The Book
 
@@ -28,16 +31,21 @@ Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' on
 I was probably thirteen/fourteen when my parents gave me a copy of **The Mystery of Silver Mountain**. It was summer, and my younger brother and I typed that BASIC listing on a C64 with a green phosphor monitor on some hot afternoon before we could go play in the woods. It was probably one of the first text adventure games I fell in love with, accomplices also being the beautiful illustrations in the book, and the wonderful background story, which, in the game was recalled with just a few words, and without any graphics.
 I thought about it a lot while making **Nesterin Trail**, and after looking around at some material I decided to try to make a porting of that masterpiece using StoryTllr64. Not a “simple” transposition (with the addition of some graphics), but a little something more -- adding descriptions and text where there were none for space reasons (the game had to run on multiple machines with little memory) -- but preserving the gameplay. That is, I want it to be possible to play this version identically to the original-including the possibility of dying on the fly, or making mistakes that will not allow the game to end. I mean, I want this version playable following this [guide](https://solutionarchive.com/file/id%2C7197/) - that works with the original game.
 
-It's not certain that I'll be able to do it (the original game code was deliberately cryptic, to avoid spoiling the surprises for those who copied the listing, and this adventure is "huge" – **80 locations** and a staggering number of moves required to complete it).
-My first goal is to release **a working game featuring a part of this large adventure** - with at least three-quarters of the locations (at the moment we can reach the **Entrance hall to the palace** - just after passing the hound at the gates).
+## The project scope
 
-**new** I've created a working C version of the original game (https://github.com/MGProduction/The-Mistery-of-Silver-Mountain-C-version) so to have a sure and quick way to check if everything is faithful with the original version.
+It's unclear whether I'll be able to complete the original game code (the listing was intentionally cryptic, designed to avoid spoiling surprises for those who copied it). This adventure boasts **80 locations** and a staggering number of moves required to finish it. My goal is to create a **working game** featuring this large adventure - or at least a **functional draft** - as close to the original as possible, but likely with some flaws.
+
+After spending a month on the project (during which I've also created a working [C version](https://github.com/MGProduction/The-Mistery-of-Silver-Mountain-C-version) of the original game to ensure accuracy and speed up testing), I've realized that it's unlikely we can have a different graphic for each location on a single C64 disk. This presents another challenge: deciding which locations can share images without compromising the core idea of this project.
+
+Given the 80 locations, we'll likely be limited to around **40 unique graphics**.
 
 ## Notes & Thanks
 
 All the material I create for this project will be free and the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce. Please be aware that I'm creating a derivative work on **Chris Oxlade** + **Judy Tatchell** + **Usborne Computer Guides** original material so I, of course, cannot really license anything.
 
 Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
+
+Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
 
 ## Game-map
 
@@ -53,7 +61,7 @@ This is the current status: rounded rooms are the ones available at the moment (
 
 ![alt text](_pub/TheMysteryOfSilverMountain_WIP.jpg)
 
-At the moment it's possible to follow the solution's guide steps up to ééEntrance hall to the palace** with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
+At the moment it's possible to follow the solution's guide steps up to **Entrance hall to the palace** with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
 
 Changes compared to the original game: 
 - **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
