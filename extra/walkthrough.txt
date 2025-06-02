@@ -1,4 +1,3 @@
-[#FAST]
 [The Mistery of Silver Mountain]
 [Introduction]
 [Crossroads]
@@ -146,87 +145,130 @@ n
 [Goblin graveyard]
 read inscriptions
 e
+[Hollow tomb]
 e
 move rubble
 w
+[Goblin graveyard]
 w
+[Half-dug grave]
 get bone
 e
+[Goblin graveyard]
 s
+[Rusty gates]
 give apple
+[Overgrown track]
 e
+[Disused waterwheel]
 s
+[Barren countryside]
 s
+[Outside a windmill]
 s
+[Pitted track]
 s
+[Woodman's hut]
 e
+[Side of a Wooded Valley]
 e
+[Stream in a Valley Bottom]
 fill jug
 s
+[Western end of a bridge]
 e
 give coin
 cross bridge
+[Eastern end of a bridge]
 e
+[Crossroads]
 e
+[Winding road]
 n
+[Ancient stone circle]
 examine stones
 w
+[Shady hollow]
 w
+[Deep dark wood]
 n
+[Huge fallen oak]
 blow reeds
 drop reeds
 north
+[Scree slope]
 north
+[Mountain hut]
 enter hut
 get planks
 west
+[Frozen pond]
 drop planks
 south
+[Icy path]
 down
+[Glacier]
 west
+[High pinnacle]
 get rope
 east
+[Glacier]
 north
+[Icy path]
 up
+[Frozen pond]
 north
+[Gap between some boulders]
 north
+[High-walled garden]
 plant seeds
 water seeds
 drop jug
 drop seeds
 climb vine
+[Inscribed cavern]
 read inscriptions
 north
+[Vaulted cavern]
 west
+[Maze of tunnels]
 west
+[Stalactites and stalagmites]
 west
 move rubble
 west
 east
+[Maze of tunnels]
 east
+[Vaulted cavern]
 east
-east
+[High glass gates]
 south
+[Ornate fountain]
 north
+[High glass gates]
 east
-[#NORM]
 give bone
 east
+[Entrance hall to the palace]
 east
+[Grarg sentry post]
 east
 wear boots
 east
+[Guard room]
 remove boots
 get sword
 wear boots
 south
+[Kitchens of the palace]
 remove boots
 examine kitchens
 open cupboard
 get phial
 examine phial
 south
-[#STOP]
+[Palace battlements]
 get brooch
 north
 west
@@ -311,7 +353,7 @@ west
 south 
 east 
 east 
-ring bell # hermit gave you correct number
+ring bell
 east 
 north
 north
@@ -336,7 +378,7 @@ west
 insert coin 
 east
 east 
-open safe #code seen inserting coin
+open safe
 get key
 west
 north 

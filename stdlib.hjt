@@ -76,7 +76,7 @@ note:normal objects - takable listable and visible
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-attr:visible+takeable+listable+large
+attr:visible+takeable+listable
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -496,9 +496,7 @@ withobj:$every
 ifobjinattr:$this,$here,visible
 	ifobj:$this,takeable		
 		setcount:weight,$inventory,takeable+large
-		ifobj:$this,large
-			addvar:weight,1
-		endif
+		addvar:weight,1
 		if:weight<maxweight
 			putobj:$this,$inventory			
 			msg:Taken

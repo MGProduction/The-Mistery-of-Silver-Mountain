@@ -11,7 +11,7 @@ objclass:localscenery
 	startin:$nowhere
 objclass:normalobj
 	note:normal objects - takable listable and visible
-	attr:visible+takeable+listable+large
+	attr:visible+takeable+listable
 objclass:hiddenobj
 	note:normal objects - initially hidden
 	attr:$none
@@ -141,9 +141,7 @@ genericverb:take
 		ifobjinattr:$this,$here,visible
 			ifobj:$this,takeable		
 				setcount:weight,$inventory,takeable+large
-				ifobj:$this,large
-					addvar:weight,1
-				endif
+				addvar:weight,1
 				if:weight<maxweight
 					putobj:$this,$inventory			
 					msg:Taken
