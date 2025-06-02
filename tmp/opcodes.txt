@@ -1,83 +1,11 @@
 onfirst[0]::$start[0] = $00/0
 	clear[130]
-	msg::[210]\c...
+	msg::[214]\c...
 	waitkey[177]
 	goto::[1]_introduction
 onfirst[0]::_introduction[1] = $101/257
-	msg::[24]Didn't go far...
-endif[135]
-endwith[136]
-withobj::[60]sluicegates.handle
-	msg::[94]The gates open, the pool empties
-	set::[20]emptypool
-endwith[136]
-withobj::[62]disusedwaterwheel.wheel
-	msg::[51]It goes round
+	[67]::154
 onfirst[0]::_dead[2] = $202/514
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
 	[0]::0
 	[0]::0
 	[0]::0
@@ -178,160 +106,162 @@ s[7]::longgallery[71] = $2e2e/11822
 s[7]::mosaicflooredhall[72] = $2f2f/12079
 s[7]::wizardslair[78] = $3030/12336
 s[7]::highglassgates[79] = $3131/12593
-s[7]::dungeonsofthepalace[83] = $3232/12850
+s[7]::dungeonsofthepalace[83] = $606/1542
 s[7]::$everywhere[246] = $b0b/2827
-n[8]::windingroad[5] = $3333/13107
-n[8]::villageofrustichouses[6] = $3434/13364
-n[8]::deepdarkwood[10] = $3535/13621
-n[8]::hugefallenoak[11] = $3636/13878
-n[8]::middleofthelake[15] = $3737/14135
+n[8]::windingroad[5] = $3232/12850
+n[8]::villageofrustichouses[6] = $3333/13107
+n[8]::deepdarkwood[10] = $3434/13364
+n[8]::hugefallenoak[11] = $3535/13621
+n[8]::middleofthelake[15] = $3636/13878
 n[8]::roughwater[16] = $1515/5397
-n[8]::islandshore[17] = $3838/14392
-n[8]::oldkiln[19] = $3939/14649
-n[8]::atticbedroom[22] = $3a3a/14906
+n[8]::islandshore[17] = $3737/14135
+n[8]::oldkiln[19] = $3838/14392
+n[8]::atticbedroom[22] = $3939/14649
 n[8]::outsideawindmill[25] = $1c1c/7196
-n[8]::barrencountryside[27] = $3b3b/15163
-n[8]::rustygates[34] = $3c3c/15420
-n[8]::sluicegates[35] = $3d3d/15677
-n[8]::disusedwaterwheel[36] = $3e3e/15934
-n[8]::westernendofabridge[38] = $3f3f/16191
-n[8]::burntoutcampfire[40] = $4040/16448
+n[8]::barrencountryside[27] = $3a3a/14906
+n[8]::rustygates[34] = $3b3b/15163
+n[8]::sluicegates[35] = $3c3c/15420
+n[8]::disusedwaterwheel[36] = $3d3d/15677
+n[8]::westernendofabridge[38] = $3e3e/15934
+n[8]::burntoutcampfire[40] = $3f3f/16191
 n[8]::pittedtrack[41] = $1818/6168
 n[8]::woodmanshut[43] = $1717/5911
-n[8]::dampwellbottom[44] = $4141/16705
-n[8]::topofadeepwell[47] = $4242/16962
-n[8]::frozenpond[48] = $4343/17219
-n[8]::gapbetweensomeboulders[49] = $4444/17476
-n[8]::glacier[50] = $4545/17733
-n[8]::inscribedcavern[54] = $4646/17990
+n[8]::dampwellbottom[44] = $4040/16448
+n[8]::topofadeepwell[47] = $4141/16705
+n[8]::frozenpond[48] = $4242/16962
+n[8]::gapbetweensomeboulders[49] = $4343/17219
+n[8]::glacier[50] = $4444/17476
+n[8]::inscribedcavern[54] = $4545/17733
 n[8]::mazeoftunnels[55] = $2323/8995
-n[8]::screeslope[58] = $4747/18247
-n[8]::banquethall[62] = $4848/18504
-n[8]::cobwebbyroom[63] = $4949/18761
-n[8]::dankcorridor[64] = $4a4a/19018
+n[8]::screeslope[58] = $4646/17990
+n[8]::banquethall[62] = $4747/18247
+n[8]::cobwebbyroom[63] = $4848/18504
+n[8]::dankcorridor[64] = $4949/18761
 n[8]::halloftapestries[69] = $2e2e/11822
-n[8]::kitchensofthepalace[70] = $4b4b/19275
-n[8]::mosaicflooredhall[72] = $4c4c/19532
-n[8]::palacebattlements[73] = $4d4d/19789
+n[8]::kitchensofthepalace[70] = $4a4a/19018
+n[8]::mosaicflooredhall[72] = $4b4b/19275
+n[8]::palacebattlements[73] = $4c4c/19532
 n[8]::safeinogbanschambers[74] = $2c2c/11308
-n[8]::silverthroneroom[76] = $4e4e/20046
-n[8]::ornatefountain[80] = $4f4f/20303
-n[8]::winecellar[81] = $5050/20560
-n[8]::dungeonsofthepalace[83] = $5151/20817
+n[8]::silverthroneroom[76] = $4d4d/19789
+n[8]::ornatefountain[80] = $4e4e/20046
+n[8]::winecellar[81] = $4f4f/20303
+n[8]::dungeonsofthepalace[83] = $5050/20560
 n[8]::$everywhere[246] = $b0b/2827
-w[9]::crossroads[4] = $5252/21074
-w[9]::windingroad[5] = $5353/21331
+w[9]::crossroads[4] = $5151/20817
+w[9]::windingroad[5] = $5252/21074
 w[9]::villageofrustichouses[6] = $1010/4112
-w[9]::stable[7] = $3333/13107
-w[9]::shadyhollow[8] = $5454/21588
-w[9]::ancientstonecircle[9] = $5555/21845
+w[9]::stable[7] = $3232/12850
+w[9]::shadyhollow[8] = $5353/21331
+w[9]::ancientstonecircle[9] = $5454/21588
 w[9]::sideofawoodedvalley[12] = $1d1d/7453
-w[9]::streaminavalleybottom[13] = $5656/22102
-w[9]::edgeofanicylake[14] = $5757/22359
+w[9]::streaminavalleybottom[13] = $5555/21845
+w[9]::edgeofanicylake[14] = $5656/22102
 w[9]::beachedketch[18] = $1515/5397
 w[9]::whitecottage[21] = $f0f/3855
-w[9]::outsideawindmill[25] = $5858/22616
+w[9]::outsideawindmill[25] = $5757/22359
 w[9]::lowerfloorofthemill[26] = $1818/6168
-w[9]::goblingraveyard[29] = $5959/22873
-w[9]::hollowtomb[31] = $3c3c/15420
-w[9]::mistypool[32] = $3e3e/15934
-w[9]::disusedwaterwheel[36] = $5a5a/23130
-w[9]::easternendofabridge[37] = $5b5b/23387
-w[9]::westernendofabridge[38] = $5c5c/23644
+w[9]::goblingraveyard[29] = $5858/22616
+w[9]::hollowtomb[31] = $3b3b/15163
+w[9]::mistypool[32] = $3d3d/15677
+w[9]::disusedwaterwheel[36] = $5959/22873
+w[9]::easternendofabridge[37] = $5a5a/23130
+w[9]::westernendofabridge[38] = $5b5b/23387
 w[9]::orchard[39] = $1e1e/7710
-w[9]::burntoutcampfire[40] = $5d5d/23901
-w[9]::pittedtrack[41] = $5e5e/24158
-w[9]::cave[46] = $5f5f/24415
-w[9]::glacier[50] = $6060/24672
-w[9]::inscribedcavern[54] = $4444/17476
-w[9]::mazeoftunnels[55] = $6161/24929
+w[9]::burntoutcampfire[40] = $5c5c/23644
+w[9]::pittedtrack[41] = $5d5d/23901
+w[9]::cave[46] = $5e5e/24158
+w[9]::glacier[50] = $5f5f/24415
+w[9]::inscribedcavern[54] = $4343/17219
+w[9]::mazeoftunnels[55] = $6060/24672
 w[9]::mountainhut[56] = $a0a/2570
 w[9]::perilouspath[57] = $2222/8738
-w[9]::silverbellintherock[59] = $6262/25186
-w[9]::stalactitesstalagmites[60] = $6363/25443
-w[9]::vaultedcavern[61] = $6464/25700
-w[9]::cobwebbyroom[63] = $6565/25957
-w[9]::entrancehalltothepalace[66] = $6666/26214
-w[9]::grargsentrypost[67] = $6767/26471
-w[9]::guardroom[68] = $6868/26728
-w[9]::kitchensofthepalace[70] = $6969/26985
+w[9]::silverbellintherock[59] = $6161/24929
+w[9]::stalactitesstalagmites[60] = $6262/25186
+w[9]::vaultedcavern[61] = $6363/25443
+w[9]::cobwebbyroom[63] = $6464/25700
+w[9]::entrancehalltothepalace[66] = $6565/25957
+w[9]::grargsentrypost[67] = $6666/26214
+w[9]::guardroom[68] = $6767/26471
+w[9]::kitchensofthepalace[70] = $6868/26728
 w[9]::safeinogbanschambers[74] = $3030/12336
 w[9]::silverthroneroom[76] = $2c2c/11308
-w[9]::wizardslair[78] = $6a6a/27242
-w[9]::highglassgates[79] = $4646/17990
-w[9]::winecellar[81] = $6b6b/27499
-w[9]::rowofcasks[82] = $6c6c/27756
+w[9]::wizardslair[78] = $6969/26985
+w[9]::highglassgates[79] = $4545/17733
+w[9]::winecellar[81] = $6a6a/27242
+w[9]::rowofcasks[82] = $6b6b/27499
 w[9]::$everywhere[246] = $b0b/2827
 e[10]::crossroads[4] = $1010/4112
 e[10]::windingroad[5] = $f0f/3855
 e[10]::villageofrustichouses[6] = $c0c/3084
-e[10]::shadyhollow[8] = $3333/13107
-e[10]::ancientstonecircle[9] = $3434/13364
-e[10]::deepdarkwood[10] = $6d6d/28013
-e[10]::sideofawoodedvalley[12] = $6e6e/28270
-e[10]::edgeofanicylake[14] = $6f6f/28527
-e[10]::middleofthelake[15] = $5e5e/24158
-e[10]::islandshore[17] = $7070/28784
+e[10]::shadyhollow[8] = $3232/12850
+e[10]::ancientstonecircle[9] = $3333/13107
+e[10]::deepdarkwood[10] = $6c6c/27756
+e[10]::sideofawoodedvalley[12] = $6d6d/28013
+e[10]::edgeofanicylake[14] = $6e6e/28270
+e[10]::middleofthelake[15] = $5d5d/23901
+e[10]::islandshore[17] = $6f6f/28527
 e[10]::outsideawindmill[25] = $d0d/3341
-e[10]::gamekeeperscottage[28] = $3d3d/15677
-e[10]::goblingraveyard[29] = $7171/29041
-e[10]::halfduggrave[30] = $3c3c/15420
-e[10]::hollowtomb[31] = $7272/29298
+e[10]::gamekeeperscottage[28] = $3c3c/15420
+e[10]::goblingraveyard[29] = $7070/28784
+e[10]::halfduggrave[30] = $3b3b/15163
+e[10]::hollowtomb[31] = $7171/29041
 e[10]::overgrowntrack[33] = $1919/6425
-e[10]::easternendofabridge[37] = $7373/29555
-e[10]::westernendofabridge[38] = $7474/29812
+e[10]::easternendofabridge[37] = $7272/29298
+e[10]::westernendofabridge[38] = $7373/29555
 e[10]::orchard[39] = $1212/4626
-e[10]::burntoutcampfire[40] = $7575/30069
-e[10]::ploughedfield[42] = $7676/30326
-e[10]::woodmanshut[43] = $5656/22102
-e[10]::narrowpassage[45] = $7777/30583
+e[10]::burntoutcampfire[40] = $7474/29812
+e[10]::ploughedfield[42] = $7575/30069
+e[10]::woodmanshut[43] = $5555/21845
+e[10]::narrowpassage[45] = $7676/30326
 e[10]::topofadeepwell[47] = $1e1e/7710
-e[10]::frozenpond[48] = $7878/30840
-e[10]::gapbetweensomeboulders[49] = $6262/25186
+e[10]::frozenpond[48] = $7777/30583
+e[10]::gapbetweensomeboulders[49] = $6161/24929
 e[10]::highpinnacle[51] = $e0e/3598
 e[10]::highwalledgarden[52] = $2222/8738
-e[10]::mazeoftunnels[55] = $7979/31097
-e[10]::perilouspath[57] = $7a7a/31354
-e[10]::silverbellintherock[59] = $7b7b/31611
-e[10]::stalactitesstalagmites[60] = $6464/25700
-e[10]::vaultedcavern[61] = $4f4f/20303
-e[10]::cobwebbyroom[63] = $7c7c/31868
-e[10]::entrancehalltothepalace[66] = $7d7d/32125
-e[10]::grargsentrypost[67] = $7e7e/32382
-e[10]::longgallery[71] = $4d4d/19789
-e[10]::mosaicflooredhall[72] = $7f7f/32639
-e[10]::silverchamber[75] = $8080/32896
+e[10]::mazeoftunnels[55] = $7878/30840
+e[10]::perilouspath[57] = $7979/31097
+e[10]::silverbellintherock[59] = $7a7a/31354
+e[10]::stalactitesstalagmites[60] = $6363/25443
+e[10]::vaultedcavern[61] = $4e4e/20046
+e[10]::cobwebbyroom[63] = $7b7b/31611
+e[10]::entrancehalltothepalace[66] = $7c7c/31868
+e[10]::grargsentrypost[67] = $7d7d/32125
+e[10]::longgallery[71] = $4c4c/19532
+e[10]::mosaicflooredhall[72] = $7e7e/32382
+e[10]::silverchamber[75] = $b0b/2827
 e[10]::turretroom[77] = $3030/12336
-e[10]::highglassgates[79] = $8181/33153
-e[10]::rowofcasks[82] = $8282/33410
+e[10]::highglassgates[79] = $7f7f/32639
+e[10]::rowofcasks[82] = $8080/32896
 e[10]::$everywhere[246] = $b0b/2827
 se[11]::$everywhere[246] = $b0b/2827
 sw[12]::$everywhere[246] = $b0b/2827
 ne[13]::$everywhere[246] = $b0b/2827
 nw[14]::$everywhere[246] = $b0b/2827
 go[15]::$everywhere[246] = $b0b/2827
-enter[16]::outsideawindmill[25] = $8383/33667
-enter[16]::mistypool[32] = $8484/33924
-enter[16]::woodmanshut[43] = $8585/34181
-enter[16]::mountainhut[56] = $8686/34438
+enter[16]::outsideawindmill[25] = $8181/33153
+enter[16]::mistypool[32] = $8282/33410
+enter[16]::woodmanshut[43] = $8383/33667
+enter[16]::dampwellbottom[44] = $8484/33924
+enter[16]::mountainhut[56] = $8585/34181
 enter[16]::$everywhere[246] = $b0b/2827
-x[17]::crossroads[4] = $8787/34695
+x[17]::crossroads[4] = $8686/34438
+x[17]::stable[7] = $8787/34695
 x[17]::stable[7] = $8888/34952
-x[17]::stable[7] = $8989/35209
-x[17]::streaminavalleybottom[13] = $8a8a/35466
-x[17]::beachedketch[18] = $8b8b/35723
-x[17]::oldkiln[19] = $8c8c/35980
+x[17]::streaminavalleybottom[13] = $8989/35209
+x[17]::beachedketch[18] = $8a8a/35466
+x[17]::oldkiln[19] = $8b8b/35723
+x[17]::whitecottage[21] = $8c8c/35980
 x[17]::whitecottage[21] = $8d8d/36237
 x[17]::whitecottage[21] = $8e8e/36494
-x[17]::whitecottage[21] = $8f8f/36751
-x[17]::atticbedroom[22] = $9090/37008
-x[17]::cupboard[23] = $9191/37265
-x[17]::sacksontheupperfloor[24] = $9292/37522
+x[17]::atticbedroom[22] = $8f8f/36751
+x[17]::cupboard[23] = $9090/37008
+x[17]::sacksontheupperfloor[24] = $9191/37265
+x[17]::goblingraveyard[29] = $9292/37522
 x[17]::goblingraveyard[29] = $9393/37779
-x[17]::goblingraveyard[29] = $9494/38036
-x[17]::mistypool[32] = $9595/38293
-x[17]::sluicegates[35] = $9696/38550
-x[17]::orchard[39] = $9797/38807
+x[17]::mistypool[32] = $9494/38036
+x[17]::sluicegates[35] = $9595/38293
+x[17]::orchard[39] = $9696/38550
+x[17]::dampwellbottom[44] = $9797/38807
 x[17]::dampwellbottom[44] = $9898/39064
 x[17]::dampwellbottom[44] = $9999/39321
 x[17]::topofadeepwell[47] = $9a9a/39578
@@ -346,187 +276,194 @@ x[17]::$everywhere[246] = $a2a2/41634
 x[17]::$everywhere[246] = $a3a3/41891
 x[17]::$everywhere[246] = $a4a4/42148
 x[17]::$everywhere[246] = $a5a5/42405
-x[17]::$everywhere[246] = $3131/12593
 x[17]::$everywhere[246] = $a6a6/42662
+x[17]::$everywhere[246] = $3030/12336
 l[18]::$everywhere[246] = $a7a7/42919
-l[18]::$everywhere[246] = $a6a6/42662
+l[18]::$everywhere[246] = $3030/12336
 take[19]::sacksontheupperfloor[24] = $a8a8/43176
-take[19]::$everywhere[246] = $a9a9/43433
+take[19]::topofadeepwell[47] = $a9a9/43433
 take[19]::$everywhere[246] = $aaaa/43690
 take[19]::$everywhere[246] = $abab/43947
-take[19]::$everywhere[246] = $a6a6/42662
+take[19]::$everywhere[246] = $6969/26985
+take[19]::$everywhere[246] = $3030/12336
 drop[20]::middleofthelake[15] = $acac/44204
 drop[20]::roughwater[16] = $acac/44204
 drop[20]::$everywhere[246] = $adad/44461
-drop[20]::$everywhere[246] = $9f9f/40863
-drop[20]::$everywhere[246] = $a6a6/42662
-use[21]::roughwater[16] = $aeae/44718
-use[21]::frozenpond[48] = $afaf/44975
-use[21]::$everywhere[246] = $b0b0/45232
-use[21]::$everywhere[246] = $b1b1/45489
-use[21]::$everywhere[246] = $b2b2/45746
-use[21]::$everywhere[246] = $a6a6/42662
-push[22]::hollowtomb[31] = $b3b3/46003
-push[22]::dampwellbottom[44] = $b4b4/46260
-push[22]::stalactitesstalagmites[60] = $b5b5/46517
-push[22]::$everywhere[246] = $a6a6/42662
-pull[23]::hollowtomb[31] = $b3b3/46003
-pull[23]::dampwellbottom[44] = $b4b4/46260
-pull[23]::stalactitesstalagmites[60] = $b5b5/46517
-pull[23]::$everywhere[246] = $a6a6/42662
-open[24]::whitecottage[21] = $8e8e/36494
-open[24]::cupboard[23] = $b6b6/46774
-open[24]::sacksontheupperfloor[24] = $9292/37522
-open[24]::sluicegates[35] = $b7b7/47031
-open[24]::dankcorridor[64] = $b8b8/47288
-open[24]::kitchensofthepalace[70] = $b9b9/47545
-open[24]::wizardslair[78] = $baba/47802
-open[24]::$everywhere[246] = $bbbb/48059
-open[24]::$everywhere[246] = $a6a6/42662
-close[25]::$everywhere[246] = $5050/20560
-close[25]::$everywhere[246] = $a6a6/42662
-lock[26]::$everywhere[246] = $a6a6/42662
-unlock[27]::wizardslair[78] = $bcbc/48316
-unlock[27]::$everywhere[246] = $a6a6/42662
-show[28]::wizardslair[78] = $b0b/2827
-show[28]::$everywhere[246] = $a6a6/42662
-give[29]::barrencountryside[27] = $bdbd/48573
-give[29]::overgrowntrack[33] = $bebe/48830
-give[29]::rustygates[34] = $bfbf/49087
-give[29]::easternendofabridge[37] = $c0c0/49344
-give[29]::westernendofabridge[38] = $c0c0/49344
-give[29]::highglassgates[79] = $a7a7/42919
-give[29]::winecellar[81] = $404/1028
-give[29]::$everywhere[246] = $c1c1/49601
-give[29]::$everywhere[246] = $c2c2/49858
-give[29]::$everywhere[246] = $c3c3/50115
-give[29]::$everywhere[246] = $c4c4/50372
-give[29]::$everywhere[246] = $c5c5/50629
-give[29]::$everywhere[246] = $c6c6/50886
-give[29]::$everywhere[246] = $c7c7/51143
+drop[20]::$everywhere[246] = $aeae/44718
+drop[20]::$everywhere[246] = $3030/12336
+use[21]::roughwater[16] = $afaf/44975
+use[21]::dampwellbottom[44] = $b0b0/45232
+use[21]::frozenpond[48] = $b1b1/45489
+use[21]::cobwebbyroom[63] = $b2b2/45746
+use[21]::dankcorridor[64] = $b3b3/46003
+use[21]::$everywhere[246] = $b4b4/46260
+use[21]::$everywhere[246] = $b5b5/46517
+use[21]::$everywhere[246] = $b6b6/46774
+use[21]::$everywhere[246] = $3030/12336
+push[22]::hollowtomb[31] = $b7b7/47031
+push[22]::dampwellbottom[44] = $b8b8/47288
+push[22]::stalactitesstalagmites[60] = $b9b9/47545
+push[22]::$everywhere[246] = $3030/12336
+pull[23]::hollowtomb[31] = $b7b7/47031
+pull[23]::dampwellbottom[44] = $b8b8/47288
+pull[23]::stalactitesstalagmites[60] = $b9b9/47545
+pull[23]::$everywhere[246] = $3030/12336
+open[24]::whitecottage[21] = $8d8d/36237
+open[24]::cupboard[23] = $baba/47802
+open[24]::sacksontheupperfloor[24] = $9191/37265
+open[24]::sluicegates[35] = $bbbb/48059
+open[24]::dankcorridor[64] = $bcbc/48316
+open[24]::kitchensofthepalace[70] = $bdbd/48573
+open[24]::wizardslair[78] = $a7a7/42919
+open[24]::$everywhere[246] = $bebe/48830
+open[24]::$everywhere[246] = $3030/12336
+close[25]::$everywhere[246] = $7f7f/32639
+close[25]::$everywhere[246] = $3030/12336
+lock[26]::$everywhere[246] = $3030/12336
+unlock[27]::wizardslair[78] = $a6a6/42662
+unlock[27]::$everywhere[246] = $3030/12336
+show[28]::wizardslair[78] = $bebe/48830
+show[28]::$everywhere[246] = $bfbf/49087
+show[28]::$everywhere[246] = $c0c0/49344
+show[28]::$everywhere[246] = $c1c1/49601
+show[28]::$everywhere[246] = $c2c2/49858
+show[28]::$everywhere[246] = $3030/12336
+give[29]::barrencountryside[27] = $c3c3/50115
+give[29]::overgrowntrack[33] = $c4c4/50372
+give[29]::rustygates[34] = $c5c5/50629
+give[29]::easternendofabridge[37] = $c6c6/50886
+give[29]::westernendofabridge[38] = $c6c6/50886
+give[29]::highglassgates[79] = $404/1028
+give[29]::winecellar[81] = $c7c7/51143
 give[29]::$everywhere[246] = $c8c8/51400
-give[29]::$everywhere[246] = $a6a6/42662
-put[30]::$everywhere[246] = $6b6b/27499
-put[30]::$everywhere[246] = $a6a6/42662
-help[31]::$everywhere[246] = $8282/33410
-inventory[32]::$everywhere[246] = $6c6c/27756
-quit[33]::$everywhere[246] = $a0a0/41120
-restart[34]::$everywhere[246] = $3232/12850
-save[35]::$everywhere[246] = $5151/20817
-load[36]::$everywhere[246] = $c9c9/51657
-mem[37]::$everywhere[246] = $caca/51914
-gfx[38]::$everywhere[246] = $cbcb/52171
-talk[39]::$everywhere[246] = $cccc/52428
-talk[39]::$everywhere[246] = $cdcd/52685
-talk[39]::$everywhere[246] = $cece/52942
-talk[39]::$everywhere[246] = $cfcf/53199
-talk[39]::$everywhere[246] = $8181/33153
-ask[40]::$everywhere[246] = $cfcf/53199
-ask[40]::$everywhere[246] = $8181/33153
-bail[41]::$everywhere[246] = $d0d0/53456
-bail[41]::$everywhere[246] = $a6a6/42662
-blow[42]::hugefallenoak[11] = $d1d1/53713
-blow[42]::$everywhere[246] = $d2d2/53970
-blow[42]::$everywhere[246] = $a6a6/42662
-break[43]::dankcorridor[64] = $d3d3/54227
-break[43]::$everywhere[246] = $a6a6/42662
-burn[44]::$everywhere[246] = $a6a6/42662
-climb[45]::dampwellbottom[44] = $d4d4/54484
-climb[45]::topofadeepwell[47] = $d5d5/54741
-climb[45]::highpinnacle[51] = $d6d6/54998
-climb[45]::highwalledgarden[52] = $d7d7/55255
-climb[45]::$everywhere[246] = $a6a6/42662
-cross[46]::easternendofabridge[37] = $d8d8/55512
-cross[46]::westernendofabridge[38] = $d9d9/55769
-cross[46]::$everywhere[246] = $a6a6/42662
-cut[47]::cobwebbyroom[63] = $dada/56026
-cut[47]::$everywhere[246] = $a6a6/42662
-dive[48]::middleofthelake[15] = $dbdb/56283
-dive[48]::roughwater[16] = $dbdb/56283
-dive[48]::mistypool[32] = $dcdc/56540
-dive[48]::$everywhere[246] = $a6a6/42662
-drink[49]::$everywhere[246] = $dddd/56797
-drink[49]::$everywhere[246] = $a6a6/42662
-eat[50]::$everywhere[246] = $dede/57054
-eat[50]::$everywhere[246] = $dfdf/57311
-eat[50]::$everywhere[246] = $e0e0/57568
-eat[50]::$everywhere[246] = $a6a6/42662
-empty[51]::mosaicflooredhall[72] = $e1e1/57825
-empty[51]::$everywhere[246] = $a6a6/42662
-feed[52]::barrencountryside[27] = $e2e2/58082
-feed[52]::highglassgates[79] = $abab/43947
-feed[52]::winecellar[81] = $bbbb/48059
-feed[52]::$everywhere[246] = $e3e3/58339
-feed[52]::$everywhere[246] = $e4e4/58596
-feed[52]::$everywhere[246] = $e5e5/58853
-feed[52]::$everywhere[246] = $a6a6/42662
-hold[53]::wizardslair[78] = $b0b/2827
-hold[53]::$everywhere[246] = $a6a6/42662
-insert[54]::$everywhere[246] = $a6a6/42662
-light[55]::winecellar[81] = $505/1285
-light[55]::$everywhere[246] = $e6e6/59110
-light[55]::$everywhere[246] = $e7e7/59367
-light[55]::$everywhere[246] = $a6a6/42662
-make[56]::hugefallenoak[11] = $d1d1/53713
-make[56]::$everywhere[246] = $d2d2/53970
-make[56]::$everywhere[246] = $a6a6/42662
-move[57]::hollowtomb[31] = $b3b3/46003
-move[57]::dampwellbottom[44] = $b4b4/46260
-move[57]::stalactitesstalagmites[60] = $b5b5/46517
-move[57]::$everywhere[246] = $a6a6/42662
-pay[58]::easternendofabridge[37] = $e8e8/59624
-pay[58]::westernendofabridge[38] = $e8e8/59624
-pay[58]::$everywhere[246] = $c2c2/49858
-pay[58]::$everywhere[246] = $a6a6/42662
-plant[59]::highwalledgarden[52] = $e9e9/59881
-plant[59]::$everywhere[246] = $eaea/60138
-plant[59]::$everywhere[246] = $a6a6/42662
-poison[60]::mosaicflooredhall[72] = $ebeb/60395
-poison[60]::$everywhere[246] = $a6a6/42662
-reflect[61]::wizardslair[78] = $a6a6/42662
-reflect[61]::$everywhere[246] = $a6a6/42662
-remove[62]::hollowtomb[31] = $b3b3/46003
-remove[62]::stalactitesstalagmites[60] = $b5b5/46517
-remove[62]::$everywhere[246] = $ecec/60652
-remove[62]::$everywhere[246] = $aaaa/43690
-remove[62]::$everywhere[246] = $eded/60909
-remove[62]::$everywhere[246] = $a6a6/42662
-rig[63]::hugefallenoak[11] = $d1d1/53713
-rig[63]::$everywhere[246] = $d2d2/53970
-rig[63]::$everywhere[246] = $a6a6/42662
-ring[64]::silverbellintherock[59] = $eeee/61166
-ring[64]::$everywhere[246] = $a6a6/42662
-swing[65]::dampwellbottom[44] = $efef/61423
-swing[65]::cobwebbyroom[63] = $dada/56026
-swing[65]::dankcorridor[64] = $f0f0/61680
-swing[65]::$everywhere[246] = $f1f1/61937
-swing[65]::$everywhere[246] = $a6a6/42662
-throw[66]::barrencountryside[27] = $f2f2/62194
-throw[66]::$everywhere[246] = $f3f3/62451
-throw[66]::$everywhere[246] = $a6a6/42662
-turn[67]::sluicegates[35] = $f4f4/62708
-turn[67]::disusedwaterwheel[36] = $f5f5/62965
-turn[67]::$everywhere[246] = $a6a6/42662
-water[68]::highwalledgarden[52] = $f6f6/63222
-water[68]::$everywhere[246] = $a6a6/42662
-wear[69]::$everywhere[246] = $b1b1/45489
-wear[69]::$everywhere[246] = $f7f7/63479
-wear[69]::$everywhere[246] = $a6a6/42662
-cheat[70]::$everywhere[246] = $f8f8/63736
-cheat[70]::$everywhere[246] = $a6a6/42662
-attack[71]::barrencountryside[27] = $f9f9/63993
-attack[71]::$everywhere[246] = $fafa/64250
+give[29]::$everywhere[246] = $c9c9/51657
+give[29]::$everywhere[246] = $caca/51914
+give[29]::$everywhere[246] = $cbcb/52171
+give[29]::$everywhere[246] = $cccc/52428
+give[29]::$everywhere[246] = $cdcd/52685
+give[29]::$everywhere[246] = $cece/52942
+give[29]::$everywhere[246] = $cfcf/53199
+give[29]::$everywhere[246] = $3030/12336
+put[30]::$everywhere[246] = $3131/12593
+put[30]::$everywhere[246] = $3030/12336
+help[31]::$everywhere[246] = $9f9f/40863
+inventory[32]::$everywhere[246] = $d0d0/53456
+quit[33]::$everywhere[246] = $4f4f/20303
+restart[34]::$everywhere[246] = $6a6a/27242
+save[35]::$everywhere[246] = $c7c7/51143
+load[36]::$everywhere[246] = $d1d1/53713
+mem[37]::$everywhere[246] = $8080/32896
+gfx[38]::$everywhere[246] = $6b6b/27499
+talk[39]::$everywhere[246] = $d2d2/53970
+talk[39]::$everywhere[246] = $d3d3/54227
+talk[39]::$everywhere[246] = $d4d4/54484
+talk[39]::$everywhere[246] = $a0a0/41120
+talk[39]::$everywhere[246] = $4d4d/19789
+ask[40]::$everywhere[246] = $a0a0/41120
+ask[40]::$everywhere[246] = $4d4d/19789
+bail[41]::$everywhere[246] = $5050/20560
+bail[41]::$everywhere[246] = $3030/12336
+blow[42]::hugefallenoak[11] = $d5d5/54741
+blow[42]::$everywhere[246] = $d6d6/54998
+blow[42]::$everywhere[246] = $3030/12336
+break[43]::dankcorridor[64] = $d7d7/55255
+break[43]::$everywhere[246] = $3030/12336
+burn[44]::$everywhere[246] = $3030/12336
+climb[45]::dampwellbottom[44] = $d8d8/55512
+climb[45]::topofadeepwell[47] = $d9d9/55769
+climb[45]::highpinnacle[51] = $dada/56026
+climb[45]::highwalledgarden[52] = $dbdb/56283
+climb[45]::$everywhere[246] = $3030/12336
+cross[46]::easternendofabridge[37] = $dcdc/56540
+cross[46]::westernendofabridge[38] = $dddd/56797
+cross[46]::$everywhere[246] = $3030/12336
+cut[47]::cobwebbyroom[63] = $b2b2/45746
+cut[47]::$everywhere[246] = $3030/12336
+dive[48]::middleofthelake[15] = $dede/57054
+dive[48]::roughwater[16] = $dede/57054
+dive[48]::mistypool[32] = $dfdf/57311
+dive[48]::$everywhere[246] = $3030/12336
+drink[49]::$everywhere[246] = $e0e0/57568
+drink[49]::$everywhere[246] = $3030/12336
+eat[50]::$everywhere[246] = $e1e1/57825
+eat[50]::$everywhere[246] = $e2e2/58082
+eat[50]::$everywhere[246] = $e3e3/58339
+eat[50]::$everywhere[246] = $3030/12336
+empty[51]::mosaicflooredhall[72] = $e4e4/58596
+empty[51]::$everywhere[246] = $3030/12336
+feed[52]::barrencountryside[27] = $e5e5/58853
+feed[52]::highglassgates[79] = $505/1285
+feed[52]::winecellar[81] = $d0d0/53456
+feed[52]::$everywhere[246] = $e6e6/59110
+feed[52]::$everywhere[246] = $e7e7/59367
+feed[52]::$everywhere[246] = $e8e8/59624
+feed[52]::$everywhere[246] = $3030/12336
+hold[53]::wizardslair[78] = $bebe/48830
+hold[53]::$everywhere[246] = $3030/12336
+insert[54]::$everywhere[246] = $3030/12336
+light[55]::winecellar[81] = $d1d1/53713
+light[55]::$everywhere[246] = $e9e9/59881
+light[55]::$everywhere[246] = $eaea/60138
+light[55]::$everywhere[246] = $3030/12336
+make[56]::hugefallenoak[11] = $d5d5/54741
+make[56]::$everywhere[246] = $d6d6/54998
+make[56]::$everywhere[246] = $3030/12336
+move[57]::hollowtomb[31] = $b7b7/47031
+move[57]::dampwellbottom[44] = $b8b8/47288
+move[57]::stalactitesstalagmites[60] = $b9b9/47545
+move[57]::$everywhere[246] = $3030/12336
+pay[58]::easternendofabridge[37] = $ebeb/60395
+pay[58]::westernendofabridge[38] = $ebeb/60395
+pay[58]::$everywhere[246] = $c9c9/51657
+pay[58]::$everywhere[246] = $3030/12336
+plant[59]::highwalledgarden[52] = $ecec/60652
+plant[59]::$everywhere[246] = $eded/60909
+plant[59]::$everywhere[246] = $3030/12336
+poison[60]::mosaicflooredhall[72] = $eeee/61166
+poison[60]::$everywhere[246] = $3030/12336
+reflect[61]::wizardslair[78] = $aeae/44718
+reflect[61]::$everywhere[246] = $3030/12336
+remove[62]::hollowtomb[31] = $b7b7/47031
+remove[62]::stalactitesstalagmites[60] = $b9b9/47545
+remove[62]::$everywhere[246] = $efef/61423
+remove[62]::$everywhere[246] = $abab/43947
+remove[62]::$everywhere[246] = $f0f0/61680
+remove[62]::$everywhere[246] = $3030/12336
+rig[63]::hugefallenoak[11] = $d5d5/54741
+rig[63]::$everywhere[246] = $d6d6/54998
+rig[63]::$everywhere[246] = $3030/12336
+ring[64]::silverbellintherock[59] = $f1f1/61937
+ring[64]::$everywhere[246] = $3030/12336
+swing[65]::dampwellbottom[44] = $b0b0/45232
+swing[65]::cobwebbyroom[63] = $b2b2/45746
+swing[65]::dankcorridor[64] = $b3b3/46003
+swing[65]::$everywhere[246] = $f2f2/62194
+swing[65]::$everywhere[246] = $3030/12336
+throw[66]::barrencountryside[27] = $f3f3/62451
+throw[66]::$everywhere[246] = $f4f4/62708
+throw[66]::$everywhere[246] = $3030/12336
+turn[67]::sluicegates[35] = $f5f5/62965
+turn[67]::disusedwaterwheel[36] = $f6f6/63222
+turn[67]::$everywhere[246] = $3030/12336
+water[68]::highwalledgarden[52] = $f7f7/63479
+water[68]::$everywhere[246] = $3030/12336
+wear[69]::$everywhere[246] = $b5b5/46517
+wear[69]::$everywhere[246] = $f8f8/63736
+wear[69]::$everywhere[246] = $3030/12336
+cheat[70]::$everywhere[246] = $f9f9/63993
+cheat[70]::$everywhere[246] = $3030/12336
+attack[71]::barrencountryside[27] = $fafa/64250
 attack[71]::$everywhere[246] = $fbfb/64507
 attack[71]::$everywhere[246] = $fcfc/64764
-attack[71]::$everywhere[246] = $fdfd/65021
-withobj:$every[72]::$everywhere[246] = $c3c3/50115
-fill[73]::streaminavalleybottom[13] = $fefe/65278
-fill[73]::middleofthelake[15] = $ffff/65535
-fill[73]::roughwater[16] = $ffff/65535
-read[74]::goblingraveyard[29] = $9494/38036
-tie[75]::topofadeepwell[47] = $4242/16962
-into[76]::mosaicflooredhall[72] = $ebeb/60395
-onfirst[240]::$everywhere[246] = $a6a6/42662
+attack[71]::$everywhere[246] = $3030/12336
+withobj:$every[72]::$everywhere[246] = $caca/51914
+fill[73]::streaminavalleybottom[13] = $fdfd/65021
+fill[73]::middleofthelake[15] = $fefe/65278
+fill[73]::roughwater[16] = $fefe/65278
+read[74]::goblingraveyard[29] = $9393/37779
+tie[75]::topofadeepwell[47] = $ffff/65535
+into[76]::mosaicflooredhall[72] = $eeee/61166
+onfirst[240]::$everywhere[246] = $3030/12336
 onfirst[241]::$everywhere[246] = $b0b/2827
-onfirst[242]::$everywhere[246] = $8181/33153
-$unknown[255]::$everywhere[246] = $6b6b/27499
+onfirst[242]::$everywhere[246] = $4d4d/19789
+$unknown[255]::$everywhere[246] = $3131/12593

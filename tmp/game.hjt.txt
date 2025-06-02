@@ -92,12 +92,20 @@ genericverb:cheat
 	put:reeds,$inventory
 	put:jug,$inventory
 	msg:Ok
+genericverb:attack
+	withobj:$every
+		ifobjin:$this,$available
+			msg:You don't find a reason to do that		
+		else
+			msg:Too risky
 actor:hermit
 	name:a hermit
 	desc:The hermit seems old and fragile, but his gaze reveals a spirit not entirely bent by events.
 	startat:sideofawoodedvalley
 	verb:give
 		msg:He gives that back to you
+		withobj:shield
+		withobj:horseshoes
 	verb:talk
 		if:hermitknowsyou
 			msg:"You need +
@@ -141,8 +149,6 @@ actor:troll
 			msg:He doesn't want it
 	verb:talk
 		msg:The troll just grunts as he reaches out a hand towards you
-	verb:attack
-		msg:Too risky
 actor:boar
 	startat:barrencountryside
 	name:a huge boar
@@ -156,8 +162,6 @@ actor:boar
 			ifobjin:$that,$available
 				put:$that,$nowhere
 				msg:He eats it!
-	verb:attack
-		msg:Too risky
 actor:hound
 	startat:highglassgates
 	name:a ferocious hound
@@ -170,8 +174,6 @@ actor:hound
 				ifobjin:$that,$available
 					put:$that,$nowhere
 					msg:He eats it!
-	verb:attack
-		msg:Too risky
 actor:feastinggrargs
 	name:grargs feasting
 	startat:banquetinghall
@@ -264,6 +266,11 @@ normalobj:boots
 	verb:drop
 		if:bootson
 			msg:You should remove them first
+	verb:show
+		ifobjin:$this,$available
+			ifobjin:hermit,$available
+				msg:'The Boots of Deception! Keep them' +
+				msg: the hermit says
 normalobj:bread
 	name:some bread
 	startat:whitecottage
@@ -308,6 +315,11 @@ normalobj:horseshoes
 	verb:x
 		msg:They're quite old, but not worn out
 		msg:There's a P carved on them
+	verb:show
+		ifobjin:$this,$available
+			ifobjin:hermit,$available
+				msg:'One of the magic objects! Keep it!' +
+				msg: the hermit says
 	_startat:stable
 normalobj:jug
 	name:a jug
@@ -357,6 +369,11 @@ normalobj:ring
 	verb:x
 		msg:It's ancient and seems precious.
 		msg:There's a P carved on it
+	verb:show
+		ifobjin:$this,$available
+			ifobjin:hermit,$available
+				msg:'One of the magic objects! Keep it!' +
+				msg: the hermit says
 normalobj:rope
 	name:a rope
 	startat:highpinnacle
@@ -391,6 +408,11 @@ normalobj:shield
 	verb:x
 		msg:On this shield is the Sylvan coat of arms
 		msg:There's a P carved on it
+	verb:show
+		ifobjin:$this,$available
+			ifobjin:hermit,$available
+				msg:'One of the magic objects! Keep it!' +
+				msg: the hermit says
 normalobj:silverplate
 	name:a silver plate
 	syn:plate
@@ -1368,10 +1390,12 @@ room:dampwellbottom
 	image:png/dampwellbottom.jpg
 	attr.shortdesc:in a damp well bottom
 	desc:The slimy stones of the walls glisten in the faint light filtering in from above. The bottom, practically dry, still smells damp.
-	attr.exits:[north]
 	verb:n
 		if:brokenwall
+			unset:ropetied
+			unset:sheettied
 			goto:narrowpassage
+	verb:use
 	verb:swing
 		withobj:axe
 			ifobjin:axe,$available
@@ -1391,7 +1415,13 @@ room:dampwellbottom
 		withobj:sheet
 			if:sheettied
 				msg:The sheet is torn
-	scenery:bottom
+	verb:enter
+		withobj:opening
+			if:brokenwall
+				unset:ropetied
+				unset:sheettied
+				goto:narrowpassage
+	scenery:bottom|wall|walls|stones
 		verb:x
 			if:brokenwall
 				msg:There's a narrow opening
@@ -1407,6 +1437,9 @@ room:dampwellbottom
 		verb:move
 		verb:pull
 			msg:They're wedged in, and you can't do much with your bare hands
+	scenery:opening
+		verb:x
+			msg:It leads north and it's big enough for you to enter it
 room:narrowpassage
 	name:Narrow passage
 	image:png/cavern.jpg
@@ -1425,6 +1458,8 @@ room:cave
 	desc:The low ceiling forces one to stoop, and drops of water make the bottom of this cave damp. 
 	attr.exits:[south,west]
 	verb:s
+		msg:Climbing a steep passage you're able to leave
+		waitkey
 		goto:topofadeepwell
 	verb:w
 		goto:narrowpassage
@@ -1433,10 +1468,12 @@ room:topofadeepwell
 	image:png/topofadeepwell.jpg
 	attr.shortdesc:by the top of a deep well
 	desc:The well appears to be dry and deep, a yawning hole with the smell of wet stone. The cold air rises steadily, carrying whispers too faint to be understood.
-	attr.exits:[east,north]
+	attr.exits:[east]
 	verb:e
 		goto:burntoutcampfire
 	verb:n
+		if:brokenwall
+			goto:cave
 	verb:tie
 		withobj:sheet
 			ifobjin:sheet,$available
@@ -1444,7 +1481,7 @@ room:topofadeepwell
 					msg:It's already tied
 				else
 					msg:You tie the sheet to the well
-					put:sheet,$here
+					put:sheet,$nowhere
 					set:sheettied
 		withobj:rope
 			ifobjin:rope,$available
@@ -1452,20 +1489,30 @@ room:topofadeepwell
 					msg:It's already tied
 				else
 					msg:You tie the rope to the well
-					put:rope,$here
+					put:rope,$nowhere
 					set:ropetied
 	verb:climb
 		withobj:sheet
-			ifobjin:sheet,$available
-				if:sheettied
-					msg:You descend into the well slowly attached to the sheet, but it rips just before you have reached the bottom.
-					put:sheet,$nowhere
-					goto:dampwellbottom
+			if:sheettied
+				msg:You descend into the well slowly attached to the sheet, but it rips just before you have reached the bottom.
+				waitkey
+				goto:dampwellbottom
 		withobj:rope
-			ifobjin:rope,$available
-				if:ropetied
-					msg:You descend into the well slowly attached to the rope.
-					goto:dampwellbottom
+			if:ropetied
+				msg:You descend into the well slowly attached to the rope.
+				waitkey
+				goto:dampwellbottom
+	verb:take
+		withobj:sheet
+			if:sheettied
+				unset:sheettied
+				put:sheet,$inventory
+				msg:Taken
+		withobj:rope
+			if:ropetied
+				unset:ropetied
+				put:rope,$inventory
+				msg:Taken
 	scenery:well
 		verb:x
 			msg:A stone well that seems particularly deep
@@ -1777,6 +1824,7 @@ room:cobwebbyroom
 		else
 			msg:You get caught in the cobwebs!
 	verb:cut
+	verb:use
 	verb:swing
 		withobj:cobwebs
 			msg:With what?
@@ -1809,6 +1857,7 @@ room:dankcorridor
 	verb:break
 		withobj:door
 			msg:How?
+	verb:use
 	verb:swing
 		withobj:axe
 			ifobjin:$this,$available

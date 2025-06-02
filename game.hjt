@@ -357,6 +357,21 @@ msg:Ok
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+attack
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+ifobjin:$this,$available
+	msg:You don't find a reason to do that		
+else
+	msg:Too risky
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 actor
 1
 <end node> 5P9i0s8y19Z
@@ -393,6 +408,16 @@ give
 4
 msg:He gives that back to you
 
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:shield
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:horseshoes
+5
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -537,13 +562,6 @@ msg:The troll just grunts as he reaches out a hand towards you
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-attack
-4
-msg:Too risky
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
 boar
 2
 <end node> 5P9i0s8y19Z
@@ -599,13 +617,6 @@ ifobjin:$this,$available
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-attack
-4
-msg:Too risky
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
 hound
 2
 <end node> 5P9i0s8y19Z
@@ -645,13 +656,6 @@ ifobjin:$this,$available
 	ifobjin:$that,$available
 		put:$that,$nowhere
 		msg:He eats it!
-
-<end node> 5P9i0s8y19Z
-dt=Text
-<node>
-attack
-4
-msg:Too risky
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1029,6 +1033,16 @@ if:bootson
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:'The Boots of Deception! Keep them' +
+		msg: the hermit says
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 bread
 2
 <end node> 5P9i0s8y19Z
@@ -1190,6 +1204,16 @@ x
 4
 msg:They're quite old, but not worn out
 msg:There's a P carved on them
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:'One of the magic objects! Keep it!' +
+		msg: the hermit says
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1411,6 +1435,16 @@ msg:There's a P carved on it
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:'One of the magic objects! Keep it!' +
+		msg: the hermit says
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 rope
 2
 <end node> 5P9i0s8y19Z
@@ -1506,6 +1540,16 @@ x
 4
 msg:On this shield is the Sylvan coat of arms
 msg:There's a P carved on it
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:'One of the magic objects! Keep it!' +
+		msg: the hermit says
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -5232,13 +5276,6 @@ The slimy stones of the walls glisten in the faint light filtering in from above
 <end node> 5P9i0s8y19Z
 dt=
 <node>
-attr.exits
-3
-[north]
-
-<end node> 5P9i0s8y19Z
-dt=
-<node>
 verb
 3
 <end node> 5P9i0s8y19Z
@@ -5247,8 +5284,15 @@ dt=
 n
 4
 if:brokenwall
+	unset:ropetied
+	unset:sheettied
 	goto:narrowpassage
 
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -5294,12 +5338,27 @@ if:sheettied
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+enter
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:opening
+5
+if:brokenwall
+	unset:ropetied
+	unset:sheettied
+	goto:narrowpassage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 scenery
 3
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-bottom
+bottom|wall|walls|stones
 4
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -5352,6 +5411,23 @@ dt=Text
 pull
 6
 msg:They're wedged in, and you can't do much with your bare hands
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+opening
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:It leads north and it's big enough for you to enter it
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -5464,6 +5540,8 @@ dt=
 <node>
 s
 4
+msg:Climbing a steep passage you're able to leave
+waitkey
 goto:topofadeepwell
 
 <end node> 5P9i0s8y19Z
@@ -5507,7 +5585,7 @@ dt=
 <node>
 attr.exits
 3
-[east,north]
+[east]
 
 <end node> 5P9i0s8y19Z
 dt=
@@ -5526,7 +5604,8 @@ dt=
 <node>
 n
 4
-//goto:nowhere
+if:brokenwall
+	goto:cave
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -5543,7 +5622,7 @@ ifobjin:sheet,$available
 		msg:It's already tied
 	else
 		msg:You tie the sheet to the well
-		put:sheet,$here
+		put:sheet,$nowhere
 		set:sheettied
 
 <end node> 5P9i0s8y19Z
@@ -5556,7 +5635,7 @@ ifobjin:rope,$available
 		msg:It's already tied
 	else
 		msg:You tie the rope to the well
-		put:rope,$here
+		put:rope,$nowhere
 		set:ropetied
 
 <end node> 5P9i0s8y19Z
@@ -5569,21 +5648,45 @@ dt=Text
 <node>
 withobj:sheet
 5
-ifobjin:sheet,$available
-	if:sheettied
-		msg:You descend into the well slowly attached to the sheet, but it rips just before you have reached the bottom.
-		put:sheet,$nowhere
-		goto:dampwellbottom
+if:sheettied
+	msg:You descend into the well slowly attached to the sheet, but it rips just before you have reached the bottom.
+	waitkey
+	goto:dampwellbottom
 
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
 withobj:rope
 5
-ifobjin:rope,$available
-	if:ropetied
-		msg:You descend into the well slowly attached to the rope.
-		goto:dampwellbottom
+if:ropetied
+	msg:You descend into the well slowly attached to the rope.
+	waitkey
+	goto:dampwellbottom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+take
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sheet
+5
+if:sheettied
+	unset:sheettied
+	put:sheet,$inventory
+	msg:Taken
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+if:ropetied
+	unset:ropetied
+	put:rope,$inventory
+	msg:Taken
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -6873,6 +6976,11 @@ cut
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
 swing
 4
 <end node> 5P9i0s8y19Z
@@ -6993,6 +7101,11 @@ withobj:door
 5
 msg:How?
 
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
