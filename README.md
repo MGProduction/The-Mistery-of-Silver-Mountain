@@ -63,7 +63,7 @@ Changes compared to the original game:
 - **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
 - **Silver bell in the rocks**: (not yet implemented) this puzzle will be handled in the same way. You need to find a clue, once you find it, you don't have to write it down and insert it when prompted.
 - **Frozen pond**: this is the only 'you're automatically dead' element I've decided to let you escape from (you can backtrack to the Mountain Hut)
-- - **Banquet hall**: once there's only the sleeping grarg, you need to examine him to *discover* the uniform
+- **Banquet hall**: once there's only the sleeping grarg, you need to examine him to *discover* the uniform
 - **Dusty Library**: in the original game, decoding the key elements here required access to an image in the companion book (and understanding how to do that). In this version, that decoding is automatic (so needed action will give you the needed information to complete the game).
 - **Safe in Ogban's chambers**: you don't need to write down the safe combination. Once you find it, opening the safe is automatic
 
