@@ -57,7 +57,7 @@ I've also added the names of the objects present in each location to the map (th
 
 ## WIP status
 
-** 17/10/2026 ** It's now possible to play ALL the game and complete it. I need to finish checking some elements, do more beta testing, and register a full (standard) walkthrough. From a technical point of view, I also need to understand how to handle images on a two-disk package (I could not fit everything in 30-40 images without losing too much)
+**17/10/2026** It's now possible to play ALL the game and complete it. I need to finish checking some elements, do more beta testing, and register a full (standard) walkthrough. From a technical point of view, I also need to understand how to handle images on a two-disk package (I could not fit everything in 30-40 images without losing too much)
 
 Changes compared to the original game: 
 - **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
