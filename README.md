@@ -53,19 +53,21 @@ The first thing I needed was a full map of the game, not just to reproduce it in
 
 ![alt text](_pub/TheMysteryOfSilverMountain.jpg)
 
-I've also added the names of the objects present in each location to the map (the ones with parenthesis around are the ones hidden at the start). This will not include what's set in the code, but it's a start.
+I've also added the names of the objects present in each location to the map (the ones with parentheses around are the ones hidden at the start). This will not include what's set in the code, but it's a start.
 
 ## WIP status
 
-This is the current status: rounded rooms are the ones available at the moment (even if not everyone is fully playable, and all of them have just some minimal enrichment - longer description, graphics, some extra synonyms for already handled actions)
-
-![alt text](_pub/TheMysteryOfSilverMountain_WIP.jpg)
-
-At the moment it's possible to follow the solution's guide steps up to **Entrance hall to the palace** with some minor flaws (so it's not far from a first release - even if "not far" can still mean 'weeks')
+** 17/10/2026 ** It's now possible to play ALL the game and complete it. I need to finish checking some elements, do more beta testing, and register a full (standard) walkthrough. From a technical point of view, I also need to understand how to handle images on a two-disk package (I could not fit everything in 30-40 images without losing too much)
 
 Changes compared to the original game: 
 - **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
 - **Silver bell in the rocks**: (not yet implemented) this puzzle will be handled in the same way. You need to find a clue, once you find it, you don't have to write it down and insert it when prompted.
 - **Frozen pond**: this is the only 'you're automatically dead' element I've decided to let you escape from (you can backtrack to the Mountain Hut)
+- **Dusty Library**: in the original game, decoding the key elements here required access to an image in the companion book (and understanding how to do that). In this version, that decoding is automatic (so needed action will give you the needed information to complete the game).
+- **Safe in Ogban's chambers**: you don't need to write down the safe combination. Once you find it, opening the safe is automatic
 
 Once ready also the .d64 will be added to this page (and it will be present also a page about this demo on itch.io)
+
+## AI usage
+
+This game was not created or converted using AI **but** I was able to **playtest it** once I've created a **Linux console version** of my **StoryTllr player**. That was not a thing I knew I could do, but it works, and with a huge (and a sudden-death) game like that I'd be a liar to say it wasn't useful to find some issue.
