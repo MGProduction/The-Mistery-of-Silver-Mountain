@@ -1,197 +1,198 @@
-[The Mistery of Silver Mountain]
+[The Mystery of Silver Mountain]
+[StoryTllr64]
 [Introduction]
 [Crossroads]
-e
+east
 [Winding road]
-e
+east
 [Village of rustic houses]
-e
+east
 [White cottage]
 examine chest
 examine pot
 get coins
 get bread
-u
+up
 [Attic bedroom]
 examine bed
 get sheet
-n
+north
 [Cupboard]
 open cupboard
 get boots
-s
+south
 [Attic bedroom]
-d
+down
 [White cottage]
-w
+west
 [Village of rustic houses]
-w
+west
 [Winding road]
-w
+west
 [Crossroads]
-w
+west
 [Eastern end of a bridge]
-w
+west
 give coin
 cross bridge
 [Western end of a bridge]
-w
+west
 [Orchard]
 examine trees
 get apples
-w
+west
 [Burnt-out campfire]
-w
+west
 wear boots
-w
+west
 [Top of a deep well]
 remove boots
 get bucket
-e
+east
 [Burnt-out campfire]
 wear boots
-n
+north
 [Woodman's hut]
 remove boots
 get axe
-n
+north
 [Pitted track]
-w
+west
 [Edge of an icy lake]
 get boat
-w
+west
 use sheet
-w
+west
 [Middle of the lake]
-n
+north
 [Rough water]
-n
+north
 [Island shore]
 drop boat
-n
+north
 [Old kiln]
 examine kiln
 get jug
-n
+north
 [Marshy inlet]
 get reeds
-s
+south
 [Old kiln]
-s
+south
 [Island shore]
-e
+east
 [Beached ketch]
 examine ketch
 get net
-w
+west
 [Island shore]
 get boat
-s
+south
 [Rough water]
-s
+south
 use bucket
-s
+south
 [Middle of the lake]
-e
+east
 [Edge of an icy lake]
 drop boat
 drop bucket
 get sheet
-e
+east
 [Pitted track]
-n
+north
 [Outside a windmill]
-e
+east
 [Lower floor of the mill]
-u
+up
 [Sacks on the upper floor]
 get sacks
 examine sacks
 get seeds
-d
+down
 [Lower floor of the mill]
-w
+west
 [Outside a windmill]
-n
+north
 [Barren countryside]
-n
+north
 throw net
-n
+north
 [Disused waterwheel]
 turn wheel
-n
+north
 [Gamekeeper's cottage]
 get lamp
-e
+east
 [Misty pool]
 examine pool
-s
+south
 [Sluice gates]
 examine sluice gates
 turn handle
-n
+north
 [Misty pool]
 examine pool
 get shield
-w
+west
 [Gamekeeper's cottage]
-s
+south
 [Disused waterwheel]
-w
+west
 [Overgrown track]
 give apple
 [Rusty gates]
-n
+north
 [Goblin graveyard]
 read inscriptions
-e
+east
 [Hollow tomb]
-e
+east
 move rubble
-w
+west
 [Goblin graveyard]
-w
+west
 [Half-dug grave]
 get bone
-e
+east
 [Goblin graveyard]
-s
+south
 [Rusty gates]
 give apple
 [Overgrown track]
-e
+east
 [Disused waterwheel]
-s
+south
 [Barren countryside]
-s
+south
 [Outside a windmill]
-s
+south
 [Pitted track]
-s
+south
 [Woodman's hut]
-e
-[Side of a Wooded Valley]
-e
-[Stream in a Valley Bottom]
+east
+[Side of a wooded Valley]
+east
+[Stream in a valley bottom]
 fill jug
-s
+south
 [Western end of a bridge]
-e
+east
 give coin
 cross bridge
 [Eastern end of a bridge]
-e
+east
 [Crossroads]
-e
+east
 [Winding road]
-n
+north
 [Ancient stone circle]
 examine stones
-w
+west
 [Shady hollow]
-w
+west
 [Deep dark wood]
-n
+north
 [Huge fallen oak]
 blow reeds
 drop reeds
@@ -236,7 +237,6 @@ west
 [Stalactites and stalagmites]
 west
 move rubble
-west
 east
 [Maze of tunnels]
 east
@@ -271,39 +271,60 @@ south
 [Palace battlements]
 get brooch
 north
+[Kitchens of the palace]
 west
+[Long gallery]
 south
+[Banquet hall]
 examine grargs
 wear boots
 south
+[Hall of tapestries]
 remove boots
 south
+[Mosaic floored hall]
+examine
 poison wine
 east
 north
+[Hall of tapestries]
 north
+[Banquet hall]
 drop boots
+examine grarg
 get uniform
 wear uniform
 examine uniform
 north
+[Long gallery]
 east
+[Kitchens of the palace]
 north
+[Guard room]
 west
+[Grarg sentry post]
 west
+[Entrance hall to the palace]
 south
+[Dank corridor]
 swing axe
 south
+[Dungeons of the palace]
 south
+[Wine cellar]
 west
 light lamp
 west 
 give bread 
 west 
+[Row of casks]
 open casks 
 west 
+[Shady hollow]
 east 
+[Ancient stone circle]
 east 
+[Stable]
 examine stables 
 examine door 
 get horseshoe
@@ -311,119 +332,142 @@ open door
 burn door
 get horseshoe
 south
+[Village of rustic houses]
 west
+[Winding road]
 west
+[Crossroads]
 west
+[Eastern end of a bridge]
 west
 give coin
 cross bridge
+[Western end of a bridge]
 west
+[Orchard]
 west
+[Burnt-out campfire]
 west
+[Top of a deep well]
 tie sheet
 climb sheet 
+[Damp well bottom]
 examine well bottom 
 swing axe
 north
+[Narrow passage]
 get ring
 east
+[Cave]
 south
+[Top of a deep well]
 east
+[Burnt-out campfire]
 north
+[Woodman's hut]
 east
+[Side of a wooded Valley]
 give brooch
 west
+[Woodman's hut]
 north
+[Pitted track]
 north
+[Outside a windmill]
 north
+[Barren countryside]
 north
+[Disused waterwheel]
 west 
+[Overgrown track]
 give apple 
+[Rusty gates]
 north 
+[Goblin graveyard]
 east
+[Hollow tomb]
 east 
+[Stalactites and stalagmites]
 east
+[Maze of tunnels]
 east 
+[Vaulted cavern]
 east 
+[High glass gates]
 east
 east 
 west
+[Vaulted cavern]
 south
+[Inscribed cavern]
 west
+[High-walled garden]
 south 
+[Gap between some boulders]
 east 
+[Perilous path]
 east 
+[Silver bell in the rock]
 ring bell
 east 
+[Dungeons of the palace]
 north
+[Dank corridor]
 north
+[Entrance hall to the palace]
 east
+[Grarg sentry post]
 east
+[Guard room]
 south 
+[Kitchens of the palace]
 west
+[Long gallery]
 south
+[Banquet hall]
 south
+[Hall of tapestries]
 south 
+[Mosaic floored hall]
 east 
+[Silver throne room]
 get silver plate
 north 
+[Dusty library]
 read books 
 south
+[Silver throne room]
 west 
+[Mosaic floored hall]
 south 
+[Safe in Ogban's chambers]
 west 
+[Cobwebby room]
 west 
 cut cobwebs 
 west 
+[Turret room]
 insert coin 
 east
+[Cobwebby room]
 east 
+[Safe in Ogban's chambers]
 open safe
 get key
 west
+[Cobwebby room]
 north 
+[Wizard's lair]
 west 
 hold up silver plate 
 west 
 unlock door 
 drop key
 west 
+[Silver chamber]
 get stone of destiny
 say magic words 
 say awake 
 say guide 
-[#STOP]
-say #write word based on books info
-[#STOP]
-s
-e
-e
-e
-[Stable]
-examine stable
-examine door
-get horseshoe
-open door
-s
-w
-w
-w
-w 
-give coin
-cross bridge
-w
-w
-w
-tie sheet
-climb sheet
-examine well bottom
-swing axe
-n
-get ring
-e
-s
-e
-n
-e
-give brooch
-
+say protect
+[Your land is free again!]
