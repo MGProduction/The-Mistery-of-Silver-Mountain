@@ -64,7 +64,7 @@ The StoryTllr64 compiler and C64 player now support the two-disk arrangement. So
 
 The game has undergone manual and AI-assisted playtesting, and the winning ending has been reached. I have also checked that the original walkthrough sequence works in this adaptation.
 
-The release `.d64` files will be added here, together with a link to the game's itch.io page.
+You will find the released `.d64` files on the [official itch.io page](https://marcogiorgini.itch.io/the-mystery-of-silver-mountain) of the game.
 
 ## Changes from the original
 
