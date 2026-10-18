@@ -1,70 +1,113 @@
-# The Mistery of Silver Mountain
+# The Mystery of Silver Mountain
 
-This is a tribute to **1984**'s **Usborne** BASIC text-adventure masterpiece, called **The Mystery of Silver Mountain**. The original game (by **Chris Oxlade** &amp; **Judy Tatchell** for **Usborne Computer Guides**), whose source code was inside a wonderful book sold then, was one reason for my love for this kind of game. Despite being a huge and long adventure, being designed for multiple 8-bit computers its descriptions and gameplay were "essential" making it even harder to solve than it was planned to be (being also some clues present only in the physical book, now not on the market anymore).
+A tribute to **The Mystery of Silver Mountain**, the 1984 BASIC text adventure by **Chris Oxlade and Judy Tatchell**, published by **Usborne**.
 
-So I decided to create a remake - adding extra text and graphics - and publish the new source code (**StoryTllr64** scripts) to help check it in these different "clothes", to highlight the greatness of the original work.
+The original game came as a source-code listing in a beautifully illustrated book, and it helped inspire my lifelong love of text adventures. It offered a remarkably large and ambitious world, designed to run on several different 8-bit computers. That portability came with very brief descriptions and a simple command system, while some essential clues appeared only in the accompanying book.
 
-# Disclaimer
+This remake uses **StoryTllr64** to bring the adventure to the Commodore 64 with expanded descriptions, additional clues and new graphics. My aim is to preserve the original game's character while making its world more accessible—and to share the scripts so others can explore, adapt and build upon this version.
 
-This **complete project** is **freely available** here on **GitHub**, as a tribute to the original game and book, which are no longer in commerce.
-(to be more specific: the book is not present on [publisher site](https://usborne.com) while available in PDF format - free - on several different websites - and the same happens also for the game).
+## About this project
 
-If you like this derivative work, please share your appreciation for the original authors and their publisher.
+The complete project is freely available here on GitHub as a tribute to the original game and book.
 
-## The Book
+If you enjoy this adaptation, please remember the work of **Chris Oxlade, Judy Tatchell and Usborne**.
 
-![alt text](_pub/eng_cover.jpg)
+This is a derivative fan project. Making it available here does not grant rights to the original material; those rights remain with their respective owners.
 
-[Link to original English book](https://dn790001.ca.archive.org/0/items/the-mystery-of-silver-mountain/the-mystery-of-silver-mountain.pdf)
+## The book
 
-## The C64 (original) game
+![Cover of the original English edition](_pub/eng_cover.jpg)
 
-![alt text](_pub/ingame_C64.png)
+[Read the original English book on the Internet Archive](https://dn790001.ca.archive.org/0/items/the-mystery-of-silver-mountain/the-mystery-of-silver-mountain.pdf)
 
-## The C64 (new) game
+## The original C64 game
 
-![alt text](_pub/ingame_title.png)
-![alt text](_pub/ingame_crossroads.png)
+![The original BASIC game running on the Commodore 64](_pub/ingame_C64.png)
 
-## Why?
+## The remake
 
-I was probably thirteen/fourteen when my parents gave me a copy of **The Mystery of Silver Mountain**. It was summer, and my younger brother and I typed that BASIC listing on a C64 with a green phosphor monitor on some hot afternoon before we could go play in the woods. It was probably one of the first text adventure games I fell in love with, accomplices also being the beautiful illustrations in the book, and the wonderful background story, which, in the game was recalled with just a few words, and without any graphics.
-I thought about it a lot while making **Nesterin Trail**, and after looking around at some material I decided to try to make a porting of that masterpiece using StoryTllr64. Not a “simple” transposition (with the addition of some graphics), but a little something more -- adding descriptions and text where there were none for space reasons (the game had to run on multiple machines with little memory) -- but preserving the gameplay. That is, I want it to be possible to play this version identically to the original-including the possibility of dying on the fly, or making mistakes that will not allow the game to end. I mean, I want this version playable following this [guide](https://solutionarchive.com/file/id%2C7197/) - that works with the original game.
+![Title screen of the StoryTllr64 remake](_pub/ingame_title.png)
 
-## The project scope
+![The crossroads in the StoryTllr64 remake](_pub/ingame_crossroads.png)
 
-I started this project unsure whether it would be possible to convert the entire game. But after more than a year, the game is complete and fully playable with 60 images on two disks. By 'fully playable', I mean that it's possible to reach the winning ending if you're brave, strong and foolish enough to play it to the end. I've made it easier in many ways, but this is not a game that you can just start and finish. It's not unprobable. It's **impossible**, at least without following a guide step by step. So be prepared to play and die, or play and do the wrong thing (which you'll probably only realise later on). There are still some "go there and die" places (I've added clues for some of them), but the game follows the original material, so it's brutal.
+## Why remake it?
 
-## Notes & Thanks
+I was probably thirteen or fourteen when my parents gave me a copy of **The Mystery of Silver Mountain**. It was summer, and my younger brother and I spent hot afternoons typing its BASIC listing into a C64 connected to a green phosphor monitor, before heading out to play in the woods.
 
-All the material I create for this project will be free and the [StoryTllr](https://github.com/MGProduction/StoryTllrC64) source code for the entire project will be available – along with supporting material I will produce. Please be aware that I'm creating a derivative work on **Chris Oxlade** + **Judy Tatchell** + **Usborne Computer Guides** original material so I, of course, cannot really license anything.
+It became one of the first text adventures I fell in love with. The book's beautiful illustrations and rich backstory brought its world to life, even though the program itself conveyed that world through just a few words and no graphics.
 
-Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
+I thought about it often while making **Nesterin Trail**. After revisiting the original material, I decided to try adapting it with StoryTllr64.
 
-Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on AI generated images (this number increased in the pre-release work, I'll see if release two game versions including the previous set, but in current release most of the images are generated). I edited every one of them (and converted them, with my tool, for C64).
+I wanted to do more than reproduce the original with pictures. This version adds descriptions and responses where memory constraints once left little room for them, while preserving the underlying adventure and most of its puzzles.
 
-## Game-map
+One important goal was compatibility with the original solution: it should still be possible to complete this version by following [this walkthrough](https://solutionarchive.com/file/id%2C7197/).
 
-The first thing I needed was a full map of the game, not just to reproduce it inside a StoryTllr source file, but also to **see** it, while I try to port the cryptic original code to mine. So I "converted" the DATA section in a .trizbort [file](_pub/TheMysteryOfSilverMountain.trizbort) then I've rendered it in jpeg
+That also means preserving some unforgiving features—including sudden deaths and mistakes that can make the game impossible to finish.
 
-![alt text](_pub/TheMysteryOfSilverMountain.jpg)
+## Before you play
 
-I've also added the names of the objects present in each location to the map (the ones with parentheses around are the ones hidden at the start). This will not include what's set in the code, but it's a start.
+This version is more forgiving than the original, but it is still **a difficult, old-school adventure**.
 
-## WIP status
+You can die, waste essential supplies, or make a mistake whose consequences only become apparent much later. Some of those mistakes can leave you unable to complete the game.
 
-The game is ready for an initial release. I've added a two disk feature in the compiler and in the C64 player, I've separated the 61 images in order to minimize disk swapping during the game, and I've done some playtest, manuale and AI-assisted (see bottom note)
+Expect to explore, take notes, draw a map, save your progress and learn from unsuccessful attempts. Finishing on your first attempt without a guide is unlikely: discovering how to succeed is part of the adventure.
 
-Changes compared to the original game: 
-- **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
-- **Silver bell in the rocks**: (not yet implemented) this puzzle will be handled in the same way. You need to find a clue, once you find it, you don't have to write it down and insert it when prompted.
-- **Frozen pond**: this is the only 'you're automatically dead' element I've decided to let you escape from (you can backtrack to the Mountain Hut)
-- **Banquet hall**: once there's only the sleeping grarg, you need to examine him to *discover* the uniform
-- **Dusty Library**: in the original game, decoding the key elements here required access to an image in the companion book (and understanding how to do that). In this version, that decoding is automatic (so needed action will give you the needed information to complete the game).
-- **Safe in Ogban's chambers**: you don't need to write down the safe combination. Once you find it, opening the safe is automatic
+I've added clues, simplified several interactions and prevented some sudden deaths. I have not tried to remove the original game's challenge or turn it into an adventure where every decision is reversible.
 
-Once ready also the .d64 will be added to this page (and it will be present also a page about this demo on itch.io)
+A few distinctions inherited from the original are particularly unforgiving. Giving **an apple** is not necessarily the same as giving **all your apples**, and paying with **a coin** can differ from handing over **your coins**. Choose your words carefully!
 
-## AI usage
+## Project scope and development status
 
-This game was not created or converted using AI **but** I was able to **playtest it** once I've created a **Linux console version** of my **StoryTllr player**. That was not a thing I knew I could do, but it works, and with a huge (and a sudden-death) game like that I'd be a liar to say it wasn't useful to find some issue.
+I began this project unsure whether I could convert the entire adventure. After more than a year of work, the game is complete and ready for an initial release, with **61 location and presentation images across two disks**.
+
+The StoryTllr64 compiler and C64 player now support the two-disk arrangement. Some images are duplicated to reduce disk swapping, particularly when revisiting earlier areas.
+
+The game has undergone manual and AI-assisted playtesting, and the winning ending has been reached. I have also checked that the original walkthrough sequence works in this adaptation.
+
+The release `.d64` files will be added here, together with a link to the game's itch.io page.
+
+## Changes from the original
+
+The main changes are expanded text, graphics and additional clues. Several puzzles also require less manual bookkeeping:
+
+- **Maze of Tunnels:** you still need to discover the route information. Once found, the game handles following it without requiring you to enter the complete sequence.
+- **Silver Bell in the Rock:** you must obtain the clue first. After that, ringing the bell automatically uses the correct number of rings.
+- **Frozen Pond:** the immediate-death situation has been made more forgiving, giving you an opportunity to deal with the dangerous ice.
+- **Banquet Hall:** once the sleeping Grarg is present, examining him reveals the uniform.
+- **Dusty Library:** the original puzzle required decoding information using an illustration in the companion book. Examining the books now provides the information needed to finish the game.
+- **Safe in Ogban's Chambers:** you must discover the combination, but do not need to write it down and enter it manually. The game remembers it.
+
+## Map
+
+One of my first tasks was to create a complete map—not only to reproduce the locations in StoryTllr64, but to understand their connections while working through the original BASIC code.
+
+I converted the location information from the original `DATA` statements into a [Trizbort file](_pub/TheMysteryOfSilverMountain.trizbort), then rendered it as an image.
+
+**Spoiler warning:** the map includes object locations and may reveal discoveries you would prefer to make yourself.
+
+![Map of The Mystery of Silver Mountain](_pub/TheMysteryOfSilverMountain.jpg)
+
+Objects shown in parentheses are hidden at the start. The map records the initial object placements; it does not capture every object movement or discovery triggered by the game logic.
+
+## Source code and acknowledgements
+
+The [StoryTllr64](https://github.com/MGProduction/StoryTllrC64) scripts and supporting material for this adaptation are available in this repository.
+
+Special thanks to the authors of these projects:
+
+- [go-mountain](https://github.com/fivegreenapples/go-mountain): a working Go conversion that greatly helped me understand and work through the original code.
+- [SilverMountain](https://github.com/Philbywhizz/SilverMountain): an Inform 7 conversion covering the game's structure, without the gameplay implementation.
+
+## Graphics
+
+The in-game graphics use a mixture of my own and friends' photographs and drawings, assembled stock imagery, and AI-generated images. In the current release, most are based on AI-generated images.
+
+The selected artwork then underwent substantial conversion work and visual adjustment for the C64's resolution, palette and graphics restrictions.
+
+## AI-assisted testing
+
+I wrote the game conversion and its scripts myself. AI was used to assist with playtesting and reviewing descriptions and clues.
+
+To make direct testing possible, I created a **Linux console version of the StoryTllr player**. This allowed an AI assistant to play the compiled adventure through commands and responses, explore puzzle sequences, reproduce problems and check whether fixes worked.
+
+For an adventure this large—with sudden deaths, limited resources and mistakes that may only matter much later—that proved useful. It helped identify implementation errors and missing clues, alongside my own testing and checks against the original material.
