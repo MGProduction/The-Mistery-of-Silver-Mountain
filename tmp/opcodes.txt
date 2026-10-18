@@ -1,469 +1,2973 @@
 onfirst[0]::$start[0] = $00/0
 	clear[130]
-	msg::[214]\c...
-	waitkey[177]
+	msg::[244]\c...
+	waitkey[179]
+	clear[130]
+	msg::[146]This is a two-disk game. Please insert the second disk now.
+	msg::[156]When, changing location, you won't see its image, swap disk and ...
+	waitkey[179]
+	clear[130]
 	goto::[1]_introduction
-onfirst[0]::_introduction[1] = $101/257
-	[67]::154
-onfirst[0]::_dead[2] = $202/514
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-	[0]::0
-onfirst[0]::_end[3] = $303/771
-onfirst[0]::$everywhere[246] = $404/1028
-onenter[1]::$everywhere[246] = $505/1285
-onleave[2]::$everywhere[246] = $606/1542
-u[5]::whitecottage[21] = $707/1799
-u[5]::lowerfloorofthemill[26] = $808/2056
-u[5]::highwalledgarden[52] = $909/2313
-u[5]::icypath[53] = $a0a/2570
-u[5]::$everywhere[246] = $b0b/2827
-d[6]::atticbedroom[22] = $c0c/3084
-d[6]::sacksontheupperfloor[24] = $d0d/3341
-d[6]::icypath[53] = $e0e/3598
-d[6]::$everywhere[246] = $b0b/2827
-s[7]::stable[7] = $f0f/3855
-s[7]::ancientstonecircle[9] = $1010/4112
-s[7]::hugefallenoak[11] = $1111/4369
-s[7]::streaminavalleybottom[13] = $1212/4626
-s[7]::roughwater[16] = $1313/4883
-s[7]::islandshore[17] = $1414/5140
-s[7]::oldkiln[19] = $1515/5397
-s[7]::marshyinlet[20] = $1616/5654
-s[7]::cupboard[23] = $707/1799
-s[7]::outsideawindmill[25] = $1717/5911
-s[7]::barrencountryside[27] = $1818/6168
-s[7]::gamekeeperscottage[28] = $1919/6425
-s[7]::goblingraveyard[29] = $1a1a/6682
-s[7]::mistypool[32] = $1b1b/6939
-s[7]::disusedwaterwheel[36] = $1c1c/7196
-s[7]::pittedtrack[41] = $1d1d/7453
-s[7]::woodmanshut[43] = $1e1e/7710
-s[7]::narrowpassage[45] = $1f1f/7967
-s[7]::cave[46] = $2020/8224
-s[7]::frozenpond[48] = $2121/8481
-s[7]::gapbetweensomeboulders[49] = $a0a/2570
-s[7]::highwalledgarden[52] = $2222/8738
-s[7]::mazeoftunnels[55] = $2323/8995
-s[7]::mountainhut[56] = $2424/9252
-s[7]::screeslope[58] = $2525/9509
-s[7]::vaultedcavern[61] = $2626/9766
-s[7]::banquethall[62] = $2727/10023
-s[7]::dankcorridor[64] = $2828/10280
-s[7]::dustylibrary[65] = $2929/10537
-s[7]::entrancehalltothepalace[66] = $2a2a/10794
-s[7]::guardroom[68] = $2b2b/11051
-s[7]::halloftapestries[69] = $2c2c/11308
-s[7]::kitchensofthepalace[70] = $2d2d/11565
-s[7]::longgallery[71] = $2e2e/11822
-s[7]::mosaicflooredhall[72] = $2f2f/12079
-s[7]::wizardslair[78] = $3030/12336
-s[7]::highglassgates[79] = $3131/12593
-s[7]::dungeonsofthepalace[83] = $606/1542
-s[7]::$everywhere[246] = $b0b/2827
-n[8]::windingroad[5] = $3232/12850
-n[8]::villageofrustichouses[6] = $3333/13107
-n[8]::deepdarkwood[10] = $3434/13364
-n[8]::hugefallenoak[11] = $3535/13621
-n[8]::middleofthelake[15] = $3636/13878
-n[8]::roughwater[16] = $1515/5397
-n[8]::islandshore[17] = $3737/14135
-n[8]::oldkiln[19] = $3838/14392
-n[8]::atticbedroom[22] = $3939/14649
-n[8]::outsideawindmill[25] = $1c1c/7196
-n[8]::barrencountryside[27] = $3a3a/14906
-n[8]::rustygates[34] = $3b3b/15163
-n[8]::sluicegates[35] = $3c3c/15420
-n[8]::disusedwaterwheel[36] = $3d3d/15677
-n[8]::westernendofabridge[38] = $3e3e/15934
-n[8]::burntoutcampfire[40] = $3f3f/16191
-n[8]::pittedtrack[41] = $1818/6168
-n[8]::woodmanshut[43] = $1717/5911
-n[8]::dampwellbottom[44] = $4040/16448
-n[8]::topofadeepwell[47] = $4141/16705
-n[8]::frozenpond[48] = $4242/16962
-n[8]::gapbetweensomeboulders[49] = $4343/17219
-n[8]::glacier[50] = $4444/17476
-n[8]::inscribedcavern[54] = $4545/17733
-n[8]::mazeoftunnels[55] = $2323/8995
-n[8]::screeslope[58] = $4646/17990
-n[8]::banquethall[62] = $4747/18247
-n[8]::cobwebbyroom[63] = $4848/18504
-n[8]::dankcorridor[64] = $4949/18761
-n[8]::halloftapestries[69] = $2e2e/11822
-n[8]::kitchensofthepalace[70] = $4a4a/19018
-n[8]::mosaicflooredhall[72] = $4b4b/19275
-n[8]::palacebattlements[73] = $4c4c/19532
-n[8]::safeinogbanschambers[74] = $2c2c/11308
-n[8]::silverthroneroom[76] = $4d4d/19789
-n[8]::ornatefountain[80] = $4e4e/20046
-n[8]::winecellar[81] = $4f4f/20303
-n[8]::dungeonsofthepalace[83] = $5050/20560
-n[8]::$everywhere[246] = $b0b/2827
-w[9]::crossroads[4] = $5151/20817
-w[9]::windingroad[5] = $5252/21074
-w[9]::villageofrustichouses[6] = $1010/4112
-w[9]::stable[7] = $3232/12850
-w[9]::shadyhollow[8] = $5353/21331
-w[9]::ancientstonecircle[9] = $5454/21588
-w[9]::sideofawoodedvalley[12] = $1d1d/7453
-w[9]::streaminavalleybottom[13] = $5555/21845
-w[9]::edgeofanicylake[14] = $5656/22102
-w[9]::beachedketch[18] = $1515/5397
-w[9]::whitecottage[21] = $f0f/3855
-w[9]::outsideawindmill[25] = $5757/22359
-w[9]::lowerfloorofthemill[26] = $1818/6168
-w[9]::goblingraveyard[29] = $5858/22616
-w[9]::hollowtomb[31] = $3b3b/15163
-w[9]::mistypool[32] = $3d3d/15677
-w[9]::disusedwaterwheel[36] = $5959/22873
-w[9]::easternendofabridge[37] = $5a5a/23130
-w[9]::westernendofabridge[38] = $5b5b/23387
-w[9]::orchard[39] = $1e1e/7710
-w[9]::burntoutcampfire[40] = $5c5c/23644
-w[9]::pittedtrack[41] = $5d5d/23901
-w[9]::cave[46] = $5e5e/24158
-w[9]::glacier[50] = $5f5f/24415
-w[9]::inscribedcavern[54] = $4343/17219
-w[9]::mazeoftunnels[55] = $6060/24672
-w[9]::mountainhut[56] = $a0a/2570
-w[9]::perilouspath[57] = $2222/8738
-w[9]::silverbellintherock[59] = $6161/24929
-w[9]::stalactitesstalagmites[60] = $6262/25186
-w[9]::vaultedcavern[61] = $6363/25443
-w[9]::cobwebbyroom[63] = $6464/25700
-w[9]::entrancehalltothepalace[66] = $6565/25957
-w[9]::grargsentrypost[67] = $6666/26214
-w[9]::guardroom[68] = $6767/26471
-w[9]::kitchensofthepalace[70] = $6868/26728
-w[9]::safeinogbanschambers[74] = $3030/12336
-w[9]::silverthroneroom[76] = $2c2c/11308
-w[9]::wizardslair[78] = $6969/26985
-w[9]::highglassgates[79] = $4545/17733
-w[9]::winecellar[81] = $6a6a/27242
-w[9]::rowofcasks[82] = $6b6b/27499
-w[9]::$everywhere[246] = $b0b/2827
-e[10]::crossroads[4] = $1010/4112
-e[10]::windingroad[5] = $f0f/3855
-e[10]::villageofrustichouses[6] = $c0c/3084
-e[10]::shadyhollow[8] = $3232/12850
-e[10]::ancientstonecircle[9] = $3333/13107
-e[10]::deepdarkwood[10] = $6c6c/27756
-e[10]::sideofawoodedvalley[12] = $6d6d/28013
-e[10]::edgeofanicylake[14] = $6e6e/28270
-e[10]::middleofthelake[15] = $5d5d/23901
-e[10]::islandshore[17] = $6f6f/28527
-e[10]::outsideawindmill[25] = $d0d/3341
-e[10]::gamekeeperscottage[28] = $3c3c/15420
-e[10]::goblingraveyard[29] = $7070/28784
-e[10]::halfduggrave[30] = $3b3b/15163
-e[10]::hollowtomb[31] = $7171/29041
-e[10]::overgrowntrack[33] = $1919/6425
-e[10]::easternendofabridge[37] = $7272/29298
-e[10]::westernendofabridge[38] = $7373/29555
-e[10]::orchard[39] = $1212/4626
-e[10]::burntoutcampfire[40] = $7474/29812
-e[10]::ploughedfield[42] = $7575/30069
-e[10]::woodmanshut[43] = $5555/21845
-e[10]::narrowpassage[45] = $7676/30326
-e[10]::topofadeepwell[47] = $1e1e/7710
-e[10]::frozenpond[48] = $7777/30583
-e[10]::gapbetweensomeboulders[49] = $6161/24929
-e[10]::highpinnacle[51] = $e0e/3598
-e[10]::highwalledgarden[52] = $2222/8738
-e[10]::mazeoftunnels[55] = $7878/30840
-e[10]::perilouspath[57] = $7979/31097
-e[10]::silverbellintherock[59] = $7a7a/31354
-e[10]::stalactitesstalagmites[60] = $6363/25443
-e[10]::vaultedcavern[61] = $4e4e/20046
-e[10]::cobwebbyroom[63] = $7b7b/31611
-e[10]::entrancehalltothepalace[66] = $7c7c/31868
-e[10]::grargsentrypost[67] = $7d7d/32125
-e[10]::longgallery[71] = $4c4c/19532
-e[10]::mosaicflooredhall[72] = $7e7e/32382
-e[10]::silverchamber[75] = $b0b/2827
-e[10]::turretroom[77] = $3030/12336
-e[10]::highglassgates[79] = $7f7f/32639
-e[10]::rowofcasks[82] = $8080/32896
-e[10]::$everywhere[246] = $b0b/2827
-se[11]::$everywhere[246] = $b0b/2827
-sw[12]::$everywhere[246] = $b0b/2827
-ne[13]::$everywhere[246] = $b0b/2827
-nw[14]::$everywhere[246] = $b0b/2827
-go[15]::$everywhere[246] = $b0b/2827
-enter[16]::outsideawindmill[25] = $8181/33153
-enter[16]::mistypool[32] = $8282/33410
-enter[16]::woodmanshut[43] = $8383/33667
-enter[16]::dampwellbottom[44] = $8484/33924
-enter[16]::mountainhut[56] = $8585/34181
-enter[16]::$everywhere[246] = $b0b/2827
-x[17]::crossroads[4] = $8686/34438
-x[17]::stable[7] = $8787/34695
-x[17]::stable[7] = $8888/34952
-x[17]::streaminavalleybottom[13] = $8989/35209
-x[17]::beachedketch[18] = $8a8a/35466
-x[17]::oldkiln[19] = $8b8b/35723
-x[17]::whitecottage[21] = $8c8c/35980
-x[17]::whitecottage[21] = $8d8d/36237
-x[17]::whitecottage[21] = $8e8e/36494
-x[17]::atticbedroom[22] = $8f8f/36751
-x[17]::cupboard[23] = $9090/37008
-x[17]::sacksontheupperfloor[24] = $9191/37265
-x[17]::goblingraveyard[29] = $9292/37522
-x[17]::goblingraveyard[29] = $9393/37779
-x[17]::mistypool[32] = $9494/38036
-x[17]::sluicegates[35] = $9595/38293
-x[17]::orchard[39] = $9696/38550
-x[17]::dampwellbottom[44] = $9797/38807
-x[17]::dampwellbottom[44] = $9898/39064
-x[17]::dampwellbottom[44] = $9999/39321
-x[17]::topofadeepwell[47] = $9a9a/39578
-x[17]::highwalledgarden[52] = $9b9b/39835
-x[17]::inscribedcavern[54] = $9c9c/40092
-x[17]::dankcorridor[64] = $9d9d/40349
-x[17]::kitchensofthepalace[70] = $9e9e/40606
-x[17]::ornatefountain[80] = $9f9f/40863
-x[17]::rowofcasks[82] = $a0a0/41120
-x[17]::$everywhere[246] = $a1a1/41377
-x[17]::$everywhere[246] = $a2a2/41634
-x[17]::$everywhere[246] = $a3a3/41891
-x[17]::$everywhere[246] = $a4a4/42148
-x[17]::$everywhere[246] = $a5a5/42405
-x[17]::$everywhere[246] = $a6a6/42662
-x[17]::$everywhere[246] = $3030/12336
-l[18]::$everywhere[246] = $a7a7/42919
-l[18]::$everywhere[246] = $3030/12336
-take[19]::sacksontheupperfloor[24] = $a8a8/43176
-take[19]::topofadeepwell[47] = $a9a9/43433
-take[19]::$everywhere[246] = $aaaa/43690
-take[19]::$everywhere[246] = $abab/43947
-take[19]::$everywhere[246] = $6969/26985
-take[19]::$everywhere[246] = $3030/12336
-drop[20]::middleofthelake[15] = $acac/44204
-drop[20]::roughwater[16] = $acac/44204
-drop[20]::$everywhere[246] = $adad/44461
-drop[20]::$everywhere[246] = $aeae/44718
-drop[20]::$everywhere[246] = $3030/12336
-use[21]::roughwater[16] = $afaf/44975
-use[21]::dampwellbottom[44] = $b0b0/45232
-use[21]::frozenpond[48] = $b1b1/45489
-use[21]::cobwebbyroom[63] = $b2b2/45746
-use[21]::dankcorridor[64] = $b3b3/46003
-use[21]::$everywhere[246] = $b4b4/46260
-use[21]::$everywhere[246] = $b5b5/46517
-use[21]::$everywhere[246] = $b6b6/46774
-use[21]::$everywhere[246] = $3030/12336
-push[22]::hollowtomb[31] = $b7b7/47031
-push[22]::dampwellbottom[44] = $b8b8/47288
-push[22]::stalactitesstalagmites[60] = $b9b9/47545
-push[22]::$everywhere[246] = $3030/12336
-pull[23]::hollowtomb[31] = $b7b7/47031
-pull[23]::dampwellbottom[44] = $b8b8/47288
-pull[23]::stalactitesstalagmites[60] = $b9b9/47545
-pull[23]::$everywhere[246] = $3030/12336
-open[24]::whitecottage[21] = $8d8d/36237
-open[24]::cupboard[23] = $baba/47802
-open[24]::sacksontheupperfloor[24] = $9191/37265
-open[24]::sluicegates[35] = $bbbb/48059
-open[24]::dankcorridor[64] = $bcbc/48316
-open[24]::kitchensofthepalace[70] = $bdbd/48573
-open[24]::wizardslair[78] = $a7a7/42919
-open[24]::$everywhere[246] = $bebe/48830
-open[24]::$everywhere[246] = $3030/12336
-close[25]::$everywhere[246] = $7f7f/32639
-close[25]::$everywhere[246] = $3030/12336
-lock[26]::$everywhere[246] = $3030/12336
-unlock[27]::wizardslair[78] = $a6a6/42662
-unlock[27]::$everywhere[246] = $3030/12336
-show[28]::wizardslair[78] = $bebe/48830
-show[28]::$everywhere[246] = $bfbf/49087
-show[28]::$everywhere[246] = $c0c0/49344
-show[28]::$everywhere[246] = $c1c1/49601
-show[28]::$everywhere[246] = $c2c2/49858
-show[28]::$everywhere[246] = $3030/12336
-give[29]::barrencountryside[27] = $c3c3/50115
-give[29]::overgrowntrack[33] = $c4c4/50372
-give[29]::rustygates[34] = $c5c5/50629
-give[29]::easternendofabridge[37] = $c6c6/50886
-give[29]::westernendofabridge[38] = $c6c6/50886
-give[29]::highglassgates[79] = $404/1028
-give[29]::winecellar[81] = $c7c7/51143
-give[29]::$everywhere[246] = $c8c8/51400
-give[29]::$everywhere[246] = $c9c9/51657
-give[29]::$everywhere[246] = $caca/51914
-give[29]::$everywhere[246] = $cbcb/52171
-give[29]::$everywhere[246] = $cccc/52428
-give[29]::$everywhere[246] = $cdcd/52685
-give[29]::$everywhere[246] = $cece/52942
-give[29]::$everywhere[246] = $cfcf/53199
-give[29]::$everywhere[246] = $3030/12336
-put[30]::$everywhere[246] = $3131/12593
-put[30]::$everywhere[246] = $3030/12336
-help[31]::$everywhere[246] = $9f9f/40863
-inventory[32]::$everywhere[246] = $d0d0/53456
-quit[33]::$everywhere[246] = $4f4f/20303
-restart[34]::$everywhere[246] = $6a6a/27242
-save[35]::$everywhere[246] = $c7c7/51143
-load[36]::$everywhere[246] = $d1d1/53713
-mem[37]::$everywhere[246] = $8080/32896
-gfx[38]::$everywhere[246] = $6b6b/27499
-talk[39]::$everywhere[246] = $d2d2/53970
-talk[39]::$everywhere[246] = $d3d3/54227
-talk[39]::$everywhere[246] = $d4d4/54484
-talk[39]::$everywhere[246] = $a0a0/41120
-talk[39]::$everywhere[246] = $4d4d/19789
-ask[40]::$everywhere[246] = $a0a0/41120
-ask[40]::$everywhere[246] = $4d4d/19789
-bail[41]::$everywhere[246] = $5050/20560
-bail[41]::$everywhere[246] = $3030/12336
-blow[42]::hugefallenoak[11] = $d5d5/54741
-blow[42]::$everywhere[246] = $d6d6/54998
-blow[42]::$everywhere[246] = $3030/12336
-break[43]::dankcorridor[64] = $d7d7/55255
-break[43]::$everywhere[246] = $3030/12336
-burn[44]::$everywhere[246] = $3030/12336
-climb[45]::dampwellbottom[44] = $d8d8/55512
-climb[45]::topofadeepwell[47] = $d9d9/55769
-climb[45]::highpinnacle[51] = $dada/56026
-climb[45]::highwalledgarden[52] = $dbdb/56283
-climb[45]::$everywhere[246] = $3030/12336
-cross[46]::easternendofabridge[37] = $dcdc/56540
-cross[46]::westernendofabridge[38] = $dddd/56797
-cross[46]::$everywhere[246] = $3030/12336
-cut[47]::cobwebbyroom[63] = $b2b2/45746
-cut[47]::$everywhere[246] = $3030/12336
-dive[48]::middleofthelake[15] = $dede/57054
-dive[48]::roughwater[16] = $dede/57054
-dive[48]::mistypool[32] = $dfdf/57311
-dive[48]::$everywhere[246] = $3030/12336
-drink[49]::$everywhere[246] = $e0e0/57568
-drink[49]::$everywhere[246] = $3030/12336
-eat[50]::$everywhere[246] = $e1e1/57825
-eat[50]::$everywhere[246] = $e2e2/58082
-eat[50]::$everywhere[246] = $e3e3/58339
-eat[50]::$everywhere[246] = $3030/12336
-empty[51]::mosaicflooredhall[72] = $e4e4/58596
-empty[51]::$everywhere[246] = $3030/12336
-feed[52]::barrencountryside[27] = $e5e5/58853
-feed[52]::highglassgates[79] = $505/1285
-feed[52]::winecellar[81] = $d0d0/53456
-feed[52]::$everywhere[246] = $e6e6/59110
-feed[52]::$everywhere[246] = $e7e7/59367
-feed[52]::$everywhere[246] = $e8e8/59624
-feed[52]::$everywhere[246] = $3030/12336
-hold[53]::wizardslair[78] = $bebe/48830
-hold[53]::$everywhere[246] = $3030/12336
-insert[54]::$everywhere[246] = $3030/12336
-light[55]::winecellar[81] = $d1d1/53713
-light[55]::$everywhere[246] = $e9e9/59881
-light[55]::$everywhere[246] = $eaea/60138
-light[55]::$everywhere[246] = $3030/12336
-make[56]::hugefallenoak[11] = $d5d5/54741
-make[56]::$everywhere[246] = $d6d6/54998
-make[56]::$everywhere[246] = $3030/12336
-move[57]::hollowtomb[31] = $b7b7/47031
-move[57]::dampwellbottom[44] = $b8b8/47288
-move[57]::stalactitesstalagmites[60] = $b9b9/47545
-move[57]::$everywhere[246] = $3030/12336
-pay[58]::easternendofabridge[37] = $ebeb/60395
-pay[58]::westernendofabridge[38] = $ebeb/60395
-pay[58]::$everywhere[246] = $c9c9/51657
-pay[58]::$everywhere[246] = $3030/12336
-plant[59]::highwalledgarden[52] = $ecec/60652
-plant[59]::$everywhere[246] = $eded/60909
-plant[59]::$everywhere[246] = $3030/12336
-poison[60]::mosaicflooredhall[72] = $eeee/61166
-poison[60]::$everywhere[246] = $3030/12336
-reflect[61]::wizardslair[78] = $aeae/44718
-reflect[61]::$everywhere[246] = $3030/12336
-remove[62]::hollowtomb[31] = $b7b7/47031
-remove[62]::stalactitesstalagmites[60] = $b9b9/47545
-remove[62]::$everywhere[246] = $efef/61423
-remove[62]::$everywhere[246] = $abab/43947
-remove[62]::$everywhere[246] = $f0f0/61680
-remove[62]::$everywhere[246] = $3030/12336
-rig[63]::hugefallenoak[11] = $d5d5/54741
-rig[63]::$everywhere[246] = $d6d6/54998
-rig[63]::$everywhere[246] = $3030/12336
-ring[64]::silverbellintherock[59] = $f1f1/61937
-ring[64]::$everywhere[246] = $3030/12336
-swing[65]::dampwellbottom[44] = $b0b0/45232
-swing[65]::cobwebbyroom[63] = $b2b2/45746
-swing[65]::dankcorridor[64] = $b3b3/46003
-swing[65]::$everywhere[246] = $f2f2/62194
-swing[65]::$everywhere[246] = $3030/12336
-throw[66]::barrencountryside[27] = $f3f3/62451
-throw[66]::$everywhere[246] = $f4f4/62708
-throw[66]::$everywhere[246] = $3030/12336
-turn[67]::sluicegates[35] = $f5f5/62965
-turn[67]::disusedwaterwheel[36] = $f6f6/63222
-turn[67]::$everywhere[246] = $3030/12336
-water[68]::highwalledgarden[52] = $f7f7/63479
-water[68]::$everywhere[246] = $3030/12336
-wear[69]::$everywhere[246] = $b5b5/46517
-wear[69]::$everywhere[246] = $f8f8/63736
-wear[69]::$everywhere[246] = $3030/12336
-cheat[70]::$everywhere[246] = $f9f9/63993
-cheat[70]::$everywhere[246] = $3030/12336
-attack[71]::barrencountryside[27] = $fafa/64250
-attack[71]::$everywhere[246] = $fbfb/64507
-attack[71]::$everywhere[246] = $fcfc/64764
-attack[71]::$everywhere[246] = $3030/12336
-withobj:$every[72]::$everywhere[246] = $caca/51914
-fill[73]::streaminavalleybottom[13] = $fdfd/65021
-fill[73]::middleofthelake[15] = $fefe/65278
-fill[73]::roughwater[16] = $fefe/65278
-read[74]::goblingraveyard[29] = $9393/37779
-tie[75]::topofadeepwell[47] = $ffff/65535
-into[76]::mosaicflooredhall[72] = $eeee/61166
-onfirst[240]::$everywhere[246] = $3030/12336
-onfirst[241]::$everywhere[246] = $b0b/2827
-onfirst[242]::$everywhere[246] = $4d4d/19789
-$unknown[255]::$everywhere[246] = $3131/12593
+onfirst[0]::_introduction[1] = $01/1
+	clear[130]
+	msg::[106]The Sylvani once lived peacefully at the foot of Silver Mountain...
+	msg::[29]But when the vicious Grarg army invaded, their queen, Pari Sylva...
+	msg::[55]In the battle of minds that followed, a traitor fell, and the Gr...
+	msg::[97]Queen Pari's son, Kylar, raised in secret, sought magical relics...
+	msg::[88]Now the Elders call to any brave soul: will you finish what Kyla...
+	setvar[174]
+	setvar[174]
+	setvar[174]
+	setvar[174]
+	setvar[174]
+	waitkey[179]
+	goto::[4]crossroads
+onfirst[0]::_dead[2] = $02/2
+	clear[130]
+	msg::[202]You have failed in your quest!
+	msg::[242]Your sudden death is yet another failure in the attempt to free ...
+	msg::[33]Do you want to try again? (Y/N)
+	getkey[137]
+	ifkey[150]::89
+		start[176]
+	else[133]
+		quit[165]
+	endif[135]
+onfirst[0]::_end[3] = $03/3
+	clear[130]
+	msg::[51]Hooorrrraaayyyy!
+	msg::[31]Congratulation, you have succeeded in your quest and your effort...
+	msg::[241]Your name will be remembered forever.
+	waitkey[179]
+	quit[165]
+onfirst[0]::mosaicflooredhall[73] = $04/4
+	clear[130]
+	msgattr::[1]topscore
+	msg::[39]From the south door, you can hear Ogban's terrifying voice order...
+onfirst[0]::wizardslair[80] = $05/5
+	clear[130]
+	msgattr::[1]topscore
+	msg::[128]The wizard screams when he sees you, then attacks you with his f...
+onfirst[0]::$everywhere[246] = $06/6
+	clear[130]
+	ifundef::[3]'One of the magic objects! Keep it!' +
+		msgattr::[1]topscore
+	else[133]
+		msgattr::[1]topscore
+		msg::[130]There are clear exits to +
+		msgattr::[3]bootsusage
+		msg::[8].
+	endif[135]
+	ifobjinattr[151]
+		msg::[224]You see: +
+		list[154]
+	endif[135]
+onenter[1]::$everywhere[246] = $07/7
+	clear[130]
+	ifundef::[2]'Magic words lie at the crossroads, the fountain and the stone c...
+		msg::[171]You are in +
+		msgattr::[0]score
+	else[133]
+		msg::[169]You are +
+		msgattr::[2]weight
+	endif[135]
+	msg::[8].
+	ifundef::[3]'One of the magic objects! Keep it!' +
+		msg::[132]There are no evident exits.
+	else[133]
+		msg::[130]There are clear exits to +
+		msgattr::[3]bootsusage
+		msg::[8].
+	endif[135]
+	ifobjinattr[151]
+		msg::[224]You see: +
+		list[154]
+	endif[135]
+onleave[2]::$everywhere[246] = $08/8
+	if::[0]bootson
+		addvar[129]
+		ifvar[153]
+			msg::[27]Boots worn out!
+			put[164]
+			unset::[0]bootson
+		else[133]
+			ifvar[153]
+				msg::[26]Boots soles crumble a little beneath your feet
+			endif[135]
+		endif[135]
+	endif[135]
+u[5]::highwalledgarden[52] = $09/9
+	if::[28]vinegrown
+		msg::[250]the vine seems resistant and you try to climb
+		waitkey[179]
+		goto::[54]inscribedcavern
+	endif[135]
+u[5]::$everywhere[246] = $0a/10
+	ifundef::[8].
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[8]shadyhollow
+	endif[135]
+u[5]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+d[6]::$everywhere[246] = $0c/12
+	ifundef::[9]A dangerous-looking troll approaches and blocks your passage, lo...
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[9]ancientstonecircle
+	endif[135]
+d[6]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+s[7]::hugefallenoak[11] = $0d/13
+	if::[12]goblinfree
+		goto::[10]deepdarkwood
+	else[133]
+		msg::[20]As soon as you move, the ghost of the Goblin Guardian gets you!
+		waitkey[179]
+		goto::[2]_dead
+	endif[135]
+s[7]::roughwater[16] = $0e/14
+	if::[13]usedbucket
+		goto::[15]middleofthelake
+	else[133]
+		ifvar[153]
+			msg::[240]Your efforts to run the ship are now in vain. The ship sinks
+			waitkey[179]
+			goto::[2]_dead
+		else[133]
+			msg::[126]The wind and the strength of the currents make navigation diffic...
+			addvar[129]
+		endif[135]
+	endif[135]
+s[7]::islandshore[17] = $0f/15
+	ifisin[147]
+		goto::[16]roughwater
+	else[133]
+		ifisin[147]
+			msg::[52]How will you move the boat on the water?
+		else[133]
+			msg::[184]You cannot swim in this icy water!
+		endif[135]
+	endif[135]
+s[7]::cave[46] = $10/16
+	msg::[30]Climbing a steep passage you're able to leave
+	waitkey[179]
+	goto::[47]topofadeepwell
+s[7]::frozenpond[48] = $11/17
+	ifisin[147]
+		goto::[53]icypath
+	else[133]
+		msg::[188]You don't dare to move. The ice is breaking!
+	endif[135]
+s[7]::highwalledgarden[52] = $12/18
+	goto::[49]gapbetweensomeboulders
+s[7]::mazeoftunnels[55] = $13/19
+	msg::[233]You wander for an undefined amount of time, only to find yoursel...
+	if[142]::158
+		msg::[237]You're completely lost
+	endif[135]
+s[7]::banquethall[62] = $14/20
+	ifisin[147]
+		if_m[143]
+			[16]
+		else[133]
+			goto::[69]halloftapestries
+		endif[135]
+s[7]::dankcorridor[64] = $15/21
+	if::[34]dankdoor
+		goto::[83]dungeonsofthepalace
+	else[133]
+		msg::[10]A massive oak door blocks you
+	endif[135]
+s[7]::entrancehalltothepalace[66] = $16/22
+	goto::[64]dankcorridor
+s[7]::guardroom[68] = $17/23
+	if_m[143]
+		ifundef::[156]When, changing location, you won't see its image, swap disk and ...
+			[220]::167
+			[24]::133
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+s[7]::highglassgates[70] = $18/24
+	goto::[74]ornatefountain
+s[7]::mosaicflooredhall[73] = $19/25
+	if::[37]ogbanpoisoned
+		goto::[76]safeinogbanschambers
+	else[133]
+		msg::[19]As soon as you leave the hall you find yourself faced with Ogban...
+		goto::[2]_dead
+	endif[135]
+s[7]::wizardslair[80] = $1a/26
+	if[142]::173
+		msg::[127]The wizard has you in his glare!
+	else[133]
+		goto::[63]cobwebbyroom
+	endif[135]
+s[7]::dungeonsofthepalace[83] = $1b/27
+	goto::[81]winecellar
+s[7]::$everywhere[246] = $1c/28
+	ifundef::[7]'The Boots of Deception! Keep them' +
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[7]stable
+	endif[135]
+s[7]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+n[8]::deepdarkwood[10] = $1d/29
+	ifisin[147]
+		put[164]
+	endif[135]
+	if[142]::140
+		ifisin[147]
+			goto::[11]hugefallenoak
+		else[133]
+			msg::[18]As soon as you approach a huge fallen oak tree, the ghost of the...
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	else[133]
+		goto::[11]hugefallenoak
+	endif[135]
+n[8]::hugefallenoak[11] = $1e/30
+	if::[12]goblinfree
+		goto::[58]screeslope
+	else[133]
+		msg::[20]As soon as you move, the ghost of the Goblin Guardian gets you!
+		waitkey[179]
+		goto::[2]_dead
+	endif[135]
+n[8]::middleofthelake[15] = $1f/31
+	goto::[16]roughwater
+n[8]::roughwater[16] = $20/32
+	goto::[17]islandshore
+n[8]::islandshore[17] = $21/33
+	ifisin[147]
+		msg::[181]You cannot drag the boat that way, it's too heavy
+	else[133]
+		ifisin[147]
+			msg::[181]You cannot drag the boat that way, it's too heavy
+		else[133]
+			goto::[19]oldkiln
+		endif[135]
+	endif[135]
+n[8]::barrencountryside[27] = $22/34
+	ifisin[147]
+		msg::[114]The giant boar blocks your path
+	else[133]
+		goto::[36]disusedwaterwheel
+	endif[135]
+n[8]::westernendofabridge[38] = $23/35
+	unset::[3]toll
+	put[164]
+	goto::[13]streaminavalleybottom
+n[8]::burntoutcampfire[40] = $24/36
+	if_m[143]
+	else[133]
+		if[142]::152
+			msg::[220]You realize with dread that a patrol of Grargs is approaching
+			set::[24]approaching
+		else[133]
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+n[8]::dampwellbottom[44] = $25/37
+	if::[25]brokenwall
+		unset::[26]ropetied
+		unset::[27]sheettied
+		goto::[45]narrowpassage
+	endif[135]
+n[8]::topofadeepwell[47] = $26/38
+	if::[25]brokenwall
+		goto::[46]cave
+	endif[135]
+n[8]::frozenpond[48] = $27/39
+	ifisin[147]
+		goto::[49]gapbetweensomeboulders
+	else[133]
+		msg::[188]You don't dare to move. The ice is breaking!
+	endif[135]
+n[8]::mazeoftunnels[55] = $13/19
+	msg::[233]You wander for an undefined amount of time, only to find yoursel...
+	if[142]::158
+		msg::[237]You're completely lost
+	endif[135]
+n[8]::banquethall[62] = $28/40
+	ifisin[147]
+		if_m[143]
+			[16]
+		else[133]
+			goto::[72]longgallery
+		endif[135]
+n[8]::cobwebbyroom[63] = $29/41
+	if::[33]cobwebscleared
+		goto::[80]wizardslair
+	else[133]
+		msg::[201]You get caught in the cobwebs!
+	endif[135]
+n[8]::dankcorridor[64] = $2a/42
+	goto::[66]entrancehalltothepalace
+n[8]::mosaicflooredhall[73] = $2b/43
+	goto::[69]halloftapestries
+n[8]::silverthroneroom[78] = $2c/44
+	if::[38]poisoninwine
+		set::[37]ogbanpoisoned
+	endif[135]
+	goto::[65]dustylibrary
+n[8]::winecellar[81] = $2d/45
+	ifisin[147]
+		ifisin[147]
+			msg::[98]Rats nibble your ankles!
+		else[133]
+			goto::[83]dungeonsofthepalace
+		endif[135]
+	else[133]
+		msg::[80]It's too dark!
+	endif[135]
+n[8]::dungeonsofthepalace[83] = $2e/46
+	if::[34]dankdoor
+		goto::[64]dankcorridor
+	else[133]
+		msg::[10]A massive oak door blocks you
+	endif[135]
+n[8]::$everywhere[246] = $2f/47
+	ifundef::[6]'Thanks' he utters while taking the bread.
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[6]villageofrustichouses
+	endif[135]
+n[8]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+w[9]::edgeofanicylake[14] = $30/48
+	ifisin[147]
+		goto::[15]middleofthelake
+	else[133]
+		ifisin[147]
+			msg::[52]How will you move the boat on the water?
+		else[133]
+			msg::[184]You cannot swim in this icy water!
+		endif[135]
+	endif[135]
+w[9]::easternendofabridge[37] = $31/49
+	if[142]::131
+		msg::[9]A dangerous-looking troll approaches and blocks your passage, lo...
+		put[164]
+	else[133]
+		unset::[3]toll
+		put[164]
+		goto::[38]westernendofabridge
+	endif[135]
+w[9]::westernendofabridge[38] = $32/50
+	unset::[3]toll
+	put[164]
+	goto::[39]orchard
+w[9]::burntoutcampfire[40] = $33/51
+	if_m[143]
+	else[133]
+		if[142]::152
+			msg::[220]You realize with dread that a patrol of Grargs is approaching
+			set::[24]approaching
+		else[133]
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+w[9]::mazeoftunnels[55] = $34/52
+	if::[30]mazetrack
+		msg::[231]You try to recall the path you saw in the cave, and after a whil...
+		waitkey[179]
+		goto::[60]stalactitesstalagmites
+	else[133]
+		msg::[233]You wander for an undefined amount of time, only to find yoursel...
+		msg::[237]You're completely lost
+	endif[135]
+w[9]::stalactitesstalagmites[60] = $35/53
+	if::[20]rubbleremoved
+		msg::[118]The passage is too steep
+	else[133]
+		msg::[13]A pile of rubble blocks your path
+	endif[135]
+w[9]::cobwebbyroom[63] = $36/54
+	if::[33]cobwebscleared
+		goto::[79]turretroom
+	else[133]
+		msg::[201]You get caught in the cobwebs!
+	endif[135]
+w[9]::entrancehalltothepalace[66] = $37/55
+	goto::[70]highglassgates
+w[9]::grargsentrypost[67] = $38/56
+	if_m[143]
+		ifundef::[156]When, changing location, you won't see its image, swap disk and ...
+			[220]::167
+			[24]::133
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+w[9]::guardroom[68] = $39/57
+	if_m[143]
+		ifundef::[156]When, changing location, you won't see its image, swap disk and ...
+			[220]::167
+			[24]::133
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+w[9]::highglassgates[70] = $3a/58
+	goto::[61]vaultedcavern
+w[9]::silverthroneroom[78] = $3b/59
+	goto::[73]mosaicflooredhall
+w[9]::wizardslair[80] = $3c/60
+	if[142]::173
+		msg::[127]The wizard has you in his glare!
+	else[133]
+		if::[46]wizarddoor
+			goto::[77]silverchamber
+		else[133]
+			msg::[135]There's a closed bulk door blocking your passage
+		endif[135]
+	endif[135]
+w[9]::winecellar[81] = $3d/61
+	ifisin[147]
+		ifisin[147]
+			msg::[98]Rats nibble your ankles!
+		else[133]
+			goto::[82]rowofcasks
+		endif[135]
+	else[133]
+		msg::[80]It's too dark!
+	endif[135]
+w[9]::rowofcasks[82] = $3e/62
+	if::[47]passageseen
+		msg::[119]The passage was steep!
+		waitkey[179]
+		goto::[8]shadyhollow
+	endif[135]
+w[9]::$everywhere[246] = $3f/63
+	ifundef::[5]'Please don't hurt me,' he says, his voice laced with fear.
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[5]windingroad
+	endif[135]
+w[9]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+e[10]::deepdarkwood[10] = $40/64
+	ifisin[147]
+		put[164]
+	endif[135]
+	goto::[8]shadyhollow
+e[10]::edgeofanicylake[14] = $41/65
+	ifisin[147]
+		msg::[181]You cannot drag the boat that way, it's too heavy
+	else[133]
+		ifisin[147]
+			msg::[181]You cannot drag the boat that way, it's too heavy
+		else[133]
+			goto::[41]pittedtrack
+		endif[135]
+	endif[135]
+e[10]::middleofthelake[15] = $42/66
+	goto::[14]edgeofanicylake
+e[10]::islandshore[17] = $43/67
+	ifisin[147]
+		msg::[181]You cannot drag the boat that way, it's too heavy
+	else[133]
+		ifisin[147]
+			msg::[181]You cannot drag the boat that way, it's too heavy
+		else[133]
+			goto::[18]beachedketch
+		endif[135]
+	endif[135]
+e[10]::hollowtomb[31] = $44/68
+	if[142]::148
+		msg::[13]A pile of rubble blocks your path
+	else[133]
+		goto::[60]stalactitesstalagmites
+	endif[135]
+e[10]::easternendofabridge[37] = $45/69
+	unset::[3]toll
+	put[164]
+	goto::[4]crossroads
+e[10]::westernendofabridge[38] = $46/70
+	if[142]::131
+		msg::[9]A dangerous-looking troll approaches and blocks your passage, lo...
+		put[164]
+	else[133]
+		unset::[3]toll
+		goto::[37]easternendofabridge
+	endif[135]
+e[10]::burntoutcampfire[40] = $47/71
+	if_m[143]
+	else[133]
+		if[142]::152
+			msg::[220]You realize with dread that a patrol of Grargs is approaching
+			set::[24]approaching
+		else[133]
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+e[10]::ploughedfield[42] = $48/72
+	if_m[143]
+		ifundef::[156]When, changing location, you won't see its image, swap disk and ...
+			[220]::167
+			[24]::133
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+e[10]::frozenpond[48] = $49/73
+	ifisin[147]
+		goto::[56]mountainhut
+	else[133]
+		msg::[188]You don't dare to move. The ice is breaking!
+	endif[135]
+e[10]::highpinnacle[51] = $4a/74
+	goto::[50]glacier
+e[10]::highwalledgarden[52] = $12/18
+	goto::[49]gapbetweensomeboulders
+e[10]::mazeoftunnels[55] = $4b/75
+	if::[30]mazetrack
+		msg::[231]You try to recall the path you saw in the cave, and after a whil...
+		waitkey[179]
+		goto::[61]vaultedcavern
+	else[133]
+		msg::[233]You wander for an undefined amount of time, only to find yoursel...
+		msg::[237]You're completely lost
+	endif[135]
+e[10]::silverbellintherock[59] = $4c/76
+	if::[32]rockdoor
+		goto::[83]dungeonsofthepalace
+	endif[135]
+e[10]::cobwebbyroom[63] = $4d/77
+	goto::[76]safeinogbanschambers
+e[10]::entrancehalltothepalace[66] = $4e/78
+	goto::[67]grargsentrypost
+e[10]::grargsentrypost[67] = $4f/79
+	if_m[143]
+		ifundef::[156]When, changing location, you won't see its image, swap disk and ...
+			[220]::167
+			[24]::133
+			msg::[41]Grargs attack and effortlessly kill you
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endif[135]
+e[10]::highglassgates[70] = $50/80
+	if::[35]distractedhoud
+		unset::[35]distractedhoud
+		goto::[66]entrancehalltothepalace
+	else[133]
+		msg::[116]The huge hound bars you way
+	endif[135]
+e[10]::mosaicflooredhall[73] = $51/81
+	setvar[174]
+	ifisin[147]
+		addvar[129]
+	endif[135]
+	ifisin[147]
+		addvar[129]
+	endif[135]
+	ifisin[147]
+		addvar[129]
+	endif[135]
+	ifvar[153]
+		goto::[78]silverthroneroom
+	else[133]
+		msg::[85]Mysterious forces hold you back. You need ancient magic to count...
+	endif[135]
+e[10]::silverchamber[77] = $52/82
+	ifisin[147]
+		msg::[210]You need to finish your mission and save your people
+		msg::[149]Time to say the magic words!
+	else[133]
+		goto::[80]wizardslair
+	endif[135]
+e[10]::rowofcasks[82] = $53/83
+	ifisin[147]
+		goto::[81]winecellar
+	else[133]
+		msg::[80]It's too dark!
+	endif[135]
+e[10]::$everywhere[246] = $54/84
+	ifundef::[4]'One of the magic objects! Keep it!' the hermit says
+		msg::[178]You can't go that way
+	else[133]
+		goto_ex::[4]crossroads
+	endif[135]
+e[10]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+se[11]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+sw[12]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+ne[13]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+nw[14]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+go[15]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+enter[16]::outsideawindmill[25] = $55/85
+	withobj::[56]outsideawindmill.windmill
+		goto::[26]lowerfloorofthemill
+	endwith[136]
+enter[16]::mistypool[32] = $56/86
+	withobj::[60]mistypool.pool
+		if::[21]emptypool
+			msg::[121]The pool is empty now
+		else[133]
+			msg::[120]The pool is deeper than you thought. You cramp up and can't get ...
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endwith[136]
+enter[16]::woodmanshut[43] = $57/87
+	msg::[141]There's nothing useful inside
+enter[16]::dampwellbottom[44] = $58/88
+	withobj::[65]dampwellbottom.opening
+		if::[25]brokenwall
+			unset::[26]ropetied
+			unset::[27]sheettied
+			goto::[45]narrowpassage
+		endif[135]
+	endwith[136]
+enter[16]::mountainhut[56] = $59/89
+	if[142]::159
+		put[164]
+		set::[31]seenplanks
+		msg::[59]Inside you found some planks
+	endif[135]
+enter[16]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+x[17]::stable[7] = $5a/90
+	withobj::[44]stable.door
+		if[142]::137
+			set::[9]seenhorseshoe
+			put[164]
+			msg::[43]Hanging on the door is a horseshoe
+		else[133]
+			if::[10]brokendoor
+				msg::[110]The door has come off its hinges. Its wood is dry and rotten, bu...
+			endif[135]
+		endif[135]
+x[17]::stable[7] = $5b/91
+	withobj::[45]stable.stable
+		if[142]::139
+			msg::[92]On a side, you notice a wooden door
+			set::[11]woodendoorseen
+		endif[135]
+x[17]::beachedketch[18] = $5c/92
+	withobj::[48]beachedketch.ketch
+		if[142]::142
+			msg::[56]In the vessel carcass you find a net
+			put[164]
+			set::[14]netseen
+		endif[135]
+x[17]::oldkiln[19] = $5d/93
+	withobj::[49]oldkiln.kiln
+		if[142]::143
+			msg::[16]Amidst the shards you find a jug still intact
+			put[164]
+			set::[15]jugseen
+		endif[135]
+x[17]::whitecottage[21] = $5e/94
+	withobj::[50]whitecottage.pot
+		if[142]::144
+			put[164]
+			msg::[199]You found some coins inside
+			set::[16]coinsfound
+		endif[135]
+x[17]::whitecottage[21] = $5f/95
+	withobj::[51]whitecottage.chest
+		msg::[75]It's empty
+x[17]::atticbedroom[22] = $60/96
+	withobj::[53]atticbedroom.bed
+		if[142]::145
+			set::[17]seensheet
+			put[164]
+			msg::[93]On the bed is a large sheet
+		endif[135]
+x[17]::cupboard[23] = $61/97
+	withobj::[54]cupboard.cupboard
+		if[142]::146
+			msg::[142]There's something inside
+		endif[135]
+x[17]::sacksontheupperfloor[24] = $62/98
+	withobj::[55]sacksontheupperfloor.sacks
+		if[142]::147
+			msg::[200]You found some seeds
+			put[164]
+			set::[19]seedsseen
+		endif[135]
+x[17]::goblingraveyard[29] = $63/99
+	withobj::[58]goblingraveyard.inscription
+		msg::[11]A mysterious epithaph on a headstone catches your eye, but the i...
+		msg::[245]\yA Goblin's soul will roam\w / \yUntil the music of the\w \ym r...
+x[17]::mistypool[32] = $64/100
+	withobj::[60]mistypool.pool
+		if::[21]emptypool
+			if[142]::150
+				msg::[24]At a point in the now-dry pool you see a shield
+				put[164]
+				set::[22]shieldseen
+			else[133]
+				ifisin[147]
+					msg::[24]At a point in the now-dry pool you see a shield
+				else[133]
+					msg::[140]There's nothing interesting
+				endif[135]
+			else[133]
+			endif[135]
+		else[133]
+			msg::[58]Inside the pool, where the waters are more melted, there is some...
+		endif[135]
+x[17]::sluicegates[35] = $65/101
+	withobj::[62]sluicegates.gates
+		msg::[139]There's an handle
+x[17]::orchard[39] = $66/102
+	withobj::[64]orchard.tree
+		msg::[147]This orchard has almost only apple trees
+		if[142]::151
+			set::[23]seenapples
+			msg::[133]There are some apples left
+			put[164]
+		endif[135]
+x[17]::dampwellbottom[44] = $67/103
+	withobj::[65]dampwellbottom.opening
+		if::[25]brokenwall
+			msg::[62]It leads north and it's big enough for you to enter it
+		endif[135]
+x[17]::dampwellbottom[44] = $68/104
+	withobj::[66]dampwellbottom.bottom
+		if::[25]brokenwall
+			msg::[137]There's a narrow opening
+		else[133]
+			msg::[131]There are loose bricks
+		endif[135]
+x[17]::dampwellbottom[44] = $69/105
+	withobj::[67]dampwellbottom.bricks
+		if::[25]brokenwall
+			msg::[137]There's a narrow opening
+		else[133]
+			msg::[100]Some of them seem loose
+		endif[135]
+x[17]::highwalledgarden[52] = $6a/106
+	withobj::[72]highwalledgarden.vine
+		if::[28]vinegrown
+			msg::[64]It's a large vine, reaching almost to the rocks top
+		endif[135]
+x[17]::inscribedcavern[54] = $6b/107
+	withobj::[73]inscribedcavern.inscriptions
+		msg::[198]You find stories and legends of the Sylvani on the walls, but yo...
+		set::[30]mazetrack
+x[17]::dankcorridor[64] = $6c/108
+	withobj::[78]dankcorridor.door
+		if::[34]dankdoor
+			msg::[73]It's broken
+		else[133]
+			msg::[66]It's a solid, heavy oak door
+		endif[135]
+x[17]::dustylibrary[65] = $6d/109
+	withobj::[79]dustylibrary.books
+		msg::[96]One book in particular catches your eye because it's open on a l...
+		msg::[2]'Magic words lie at the crossroads, the fountain and the stone c...
+		msg::[22]As you flip through a second volume, you discover that those pla...
+x[17]::kitchensofthepalace[71] = $6e/110
+	withobj::[81]kitchensofthepalace.kitchens
+		msg::[136]There's a large cupboard in the corner
+x[17]::rowofcasks[82] = $6f/111
+	withobj::[93]rowofcasks.casks
+		msg::[25]Behind one of them, a passage leads west!
+		set::[47]passageseen
+x[17]::$everywhere[246] = $70/112
+	withobj::[6]shield
+		msg::[94]On this shield is the Sylvan coat of arms
+		msg::[134]There's a P carved on them. P as Pari?
+x[17]::$everywhere[246] = $71/113
+	withobj::[7]horseshoe
+		msg::[78]It's quite old, but not worn out
+		msg::[134]There's a P carved on them. P as Pari?
+x[17]::$everywhere[246] = $72/114
+	withobj::[16]sleepinggrarg
+		ifisin[147]
+			msg::[49]He's sleeping
+			if[142]::132
+				msg::[83]Mmh... he wears a uniform
+				put[164]
+				set::[4]seenuniform
+			endif[135]
+		endif[135]
+x[17]::$everywhere[246] = $73/115
+	withobj::[36]ring
+		msg::[72]It's ancient and seems precious.
+		msg::[134]There's a P carved on them. P as Pari?
+x[17]::$everywhere[246] = $74/116
+	withobj::[41]uniform
+		ifisin[147]
+			msg::[63]It's a dirty Grarg's uniform, and it's more or less your size
+			if[142]::136
+				set::[8]matchesseen
+				msg::[54]In a pocket you find some matches!
+				put[164]
+			endif[135]
+		endif[135]
+x[17]::$everywhere[246] = $75/117
+	withobj::[42]bridge
+		ifisroom_m[149]
+x[17]::$everywhere[246] = $76/118
+	withobj::[249]$none
+		msgattr::[1]topscore
+		ifundef::[3]'One of the magic objects! Keep it!' +
+			msg::[132]There are no evident exits.
+		else[133]
+			msg::[130]There are clear exits to +
+			msgattr::[3]bootsusage
+			msg::[8].
+		endif[135]
+		ifobjinattr[151]
+			msg::[224]You see: +
+			list[154]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[87]Nothing worth noting
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			ifundef::[65]It's a matter of second, and a large vine grows along the rocks ...
+				msg::[34]Doesn't seem especially interesting
+			else[133]
+				msgattr[158]::65
+			endif[135]
+		else[133]
+			msg::[196]You don't see that here
+		endif[135]
+	endwith[136]
+	withobj::[0]exits
+		ifundef::[3]'One of the magic objects! Keep it!' +
+			msg::[132]There are no evident exits.
+		else[133]
+			msg::[130]There are clear exits to +
+			msgattr::[3]bootsusage
+			msg::[8].
+		endif[135]
+	endwith[136]
+x[17]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+l[18]::$everywhere[246] = $78/120
+	withobj::[249]$none
+		msgattr::[1]topscore
+		ifundef::[3]'One of the magic objects! Keep it!' +
+			msg::[132]There are no evident exits.
+		else[133]
+			msg::[130]There are clear exits to +
+			msgattr::[3]bootsusage
+			msg::[8].
+		endif[135]
+		ifobjinattr[151]
+			msg::[224]You see: +
+			list[154]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[87]Nothing worth noting
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			ifundef::[65]It's a matter of second, and a large vine grows along the rocks ...
+				msg::[34]Doesn't seem especially interesting
+			else[133]
+				msgattr[158]::65
+			endif[135]
+		else[133]
+			msg::[196]You don't see that here
+		endif[135]
+	endwith[136]
+l[18]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+take[19]::sacksontheupperfloor[24] = $79/121
+	withobj::[55]sacksontheupperfloor.sacks
+		msg::[99]Sacks are too heavy!
+take[19]::topofadeepwell[47] = $7a/122
+	withobj::[38]sheet
+		if::[27]sheettied
+			unset::[27]sheettied
+			put[164]
+			msg::[104]Taken
+		endif[135]
+	endwith[136]
+	withobj::[37]rope
+		if::[26]ropetied
+			unset::[26]ropetied
+			put[164]
+			msg::[104]Taken
+		endif[135]
+	endwith[136]
+take[19]::$everywhere[246] = $7b/123
+	withobj::[7]horseshoe
+		if[142]::134
+			msg::[76]It's firmly nailed on
+		else[133]
+			put[164]
+			msg::[104]Taken
+		endif[135]
+take[19]::$everywhere[246] = $7c/124
+	withobj::[38]sheet
+		ifisin[147]
+			msg::[228]You take the sheet back
+			put[164]
+			ifisin[147]
+				put[164]
+				put[164]
+			else[133]
+				put[164]
+				put[164]
+			endif[135]
+		endif[135]
+take[19]::$everywhere[246] = $7d/125
+	withobj::[245]$every
+		ifobjinattr[151]
+			ifis[145]
+				setcount[169]
+				addvar[129]
+				ifvar[153]
+					put[164]
+					msg::[104]Taken
+				else[133]
+					msg::[163]You already carry too much to add also this size object
+				endif[135]
+			else[133]
+				msg::[197]You don't want to take it
+			endif[135]
+		else[133]
+			ifisin[147]
+				msg::[164]You already have it
+			else[133]
+				msg::[194]You don't see it here
+			endif[135]
+		endif[135]
+	endwith[136]
+take[19]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+drop[20]::$everywhere[246] = $7e/126
+	withobj::[21]boat
+		ifisroom_m[149]
+			[2]
+drop[20]::$everywhere[246] = $7f/127
+	withobj::[22]boatwithsail
+		ifisroom_m[149]
+			[2]
+drop[20]::$everywhere[246] = $80/128
+	withobj::[24]boots
+		if::[0]bootson
+			msg::[226]You should remove them first
+		endif[135]
+drop[20]::$everywhere[246] = $81/129
+	withobj::[245]$every
+		ifisin[147]
+			ifis[145]
+				put[164]
+				msg::[38]Dropped
+				ifvar[153]
+					decvar[132]
+				endif[135]
+			else[133]
+				msg::[177]You can't drop it
+			endif[135]
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+drop[20]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+use[21]::roughwater[16] = $82/130
+	withobj::[26]bucket
+		ifisin[147]
+			ifvar[153]
+				msg::[208]You managed to keep the ship afloat
+				set::[13]usedbucket
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[27]jug
+		ifisin[147]
+			ifvar[153]
+				msg::[81]It's too small to make a difference
+			endif[135]
+		endif[135]
+	endwith[136]
+use[21]::dampwellbottom[44] = $83/131
+	withobj::[3]axe
+		ifisin[147]
+			if::[25]brokenwall
+				msg::[167]You already removed the loose bricks
+			else[133]
+				msg::[160]With a decisive blow you manage to break down part of the brick ...
+				set::[25]brokenwall
+			endif[135]
+		endif[135]
+	endwith[136]
+use[21]::frozenpond[48] = $84/132
+	withobj::[35]planks
+		ifisin[147]
+			msg::[217]You put the planks on the frozen surface. Not you feel safer to ...
+			put[164]
+		endif[135]
+	endwith[136]
+use[21]::cobwebbyroom[63] = $85/133
+	withobj::[4]sword
+		ifisin[147]
+			msg::[185]You cleared the cobwebs
+			set::[33]cobwebscleared
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+use[21]::dankcorridor[64] = $86/134
+	withobj::[3]axe
+		ifisin[147]
+			msg::[108]The door broke!
+			set::[34]dankdoor
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+use[21]::turretroom[79] = $87/135
+	withobj::[12]coin
+		ifisin[147]
+			decvar[132]
+			ifvar[153]
+				put[164]
+			endif[135]
+			msg::[12]A number appears: 731
+			set::[39]safenumber
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+use[21]::$everywhere[246] = $88/136
+	withobj::[3]axe
+		msg::[53]How?
+use[21]::$everywhere[246] = $89/137
+	withobj::[24]boots
+		ifisin[147]
+			if::[0]bootson
+				msg::[236]You're already wearing them
+			else[133]
+				if[142]::133
+					msg::[95]Once worn, you discover that you are invisible.
+					set::[5]wearonce
+				else[133]
+					msg::[238]You're invisible
+				endif[135]
+				set::[0]bootson
+			endif[135]
+		endif[135]
+use[21]::$everywhere[246] = $8a/138
+	withobj::[38]sheet
+		ifisin[147]
+			ifisin[147]
+				msg::[218]You put the sheet on the boat as a sail
+				put[164]
+				ifisin[147]
+					put[164]
+					put[164]
+				else[133]
+					put[164]
+					put[164]
+				endif[135]
+			endif[135]
+		endif[135]
+use[21]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+push[22]::hollowtomb[31] = $8b/139
+	withobj::[59]hollowtomb.rubble
+		msg::[182]You cannot move rubble from here
+push[22]::dampwellbottom[44] = $8c/140
+	withobj::[67]dampwellbottom.bricks
+		msg::[145]They're wedged in, and you can't do much with your bare hands
+push[22]::stalactitesstalagmites[60] = $8d/141
+	withobj::[76]stalactitesstalagmites.rubble
+		msg::[15]After a long work, you finally manage to remove the rubble, reve...
+		set::[20]rubbleremoved
+push[22]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+pull[23]::hollowtomb[31] = $8b/139
+	withobj::[59]hollowtomb.rubble
+		msg::[182]You cannot move rubble from here
+pull[23]::dampwellbottom[44] = $8c/140
+	withobj::[67]dampwellbottom.bricks
+		msg::[145]They're wedged in, and you can't do much with your bare hands
+pull[23]::stalactitesstalagmites[60] = $8d/141
+	withobj::[76]stalactitesstalagmites.rubble
+		msg::[15]After a long work, you finally manage to remove the rubble, reve...
+		set::[20]rubbleremoved
+pull[23]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+open[24]::stable[7] = $8e/142
+	withobj::[44]stable.door
+		if[142]::138
+			set::[10]brokendoor
+			msg::[109]The door comes off its hinges
+		endif[135]
+open[24]::whitecottage[21] = $5f/95
+	withobj::[51]whitecottage.chest
+		msg::[75]It's empty
+open[24]::cupboard[23] = $8f/143
+	withobj::[54]cupboard.cupboard
+		if[142]::146
+			msg::[57]Inside the cupboard you find boots
+			put[164]
+			set::[18]seenboots
+		endif[135]
+open[24]::sacksontheupperfloor[24] = $62/98
+	withobj::[55]sacksontheupperfloor.sacks
+		if[142]::147
+			msg::[200]You found some seeds
+			put[164]
+			set::[19]seedsseen
+		endif[135]
+open[24]::sluicegates[35] = $90/144
+	withobj::[62]sluicegates.gates
+		msg::[172]You are not strong enough
+open[24]::dankcorridor[64] = $91/145
+	withobj::[78]dankcorridor.door
+		if::[34]dankdoor
+			msg::[112]The door's broken
+		else[133]
+			msg::[172]You are not strong enough
+		endif[135]
+	endwith[136]
+open[24]::kitchensofthepalace[71] = $92/146
+	withobj::[80]kitchensofthepalace.cupboard
+		if[142]::164
+			msg::[138]There's a phial
+			put[164]
+			set::[36]seenphial
+		endif[135]
+open[24]::safeinogbanschambers[76] = $93/147
+	withobj::[85]safeinogbanschambers.safe
+		if::[39]safenumber
+			if::[40]alreadyopened
+				msg::[165]You already opened it
+			else[133]
+				set::[40]alreadyopened
+				if[142]::169
+					put[164]
+					msg::[154]Using slot machine numbers, it opens. Inside there's a key
+					set::[41]seenkey
+				else[133]
+					msg::[75]It's empty
+				endif[135]
+			endif[135]
+		else[133]
+			msg::[209]You need its combination number to open it
+		endif[135]
+open[24]::wizardslair[80] = $94/148
+	withobj::[91]wizardslair.door
+		if[142]::173
+			msg::[127]The wizard has you in his glare!
+		else[133]
+			if::[46]wizarddoor
+				msg::[70]It's already opened
+			else[133]
+				msg::[77]It's locked
+			endif[135]
+		endif[135]
+open[24]::rowofcasks[82] = $6f/111
+	withobj::[93]rowofcasks.casks
+		msg::[25]Behind one of them, a passage leads west!
+		set::[47]passageseen
+open[24]::$everywhere[246] = $95/149
+	ifisin[147]
+		ifis[145]
+			ifis[145]
+				msg::[69]It's already open
+			else[133]
+				setattr[168]
+				msg::[35]Done
+			endif[135]
+		else[133]
+			msg::[183]You cannot open it
+		endif[135]
+	endif[135]
+open[24]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+close[25]::$everywhere[246] = $96/150
+	ifisin[147]
+		ifis[145]
+			ifis[145]
+				unsetattr[178]
+				msg::[35]Done
+			else[133]
+				msg::[68]It's already closed
+			endif[135]
+		else[133]
+			msg::[180]You cannot close it
+		endif[135]
+	endif[135]
+close[25]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+lock[26]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+unlock[27]::safeinogbanschambers[76] = $97/151
+	withobj::[85]safeinogbanschambers.safe
+unlock[27]::wizardslair[80] = $98/152
+	withobj::[91]wizardslair.door
+		if[142]::173
+			msg::[127]The wizard has you in his glare!
+		else[133]
+			ifisin[147]
+				msg::[117]The key turns! The door's now opened
+				set::[46]wizarddoor
+			else[133]
+				msg::[162]With what?
+			endif[135]
+		endif[135]
+unlock[27]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+show[28]::wizardslair[80] = $99/153
+	withobj::[39]silverplate
+		ifisin[147]
+			msg::[221]You reflected the wizard's glare! He is dead!
+			set::[45]wizarddead
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+show[28]::$everywhere[246] = $9a/154
+	withobj::[6]shield
+		ifisin[147]
+			ifisin[147]
+				msg::[3]'One of the magic objects! Keep it!' +
+				msg::[249]the hermit says
+			endif[135]
+		endif[135]
+show[28]::$everywhere[246] = $9b/155
+	withobj::[7]horseshoe
+		ifisin[147]
+			ifisin[147]
+				msg::[4]'One of the magic objects! Keep it!' the hermit says
+			endif[135]
+		endif[135]
+show[28]::$everywhere[246] = $9c/156
+	withobj::[24]boots
+		ifisin[147]
+			ifisin[147]
+				msg::[7]'The Boots of Deception! Keep them' +
+				msg::[249]the hermit says
+			endif[135]
+		endif[135]
+show[28]::$everywhere[246] = $9d/157
+	withobj::[36]ring
+		ifisin[147]
+			ifisin[147]
+				msg::[3]'One of the magic objects! Keep it!' +
+				msg::[249]the hermit says
+			endif[135]
+		endif[135]
+show[28]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+give[29]::barrencountryside[27] = $9e/158
+	withobj::[245]$every
+		ifisin[147]
+			ifisin[147]
+				put[164]
+				msg::[45]He eats it!
+			endif[135]
+		endif[135]
+	endwith[136]
+give[29]::overgrowntrack[33] = $9f/159
+	withobj::[20]apples
+		ifisin[147]
+			msg::[40]Give the apples to the pony and he lets you ride him heading bri...
+			msg::[247]north.
+			put[164]
+			waitkey[179]
+			put[164]
+			goto::[34]rustygates
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[19]apple
+		ifisin[147]
+			msg::[40]Give the apples to the pony and he lets you ride him heading bri...
+			msg::[247]north.
+			waitkey[179]
+			put[164]
+			goto::[34]rustygates
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+give[29]::rustygates[34] = $a0/160
+	withobj::[20]apples
+		ifisin[147]
+			msg::[40]Give the apples to the pony and he lets you ride him heading bri...
+			msg::[248]south.
+			put[164]
+			waitkey[179]
+			put[164]
+			goto::[33]overgrowntrack
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[19]apple
+		ifisin[147]
+			msg::[40]Give the apples to the pony and he lets you ride him heading bri...
+			msg::[248]south.
+			waitkey[179]
+			put[164]
+			goto::[33]overgrowntrack
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+give[29]::easternendofabridge[37] = $a1/161
+	withobj::[11]coins
+		ifisin[147]
+			msg::[125]The troll takes them all and goes away
+			put[164]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[12]coin
+		ifisin[147]
+			msg::[124]The troll takes it and goes away
+			decvar[132]
+			ifvar[153]
+				put[164]
+				msg::[223]You run out of coins
+			endif[135]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+give[29]::westernendofabridge[38] = $a1/161
+	withobj::[11]coins
+		ifisin[147]
+			msg::[125]The troll takes them all and goes away
+			put[164]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[12]coin
+		ifisin[147]
+			msg::[124]The troll takes it and goes away
+			decvar[132]
+			ifvar[153]
+				put[164]
+				msg::[223]You run out of coins
+			endif[135]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+give[29]::highglassgates[70] = $a2/162
+	withobj::[23]bone
+		ifisin[147]
+			set::[35]distractedhoud
+			put[164]
+			msg::[115]The hound begins to gnaw at the bone, calming down.
+		endif[135]
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			ifisin[147]
+				put[164]
+				msg::[45]He eats it!
+			endif[135]
+		endif[135]
+	endwith[136]
+give[29]::winecellar[81] = $a3/163
+	withobj::[20]apples
+	endwith[136]
+	withobj::[18]bread
+		ifisin[147]
+			msg::[143]They scurry away
+			put[164]
+			put[164]
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+give[29]::$everywhere[246] = $a4/164
+	withobj::[5]hermit
+		msg::[46]He gives that back to you
+		withobj::[6]shield
+		endwith[136]
+		withobj::[7]horseshoe
+		endwith[136]
+give[29]::$everywhere[246] = $a5/165
+	withobj::[10]troll
+		withobj::[11]coins
+			ifisin[147]
+				msg::[125]The troll takes them all and goes away
+				put[164]
+				set::[3]toll
+			else[133]
+				msg::[190]You don't have any
+			endif[135]
+		endwith[136]
+		withobj::[12]coin
+			ifisin[147]
+				msg::[124]The troll takes it and goes away
+				decvar[132]
+				ifvar[153]
+					put[164]
+					msg::[223]You run out of coins
+				endif[135]
+				set::[3]toll
+			else[133]
+				msg::[190]You don't have any
+			endif[135]
+		endwith[136]
+		withobj::[245]$every
+			msg::[44]He doesn't want it
+		endwith[136]
+give[29]::$everywhere[246] = $a6/166
+	withobj::[13]boar
+		ifisin[147]
+			ifisin[147]
+				put[164]
+				msg::[45]He eats it!
+			endif[135]
+		endif[135]
+give[29]::$everywhere[246] = $a7/167
+	withobj::[14]hound
+		withobj::[245]$every
+			ifisin[147]
+				ifisin[147]
+					put[164]
+					msg::[45]He eats it!
+				endif[135]
+			endif[135]
+		endwith[136]
+give[29]::$everywhere[246] = $a8/168
+	withobj::[17]kid
+		withobj::[18]bread
+			ifisin[147]
+				ifisin[147]
+					msg::[6]'Thanks' he utters while taking the bread.
+					put[164]
+				endif[135]
+			endif[135]
+		endwith[136]
+give[29]::$everywhere[246] = $a9/169
+	withobj::[18]bread
+give[29]::$everywhere[246] = $aa/170
+	withobj::[23]bone
+give[29]::$everywhere[246] = $ab/171
+	withobj::[25]brooch
+		ifisin[147]
+			ifisin[147]
+				msg::[50]His eyes light up upon seeing that old pin. He smiles at you and...
+				msg::[1]"You need five rings", he says.
+				put[164]
+				set::[1]hermitknowsyou
+				set::[2]howmanyrings
+			endif[135]
+		endif[135]
+give[29]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+put[30]::$everywhere[246] = $ac/172
+	msg::[155]What?
+put[30]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+help[31]::$everywhere[246] = $ad/173
+	msg::[150]To act write short commands in \yVERB+ELEMENT \w (i.e. \ytake pe...
+	msg::[84]Move using cardinal directions. Use \yinventory \wto see what yo...
+inventory[32]::$everywhere[246] = $ae/174
+	ifobjinattr[151]
+		msg::[170]You are carrying: +
+		list[154]
+	else[133]
+		msg::[174]You aren't carrying anything.
+	endif[135]
+quit[33]::$everywhere[246] = $af/175
+	msg::[17]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[150]::89
+		quit[165]
+	endif[135]
+restart[34]::$everywhere[246] = $b0/176
+	msg::[17]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[150]::89
+		start[176]
+	endif[135]
+save[35]::$everywhere[246] = $b1/177
+	save[166]
+	msg::[35]Done
+load[36]::$everywhere[246] = $b2/178
+	msg::[17]Are you sure? (Y/N)
+	getkey[137]
+	ifkey[150]::89
+		load[155]
+	endif[135]
+mem[37]::$everywhere[246] = $b3/179
+	dbg[131]
+gfx[38]::$everywhere[246] = $b4/180
+	msg::[246]\yn\wormal, \yp\wrogressive or \ys\wtatic?
+	getkey[137]
+	ifkey[150]::78
+		gfxmode[138]::0
+		msg::[35]Done
+	else[133]
+		ifkey[150]::80
+			gfxmode[138]::1
+			msg::[35]Done
+		else[133]
+			ifkey[150]::83
+				gfxmode[138]::2
+				msg::[35]Done
+			endif[135]
+		endif[135]
+	endif[135]
+image[39]::$everywhere[246] = $b5/181
+	gfxmode[138]::255
+talk[40]::$everywhere[246] = $b6/182
+	withobj::[5]hermit
+		if::[1]hermitknowsyou
+			msg::[0]"You need five rings", he says
+			set::[2]howmanyrings
+		else[133]
+			msg::[47]He looks at you without answering. He has clearly seen too many ...
+		endif[135]
+talk[40]::$everywhere[246] = $b7/183
+	withobj::[10]troll
+		ifisin[147]
+			msg::[123]The troll just grunts as he reaches out a hand towards you
+		endif[135]
+talk[40]::$everywhere[246] = $b8/184
+	withobj::[17]kid
+		ifisin[147]
+			msg::[5]'Please don't hurt me,' he says, his voice laced with fear.
+			msg::[28]But as soon as he realizes you're not a threat, he relaxes and w...
+		endif[135]
+talk[40]::$everywhere[246] = $b9/185
+	ifobjinattr[151]
+		ifis[145]
+			msg::[48]He simply ignores you
+		else[133]
+			msg::[152]To whom?
+		endif[135]
+	else[133]
+		msg::[158]Who?
+	endif[135]
+talk[40]::$everywhere[246] = $ba/186
+	withobj::[249]$none
+		msg::[151]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[145]
+			msg::[60]It doesn't seem wise
+		else[133]
+			ifisin[147]
+				msg::[179]You can't talk with that
+			else[133]
+				msg::[196]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[105]Talk to whom?
+	endwith[136]
+ask[41]::$everywhere[246] = $b9/185
+	ifobjinattr[151]
+		ifis[145]
+			msg::[48]He simply ignores you
+		else[133]
+			msg::[152]To whom?
+		endif[135]
+	else[133]
+		msg::[158]Who?
+	endif[135]
+ask[41]::$everywhere[246] = $ba/186
+	withobj::[249]$none
+		msg::[151]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[145]
+			msg::[60]It doesn't seem wise
+		else[133]
+			ifisin[147]
+				msg::[179]You can't talk with that
+			else[133]
+				msg::[196]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[105]Talk to whom?
+	endwith[136]
+bail[42]::$everywhere[246] = $bb/187
+	withobj::[245]$every
+		msg::[53]How?
+	endwith[136]
+bail[42]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+blow[43]::hugefallenoak[11] = $bc/188
+	withobj::[1]reeds
+		ifisin[147]
+			if[142]::140
+				msg::[175]You begin to play a slow, haunting melody that immediately captu...
+				msg::[129]Then he almost smiles and disappears
+				set::[12]goblinfree
+			endif[135]
+		endif[135]
+	endwith[136]
+blow[43]::$everywhere[246] = $bd/189
+	withobj::[1]reeds
+		ifisin[147]
+			msg::[213]You obtain a nice tune
+		endif[135]
+	endwith[136]
+blow[43]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+break[44]::dankcorridor[64] = $be/190
+	withobj::[78]dankcorridor.door
+		msg::[53]How?
+	endwith[136]
+break[44]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+burn[45]::stable[7] = $bf/191
+	withobj::[44]stable.door
+		if::[6]doorburned
+			msg::[37]Door is already burnt
+		else[133]
+			ifisin[147]
+				set::[6]doorburned
+				msg::[111]The door was reduced to ashes
+			else[133]
+				msg::[162]With what?
+			endif[135]
+		endif[135]
+burn[45]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+climb[46]::dampwellbottom[44] = $c0/192
+	withobj::[37]rope
+		if::[26]ropetied
+			msg::[21]As soon as you try to climb back up the rope comes off and falls...
+			unset::[26]ropetied
+		else[133]
+			ifisin[147]
+				msg::[176]You can't climb using the rope now that's not tied to the well
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[38]sheet
+		if::[27]sheettied
+			msg::[122]The sheet is torn
+		endif[135]
+	endwith[136]
+climb[46]::topofadeepwell[47] = $c1/193
+	withobj::[38]sheet
+		if::[27]sheettied
+			msg::[187]You descend into the well slowly attached to the sheet, but it r...
+			waitkey[179]
+			goto::[44]dampwellbottom
+		endif[135]
+	endwith[136]
+	withobj::[37]rope
+		if::[26]ropetied
+			msg::[186]You descend into the well slowly attached to the rope.
+			waitkey[179]
+			goto::[44]dampwellbottom
+		endif[135]
+	endwith[136]
+climb[46]::highpinnacle[51] = $c2/194
+	withobj::[37]rope
+		ifisin[147]
+			msg::[234]You're already at the top
+		endif[135]
+	endwith[136]
+climb[46]::highwalledgarden[52] = $c3/195
+	withobj::[72]highwalledgarden.vine
+		if::[28]vinegrown
+			msg::[250]the vine seems resistant and you try to climb
+			waitkey[179]
+			goto::[54]inscribedcavern
+		endif[135]
+	endwith[136]
+climb[46]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+cross[47]::$everywhere[246] = $c4/196
+	withobj::[42]bridge
+		ifisroom_m[149]
+		else[133]
+			unset::[3]toll
+			ifisroom::[38]westernendofabridge
+				goto::[37]easternendofabridge
+			else[133]
+				goto::[38]westernendofabridge
+			endif[135]
+		endif[135]
+	endif[135]
+cross[47]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+cut[48]::cobwebbyroom[63] = $c5/197
+	withobj::[77]cobwebbyroom.cobwebs
+		ifisin[147]
+			msg::[185]You cleared the cobwebs
+			set::[33]cobwebscleared
+		else[133]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+cut[48]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+dive[49]::mistypool[32] = $c6/198
+	if::[21]emptypool
+		msg::[121]The pool is empty now
+	else[133]
+		msg::[120]The pool is deeper than you thought. You cramp up and can't get ...
+		waitkey[179]
+		goto::[2]_dead
+	endif[135]
+dive[49]::$everywhere[246] = $c7/199
+	ifisroom_m[149]
+		[2]
+dive[49]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+drink[50]::$everywhere[246] = $c8/200
+	withobj::[245]$every
+		msg::[239]You're not thirsty
+	endwith[136]
+drink[50]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+eat[51]::$everywhere[246] = $c9/201
+	withobj::[18]bread
+		ifisin[147]
+			msg::[74]It's disgusting, but still eatable.
+			msg::[35]Done
+			put[164]
+		endif[135]
+eat[51]::$everywhere[246] = $ca/202
+	withobj::[19]apple
+		ifisin[147]
+			msg::[79]It's tasty
+			put[164]
+		endif[135]
+eat[51]::$everywhere[246] = $cb/203
+	withobj::[20]apples
+		ifisin[147]
+			msg::[144]They're tasty
+			msg::[35]Done
+			put[164]
+		endif[135]
+eat[51]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+empty[52]::mosaicflooredhall[73] = $cc/204
+	withobj::[34]phial
+		msg::[157]Where?
+	endwith[136]
+empty[52]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+feed[53]::barrencountryside[27] = $cd/205
+	withobj::[13]boar
+		ifisin[147]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+feed[53]::highglassgates[70] = $ce/206
+	msg::[162]With what?
+feed[53]::winecellar[81] = $cf/207
+	withobj::[92]winecellar.rats
+		msg::[162]With what?
+feed[53]::$everywhere[246] = $d0/208
+	withobj::[8]pony
+		msg::[162]With what?
+feed[53]::$everywhere[246] = $d1/209
+	withobj::[13]boar
+		ifisin[147]
+			msg::[162]With what?
+		endif[135]
+feed[53]::$everywhere[246] = $d2/210
+	withobj::[14]hound
+		ifisin[147]
+			msg::[162]With what?
+		endif[135]
+feed[53]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+hold[54]::wizardslair[80] = $99/153
+	withobj::[39]silverplate
+		ifisin[147]
+			msg::[221]You reflected the wizard's glare! He is dead!
+			set::[45]wizarddead
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+hold[54]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+insert[55]::turretroom[79] = $87/135
+	withobj::[12]coin
+		ifisin[147]
+			decvar[132]
+			ifvar[153]
+				put[164]
+			endif[135]
+			msg::[12]A number appears: 731
+			set::[39]safenumber
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+insert[55]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+light[56]::winecellar[81] = $d3/211
+	withobj::[32]matches
+		ifisin[147]
+			msg::[86]Not bright enough
+		endif[135]
+	endwith[136]
+light[56]::$everywhere[246] = $d4/212
+	withobj::[30]lamp
+		ifisin[147]
+			ifisin[147]
+				ifisin[147]
+					put[164]
+					put[164]
+					msg::[232]You use matches and now the lamp is lit
+				else[133]
+					msg::[162]With what?
+				endif[135]
+			else[133]
+				msg::[227]You should take it first
+			endif[135]
+		endif[135]
+light[56]::$everywhere[246] = $d5/213
+	withobj::[32]matches
+		ifisin[147]
+			msg::[206]You lit one of them
+		endif[135]
+light[56]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+make[57]::hugefallenoak[11] = $bc/188
+	withobj::[1]reeds
+		ifisin[147]
+			if[142]::140
+				msg::[175]You begin to play a slow, haunting melody that immediately captu...
+				msg::[129]Then he almost smiles and disappears
+				set::[12]goblinfree
+			endif[135]
+		endif[135]
+	endwith[136]
+make[57]::$everywhere[246] = $bd/189
+	withobj::[1]reeds
+		ifisin[147]
+			msg::[213]You obtain a nice tune
+		endif[135]
+	endwith[136]
+make[57]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+move[58]::hollowtomb[31] = $8b/139
+	withobj::[59]hollowtomb.rubble
+		msg::[182]You cannot move rubble from here
+move[58]::dampwellbottom[44] = $8c/140
+	withobj::[67]dampwellbottom.bricks
+		msg::[145]They're wedged in, and you can't do much with your bare hands
+move[58]::stalactitesstalagmites[60] = $8d/141
+	withobj::[76]stalactitesstalagmites.rubble
+		msg::[15]After a long work, you finally manage to remove the rubble, reve...
+		set::[20]rubbleremoved
+move[58]::rowofcasks[82] = $6f/111
+	withobj::[93]rowofcasks.casks
+		msg::[25]Behind one of them, a passage leads west!
+		set::[47]passageseen
+move[58]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+pay[59]::easternendofabridge[37] = $d6/214
+	withobj::[10]troll
+		msg::[162]With what?
+	endwith[136]
+	withobj::[12]coin
+		ifisin[147]
+			msg::[124]The troll takes it and goes away
+			decvar[132]
+			ifvar[153]
+				put[164]
+				msg::[223]You run out of coins
+			endif[135]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[11]coins
+		ifisin[147]
+			msg::[125]The troll takes them all and goes away
+			put[164]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+pay[59]::westernendofabridge[38] = $d6/214
+	withobj::[10]troll
+		msg::[162]With what?
+	endwith[136]
+	withobj::[12]coin
+		ifisin[147]
+			msg::[124]The troll takes it and goes away
+			decvar[132]
+			ifvar[153]
+				put[164]
+				msg::[223]You run out of coins
+			endif[135]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+	withobj::[11]coins
+		ifisin[147]
+			msg::[125]The troll takes them all and goes away
+			put[164]
+			set::[3]toll
+		else[133]
+			msg::[190]You don't have any
+		endif[135]
+	endwith[136]
+pay[59]::$everywhere[246] = $a5/165
+	withobj::[10]troll
+		withobj::[11]coins
+			ifisin[147]
+				msg::[125]The troll takes them all and goes away
+				put[164]
+				set::[3]toll
+			else[133]
+				msg::[190]You don't have any
+			endif[135]
+		endwith[136]
+		withobj::[12]coin
+			ifisin[147]
+				msg::[124]The troll takes it and goes away
+				decvar[132]
+				ifvar[153]
+					put[164]
+					msg::[223]You run out of coins
+				endif[135]
+				set::[3]toll
+			else[133]
+				msg::[190]You don't have any
+			endif[135]
+		endwith[136]
+		withobj::[245]$every
+			msg::[44]He doesn't want it
+		endwith[136]
+pay[59]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+plant[60]::highwalledgarden[52] = $d7/215
+	withobj::[2]seeds
+		ifisin[147]
+			if::[29]seedplanted
+				msg::[166]You already planted most of them
+			else[133]
+				msg::[91]Ok. This indeed seems a great place to plant them
+				set::[29]seedplanted
+			endif[135]
+		endif[135]
+	endwith[136]
+plant[60]::$everywhere[246] = $d8/216
+	withobj::[2]seeds
+		ifisin[147]
+			msg::[214]You plant some of them, but nothing appens
+		endif[135]
+	endwith[136]
+plant[60]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+poison[61]::mosaicflooredhall[73] = $d9/217
+	withobj::[82]mosaicflooredhall.goblet
+		ifisin[147]
+			msg::[36]Done!
+			set::[38]poisoninwine
+		else[133]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+	withobj::[83]mosaicflooredhall.wine
+		ifisin[147]
+			msg::[36]Done!
+			set::[38]poisoninwine
+		else[133]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+poison[61]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+reflect[62]::wizardslair[80] = $da/218
+	msg::[53]How?
+reflect[62]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+remove[63]::hollowtomb[31] = $8b/139
+	withobj::[59]hollowtomb.rubble
+		msg::[182]You cannot move rubble from here
+remove[63]::stalactitesstalagmites[60] = $8d/141
+	withobj::[76]stalactitesstalagmites.rubble
+		msg::[15]After a long work, you finally manage to remove the rubble, reve...
+		set::[20]rubbleremoved
+remove[63]::$everywhere[246] = $db/219
+	withobj::[24]boots
+		ifisin[147]
+			if::[0]bootson
+				msg::[89]Ok
+				unset::[0]bootson
+			else[133]
+				msg::[193]You don't have them on
+			endif[135]
+		endif[135]
+remove[63]::$everywhere[246] = $7c/124
+	withobj::[38]sheet
+		ifisin[147]
+			msg::[228]You take the sheet back
+			put[164]
+			ifisin[147]
+				put[164]
+				put[164]
+			else[133]
+				put[164]
+				put[164]
+			endif[135]
+		endif[135]
+remove[63]::$everywhere[246] = $dc/220
+	withobj::[41]uniform
+		ifisin[147]
+			if::[7]uniformon
+				msg::[89]Ok
+				unset::[7]uniformon
+			else[133]
+				msg::[192]You don't have it on
+			endif[135]
+		endif[135]
+remove[63]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+rig[64]::hugefallenoak[11] = $bc/188
+	withobj::[1]reeds
+		ifisin[147]
+			if[142]::140
+				msg::[175]You begin to play a slow, haunting melody that immediately captu...
+				msg::[129]Then he almost smiles and disappears
+				set::[12]goblinfree
+			endif[135]
+		endif[135]
+	endwith[136]
+rig[64]::$everywhere[246] = $bd/189
+	withobj::[1]reeds
+		ifisin[147]
+			msg::[213]You obtain a nice tune
+		endif[135]
+	endwith[136]
+rig[64]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+ring[65]::silverbellintherock[59] = $dd/221
+	withobj::[75]silverbellintherock.bell
+		if::[2]howmanyrings
+			msg::[219]You rang five times, as the hermit said.
+			msg::[14]A rock door opens to the east!
+			set::[32]rockdoor
+		else[133]
+			msg::[222]You ring few times, hesitantly.
+			msg::[203]You have mistreaded the bell!
+			waitkey[179]
+			goto::[2]_dead
+		endif[135]
+	endwith[136]
+ring[65]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+say[66]::silverchamber[77] = $de/222
+	withobj::[86]silverchamber.words
+		ifisin[147]
+			msg::[173]You are ready. Say them one by one
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+	withobj::[87]silverchamber.awake
+		ifisin[147]
+			if[142]::170
+				msg::[102]THE MOUNTAIN RUMBLES!
+				addvar[129]
+				set::[42]awake
+			else[133]
+				msg::[168]You already said that
+			endif[135]
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+	withobj::[88]silverchamber.guide
+		ifisin[147]
+			if[142]::171
+				msg::[103]TOWERS FALL DOWN!
+				addvar[129]
+				set::[43]guide
+			else[133]
+				msg::[168]You already said that
+			endif[135]
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+	withobj::[89]silverchamber.protect
+		ifisin[147]
+			if[142]::172
+				addvar[129]
+				set::[44]protect
+			endif[135]
+			ifvar[153]
+				msg::[101]Something around you starts to tremble!
+				goto::[3]_end
+			else[133]
+				msg::[215]You pronounced the last magic word in the wrong order! The room ...
+				goto::[2]_dead
+			endif[135]
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[216]You pronounced the wrong word! The room collapses.
+			goto::[2]_dead
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+	withobj::[249]$none
+		ifisin[147]
+			msg::[212]You need to say the magic words now
+		else[133]
+			msg::[204]You have to take the Stone of Destiny first
+		endif[135]
+	endwith[136]
+say[66]::$everywhere[246] = $df/223
+	withobj::[245]$every
+		msg::[159]Why?
+	endwith[136]
+	withobj::[249]$none
+		msg::[155]What?
+	endwith[136]
+say[66]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+swing[67]::dampwellbottom[44] = $83/131
+	withobj::[3]axe
+		ifisin[147]
+			if::[25]brokenwall
+				msg::[167]You already removed the loose bricks
+			else[133]
+				msg::[160]With a decisive blow you manage to break down part of the brick ...
+				set::[25]brokenwall
+			endif[135]
+		endif[135]
+	endwith[136]
+swing[67]::cobwebbyroom[63] = $85/133
+	withobj::[4]sword
+		ifisin[147]
+			msg::[185]You cleared the cobwebs
+			set::[33]cobwebscleared
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+swing[67]::dankcorridor[64] = $86/134
+	withobj::[3]axe
+		ifisin[147]
+			msg::[108]The door broke!
+			set::[34]dankdoor
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+swing[67]::$everywhere[246] = $e0/224
+	withobj::[3]axe
+		ifisin[147]
+			msg::[148]Thwack!
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+	withobj::[4]sword
+		ifisin[147]
+			msg::[148]Thwack!
+		else[133]
+			msg::[191]You don't have it
+		endif[135]
+	endwith[136]
+swing[67]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+throw[68]::barrencountryside[27] = $e1/225
+	withobj::[33]net
+		ifisin[147]
+			ifisin[147]
+				msg::[161]With no small amount of luck you manage to capture the giant ani...
+				put[164]
+				put[164]
+			endif[135]
+		endif[135]
+	endwith[136]
+throw[68]::$everywhere[246] = $e2/226
+	withobj::[245]$every
+		ifisin[147]
+			put[164]
+			msg::[32]Didn't go far...
+		endif[135]
+	endwith[136]
+throw[68]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+turn[69]::sluicegates[35] = $e3/227
+	withobj::[61]sluicegates.handle
+		msg::[113]The gates open, the pool empties
+		set::[21]emptypool
+	endwith[136]
+turn[69]::disusedwaterwheel[36] = $e4/228
+	withobj::[63]disusedwaterwheel.wheel
+		msg::[61]It goes around
+turn[69]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+water[70]::highwalledgarden[52] = $e5/229
+	withobj::[2]seeds
+		if::[29]seedplanted
+			ifisin[147]
+				msg::[65]It's a matter of second, and a large vine grows along the rocks ...
+				set::[28]vinegrown
+				put[164]
+				put[164]
+			else[133]
+				msg::[162]With what?
+			endif[135]
+		else[133]
+			msg::[225]You should plant them first
+		endif[135]
+	endwith[136]
+water[70]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+wear[71]::$everywhere[246] = $89/137
+	withobj::[24]boots
+		ifisin[147]
+			if::[0]bootson
+				msg::[236]You're already wearing them
+			else[133]
+				if[142]::133
+					msg::[95]Once worn, you discover that you are invisible.
+					set::[5]wearonce
+				else[133]
+					msg::[238]You're invisible
+				endif[135]
+				set::[0]bootson
+			endif[135]
+		endif[135]
+wear[71]::$everywhere[246] = $e6/230
+	withobj::[41]uniform
+		ifisin[147]
+			if::[7]uniformon
+				msg::[235]You're already wearing it
+			else[133]
+				msg::[207]You look enough like a Grarg now
+				set::[7]uniformon
+			endif[135]
+		endif[135]
+wear[71]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+attack[72]::barrencountryside[27] = $e7/231
+	withobj::[13]boar
+		msg::[162]With what?
+	endwith[136]
+attack[72]::$everywhere[246] = $e8/232
+	withobj::[15]feastinggrargs
+		ifisin[147]
+			msg::[153]Too risky
+		endif[135]
+attack[72]::$everywhere[246] = $e9/233
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[153]Too risky
+		endif[135]
+	endwith[136]
+attack[72]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+withobj:$every[73]::$everywhere[246] = $a6/166
+	withobj::[13]boar
+		ifisin[147]
+			ifisin[147]
+				put[164]
+				msg::[45]He eats it!
+			endif[135]
+		endif[135]
+leave[74]::$everywhere[246] = $7e/126
+	withobj::[21]boat
+		ifisroom_m[149]
+			[2]
+leave[74]::$everywhere[246] = $7f/127
+	withobj::[22]boatwithsail
+		ifisroom_m[149]
+			[2]
+fill[75]::streaminavalleybottom[13] = $ea/234
+	withobj::[26]bucket
+		ifisin[147]
+			msg::[107]The bucket has small leaks, so it's not useful to carry water
+		endif[135]
+	endwith[136]
+	withobj::[27]jug
+		ifisin[147]
+			msg::[90]Ok. Now the jug's full
+			put[164]
+			put[164]
+		endif[135]
+	endwith[136]
+fill[75]::middleofthelake[15] = $eb/235
+	withobj::[26]bucket
+	endwith[136]
+	withobj::[27]jug
+		msg::[23]As you're trying to fill it up, the boat capsized!
+		waitkey[179]
+		goto::[2]_dead
+	endwith[136]
+fill[75]::roughwater[16] = $eb/235
+	withobj::[26]bucket
+	endwith[136]
+	withobj::[27]jug
+		msg::[23]As you're trying to fill it up, the boat capsized!
+		waitkey[179]
+		goto::[2]_dead
+	endwith[136]
+read[76]::goblingraveyard[29] = $63/99
+	withobj::[58]goblingraveyard.inscription
+		msg::[11]A mysterious epithaph on a headstone catches your eye, but the i...
+		msg::[245]\yA Goblin's soul will roam\w / \yUntil the music of the\w \ym r...
+tie[77]::topofadeepwell[47] = $ec/236
+	withobj::[38]sheet
+		ifisin[147]
+			if::[27]sheettied
+				msg::[71]It's already tied
+			else[133]
+				msg::[230]You tie the sheet to the well
+				put[164]
+				set::[27]sheettied
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[37]rope
+		ifisin[147]
+			if::[26]ropetied
+				msg::[71]It's already tied
+			else[133]
+				msg::[229]You tie the rope to the well
+				put[164]
+				set::[26]ropetied
+			endif[135]
+		endif[135]
+	endwith[136]
+into[78]::mosaicflooredhall[73] = $d9/217
+	withobj::[82]mosaicflooredhall.goblet
+		ifisin[147]
+			msg::[36]Done!
+			set::[38]poisoninwine
+		else[133]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+	withobj::[83]mosaicflooredhall.wine
+		ifisin[147]
+			msg::[36]Done!
+			set::[38]poisoninwine
+		else[133]
+			msg::[162]With what?
+		endif[135]
+	endwith[136]
+onfirst[240]::$everywhere[246] = $77/119
+	withobj::[249]$none
+		msg::[243]\V what?
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[195]You don't see that
+	endwith[136]
+	withobj::[245]$every
+		ifisin[147]
+			msg::[189]You don't find a reason to do that
+		else[133]
+			msg::[194]You don't see it here
+		endif[135]
+	endwith[136]
+onfirst[241]::$everywhere[246] = $0b/11
+	msg::[178]You can't go that way
+onfirst[242]::$everywhere[246] = $ba/186
+	withobj::[249]$none
+		msg::[151]To whom, about what?
+	endwith[136]
+	withobj::[245]$every
+		ifis[145]
+			msg::[60]It doesn't seem wise
+		else[133]
+			ifisin[147]
+				msg::[179]You can't talk with that
+			else[133]
+				msg::[196]You don't see that here
+			endif[135]
+		endif[135]
+	endwith[136]
+	withobj::[255]$unknown
+		msg::[105]Talk to whom?
+	endwith[136]
+$unknown[255]::$everywhere[246] = $ac/172
+	msg::[155]What?

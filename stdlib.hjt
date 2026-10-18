@@ -251,6 +251,11 @@ dt=Text
 <node>
 u
 2
+ifundef:$room.exit.u
+	msg:You can't go that way
+else
+	goto:$room.exit.u
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -261,6 +266,11 @@ dt=Text
 <node>
 d
 2
+ifundef:$room.exit.d
+	msg:You can't go that way
+else
+	goto:$room.exit.d
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -271,6 +281,11 @@ dt=Text
 <node>
 s
 2
+ifundef:$room.exit.s
+	msg:You can't go that way
+else
+	goto:$room.exit.s
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -281,6 +296,11 @@ dt=Text
 <node>
 n
 2
+ifundef:$room.exit.n
+	msg:You can't go that way
+else
+	goto:$room.exit.n
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -291,6 +311,11 @@ dt=Text
 <node>
 w
 2
+ifundef:$room.exit.w
+	msg:You can't go that way
+else
+	goto:$room.exit.w
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -301,6 +326,11 @@ dt=Text
 <node>
 e
 2
+ifundef:$room.exit.e
+	msg:You can't go that way
+else
+	goto:$room.exit.e
+
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
@@ -390,7 +420,7 @@ msg:$roomdesc
 ifundef:$room.exits
 	msg:There are no evident exits.
 else
-	msg:There are obvious exits to +
+	msg:There are clear exits to +
 	msg:$room.exits
 	msg:.
 endif
@@ -403,7 +433,7 @@ dt=Text
 <node>
 withobj:$unknown
 3
-msg:Looks absolutely normal
+msg:Nothing worth noting
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -412,7 +442,7 @@ withobj:$every
 3
 ifobjin:$this,$available
 	ifundef:$objdesc
-		msg:Looks absolutely normal
+		msg:Doesn't seem especially interesting
 	else
 		msg:$objdesc
 else
@@ -426,7 +456,7 @@ withobj:exits
 ifundef:$room.exits
 	msg:There are no evident exits.
 else
-	msg:There are obvious exits to +
+	msg:There are clear exits to +
 	msg:$room.exits
 	msg:.
 endif
@@ -450,7 +480,7 @@ msg:$roomdesc
 ifundef:$room.exits
 	msg:There are no evident exits.
 else
-	msg:There are obvious exits to +
+	msg:There are clear exits to +
 	msg:$room.exits
 	msg:.
 endif
@@ -463,7 +493,7 @@ dt=Text
 <node>
 withobj:$unknown
 3
-msg:Looks absolutely normal
+msg:Nothing worth noting
 
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -472,7 +502,7 @@ withobj:$every
 3
 ifobjin:$this,$available
 	ifundef:$objdesc
-		msg:Looks absolutely normal
+		msg:Doesn't seem especially interesting
 	else
 		msg:$objdesc
 else
@@ -701,7 +731,7 @@ msg:.
 ifundef:$room.exits
 	msg:There are no evident exits.
 else
-	msg:There are obvious exits to +
+	msg:There are clear exits to +
 	msg:$room.exits
 	msg:.
 endif
@@ -806,6 +836,13 @@ else
 		ifkey:S
 			gfxmode:2
 			msg:Done
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image
+2
+gfxmode:255
 
 <end node> 5P9i0s8y19Z
 dt=Text

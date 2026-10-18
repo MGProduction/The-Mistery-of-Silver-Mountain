@@ -56,16 +56,40 @@ verbclass:talkverb
 	withobj:$unknown
 		msg:Talk to whom?
 movementverb:u
+	ifundef:$room.exit.u
+		msg:You can't go that way
+	else
+		goto:$room.exit.u
 	synonym:u,up
 movementverb:d
+	ifundef:$room.exit.d
+		msg:You can't go that way
+	else
+		goto:$room.exit.d
 	synonym:d,down
 movementverb:s
+	ifundef:$room.exit.s
+		msg:You can't go that way
+	else
+		goto:$room.exit.s
 	synonym:s,south
 movementverb:n
+	ifundef:$room.exit.n
+		msg:You can't go that way
+	else
+		goto:$room.exit.n
 	synonym:n,north
 movementverb:w
+	ifundef:$room.exit.w
+		msg:You can't go that way
+	else
+		goto:$room.exit.w
 	synonym:w,west
 movementverb:e
+	ifundef:$room.exit.e
+		msg:You can't go that way
+	else
+		goto:$room.exit.e
 	synonym:e,east
 movementverb:se
 	synonym:se,southeast,south-east
@@ -86,7 +110,7 @@ genericverb:x
 		ifundef:$room.exits
 			msg:There are no evident exits.
 		else
-			msg:There are obvious exits to +
+			msg:There are clear exits to +
 			msg:$room.exits
 			msg:.
 		endif
@@ -94,11 +118,11 @@ genericverb:x
 			msg:You see: +
 			listobjin:$here,visible+listable
 	withobj:$unknown
-		msg:Looks absolutely normal
+		msg:Nothing worth noting
 	withobj:$every
 		ifobjin:$this,$available
 			ifundef:$objdesc
-				msg:Looks absolutely normal
+				msg:Doesn't seem especially interesting
 			else
 				msg:$objdesc
 		else
@@ -107,7 +131,7 @@ genericverb:x
 		ifundef:$room.exits
 			msg:There are no evident exits.
 		else
-			msg:There are obvious exits to +
+			msg:There are clear exits to +
 			msg:$room.exits
 			msg:.
 		endif
@@ -118,7 +142,7 @@ genericverb:l
 		ifundef:$room.exits
 			msg:There are no evident exits.
 		else
-			msg:There are obvious exits to +
+			msg:There are clear exits to +
 			msg:$room.exits
 			msg:.
 		endif
@@ -126,11 +150,11 @@ genericverb:l
 			msg:You see: +
 			listobjin:$here,visible+listable
 	withobj:$unknown
-		msg:Looks absolutely normal
+		msg:Nothing worth noting
 	withobj:$every
 		ifobjin:$this,$available
 			ifundef:$objdesc
-				msg:Looks absolutely normal
+				msg:Doesn't seem especially interesting
 			else
 				msg:$objdesc
 		else
@@ -235,7 +259,7 @@ verb:onenter
 	ifundef:$room.exits
 		msg:There are no evident exits.
 	else
-		msg:There are obvious exits to +
+		msg:There are clear exits to +
 		msg:$room.exits
 		msg:.
 	endif
@@ -288,6 +312,8 @@ verb:gfx
 			ifkey:S
 				gfxmode:2
 				msg:Done
+verb:image
+	gfxmode:255
 talkverb:talk
 	ifobjinattr:$this,$here,visible
 		ifobj:$this,actor		

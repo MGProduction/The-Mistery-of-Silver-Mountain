@@ -33,11 +33,7 @@ I thought about it a lot while making **Nesterin Trail**, and after looking arou
 
 ## The project scope
 
-It's unclear whether I'll be able to complete the original game code (the listing was intentionally cryptic, designed to avoid spoiling surprises for those who copied it). This adventure boasts **80 locations** and a staggering number of moves required to finish it. My goal is to create a **working game** featuring this large adventure - or at least a **functional draft** - as close to the original as possible, but likely with some flaws.
-
-After spending a month on the project (during which I've also created a working [C version](https://github.com/MGProduction/The-Mistery-of-Silver-Mountain-C-version) of the original game to ensure accuracy and speed up testing), I've realized that it's unlikely we can have a different graphic for each location on a single C64 disk. This presents another challenge: deciding which locations can share images without compromising the core idea of this project.
-
-Given the 80 locations, we'll likely be limited to around **40 unique graphics**.
+I started this project unsure whether it would be possible to convert the entire game. But after more than a year, the game is complete and fully playable with 60 images on two disks. By 'fully playable', I mean that it's possible to reach the winning ending if you're brave, strong and foolish enough to play it to the end. I've made it easier in many ways, but this is not a game that you can just start and finish. It's not unprobable. It's **impossible**, at least without following a guide step by step. So be prepared to play and die, or play and do the wrong thing (which you'll probably only realise later on). There are still some "go there and die" places (I've added clues for some of them), but the game follows the original material, so it's brutal.
 
 ## Notes & Thanks
 
@@ -45,7 +41,7 @@ All the material I create for this project will be free and the [StoryTllr](http
 
 Special thanks go to these two repositories – [one](https://github.com/fivegreenapples/go-mountain) with a (working) Go conversion (which greatly helped me tackle the original code), and [one](https://github.com/Philbywhizz/SilverMountain) with a conversion in Inform7 (only structural, without gameplay).
 
-Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on generated images. I edited every one of them (and converted them for C64).
+Disclaimer: In-game graphics are based on pictures/drawings (mine or friends' ones), assembled stock images, but some also on AI generated images (this number increased in the pre-release work, I'll see if release two game versions including the previous set, but in current release most of the images are generated). I edited every one of them (and converted them, with my tool, for C64).
 
 ## Game-map
 
@@ -57,7 +53,7 @@ I've also added the names of the objects present in each location to the map (th
 
 ## WIP status
 
-**17/10/2026** It's now possible to play ALL the game and complete it. I need to finish checking some elements, do more beta testing, and register a full (standard) walkthrough. From a technical point of view, I also need to understand how to handle images on a two-disk package (I could not fit everything in 30-40 images without losing too much)
+The game is ready for an initial release. I've added a two disk feature in the compiler and in the C64 player, I've separated the 61 images in order to minimize disk swapping during the game, and I've done some playtest, manuale and AI-assisted (see bottom note)
 
 Changes compared to the original game: 
 - **Maze of Tunnels**: in the original game, you needed to write down a path and use it to exit the maze. I've kept the necessity to find that information, but once you find it, that puzzle is 'solved' in an automatic way, without the need to insert the exact sequence
