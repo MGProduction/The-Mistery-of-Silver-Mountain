@@ -91,6 +91,10 @@ Objects shown in parentheses are hidden at the start. The map records the initia
 
 ## Source code and acknowledgements
 
+Game source code is in **game.hjt** and **stdlib.hjt** - these files are **TreePad Lite** files (so you can easily open them with that wonderful tool). If you don't have it, or don't want to use it, in **tmp** folder you'll find their text-only tabbed version - same content but a lot easier to read with a text editor.
+
+![Text inside TreePad Lite](_pub/treepad.png) ![Text inside VS Code](_pub/vscode.png)
+
 The [StoryTllr64](https://github.com/MGProduction/StoryTllrC64) scripts and supporting material for this adaptation are available in this repository.
 
 Special thanks to the authors of these projects:
