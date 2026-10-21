@@ -1,0 +1,9373 @@
+<Treepad version 3.0>
+dt=
+<node>
+main
+0
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+config
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:MontagnadArgento
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+title:Il mistero della Montagna d'Argento
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+originalauthor:Chris Oxlade + Judy Tatchell
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+originalpublisher: Usborne Publishing Limited
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+author:Marco Giorgini
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+engine:StoryTllrC64
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+version:1.0.0
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+licence:---
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+binary:yes
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+model:C64
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+rborder:1
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hborder:8
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+splity:96
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+imgborder:new_png/border_medium.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+folder:new_png/
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+disk:multiple.swap
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+build
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+emit_texts:1
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_string_checksimilarity:1
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bitvars_check:1
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+localization
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+and:e
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+include:stdlib_it.hjt
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onleave
+2
+if:bootson
+	addvar:bootsusage,1	
+	if:bootsusage>5
+		msg:Gli stivali sono consumati!
+		put:boots,$nowhere
+		unset:bootson
+	else
+		if:bootsusage>2
+			msg:Le suole degli stivali si sbriciolano sotto i tuoi piedi
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+genericverb
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+attack
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:attacca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+ifobjin:$this,$available
+	msg:Non trovi un motivo per farlo
+else
+	msg:Troppo rischioso
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bail
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:sgotta
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+msg:Come?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+blow
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:soffia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:reeds
+3
+ifobjin:$this,$available
+	msg:Ottieni una piacevole melodia
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+break
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:rompi,spezza
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+burn
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:brucia,incendia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+climb
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:scala,arrampicati
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+cross
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:attraversa
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+cut
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:taglia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dive
+2
+ifisroom:middleofthelake|roughwater
+	msg:Ti tuffi nel lago, ma l'acqua e' gelida e ben presto anneghi
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:tuffati,immergiti
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+drink
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:bevi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+msg:Non hai sete
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+eat
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:mangia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+empty
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:svuota
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:nutri,sfama
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fill
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:riempi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hold
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:solleva,alza
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+insert
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:inserisci,infila
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+into
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:versa
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+leave
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:abbandona
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+light
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:accendi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+make
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:crea,fabbrica
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:reeds
+3
+ifobjin:$this,$available
+	msg:Ottieni una piacevole melodia
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+move
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:sposta,muovi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pay
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:paga
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+plant
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:pianta,semina
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:seeds
+3
+ifobjin:$this,$available
+	msg:Ne pianti alcuni, ma non accade nulla
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+poison
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:avvelena
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+reflect
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:rifletti
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:togli,rimuovi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+rig
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:arma,allestisci
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:reeds
+3
+ifobjin:$this,$available
+	msg:Ottieni una piacevole melodia
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ring
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:suona
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+say
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:di,pronuncia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+msg:Perche'?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$none
+3
+msg:Cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+swing
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:brandisci,colpisci
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:axe
+3
+ifobjin:$this,$available
+	msg:Toc!
+else
+	msg:Non ce l'hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sword
+3
+ifobjin:$this,$available
+	msg:Toc!
+else
+	msg:Non ce l'hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+throw
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:lancia,getta,tira
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+3
+ifobjin:$this,$available
+	put:$this,$here
+	msg:Non e' andato lontano...
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tie
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:lega
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+turn
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:gira,ruota
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+water
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:annaffia,innaffia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+wear
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+synonym:indossa
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+actor
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hermit
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:eremita
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un eremita
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Gli anni hanno incurvato la schiena dell'eremita e assottigliato le sue mani. Gli occhi vigili, pero', sono ancora limpidi: le avversita' non ne hanno piegato la volonta'. Sulla tunica spicca uno strano ricamo floreale.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:sideofawoodedvalley
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+msg:Te lo restituisce
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:shield
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:horseshoe
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+talk
+4
+if:hermitknowsyou
+	msg:"Servono cinque rintocchi", dice.
+	set:howmanyrings
+else
+	msg:Ti guarda senza rispondere. Ha visto troppi orrori per fidarsi di uno sconosciuto.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pony
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pony
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un pony
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il pony sellato sembra affamato, ma le zampe robuste e le orecchie attente fanno pensare che possa ancora portare un cavaliere.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:overgrowntrack
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+4
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ogban
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ogban
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Ogban
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il corpo massiccio di Ogban giace contorto sul pavimento, con le mani strette alla gola. Qualunque potere avesse in vita, ora non puo' piu' aiutarlo.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:safeinogbanschambers
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+troll
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:troll
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un troll
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il troll e' tozzo e irsuto, con arti possenti. Ti fissa in attesa, senza alcuna cordialita'.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pay
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coins
+5
+ifobjin:coins,$available
+	msg:Il troll le prende tutte e si allontana
+	put:coins,$nowhere
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	msg:Il troll la prende e si allontana
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+		msg:Hai finito le monete
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+msg:Non lo vuole
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+talk
+4
+ifobjin:troll,$available
+	msg:Il troll si limita a grugnire, tendendo una mano verso di te
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+boar
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:verro
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:barrencountryside
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un enorme verro
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Un enorme verro ti osserva con occhi ardenti come braci. Le spalle irte di setole e la testa abbassata non lasciano dubbi sul pericolo di avvicinarsi incautamente.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+5
+ifobjin:$this,$available
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+ifobjin:$this,$available
+	ifobjin:$that,$available
+		put:$that,$nowhere
+		msg:Lo divora!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hound
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:mastino,cane
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:highglassgates
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un feroce mastino
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+4
+ifobjin:$this,$available
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+ifobjin:$this,$available
+	ifobjin:$that,$available
+		put:$that,$nowhere
+		msg:Lo divora!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feastinggrargs
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:grargs,grarg a banchetto
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:dei Grarg a banchetto
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:banquethall
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:grargs
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+I Grarg sono una compagnia brutale: dai lineamenti rozzi e dalla corporatura massiccia, appaiono pericolosi anche mentre sono intenti al banchetto.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+attack
+4
+ifobjin:feastinggrargs,$available
+	msg:Troppo rischioso
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+sleepinggrarg
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:grarg,grarg addormentato
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un Grarg addormentato
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:grarg
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+ifobjin:sleepinggrarg,$available
+	msg:Sta dormendo
+	ifnot:seenuniform
+		msg:Mmh... indossa un'uniforme
+		put:uniform,$here
+		set:seenuniform
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+kid
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ragazzo,bambino
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il ragazzo e' magro e sporco, con gli abiti logori di chi vive di stenti. Continua a scrutare gli alberi, tanto spaventato da scambiare qualsiasi sconosciuto per un nemico.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un ragazzo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:boy
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:deepdarkwood
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+talk
+4
+ifobjin:kid,$available
+	msg:"Ti prego, non farmi male", dice con voce tremante.
+	msg:Ma quando capisce che non sei una minaccia si calma e ti avverte: "Attento al sentiero a nord. C'e' il fantasma di un Goblin!"
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bread
+5
+ifobjin:kid,$available
+	ifobjin:bread,$available
+		msg:"Grazie", mormora prendendo il pane.
+		put:bread,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+normalobj
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+apple
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:mela
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una mela
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:apple
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+eat
+4
+ifobjin:apple,$available
+	msg:E' gustosa
+	put:apple,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+apples
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:mele
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:delle mele
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:apples
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:orchard
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+eat
+4
+ifobjin:apples,$available
+	msg:Sono gustose
+	msg:Fatto
+	put:apples,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+axe
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ascia,scure
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un'ascia
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:axe
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:woodmanshut
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+msg:Come?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+boat
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:barca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una barca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:boat
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+La piccola barca ha visto tempi migliori. Lo scafo malconcio sembra appena utilizzabile e, senza remi ne' vela, non offre un modo evidente per attraversare il lago.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:edgeofanicylake
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+leave
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+drop
+4
+ifisroom:middleofthelake|roughwater
+	msg:Lasciare la barca in mezzo a un lago gelido e' una pessima idea. In pochi secondi anneghi
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+boatwithsail
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:barca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una barca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:boat
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Hai fissato un lenzuolo all'albero della barca come vela di fortuna. Lo scafo sembra ancora fragile, ma ora il vento potrebbe spingerlo attraverso il lago.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+leave
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+drop
+4
+ifisroom:middleofthelake|roughwater
+	msg:Lasciare la barca in mezzo a un lago gelido e' una pessima idea. In pochi secondi anneghi
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bone
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:osso
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un osso
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:bone
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:halfduggrave
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+boots
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:stivali
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:degli stivali
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:boots
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il tempo ha screpolato il cuoio e assottigliato le suole degli stivali. Sembrano un misero bottino, ma in queste terre le apparenze possono ingannare.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:cupboard
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+wear
+4
+ifobjin:boots,$available
+	if:bootson
+		msg:Li indossi gia'
+	else
+		ifnot:wearonce
+			msg:Una volta indossati, scopri di essere invisibile.
+			set:wearonce
+		else
+			msg:Sei invisibile
+		set:bootson
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove
+4
+ifobjin:boots,$available
+	if:bootson
+		msg:Fatto
+		unset:bootson
+	else
+		msg:Non li indossi
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+drop
+4
+if:bootson
+	msg:Devi prima toglierli
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:"Gli Stivali dell'Inganno! Tienili" +
+		msg: dice l'eremita
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bread
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pane
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:del pane
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:whitecottage
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:bread
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+eat
+4
+ifobjin:bread,$available
+	msg:E' disgustoso, ma ancora commestibile.
+	msg:Fatto
+	put:bread,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Il pane e' indurito e piccole macchie di muffa ne segnano la crosta. Potrebbe ancora placare la fame, ma sarebbe un pasto miserabile.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+brooch
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:spilla,monile
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una spilla
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:palacebattlements
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+ifobjin:hermit,$available
+	ifobjin:brooch,$available
+		msg:Gli occhi gli si illuminano alla vista della vecchia spilla. Ti sorride e, dopo averti chiesto chi sei, decide di aiutarti con un indizio.
+		msg:"Servono cinque rintocchi", dice.
+		put:brooch,$nowhere
+		set:hermitknowsyou
+		set:howmanyrings
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Un antico monile d'argento con incisioni floreali.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bucket
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:secchio
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un secchio
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:topofadeepwell
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+coin
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:moneta
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una moneta
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:coin
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+coins
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:monete
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:delle monete
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:coins
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:whitecottage
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+horseshoe
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ferro di cavallo,ferro
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un ferro di cavallo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+take
+4
+ifnot:doorburned
+	msg:E' saldamente inchiodato
+else
+	put:horseshoe,$inventory
+	msg:Fatto
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+msg:E' piuttosto vecchio, ma non consumato
+msg:Vi e' incisa una P. P come Pari?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:"Uno degli oggetti magici! Tienilo!", dice l'eremita
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:stable
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+jug
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:brocca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una brocca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:oldkiln
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Una semplice brocca di terracotta, abbastanza solida da contenere acqua.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+jugfull
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:brocca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una brocca
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Una semplice brocca di terracotta piena d'acqua. Il peso non lascia dubbi sul contenuto.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+key
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:chiave
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una chiave
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+E' una robusta chiave d'oro
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+lamp
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lampada
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una lampada
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:gamekeeperscottage
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+light
+4
+ifobjin:lamp,$available
+	ifobjin:lamp,$inventory
+		ifobjin:matches,$inventory
+			put:lamp,$nowhere
+			put:litlamp,$inventory
+			msg:Usi i fiammiferi e accendi la lampada
+		else
+			msg:Con cosa?
+	else
+		msg:Devi prima prenderla
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+litlamp
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lampada
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lamp
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una lampada accesa
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+matches
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:fiammiferi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:dei fiammiferi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+light
+4
+ifobjin:$this,$available
+	msg:Ne accendi uno
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+net
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:rete
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una rete
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:beachedketch
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+phial
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:fiala
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una fiala
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+Una piccola fiala reca un'etichetta con la scritta "Veleno". Qualunque cosa contenga, l'avvertimento e' chiaro.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+planks
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:assi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:delle assi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+reeds
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:canne
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:delle canne
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:reeds
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:marshyinlet
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ring
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:anello
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un anello
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:narrowpassage
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+msg:E' antico e sembra prezioso.
+msg:Vi e' incisa una P. P come Pari?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:"Uno degli oggetti magici! Tienilo!", dice l'eremita
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+rope
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:corda
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una corda
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:highpinnacle
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+seeds
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:semi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:dei semi
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+sheet
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lenzuolo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un lenzuolo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_startat:atticbedroom
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+ifobjin:$this,$available
+	ifobjin:boat,$available
+		msg:Sistemi il lenzuolo sulla barca come vela
+		put:sheet,$nowhere
+		ifobjin:boat,$inventory
+			put:boatwithsail,$inventory
+			put:boat,$nowhere
+		else
+			put:boatwithsail,$here
+			put:boat,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove|take
+4
+ifobjin:boatwithsail,$available
+	msg:Recuperi il lenzuolo
+	put:sheet,$inventory
+	ifobjin:boatwithsail,$inventory
+		put:boat,$inventory
+		put:boatwithsail,$nowhere
+	else
+		put:boat,$here
+		put:boatwithsail,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+shield
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:scudo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:uno scudo
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+msg:Sullo scudo e' raffigurato lo stemma dei Sylvani
+msg:Vi e' incisa una P. P come Pari?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+ifobjin:$this,$available
+	ifobjin:hermit,$available
+		msg:"Uno degli oggetti magici! Tienilo!" +
+		msg: dice l'eremita
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+silverplate
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:piatto,piatto d'argento
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un piatto d'argento
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:plate
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:silverthroneroom
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+stoneofdestiny
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pietra,pietra del destino
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:la Pietra del Destino
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:stone
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:silverchamber
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+sword
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:spada
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una spada
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+startat:guardroom
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+uniform
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:uniforme,divisa
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:un'uniforme
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+3
+L'uniforme dei Grarg e' sudicia e di fattura rozza, ma sembra abbastanza vicina alla tua taglia da poterla indossare.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+wear
+4
+ifobjin:uniform,$available
+	if:uniformon
+		msg:La indossi gia'
+	else
+		msg:Ora sembri proprio un Grarg
+		set:uniformon
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove
+4
+ifobjin:uniform,$available
+	if:uniformon
+		msg:Fatto
+		unset:uniformon
+	else
+		msg:Non la indossi
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+ifobjin:uniform,$available
+	msg:E' una sporca uniforme dei Grarg, piu' o meno della tua taglia
+	ifnot:matchesseen
+		set:matchesseen
+		msg:In una tasca trovi dei fiammiferi!
+		put:matches,$inventory
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+localobj
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bridge
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ponte
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+cross
+4
+ifisroom:westernendofabridge|easternendofabridge
+	ifnot:toll
+		msg:Un troll dall'aria minacciosa si avvicina e ti sbarra il passo, fissandoti in attesa
+	else
+		unset:toll
+		ifisroom:westernendofabridge
+			goto:easternendofabridge
+		else
+			goto:westernendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+4
+ifisroom:westernendofabridge|easternendofabridge
+	msg:E' un ponte di pietra
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+room
+1
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+$start
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Il mistero della Montagna d'Argento
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:\c##SUBTITLE##
+	\c
+	\cGioco originale in \yBASIC\w di
+	\c\y##ORIGINALAUTHOR##\w
+	\c\y##ORIGINALPUBLISHER##\w
+	\c
+	\cVersione \yStoryTllrC64\w 
+	\cdi \y##AUTHOR##\w
+waitkey
+goto:_twodisk
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_twodisk
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:StoryTllr64
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:Questa avventura richiede due dischi. Inserisci ora il #secondo.
+msg:Se, cambiando luogo, l'immagine non compare, cambia disco e digita #image per ricaricarla (capitera' poche volte, ma capitera')
+waitkey
+goto:_introduction
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_introduction
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Introduzione
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:Un tempo i Sylvani vivevano in pace ai piedi della Montagna d'Argento, guidati da saggi Anziani e protetti dalla mistica Pietra del Destino.
+msg: Ma quando il feroce esercito dei Grarg invase le loro terre, la regina Pari Sylvan uso' la Pietra per resistere.
+msg: Nella battaglia di volonta' che segui', uno degli anziani vacillo' e il mago dei Grarg, Magrarg, prese il potere. I Sylvani divennero schiavi del brutale signore Ogban.
+msg: Kylar, figlio della regina Pari e cresciuto in segreto, cerco' reliquie magiche con cui sconfiggere il male, ma fu ucciso prima di portare a termine la sua impresa.
+msg: Ora gli Anziani si rivolgono a chiunque abbia coraggio: finirai cio' che Kylar ha iniziato?
+setvar:maxweight,13
+setvar:coinnum,4
+setvar:bootsusage,0
+setvar:boatwater,0
+setvar:magicwords,0
+waitkey
+goto:crossroads
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_dead
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sei morto!
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:Hai fallito la tua missione!
+msg:La tua morte improvvisa e' l'ennesimo fallimento nel tentativo di liberare i Sylvani dalla tirannia.
+msg:Vuoi riprovare? (S/N)
+getkey
+ifkey:S
+	start
+else
+	quit
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_end
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:La tua terra e' di nuovo libera!
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:Evvivaaaa!
+msg:Congratulazioni! Hai portato a termine la tua missione e grazie ai tuoi sforzi la pace puo' finalmente tornare nella terra dei Sylvani.
+msg:Il tuo nome sara' ricordato per sempre.
+waitkey
+quit
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+crossroads
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Crocevia
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+a un crocevia
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Diversi sentieri collinari si incontrano sotto un cartello storto. Le sue braccia consumate indicano una campagna deserta, ma quasi tutte le scritte sono sbiadite: solo il vento sembra sapere dove andare.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+windingroad
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+easternendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/crossroads.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+signpost
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:cartello
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Quasi tutte le scritte sul cartello sono sbiadite, ma riesci ancora a leggere l'indicazione di un villaggio a est.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+windingroad
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Strada tortuosa
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su una strada tortuosa
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La strada serpeggia tra basse colline e roveti, scomparendo dietro ogni curva. Muretti di pietra diroccati ne segnano i margini e un vento sottile ti accompagna tra gli arbusti.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+crossroads
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+villageofrustichouses
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+ancientstonecircle
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/wooded_track.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+villageofrustichouses
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Villaggio di case rustiche
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un villaggio di case rustiche
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Casette dai tetti di paglia si stringono lungo una stretta strada, con i comignoli spenti. Alcune porte sono socchiuse, ma nessuna voce risponde ai tuoi passi: il silenzio sa piu' di fuga precipitosa che di sonno.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+windingroad
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+whitecottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+stable
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/rustic_village.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+stable
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stalla
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una piccola stalla
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La piccola stalla e' piena di box vuoti, con i cancelli che penzolano storti sopra un pavimento di paglia calpestata. L'odore di cuoio aleggia nell'aria viziata, e su un lato si apre una porta di legno.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+villageofrustichouses
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+ancientstonecircle
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/stable.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+door
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:porta
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:seenhorseshoe
+	set:seenhorseshoe
+	put:horseshoe,$here
+	msg:Sulla porta e' appeso un ferro di cavallo
+else
+	if:brokendoor
+		msg:La porta e' uscita dai cardini. Il legno e' secco e marcio, ma i pochi chiodi sono conficcati a fondo
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+if:!brokendoor
+	set:brokendoor
+	msg:La porta esce dai cardini
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+burn
+6
+if:doorburned
+	msg:La porta e' gia' bruciata
+else
+	ifobjin:matches,$available
+		set:doorburned
+		msg:La porta e' ridotta in cenere
+	else
+		msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+stable|stables
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:stalla,stalle
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:!woodendoorseen
+	msg:Da un lato noti una porta di legno
+	set:woodendoorseen
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+shadyhollow
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Conca ombrosa
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una conca ombrosa
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Alberi secolari proteggono una conca coperta di muschio, dove il terreno del bosco si abbassa nell'ombra fresca. Le chiome attutiscono il vento; perfino gli uccelli sembrano tenersi lontani.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+ancientstonecircle
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+deepdarkwood
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/dark_wood.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+ancientstonecircle
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Antico cerchio di pietre
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso un antico cerchio di pietre
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Pietre erette, consumate dal tempo, formano un cerchio irregolare sul pendio. Le loro superfici hanno resistito a innumerevoli inverni, eppure l'aria nel cerchio e' stranamente calma e ti infonde un po' di coraggio.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+stable
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+shadyhollow
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+windingroad
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/stone_circle.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+stones|circle
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pietre,cerchio
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il cerchio e' composto da nove pietre consumate dal tempo. La loro disposizione irregolare non turba la calma al suo interno.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+deepdarkwood
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Profondo bosco buio
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un profondo bosco buio
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+I rami intrecciati nascondono il cielo e immergono il bosco in ombre fredde, verdi e nere. Oltre i tronchi qualcosa si muove nel sottobosco, poi tace quando ti fermi ad ascoltare.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/dark_wood.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:kid,$here
+	put:kid,$nowhere
+ifnot:goblinfree
+	ifobjin:reeds,$available
+		goto:hugefallenoak
+	else
+		msg:Appena ti avvicini a un'enorme quercia caduta, appare il fantasma del Goblin Guardiano e ti uccide!
+		waitkey
+		goto:_dead
+else
+	goto:hugefallenoak
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifobjin:kid,$here
+	put:kid,$nowhere
+goto:shadyhollow
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+hugefallenoak
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Grande quercia abbattuta
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino a una grande quercia abbattuta
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una quercia abbattuta giace sul terreno del bosco, con enormi radici che hanno strappato una cavita' nella terra. Rami spezzati sono sparsi tra le foglie e il tronco imponente sembra custodire il passaggio.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:$roomdesc
+if:!goblinfree
+	msg:Seduta sulla quercia abbattuta, la spettrale figura del guardiano Goblin ti osserva con sospetto
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/fallen_oak.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:goblinfree
+	goto:screeslope
+else
+	msg:Appena ti muovi, il fantasma del Goblin Guardiano ti uccide!
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:goblinfree
+	goto:deepdarkwood
+else
+	msg:Appena ti muovi, il fantasma del Goblin Guardiano ti uccide!
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+rig
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+make
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ring
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+blow
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:reeds
+5
+ifobjin:$this,$available
+	ifnot:goblinfree
+		msg:Inizi a suonare una melodia lenta e struggente che cattura subito il Goblin Guardiano e ne muta l'espressione.
+		msg:Poi accenna un sorriso e scompare
+		set:goblinfree
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sideofawoodedvalley
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Fianco di una valle boscosa
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sul fianco di una valle boscosa
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il sentiero costeggia il lato riparato di una valle boscosa. Gli alberi alti attenuano il vento e la quiete sotto i rami offre una breve tregua dalle colline esposte.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+streaminavalleybottom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+woodmanshut
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/wooded_track.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+streaminavalleybottom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Torrente in fondo alla valle
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino a un torrente in fondo alla valle
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un torrente limpido scorre tra pietre levigate, muschio e felci. L'aria fresca si alza dall'acqua e porta con se' l'odore della terra umida.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+westernendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+sideofawoodedvalley
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/valley_stream.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fill
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bucket
+5
+ifobjin:$this,$inventory
+	msg:Il secchio perde da piccoli fori e non e' adatto a trasportare acqua
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:jug
+5
+ifobjin:$this,$inventory
+	msg:Bene. Ora la brocca e' piena
+	put:jug,$nowhere
+	put:jugfull,$inventory
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+stream|water
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:torrente,ruscello,acqua
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il torrente scorre limpido su pietre levigate. L'acqua sembra pulita, ma e' cosi' fredda da intorpidire le dita.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+lake
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+edgeofanicylake
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Riva del lago gelido
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sulla riva di un lago gelido
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un vento pungente spazza la riva sassosa di un lago profondo e gelido. Le piante basse si piegano alle raffiche; oltre l'acqua scura si intravede un'isola lontana. Anche una breve nuotata sarebbe pericolosa.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/lake_shore.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifobjin:boat,$inventory
+	msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+else
+	ifobjin:boatwithsail,$inventory
+		msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+	else
+		goto:pittedtrack
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+ifobjin:boatwithsail,$inventory
+	goto:middleofthelake
+else
+	ifobjin:boat,$inventory
+		msg:Come farai a muovere la barca sull'acqua?
+	else
+		msg:Non puoi nuotare in quest'acqua gelida!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+middleofthelake
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Centro del lago
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nel centro del lago
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Sei al largo sul lago gelido; le rive sono ormai linee lontane sotto un cielo pallido. Le onde spinte dal vento colpiscono la piccola barca e il freddo ti penetra attraverso ogni cucitura degli abiti.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/open_lake.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+goto:roughwater
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+goto:edgeofanicylake
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fill
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bucket
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:jug
+5
+msg:Mentre cerchi di riempirla, la barca si rovescia!
+waitkey
+goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+roughwater
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Acque agitate
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Qui il lago e' agitato: onde ripide si infrangono l'una contro l'altra, gettando spruzzi gelidi sulla barca. Ogni ondata la devia dalla rotta e richiede tutta la tua attenzione.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in acque agitate
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/open_lake.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+goto:islandshore
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:usedbucket
+	goto:middleofthelake
+else
+	if:boatwater>10
+		msg:I tuoi sforzi sono ormai inutili. La barca affonda
+		waitkey
+		goto:_dead
+	else
+		msg:Il vento e le correnti rendono difficile navigare. La barca si sta riempiendo d'acqua e sta affondando.
+		addvar:boatwater,1
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bucket
+5
+ifobjin:bucket,$available
+	if:boatwater>0
+		msg:Riesci a tenere a galla la barca
+		set:usedbucket
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:jug
+5
+ifobjin:jug,$available
+	if:boatwater>0
+		msg:E' troppo piccola per fare la differenza
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fill
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bucket
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:jug
+5
+msg:Mentre cerchi di riempirla, la barca si rovescia!
+waitkey
+goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+islandshore
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Riva dell'isola
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sulla riva di un'isola
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una stretta striscia di riva offre riparo dal vento incessante del lago. Una vegetazione bassa e vivace ricopre l'isola; poco piu' avanti giace il relitto di un piccolo veliero.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/island_wreck.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:boat,$inventory
+	msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+else
+	ifobjin:boatwithsail,$inventory
+		msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+	else
+		goto:oldkiln
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifobjin:boat,$inventory
+	msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+else
+	ifobjin:boatwithsail,$inventory
+		msg:Non puoi trascinare la barca da quella parte: e' troppo pesante
+	else
+		goto:beachedketch
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+ifobjin:boatwithsail,$inventory
+	goto:roughwater
+else
+	ifobjin:boat,$inventory
+		msg:Come farai a muovere la barca sull'acqua?
+	else
+		msg:Non puoi nuotare in quest'acqua gelida!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+beachedketch
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Veliero arenato
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso un veliero arenato
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un veliero in rovina giace su un fianco sulla riva dell'isola, con lo scafo spaccato sotto brandelli di vela. Gli uccelli si sono impadroniti del relitto. Non navighera' mai piu', ma vale forse la pena esaminarlo.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+islandshore
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/island_wreck.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ketch|vessel
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:veliero,relitto,imbarcazione
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:netseen
+	msg:Tra i resti del veliero trovi una rete
+	put:net,$here
+	set:netseen
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+oldkiln
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Antica fornace
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una antica fornace
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una fornace di mattoni abbandonata si sgretola sotto fuliggine ed erbacce. Cocci di terracotta giacciono semisepolti nella cenere fredda attorno all'apertura, resti di un lavoro interrotto da tempo.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+marshyinlet
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+islandshore
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/old_kiln.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+kiln
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:fornace
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:jugseen
+	msg:Tra i cocci trovi una brocca ancora intatta
+	put:jug,$here
+	set:jugseen
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+marshyinlet
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Ingresso nelle paludi
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+davanti a un ingresso nelle paludi
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Canne fitte circondano un'insenatura dove l'acqua del lago ristagna scura. Il fango cede sotto i tuoi piedi e ogni movimento fa frusciare gli steli gli uni contro gli altri.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+oldkiln
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/marsh_inlet.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+cottage
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+whitecottage
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Casetta bianca
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una casetta bianca
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Le pareti imbiancate della casetta ricordano una casa un tempo ben curata. Il focolare e' spento e oggetti rotti ingombrano un tavolo ancora apparecchiato. Tra le cose abbandonate restano una pentola e un baule.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[ovest,alto]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+villageofrustichouses
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.u
+3
+atticbedroom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/white_cottage.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pot
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pentola
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:coinsfound	
+	put:coins,$here
+	msg:Dentro trovi delle monete
+	set:coinsfound
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+chest
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:baule,cassa
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:E' vuoto
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fireplace
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:focolare,camino
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il focolare e' spento. Su una mensola sono allineati recipienti di rame, tra cui una pentola.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+atticbedroom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Camera in soffitta
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una camera in soffitta
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La polvere ricopre la camera in soffitta, offuscando il legno e le pieghe delle coperte sul letto. Un robusto armadio occupa un angolo; nulla fa pensare che qualcuno abbia dormito qui di recente.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,basso]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+cupboard
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.d
+3
+whitecottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/attic_cupboard.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+bed
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:letto
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:seensheet
+	set:seensheet
+	put:sheet,$here
+	msg:Sul letto c'e' un grande lenzuolo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cupboard
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Armadio
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso un armadio in un angolo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+In un angolo della camera in soffitta c'e' un robusto armadio di legno. Gli sportelli sono socchiusi e nascondono l'interno nell'ombra, sotto un velo di polvere.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+atticbedroom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/attic_cupboard.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cupboard
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:armadio
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+ifnot:seenboots
+	msg:C'e' qualcosa dentro
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+ifnot:seenboots
+	msg:Nell'armadio trovi degli stivali
+	put:boots,$here
+	set:seenboots
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+windmill
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sacksontheupperfloor
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sacchi al piano superiore
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso dei sacchi al piano superiore
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Pesanti sacchi ingombrano il piano superiore del mulino, sotto travi scricchiolanti. Alcune cuciture hanno ceduto e il grano si e' sparso nella polvere tra le assi consumate.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[basso]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.d
+3
+lowerfloorofthemill
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/mill_loft.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sacks
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:sacchi
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+take
+6
+msg:I sacchi sono troppo pesanti!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:!seedsseen
+	msg:Trovi dei semi
+	put:seeds,$here
+	set:seedsseen
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+outsideawindmill
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Esterno del mulino a vento
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+fuori da un mulino a vento
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il vecchio mulino a vento domina i campi vuoti, con le grandi pale immobili. Il muschio ne scurisce la base e l'ingresso conduce verso i meccanismi silenziosi.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/windmill.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+enter
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:mulino
+5
+goto:lowerfloorofthemill
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+barrencountryside
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+pittedtrack
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+lowerfloorofthemill
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+ploughedfield
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+lowerfloorofthemill
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Piano inferiore del mulino
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+al piano inferiore del mulino
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Le macine sono immobili sotto un velo di farina. Meccanismi di legno riempiono il piano inferiore e una scala stretta sale al deposito nel sottotetto.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[ovest,alto]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+outsideawindmill
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.u
+3
+sacksontheupperfloor
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/mill_floor.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+northwest
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+barrencountryside
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Campagna brulla
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una campagna brulla
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il vento spazza i campi vuoti, sollevando polvere e facendo tremare le erbacce secche. Un vecchio sentiero attraversa la terra incolta; nessuno sembra piu' occuparsene.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+outsideawindmill
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/bare_fields.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:boar,$available
+	msg:Il gigantesco verro ti sbarra il passo
+else
+	goto:disusedwaterwheel
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+throw
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:net
+5
+ifobjin:net,$available
+	ifobjin:boar,$available
+		msg:Con una buona dose di fortuna riesci a catturare l'enorme animale, rendendolo innocuo.
+		put:boar,$nowhere
+		put:net,$nowhere
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:boar
+5
+ifobjin:boar,$available
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+ifobjin:boar,$available
+	ifobjin:$this,$available
+		put:$this,$nowhere
+		msg:Lo divora!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+attack
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:boar
+5
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+gamekeeperscottage
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Casetta del guardiacaccia
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella casetta del guardiacaccia
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La casetta del guardiacaccia odora vagamente di pino e di fumo. Corna e mappe sbiadite sono appese sopra attrezzi consumati dall'uso. La polvere ricopre una stanza lasciata in ordine da mani ormai lontane.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+mistypool
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+disusedwaterwheel
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/gamekeeper_cottage.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+lamp
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lampada
+5
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+goblingraveyard
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Cimitero dei Goblin
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nel cimitero dei Goblin
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Lapidi storte affollano un cimitero dei Goblin abbandonato. Le radici sollevano le tombe e il muschio nasconde le incisioni. Tra le iscrizioni consumate, un epitaffio potrebbe meritare una lettura.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+rustygates
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+halfduggrave
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+hollowtomb
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/goblin_graves.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+gravestone|headstone|gravestones|headstones
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:lapide,lapidi
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Sulla lapide c'e' un'iscrizione consunta, con lettere in parte cancellate dal tempo.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+inscription|inscriptions
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:iscrizione,iscrizioni
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+read
+6
+msg:Un misterioso epitaffio attira la tua attenzione, ma l'iscrizione e' sbiadita e alcune lettere sono illeggibili.
+msg:\yL'anima di un Goblin vaghera'\w / \yFinche' la musica delle\w \yp l d i\w / \ya casa lo riportera'
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+halfduggrave
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Tomba semiscavata
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una tomba semiscavata
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una tomba incompiuta si apre tra le lapidi storte. La terra smossa aderisce alle pareti e rivela i resti di una vecchia sepoltura.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+goblingraveyard
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/goblin_graves.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+bone
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:osso
+5
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+hollowtomb
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Tomba cava
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una tomba cava
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La pietra umida della tomba amplifica ogni minimo rumore. La vecchia polvere giace intatta negli angoli, mentre delle macerie ostruiscono il passaggio piu' avanti.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+goblingraveyard
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/hollow_tomb.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+rubble
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:macerie
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove|move|push|pull
+6
+msg:Non puoi spostare le macerie da qui
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifnot:rubbleremoved
+	msg:Un cumulo di macerie ti blocca la strada
+else
+	goto:stalactitesstalagmites
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+mistypool
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Piscina avvolta nella nebbia
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una piscina avvolta nella nebbia
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La nebbia aleggia su una piscina riparata, sfumando le canne e le pietre lungo le rive. L'acqua ne nasconde la profondita' sotto una superficie ingannevolmente calma; sul fondo un debole bagliore cattura la luce.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+sluicegates
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+gamekeeperscottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/misty_pool.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pool
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:piscina
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:emptypool
+	if:!shieldseen
+		msg:Sul fondo della piscina ormai asciutta vedi uno scudo
+		put:shield,$here
+		set:shieldseen
+	else
+		ifobjin:shield,$here
+			msg:Sul fondo della piscina ormai asciutta vedi uno scudo
+		else
+			msg:Non c'e' nulla di interessante
+	else
+else
+	msg:Nella piscina, dove l'acqua e' piu' libera dal ghiaccio, qualcosa luccica
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+enter
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:pool
+5
+if:emptypool
+	msg:Ora la piscina e' vuota
+else
+	msg:La piscina e' piu' profonda di quanto pensassi. Un crampo ti impedisce di tornare a riva. Anneghi
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+dive
+4
+if:emptypool
+	msg:Ora la piscina e' vuota
+else
+	msg:La piscina e' piu' profonda di quanto pensassi. Un crampo ti impedisce di tornare a riva. Anneghi
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+overgrowntrack
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sentiero coperto dalle erbacce
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un sentiero coperto dalle erbacce
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un vecchio sentiero si fa strada tra i rovi sul pendio boscoso. Radici e pietre semisepolte ne spezzano la superficie, ma il percorso e' ancora riconoscibile tra gli alberi.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.e
+3
+disusedwaterwheel
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/wooded_track.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apples
+5
+ifobjin:apples,$available
+	msg:Dai le mele al pony e lui ti lascia montare, portandoti di buon passo verso +
+	msg:nord.
+	put:apples,$nowhere
+	waitkey
+	put:pony,rustygates
+	goto:rustygates
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apple
+5
+ifobjin:apples,$available
+	msg:Dai la mela al pony e lui ti lascia montare, portandoti di buon passo verso +
+	msg:nord.
+	waitkey
+	put:pony,rustygates
+	goto:rustygates
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+rustygates
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Cancelli arrugginiti
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino a dei cancelli arrugginiti
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La ruggine corrode i cancelli di ferro e i rampicanti ne avvolgono i cardini. Oltre le sbarre, il terreno abbandonato non sembra piu' accogliente del sentiero alle tue spalle.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+goblingraveyard
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/rusty_gates.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apples
+5
+ifobjin:apples,$available
+	msg:Dai le mele al pony e lui ti lascia montare, portandoti di buon passo verso +
+	msg:sud.
+	put:apples,$nowhere
+	waitkey
+	put:pony,overgrowntrack
+	goto:overgrowntrack
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apple
+5
+ifobjin:apples,$available
+	msg:Dai la mela al pony e lui ti lascia montare, portandoti di buon passo verso +
+	msg:sud.
+	waitkey
+	put:pony,overgrowntrack
+	goto:overgrowntrack
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sluicegates
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Chiuse d'acqua
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso delle chiuse d'acqua
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Pesanti chiuse di legno trattengono l'acqua accanto al vecchio canale del mulino. Ferramenta arrugginita ne rinforza il telaio e una manovella dall'aria ostinata ne comanda il movimento.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+mistypool
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/waterworks.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+handle
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:manovella
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+gates
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:chiuse
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:C'e' una manovella
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+msg:Non hai abbastanza forza
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+turn
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:handle
+5
+msg:Le chiuse si aprono e la piscina si svuota
+set:emptypool
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+disusedwaterwheel
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Ruota idraulica in disuso
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una ruota idraulica in disuso
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La ruota idraulica e' immobile accanto a un corso d'acqua soffocato dalle erbacce. Il legno scuro e' levigato da anni d'acqua. Le vicine chiuse fanno parte dello stesso impianto abbandonato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest,nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.s
+3
+barrencountryside
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.w
+3
+overgrowntrack
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+gamekeeperscottage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/waterworks.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+wheel|waterwheel
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ruota,ruota idraulica
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+turn
+6
+msg:Si mette a girare
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+trollbridge
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+easternendofabridge
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Estremita' orientale del ponte
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+all'estremita' orientale di un ponte di pietra
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Dalla riva orientale, un vecchio ponte di pietra scavalca il ruscello. Da sotto la muratura arriva un odore acre, accompagnato da rumori che ti fanno esitare prima di attraversare.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[ovest,est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/stone_bridge.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+ifnot:toll
+	msg:Un troll dall'aria minacciosa si avvicina e ti sbarra il passo, fissandoti in attesa
+	put:troll,$here
+else
+	unset:toll
+	put:troll,$nowhere
+	goto:westernendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+unset:toll
+put:troll,$nowhere
+goto:crossroads
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pay
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:troll
+5
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	msg:Il troll la prende e si allontana
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+		msg:Hai finito le monete
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coins
+5
+ifobjin:coins,$available
+	msg:Il troll le prende tutte e si allontana
+	put:coins,$nowhere
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coins
+5
+ifobjin:coins,$available
+	msg:Il troll le prende tutte e si allontana
+	put:coins,$nowhere
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	msg:Il troll la prende e si allontana
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+		msg:Hai finito le monete
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+westernendofabridge
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Estremita' occidentale del ponte
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+all'estremita' occidentale di un ponte
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+All'estremita' occidentale del ponte di pietra, il ruscello scorre sotto un arco basso e consunto. Lo stesso odore sgradevole ristagna nei pressi del passaggio e sotto le pietre qualcosa si muove.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest,est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/stone_bridge.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+unset:toll
+put:troll,$nowhere
+goto:streaminavalleybottom
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+unset:toll
+put:troll,$nowhere
+goto:orchard
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+e
+4
+ifnot:toll
+	msg:Un troll dall'aria minacciosa si avvicina e ti sbarra il passo, fissandoti in attesa
+	put:troll,$here
+else
+	unset:toll
+	goto:easternendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pay
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:troll
+5
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	msg:Il troll la prende e si allontana
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+		msg:Hai finito le monete
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coins
+5
+ifobjin:coins,$available
+	msg:Il troll le prende tutte e si allontana
+	put:coins,$nowhere
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coins
+5
+ifobjin:coins,$available
+	msg:Il troll le prende tutte e si allontana
+	put:coins,$nowhere
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	msg:Il troll la prende e si allontana
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+		msg:Hai finito le monete
+	set:toll
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+southwest
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+orchard
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Frutteto
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un piccolo frutteto
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Meli nodosi riempiono un piccolo frutteto trascurato. I rami portano molti meno frutti del dovuto, ma uno sguardo attento tra le foglie potrebbe rivelare quelli rimasti.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+westernendofabridge
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+burntoutcampfire
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/orchard.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tree|trees|orchard
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:albero,alberi,meli,frutteto
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:In questo frutteto crescono quasi soltanto meli
+ifnot:seenapples
+	set:seenapples
+	msg:Ci sono ancora delle mele
+	put:apples,$here
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+burntoutcampfire
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Resti di un bivacco
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso i resti di un bivacco
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Tronchi anneriti giacciono in un cerchio di terra bruciata, tra cenere e terreno calpestato. Il bivacco abbandonato offre poco riparo e gli accessi aperti ti fanno sentire esposto.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/campfire.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:bootson|uniformon
+	unset:approaching
+	goto:woodmanshut
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+if:bootson|uniformon
+	unset:approaching
+	goto:orchard
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:bootson|uniformon
+	unset:approaching
+	goto:topofadeepwell
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+pittedtrack
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sentiero dissestato
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un sentiero dissestato
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Solchi profondi segnano un sentiero tra campi spogli battuti dal vento. Pietre sporgono dal fondo sconnesso e le erbacce invadono i margini di una strada che ha visto giorni migliori.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+outsideawindmill
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+woodmanshut
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+edgeofanicylake
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/bare_fields.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+ploughedfield
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Campo arato
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+altimage:new_png/bare_fields.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un campo arato
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Solchi paralleli segnano un campo spoglio accanto al vecchio sentiero. Dopo l'aratura non e' stato seminato nulla e il terreno nudo e' esposto al vento.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/bare_fields.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+if:bootson|uniformon
+	goto:outsideawindmill
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+woodmanshut
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Capanna del boscaiolo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una capanna del boscaiolo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La capanna del boscaiolo sorge accanto al sentiero del bosco, con assi scurite dal tempo. Polvere e odore di legname vecchio riempiono il piccolo spazio di lavoro.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+pittedtrack
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+sideofawoodedvalley
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+burntoutcampfire
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/woodman_hut.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+enter
+4
+msg:Dentro non c'e' nulla di utile
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+well
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+dampwellbottom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Fondo di un pozzo umido
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sul fondo di un pozzo umido
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Sul fondo del pozzo, l'umidita' brilla tra le pietre serrate nonostante il pavimento quasi asciutto. Un cerchio pallido di luce e' sospeso molto in alto e mette in risalto ogni giuntura della muratura.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/well_bottom.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:brokenwall
+	unset:ropetied
+	unset:sheettied
+	goto:narrowpassage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+swing
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:axe
+5
+ifobjin:axe,$available
+	if:brokenwall
+		msg:Hai gia' rimosso i mattoni allentati
+	else
+		msg:Con un colpo deciso abbatti parte del muro di mattoni, rivelando una stretta apertura
+		set:brokenwall
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+climb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+if:ropetied
+	msg:Appena provi a risalire, la corda si stacca e cade ai tuoi piedi
+	unset:ropetied
+else
+	ifobjin:rope,$available
+		msg:Non puoi arrampicarti sulla corda ora che non e' legata al pozzo
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sheet
+5
+if:sheettied
+	msg:Il lenzuolo e' strappato
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+enter
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:opening
+5
+if:brokenwall
+	unset:ropetied
+	unset:sheettied
+	goto:narrowpassage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bottom|well|wall|walls|stones
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:fondo,pozzo,parete,muro,pareti,muri,pietre
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:brokenwall
+	msg:C'e' una stretta apertura
+else
+	msg:Ci sono dei mattoni allentati
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bricks
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:mattoni
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:brokenwall
+	msg:C'e' una stretta apertura
+else
+	msg:Alcuni sembrano allentati
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+push
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+move
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pull
+6
+msg:Sono incastrati e a mani nude puoi fare ben poco
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+opening
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:apertura
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:brokenwall
+	msg:Conduce a nord ed e' abbastanza larga da lasciarti passare
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+narrowpassage
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stretto passaggio
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in uno stretto passaggio
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un basso passaggio di pietra ti stringe da entrambi i lati. Gocce d'umidita' coprono le pareti e l'aria stantia non offre indizi su cio' che si trova oltre la curva.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/low_caves.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+cave
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+dampwellbottom
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cave
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Grotta
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una piccola grotta
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il passaggio sbocca in una piccola grotta dal soffitto tanto basso da costringerti a chinarti. L'acqua gocciola sul pavimento irregolare e si raccoglie in piccole cavita'.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+narrowpassage
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/low_caves.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+msg:Risalendo un passaggio ripido riesci a uscire
+waitkey
+goto:topofadeepwell
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+topofadeepwell
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Bocca di un pozzo profondo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso la bocca di un pozzo profondo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un pozzo di pietra si apre accanto al sentiero e scende oltre la portata della luce. Il secchio e' li' vicino, ma dal basso non arriva alcuno sciabordio: soltanto aria fresca e umida.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+burntoutcampfire
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/well_top.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:brokenwall
+	goto:cave
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tie
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sheet
+5
+ifobjin:sheet,$available
+	if:sheettied
+		msg:E' gia' legato
+	else
+		msg:Leghi il lenzuolo al pozzo
+		put:sheet,$nowhere
+		set:sheettied
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+ifobjin:rope,$available
+	if:ropetied
+		msg:E' gia' legato
+	else
+		msg:Leghi la corda al pozzo
+		put:rope,$nowhere
+		set:ropetied
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+climb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sheet
+5
+if:sheettied
+	msg:Scendi lentamente nel pozzo usando il lenzuolo, ma questo si strappa poco prima che tu raggiunga il fondo.
+	waitkey
+	goto:dampwellbottom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+if:ropetied
+	msg:Scendi lentamente nel pozzo usando la corda.
+	waitkey
+	goto:dampwellbottom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+take
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sheet
+5
+if:sheettied
+	unset:sheettied
+	put:sheet,$inventory
+	msg:Fatto
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+if:ropetied
+	unset:ropetied
+	put:rope,$inventory
+	msg:Fatto
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+well
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pozzo
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il pozzo di pietra scende oltre la portata della luce. Dal fondo risale costantemente aria umida.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+north
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+frozenpond
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stagno ghiacciato
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un piccolo stagno ghiacciato
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un piccolo stagno e' sigillato da una fragile crosta di ghiaccio. Crepe si allargano con scricchiolii minacciosi, mentre un albero inclinato protende i rami spogli sulla riva.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/frozen_pond.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cracks
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:crepe
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il ghiaccio e' pericolosamente sottile. Crepe fini ne percorrono la superficie, che scricchiola sotto il tuo peso.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+tree|branch|branches
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:albero,ramo,rami
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+I rami dell'albero sono fuori dalla tua portata.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:planks,$here
+	goto:gapbetweensomeboulders
+else
+	msg:Non osi muoverti. Il ghiaccio si sta spezzando!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifobjin:planks,$here
+	goto:mountainhut
+else
+	msg:Non osi muoverti. Il ghiaccio si sta spezzando!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+ifobjin:planks,$here
+	goto:icypath
+else
+	msg:Non osi muoverti. Il ghiaccio si sta spezzando!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:planks
+5
+ifobjin:planks,$inventory
+	msg:Posi le assi sulla superficie ghiacciata. Ora ti senti piu' sicuro a muoverti
+	put:planks,$here
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+gapbetweensomeboulders
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Varco tra i massi
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un varco tra i massi
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Grandi massi si accalcano sul fianco della montagna e lasciano uno stretto varco tra i bordi frastagliati. Oltre, un sentiero prosegue tra pietre instabili lungo il pendio ripido.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+highwalledgarden
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+perilouspath
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+frozenpond
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/rocky_trail.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+glacier
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Ghiacciaio
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sopra un ghiacciaio
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un grande ghiacciaio riempie la conca sottostante, con la superficie pallida solcata da profonde fratture blu. Uno stretto percorso ghiacciato segue la cresta, esposto a un vento incessante.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest,alto]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+icypath
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+highpinnacle
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/glacier_route.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+u
+4
+//goto:nowhere
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+highpinnacle
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Alto pinnacolo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un alto pinnacolo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Dall'alto pinnacolo la montagna precipita verso valli lontane e una vasta distesa di ghiaccio. Lo spazio per i piedi e' angusto e il vento implacabile rende faticoso perfino restare in piedi.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/glacier_route.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+pinnacle
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:pinnacolo
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+Il pinnacolo si innalza ripido sopra il ghiacciaio, esposto al vento da ogni lato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+goto:glacier
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+climb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:rope
+5
+ifobjin:rope,$here
+	msg:Sei gia' in cima
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+highwalledgarden
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Giardino cinto da alte mura
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un giardino cinto da alte mura
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Alte mura riparano dal vento il giardino della regina Pari Sylvan. Rose e aiuole di terra scura conservano parte della sua antica bellezza. Qui il suolo sembra ancora insolitamente ricco di vita.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/queen_garden.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+//goto:nowhere
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+goto:gapbetweensomeboulders
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+u
+4
+if:vinegrown
+	msg:Il rampicante sembra robusto e provi a salirci
+	waitkey
+	goto:inscribedcavern
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+plant
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:seeds
+5
+ifobjin:$this,$available
+	if:seedplanted
+		msg:Ne hai gia' piantata la maggior parte
+	else
+		msg:Bene. Questo sembra proprio un ottimo posto per piantarli
+		set:seedplanted
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+water
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:seeds
+5
+if:seedplanted
+	ifobjin:jugfull,$inventory
+		msg:In pochi secondi cresce un enorme rampicante che risale le rocce quasi fino in cima
+		set:vinegrown
+		put:jugfull,$nowhere
+		put:jug,$inventory
+	else
+		msg:Con cosa?
+else
+	msg:Devi prima piantarli
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+climb
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:vine
+5
+if:vinegrown
+	msg:Il rampicante sembra robusto e provi a salirci
+	waitkey
+	goto:inscribedcavern
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+vine
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:rampicante
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:vinegrown
+	msg:E' un grande rampicante che arriva quasi in cima alle rocce
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+icypath
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sentiero ghiacciato
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un sentiero ghiacciato
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/glacier_route.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un sottile velo di ghiaccio nasconde le pietre del sentiero. La via sale tra rocce esposte e precipizi, con il ghiacciaio in basso e brina in ogni fessura riparata.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[alto,basso]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.u
+3
+frozenpond
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.d
+3
+glacier
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+inscribedcavern
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Caverna delle iscrizioni
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una caverna delle iscrizioni
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Simboli incisi e figure consunte ricoprono quasi interamente le pareti della caverna. I segni sembrano disposti con uno scopo: storie, avvertimenti o istruzioni lasciate da chi conosceva questi passaggi.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/inscribed_cavern.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+inscriptions|scribbles|symbols
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:iscrizioni,segni,simboli
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:Sulle pareti trovi storie e leggende dei Sylvani, ma la tua attenzione cade su un disegno che raffigura un labirinto e indica chiaramente il percorso per uscirne.
+set:mazetrack
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+vaultedcavern
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+highwalledgarden
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+mazeoftunnels
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Labirinto di tunnel
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un labirinto di tunnel
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Bassi passaggi si diramano nella roccia umida e ogni svolta somiglia alla precedente. Gli echi non offrono indicazioni affidabili e ben presto e' difficile ricordare da dove sei arrivato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest,sud,nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/low_caves.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+maze
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:labirinto
+5
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+if:mazetrack
+	msg:Cerchi di ricordare il percorso visto nella caverna e, dopo un po', trovi la strada
+	waitkey
+	goto:vaultedcavern
+else
+	msg:Vaghi a lungo, solo per ritrovarti al punto di partenza
+	msg:Sei completamente perso
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:mazetrack
+	msg:Cerchi di ricordare il percorso visto nella caverna e, dopo un po', trovi la strada
+	waitkey
+	goto:stalactitesstalagmites
+else
+	msg:Vaghi a lungo, solo per ritrovarti al punto di partenza
+	msg:Sei completamente perso
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+s
+4
+msg:Vaghi a lungo, solo per ritrovarti al punto di partenza
+ifnot:mazetrack
+	msg:Sei completamente perso
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+n
+4
+msg:Vaghi a lungo, solo per ritrovarti al punto di partenza
+ifnot:mazetrack
+	msg:Sei completamente perso
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+mountainhut
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Capanna di montagna
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino a una capanna di montagna
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una piccola capanna di legno si aggrappa a un ripiano roccioso sopra il pendio. Il comignolo e' spento e la porta socchiusa promette riparo, ma non rivela alcun occupante.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+screeslope
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+frozenpond
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/mountain_hut.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+enter
+4
+ifnot:seenplanks
+	put:planks,$here
+	set:seenplanks
+	msg:Dentro trovi delle assi
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+perilouspath
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sentiero pericoloso
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un sentiero pericoloso
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il sentiero taglia un ripido fianco della montagna tra massi incombenti e pietrisco instabile. Le pietre rotolano sotto gli stivali e ti ricordano il precipizio oltre il bordo.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+silverbellintherock
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+gapbetweensomeboulders
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/rocky_trail.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+screeslope
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Declivio coperto di ciottoli
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+su un declivio coperto di ciottoli
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il pietrisco ricopre il pendio ripido e scivola a ogni passo. Un sentiero si insinua tra massi piu' grandi, offrendo un appoggio incerto durante la salita.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+mountainhut
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+hugefallenoak
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/rocky_trail.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+silverbellintherock
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Campana d'argento nella roccia
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una campana d'argento nella roccia
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una campana d'argento e' incastonata nella roccia, luminosa contro la pietra consunta. La sua immobilita' sembra in attesa, come se una sola nota potesse arrivare molto lontano.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+perilouspath
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/silver_bell.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+sceneryobj
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+bell
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:campana
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una campana d'argento
+5
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+e
+4
+if:rockdoor
+	goto:dungeonsofthepalace
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+ring
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bell
+5
+if:howmanyrings
+	msg:Suoni cinque rintocchi, come ha detto l'eremita.
+	msg:Una porta nella roccia si apre a est!
+	set:rockdoor
+else
+	msg:Suoni qualche rintocco, esitante.
+	msg:Hai suonato la campana nel modo sbagliato!
+	waitkey
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+stalactitesstalagmites
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stalattiti e stalagmiti
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino a stalattiti e stalagmiti
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/great_cavern.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+L'acqua gocciola tra le stalattiti e le guglie di pietra che si alzano dal suolo. Piu' avanti le formazioni si aprono verso un'alta caverna. Un cumulo di rocce crollate blocca il ritorno in un passaggio.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+mazeoftunnels
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:rubbleremoved
+	msg:Il passaggio e' troppo ripido
+else
+	msg:Un cumulo di macerie ti blocca la strada
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+rubble
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:macerie
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+remove|move|push|pull
+6
+msg:Dopo un lungo lavoro riesci a rimuovere le macerie, rivelando un ripido passaggio
+set:rubbleremoved
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+vaultedcavern
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Caverna a volta
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una caverna a volta
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+La caverna si innalza in una volta sorretta da grandi pilastri naturali. Le stalattiti sovrastano guglie di pietra e ogni passo ritorna in echi sovrapposti dalle aperture buie. A ovest si trova un labirinto inestricabile.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/great_cavern.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+highglassgates
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+inscribedcavern
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+mazeoftunnels
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+palace
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+banquethall
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sala per banchetti
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una sala per banchetti
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un lungo tavolo domina la sala sotto stendardi strappati e travi annerite dal fumo. Calici, piatti e legno macchiato raccontano banchetti ben piu' rozzi di quelli degli antichi abitanti del palazzo.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/banquet_hall.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:feastinggrargs,$here
+	if:bootson|uniformon
+		put:feastinggrargs,$nowhere
+		put:sleepinggrarg,$here
+		goto:longgallery
+	else
+		msg:I Grarg ti vedranno!
+else
+	goto:longgallery
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+ifobjin:feastinggrargs,$here
+	if:bootson|uniformon
+		put:feastinggrargs,$nowhere
+		put:sleepinggrarg,$here
+		goto:halloftapestries
+	else
+		msg:I Grarg ti vedranno!
+else
+	goto:halloftapestries
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cobwebbyroom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stanza coperta da ragnatele
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una stanza piena di ragnatele
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Fitte ragnatele attraversano la stanza abbandonata e velano le porte. La polvere si accumula su una sedia rotta sotto una finestra chiusa, ma i fili intrecciati sono l'ostacolo piu' immediato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/web_room.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:cobwebscleared
+	goto:wizardslair
+else
+	msg:Resti impigliato nelle ragnatele!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+goto:safeinogbanschambers
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:cobwebscleared
+	goto:turretroom
+else
+	msg:Resti impigliato nelle ragnatele!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+cut
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:ragnatele
+5
+ifobjin:sword,$available
+	msg:Hai eliminato le ragnatele
+	set:cobwebscleared
+else
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+swing
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:sword
+5
+ifobjin:sword,$available
+	msg:Hai eliminato le ragnatele
+	set:cobwebscleared
+else
+	msg:Non ce l'hai
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+dankcorridor
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Corridoio umido
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in un corridoio umido
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+L'umidita' scorre lungo le pareti di pietra e si raccoglie in piccole pozzanghere. L'odore di muffa si intensifica vicino a una pesante porta di quercia, con la ferramenta scurita dalla ruggine.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/dank_corridor.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+normalobj
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+door
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:porta
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una porta di quercia
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+if:dankdoor
+	msg:E' rotta
+else
+	msg:E' una porta di quercia massiccia e pesante
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+goto:entrancehalltothepalace
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:dankdoor
+	goto:dungeonsofthepalace
+else
+	msg:Una massiccia porta di quercia ti blocca
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+break
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:door
+5
+msg:Come?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+swing
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:axe
+5
+ifobjin:$this,$available
+	msg:La porta si e' spezzata!
+	set:dankdoor
+else
+	msg:Non ce l'hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:door
+5
+if:dankdoor
+	msg:La porta e' rotta
+else
+	msg:Non hai abbastanza forza
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+door
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:porta
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+La massiccia porta di quercia e' troppo pesante per cedere a una semplice spinta. La ferramenta ne rinforza il legno spesso.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+dustylibrary
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Biblioteca polverosa
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una biblioteca polverosa
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Vecchi libri si incurvano su scaffali deformati, con le rilegature coperte di polvere. Il silenzio invita a cercare con attenzione, ma pagine fragili e legno vecchio richiedono delicatezza.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+silverthroneroom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/dusty_library.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sceneryobj
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+books|book
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:libri,libro
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:Un libro in particolare attira la tua attenzione: e' aperto su un leggio.
+msg:"Le parole magiche si trovano al crocevia, alla fontana e al cerchio di pietre", dice.
+msg:Sfogliando un secondo volume scopri che quei luoghi sono associati alle parole: "GUIDARE, RISVEGLIARE e infine PROTEGGERE"
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+entrancehalltothepalace
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Ingresso del palazzo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nell'ingresso del palazzo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Alte colonne incorniciano l'ingresso del palazzo, dove la polvere ha spento la lucentezza del pavimento. Stendardi sbiaditi pendono sopra le porte, ricordi di una corte il cui splendore ha ceduto il posto all'occupazione.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/entrance_hall.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+goto:dankcorridor
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+goto:grargsentrypost
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+goto:highglassgates
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+grargsentrypost
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Posto di guardia dei Grarg
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso un posto di guardia dei Grarg
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il posto di guardia dei Grarg occupa un passaggio angusto verso il palazzo. Legname grezzo, ferramenta e torce spente non lasciano dubbi: chiunque passi di qui viene sorvegliato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/sentry_post.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+if:bootson|uniformon
+	goto:guardroom
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:bootson|uniformon
+	goto:entrancehalltothepalace
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+guardroom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stanza delle guardie
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella stanza delle guardie
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Rastrelliere per armi e sgabelli malridotti arredano una stanza fatta per le guardie, non per il conforto. L'odore di cuoio e ferro ristagna tra le pareti di pietra; il silenzio non garantisce che gli occupanti siano lontani.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/guardroom.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sword
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:spada
+5
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:bootson|uniformon
+	goto:kitchensofthepalace
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:bootson|uniformon
+	goto:grargsentrypost
+else
+	ifnot:approaching
+		msg:Ti accorgi con terrore che si sta avvicinando una pattuglia di Grarg
+		set:approaching
+	else
+		msg:I Grarg ti attaccano e ti uccidono senza difficolta'
+		waitkey
+		goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+halloftapestries
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Galleria degli arazzi
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella galleria degli arazzi
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Arazzi sbiaditi rivestono il lungo passaggio del palazzo, con battaglie e bestie fantastiche interrotte da ritratti in cornici invecchiate. Uno spiffero solleva i bordi sfilacciati e sembra animare le figure.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+banquethall
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+mosaicflooredhall
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/palace_gallery.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+highglassgates
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Alti cancelli di cristallo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+vicino ad alti cancelli di cristallo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Alti cancelli di cristallo brillano all'ingresso del palazzo, con pannelli delicati racchiusi in una cornice imponente. Riflettono la poca luce che raggiunge la bocca della caverna e danno alla soglia una bellezza inquietante.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/glass_gates.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est,sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+if:distractedhoud
+	unset:distractedhoud
+	goto:entrancehalltothepalace
+else
+	msg:L'enorme mastino ti sbarra il passo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+goto:ornatefountain
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+goto:vaultedcavern
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bone
+5
+ifobjin:bone,$available
+	set:distractedhoud
+	put:bone,$nowhere
+	msg:Il mastino comincia a rosicchiare l'osso e si calma.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+ifobjin:boar,$available
+	ifobjin:$this,$available
+		put:$this,$nowhere
+		msg:Lo divora!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+4
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+kitchensofthepalace
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Cucine del palazzo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nelle cucine del palazzo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Forni anneriti e grandi pentole occupano le cucine del palazzo. Polvere di grano si accumula sotto i tavoli e un grande armadio sorge in un angolo, tra i resti di pasti frettolosi.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+guardroom
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+palacebattlements
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+longgallery
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/palace_kitchens.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+cupboard
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:armadio
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+ifnot:seenphial
+	msg:C'e' una fiala
+	put:phial,$here
+	set:seenphial
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+kitchens
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:cucine,cucina
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:In un angolo c'e' un grande armadio
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+longgallery
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Lunga galleria
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella lunga galleria
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una lunga galleria passa accanto a ritratti screpolati e arazzi sbiaditi. Volti e bestie tessute emergono dall'ombra, mentre gli spifferi portano l'odore stantio del palazzo occupato.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,est]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.s
+3
+banquethall
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+kitchensofthepalace
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/palace_gallery.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+mosaicflooredhall
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Sala dei mosaici
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una sala dal pavimento a mosaico
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un intricato mosaico ricopre il pavimento della sala, con tessere consumate lungo i passaggi principali. Il vecchio disegno sopravvive sotto sporco e danni e dona alla stanza una dignita' che gli attuali padroni non meritano.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,est,sud]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/mosaic_hall.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:$roomdesc
+msg:Dalla porta a sud senti la voce terrificante di Ogban che ordina altro vino
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sceneryobj
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+goblet
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:coppa
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:una coppa
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+E' una coppa d'oro con del vino. Vi e' incisa una O
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+goto:halloftapestries
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+setvar:magic,0
+ifobjin:horseshoe,$inventory
+	addvar:magic,1
+ifobjin:shield,$inventory
+	addvar:magic,1
+ifobjin:ring,$inventory
+	addvar:magic,1
+if:magic=3
+	goto:silverthroneroom
+else
+	msg:Forze misteriose ti respingono. Serve un'antica magia per contrastare questo potere
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:ogbanpoisoned
+	goto:safeinogbanschambers
+else
+	msg:Appena lasci la sala ti trovi davanti Ogban, che ti uccide senza esitazione
+	goto:_dead
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+into
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+poison
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:goblet
+5
+ifobjin:phial,$available
+	msg:Fatto
+	set:poisoninwine
+else
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:vino
+5
+ifobjin:phial,$available
+	msg:Fatto
+	set:poisoninwine
+else
+	msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+empty
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:phial
+5
+msg:Dove?
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+ornatefountain
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Fontana ornata
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una fontana ornata
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una fontana di pietra ornata sorge in un cortile riparato del palazzo. Figure consunte si chinano su una vasca orlata di muschio, dove un filo d'acqua interrompe il silenzio.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+exit.n
+3
+highglassgates
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/fountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+fountain
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:fontana
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+La fontana del cortile e' levigata da generazioni di intemperie. Le sue sculture sono sopravvissute a chi le ha create.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+palacebattlements
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Camminamenti merlati del palazzo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+sopra i camminamenti merlati del palazzo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Il vento spazza i merli del palazzo e ti strattona gli abiti, mentre la terra si apre lontano sotto di te. Merlature spezzate e pietre consunte offrono poco conforto a questa altezza.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/battlements.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+kitchensofthepalace
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+safeinogbanschambers
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Cassaforte nella camera di Ogban
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una cassaforte nella camera di Ogban
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Le stanze di Ogban sono dominate da una pesante cassaforte di ferro contro la parete. Mobili rozzi e carte sparse tradiscono un potere esercitato senza alcun riguardo per la bellezza.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/ogban_chambers.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.n
+3
+mosaicflooredhall
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.w
+3
+cobwebbyroom
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+sceneryobj
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+safe
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:cassaforte
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+if:safenumber
+	if:alreadyopened
+		msg:L'hai gia' aperta
+	else
+		set:alreadyopened
+		if:!seenkey
+			put:key,$here
+			msg:Usando i numeri della macchina, apri la cassaforte. Dentro c'e' una chiave
+			set:seenkey
+		else
+			msg:E' vuoto
+else
+	msg:Serve la combinazione per aprirla
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+unlock
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+E' una pesante cassaforte di ferro
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+silverchamber
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Camera d'argento
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella camera d'argento
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una luce pallida si riflette sulle superfici della camera d'argento, dando alla stanza un bagliore freddo e mutevole. Il suo silenzio e' diverso da quello delle sale abbandonate, come se cio' che custodisce richiedesse una cautela insolita.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/silver_chamber.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+say
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:parole
+5
+ifobjin:stoneofdestiny,$inventory
+	msg:Sei pronto. Pronunciale una per volta
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:risvegliare
+5
+ifobjin:stoneofdestiny,$inventory
+	if:!awake
+		msg:LA MONTAGNA TREMA!
+		addvar:magicwords,1
+		set:awake
+	else	
+		msg:L'hai gia' detto
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:guidare
+5
+ifobjin:stoneofdestiny,$inventory
+	if:!guide
+		msg:LE TORRI CROLLANO!
+		addvar:magicwords,1
+		set:guide
+	else	
+		msg:L'hai gia' detto
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:proteggere
+5
+ifobjin:stoneofdestiny,$inventory
+	if:!protect
+		addvar:magicwords,1
+		set:protect
+	if:magicwords=3		
+		msg:Qualcosa intorno a te comincia a tremare!
+		goto:_end
+	else
+		msg:Hai pronunciato l'ultima parola magica nell'ordine sbagliato! La stanza crolla.
+		goto:_dead
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$every
+5
+ifobjin:stoneofdestiny,$available
+	msg:Hai pronunciato la parola sbagliata! La stanza crolla.
+	goto:_dead
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:$none
+5
+ifobjin:stoneofdestiny,$available
+	msg:Ora devi pronunciare le parole magiche
+else
+	msg:Devi prima prendere la Pietra del Destino
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+e
+4
+ifobjin:stoneofdestiny,$inventory
+	msg:Devi completare la missione e salvare il tuo popolo
+	msg:E' il momento di pronunciare le parole magiche!
+else
+	goto:wizardslair
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+silverthroneroom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stanza del trono d'argento
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella stanza del trono d'argento
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Un trono d'argento intagliato si erge sotto alte finestre e cattura la luce fredda. La polvere offusca il pavimento, ma il seggio domina ancora la stanza con l'autorita' della scomparsa corte dei Sylvani.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/silver_throne.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:poisoninwine
+	set:ogbanpoisoned
+goto:dustylibrary
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+goto:mosaicflooredhall
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+turretroom
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Stanza della torretta
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una stanza della torretta con una macchina a moneta
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Una finestra stretta lascia entrare una lama di luce nella stanza della torretta. La polvere circonda una strana macchina di metallo, il cui scopo non e' evidente a prima vista.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+exit.e
+3
+cobwebbyroom
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/turret_room.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+machine
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:macchina
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+desc
+5
+C'e' uno schermo con una fessura grande quanto una moneta.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+5
+msg:Devi inserire qualcosa nella fessura.
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+use
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+	endif
+	msg:Compare un numero: 731
+	set:safenumber
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+insert
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:coin
+5
+ifobjin:coins,$available
+	decvar:coinnum,1
+	if:coinnum=0
+		put:coins,$nowhere
+	endif
+	msg:Compare un numero: 731
+	set:safenumber
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+wizardslair
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Tana del mago
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nella tana del mago
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Pergamene e grimori affollano gli scaffali del mago sopra un groviglio di strani strumenti. La stanza odora di metallo caldo e vapori pungenti; una porta pesante protegge cio' che si trova oltre il laboratorio.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/wizard_lair.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
+clear
+msg:$roomdesc
+msg:Il mago urla quando ti vede, poi ti assale con il suo sguardo feroce
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+door
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:porta
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+unlock
+6
+if:!wizarddead
+	msg:Il mago ti tiene prigioniero del suo sguardo!
+else	
+	ifobjin:key,$available
+		msg:La chiave gira! Ora la porta e' aperta
+		set:wizarddoor
+	else
+		msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+if:!wizarddead
+	msg:Il mago ti tiene prigioniero del suo sguardo!
+else
+	if:wizarddoor
+		msg:E' gia' aperta
+	else
+		msg:E' chiusa a chiave
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+if:!wizarddead
+	msg:Il mago ti tiene prigioniero del suo sguardo!
+else
+	goto:cobwebbyroom
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+if:!wizarddead
+	msg:Il mago ti tiene prigioniero del suo sguardo!
+else
+	if:wizarddoor
+		goto:silverchamber
+	else
+		msg:Una porta massiccia chiusa ti sbarra il passaggio
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+reflect
+4
+msg:Come?
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+hold
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+show
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:silverplate
+5
+ifobjin:silverplate,$available
+	msg:Hai riflesso lo sguardo del mago! E' morto!
+	set:wizarddead
+else
+	msg:Non ce l'hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+underpalace
+1
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+winecellar
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Cantina dei vini
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+in una cantina dei vini
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Bottiglie polverose e vecchie botti affollano la cantina sotto basse volte di pietra. L'aria odora di vino acido e quercia umida; oltre la portata di ogni luce si addensa un buio profondo.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[nord,ovest]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/wine_cellar.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+rats
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:ratti,topi
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+feed
+6
+msg:Con cosa?
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+ifobjin:litlamp,$available
+	ifobjin:rats,$available
+		msg:I ratti ti mordicchiano le caviglie!
+	else
+		goto:dungeonsofthepalace
+else
+	msg:E' troppo buio!
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+w
+4
+ifobjin:litlamp,$available
+	ifobjin:rats,$available
+		msg:I ratti ti mordicchiano le caviglie!
+	else
+		goto:rowofcasks
+else
+	msg:E' troppo buio!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+give
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:apples
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:bread
+5
+ifobjin:$this,$available
+	msg:Si allontanano di corsa
+	put:rats,$nowhere
+	put:$this,$nowhere
+else
+	msg:Non ne hai
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+light
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+withobj:matches
+5
+ifobjin:matches,$available
+	msg:Non fa abbastanza luce
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+rowofcasks
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Fila di botti
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+presso una fila di botti
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Vecchie botti di quercia sono allineate nella penombra, con bottiglie polverose sugli scaffali sovrastanti. Il vino acido macchia il pavimento e i fianchi panciuti delle botti nascondono gran parte della parete.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[est]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/wine_cellar.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+e
+4
+ifobjin:litlamp,$available
+	goto:winecellar
+else
+	msg:E' troppo buio!
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+w
+4
+if:passageseen
+	msg:Il passaggio era ripido!
+	waitkey
+	goto:shadyhollow
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+scenery
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+casks
+4
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+syn:botti
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+verb
+5
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+open
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+move
+6
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+x
+6
+msg:Dietro una delle botti c'e' un passaggio verso ovest!
+set:passageseen
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+dungeonsofthepalace
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:Segrete del palazzo
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.shortdesc
+3
+nelle segrete del palazzo
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+desc
+3
+Catene arrugginite pendono dalle pareti umide delle segrete. Celle sbarrate si perdono nel buio oltre pozze d'acqua fetida, e il freddo della prigionia persiste anche dopo che ogni rumore e' svanito.
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+attr.exits
+3
+[sud,nord]
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.2:new_png/dungeons.png
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+verb
+3
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+s
+4
+goto:winecellar
+
+<end node> 5P9i0s8y19Z
+dt=
+<node>
+n
+4
+if:dankdoor
+	goto:dankcorridor
+else
+	msg:Una massiccia porta di quercia ti blocca
+
+<end node> 5P9i0s8y19Z

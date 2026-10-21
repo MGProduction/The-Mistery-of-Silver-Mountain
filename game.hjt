@@ -81,12 +81,12 @@ splity:96
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-imgborder:png/border_medium.png
+imgborder:new_png/border_medium.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-folder:png/
+folder:new_png/
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1814,7 +1814,7 @@ name:The Mystery of Silver Mountain
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/silver_mountain_C64.png
+image.b:new_png/silver_mountain.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1831,11 +1831,32 @@ msg:\c##SUBTITLE##
 	\c\yStoryTllrC64\w release 
 	\cby \y##AUTHOR##\w
 waitkey
+goto:_twodisk
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+_twodisk
+2
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+name:StoryTllr64
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image.b:new_png/silver_mountain.png
+3
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+onfirst
+3
 clear
-msg:This is a two-disk game. Please insert the second disk now. 
-msg:When, changing location, you won't see its image, swap disk and write 'image' to reload (it won't happen too often, but it will happen)
+msg:This is a StoryTllr64 two-disk game. Please insert the #second disk now. 
+msg:When, changing location, you won't see its image, swap disk and write #image to reload (it won't happen too often, but it will happen)
 waitkey
-clear
 goto:_introduction
 
 <end node> 5P9i0s8y19Z
@@ -1851,7 +1872,7 @@ name:Introduction
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/silver_mountain_C64.png
+image.b:new_png/silver_mountain.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1885,7 +1906,7 @@ name:You're dead!
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/silver_mountain_C64.png
+image.b:new_png/silver_mountain.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1915,7 +1936,7 @@ name:Your land is free again!
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/silver_mountain_C64.png
+image.b:new_png/silver_mountain.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -1977,7 +1998,7 @@ easternendofabridge
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/crossroads_C64.png
+image.b:new_png/crossroads.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -2051,7 +2072,7 @@ ancientstonecircle
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/wooded_track_C64.png
+image.b:new_png/wooded_track.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2108,7 +2129,7 @@ stable
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/rustic_village_C64.png
+image.b:new_png/rustic_village.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2158,7 +2179,7 @@ ancientstonecircle
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/stable_C64.png
+image.b:new_png/stable.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2278,7 +2299,7 @@ deepdarkwood
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/dark_wood_C64.png
+image.b:new_png/dark_wood.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2335,7 +2356,7 @@ windingroad
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/stone_circle_C64.png
+image.b:new_png/stone_circle.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2388,7 +2409,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/dark_wood_C64.png
+image.b:new_png/dark_wood.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2455,7 +2476,17 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/fallen_oak_C64.png
+onfirst
+3
+clear
+msg:$roomdesc
+if:!goblinfree
+	msg:Sitting on the felled oak tree, the ghostly figure of the Goblin Guardian watches you suspiciously
+
+<end node> 5P9i0s8y19Z
+dt=Text
+<node>
+image:new_png/fallen_oak.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2560,7 +2591,7 @@ woodmanshut
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/wooded_track_C64.png
+image.b:new_png/wooded_track.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2610,7 +2641,7 @@ sideofawoodedvalley
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/valley_stream_C64.png
+image:new_png/valley_stream.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2696,7 +2727,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/lake_shore_C64.png
+image:new_png/lake_shore.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2763,7 +2794,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/open_lake_C64.png
+image:new_png/open_lake.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2837,7 +2868,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/open_lake_C64.png
+image:new_png/open_lake.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -2944,7 +2975,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/island_wreck_C64.png
+image:new_png/island_wreck.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3031,7 +3062,7 @@ islandshore
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/island_wreck_C64.png
+image:new_png/island_wreck.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3106,7 +3137,7 @@ islandshore
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/old_kiln_C64.png
+image:new_png/old_kiln.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3174,7 +3205,7 @@ oldkiln
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/marsh_inlet_C64.png
+image:new_png/marsh_inlet.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3229,7 +3260,7 @@ atticbedroom
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/white_cottage_C64.png
+image.b:new_png/white_cottage.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3338,7 +3369,7 @@ whitecottage
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/attic_cupboard_C64.png
+image.b:new_png/attic_cupboard.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3406,7 +3437,7 @@ atticbedroom
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/attic_cupboard_C64.png
+image.b:new_png/attic_cupboard.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3487,7 +3518,7 @@ lowerfloorofthemill
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/mill_loft_C64.png
+image:new_png/mill_loft.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3560,7 +3591,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/windmill_C64.png
+image:new_png/windmill.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3655,7 +3686,7 @@ sacksontheupperfloor
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/mill_floor_C64.png
+image:new_png/mill_floor.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -3703,7 +3734,7 @@ outsideawindmill
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/bare_fields_C64.png
+image:new_png/bare_fields.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3824,7 +3855,7 @@ disusedwaterwheel
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/gamekeeper_cottage_C64.png
+image:new_png/gamekeeper_cottage.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3891,7 +3922,7 @@ hollowtomb
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/goblin_graves_C64.png
+image:new_png/goblin_graves.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -3974,7 +4005,7 @@ goblingraveyard
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/goblin_graves_C64.png
+image:new_png/goblin_graves.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4027,7 +4058,7 @@ goblingraveyard
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/hollow_tomb_C64.png
+image:new_png/hollow_tomb.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4114,7 +4145,7 @@ gamekeeperscottage
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/misty_pool_C64.png
+image:new_png/misty_pool.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4225,7 +4256,7 @@ disusedwaterwheel
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/wooded_track_C64.png
+image.b:new_png/wooded_track.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4307,7 +4338,7 @@ goblingraveyard
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/rusty_gates_C64.png
+image:new_png/rusty_gates.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4389,7 +4420,7 @@ mistypool
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/waterworks_C64.png
+image:new_png/waterworks.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4498,7 +4529,7 @@ gamekeeperscottage
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/waterworks_C64.png
+image:new_png/waterworks.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -4561,7 +4592,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/stone_bridge_C64.png
+image.b:new_png/stone_bridge.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4695,7 +4726,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/stone_bridge_C64.png
+image.b:new_png/stone_bridge.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4856,7 +4887,7 @@ burntoutcampfire
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/orchard_C64.png
+image.b:new_png/orchard.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -4918,7 +4949,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/campfire_C64.png
+image.b:new_png/campfire.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5031,7 +5062,7 @@ edgeofanicylake
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/bare_fields_C64.png
+image:new_png/bare_fields.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5046,7 +5077,7 @@ name:Ploughed field
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-altimage:png/bare_fields_C64.png
+altimage:new_png/bare_fields.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5072,7 +5103,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/bare_fields_C64.png
+image:new_png/bare_fields.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5150,7 +5181,7 @@ burntoutcampfire
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/woodman_hut_C64.png
+image:new_png/woodman_hut.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5196,7 +5227,7 @@ At the bottom of the well, moisture shines on the close-set stones despite the a
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/well_bottom_C64.png
+image:new_png/well_bottom.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5389,7 +5420,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/low_caves_C64.png
+image.b:new_png/low_caves.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5405,21 +5436,6 @@ exit.s
 3
 dampwellbottom
 
-<end node> 5P9i0s8y19Z
-dt=
-<node>
-scenery
-3
-<end node> 5P9i0s8y19Z
-dt=
-<node>
-ring
-4
-<end node> 5P9i0s8y19Z
-dt=
-<node>
-verb
-3
 <end node> 5P9i0s8y19Z
 dt=
 <node>
@@ -5461,7 +5477,7 @@ narrowpassage
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/low_caves_C64.png
+image.b:new_png/low_caves.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5518,7 +5534,7 @@ burntoutcampfire
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/well_top_C64.png
+image.b:new_png/well_top.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5670,7 +5686,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/frozen_pond_C64.png
+image:new_png/frozen_pond.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5805,7 +5821,7 @@ frozenpond
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/rocky_trail_C64.png
+image:new_png/rocky_trail.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5855,7 +5871,7 @@ highpinnacle
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/glacier_route_C64.png
+image:new_png/glacier_route.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5903,7 +5919,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/glacier_route_C64.png
+image:new_png/glacier_route.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -5974,7 +5990,7 @@ High walls shelter Queen Pari Sylvan's garden from the mountain wind. Roses and 
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/queen_garden_C64.png
+image:new_png/queen_garden.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6108,7 +6124,7 @@ on an icy path
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/glacier_route_C64.png
+image:new_png/glacier_route.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6172,7 +6188,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/inscribed_cavern_C64.png
+image:new_png/inscribed_cavern.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6245,7 +6261,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.b:png/low_caves_C64.png
+image.b:new_png/low_caves.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6354,7 +6370,7 @@ frozenpond
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/mountain_hut_C64.png
+image:new_png/mountain_hut.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6419,7 +6435,7 @@ gapbetweensomeboulders
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/rocky_trail_C64.png
+image:new_png/rocky_trail.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6469,7 +6485,7 @@ hugefallenoak
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/rocky_trail_C64.png
+image:new_png/rocky_trail.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6512,7 +6528,7 @@ perilouspath
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/silver_bell_C64.png
+image:new_png/silver_bell.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -6582,7 +6598,7 @@ near some stalactites and stalagmites
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/great_cavern_C64.png
+image:new_png/great_cavern.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6670,7 +6686,7 @@ The cavern rises into a vaulted roof supported by great natural pillars. Stalact
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image:png/great_cavern_C64.png
+image:new_png/great_cavern.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6739,7 +6755,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/banquet_hall_C64.png
+image.2:new_png/banquet_hall.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6810,7 +6826,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/web_room_C64.png
+image.2:new_png/web_room.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -6915,7 +6931,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/dank_corridor_C64.png
+image.2:new_png/dank_corridor.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -7054,7 +7070,7 @@ in a dusty library
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/dusty_library_C64.png
+image.2:new_png/dusty_library.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7135,7 +7151,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/entrance_hall_C64.png
+image.2:new_png/entrance_hall.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7197,7 +7213,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/sentry_post_C64.png
+image.2:new_png/sentry_post.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7270,7 +7286,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/guardroom_C64.png
+image.2:new_png/guardroom.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7367,7 +7383,7 @@ mosaicflooredhall
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/palace_gallery_C64.png
+image.2:new_png/palace_gallery.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7396,7 +7412,7 @@ Tall glass gates gleam at the palace approach, their delicate panels held in an 
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/glass_gates_C64.png
+image.2:new_png/glass_gates.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7522,7 +7538,7 @@ longgallery
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/palace_kitchens_C64.png
+image.2:new_png/palace_kitchens.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7614,7 +7630,7 @@ kitchensofthepalace
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/palace_gallery_C64.png
+image.2:new_png/palace_gallery.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7650,7 +7666,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/mosaic_hall_C64.png
+image.2:new_png/mosaic_hall.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -7808,7 +7824,7 @@ highglassgates
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/fountain_C64.png
+image.2:new_png/fountain.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -7854,7 +7870,7 @@ Wind sweeps along the palace battlements, tugging at your clothes as the land op
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/battlements_C64.png
+image.2:new_png/battlements.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -7904,7 +7920,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/ogban_chambers_C64.png
+image.2:new_png/ogban_chambers.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -8000,7 +8016,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/silver_chamber_C64.png
+image.2:new_png/silver_chamber.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -8136,7 +8152,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/silver_throne_C64.png
+image.2:new_png/silver_throne.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -8200,7 +8216,7 @@ cobwebbyroom
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/turret_room_C64.png
+image.2:new_png/turret_room.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -8305,7 +8321,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/wizard_lair_C64.png
+image.2:new_png/wizard_lair.png
 3
 <end node> 5P9i0s8y19Z
 dt=Text
@@ -8453,7 +8469,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/wine_cellar_C64.png
+image.2:new_png/wine_cellar.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -8577,7 +8593,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/wine_cellar_C64.png
+image.2:new_png/wine_cellar.png
 3
 <end node> 5P9i0s8y19Z
 dt=
@@ -8671,7 +8687,7 @@ attr.exits
 <end node> 5P9i0s8y19Z
 dt=Text
 <node>
-image.2:png/dungeons_C64.png
+image.2:new_png/dungeons.png
 3
 <end node> 5P9i0s8y19Z
 dt=
