@@ -66,6 +66,8 @@ The game has undergone manual and AI-assisted playtesting, and the winning endin
 
 You will find the released `.d64` files on the [official itch.io page](https://marcogiorgini.itch.io/the-mystery-of-silver-mountain) of the game.
 
+In case you case, there's also an **Italian version** of the game: source codes [game_it.hjt](game_it.hjt)+[stdlib_it.hjt](stdlib_it.hjt) / .d64 files on the [official itch.io page](https://marcogiorgini.itch.io/il-mistero-della-montagna-dargento) of the game.
+
 ## Changes from the original
 
 The main changes are expanded text, graphics and additional clues. Several puzzles also require less manual bookkeeping:
